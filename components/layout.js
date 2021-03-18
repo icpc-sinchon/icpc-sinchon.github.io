@@ -1,5 +1,11 @@
+import styles from './Layout.module.css'
+
 const Layout = ({ children }) => {
     return (
-        <div>{children}</div>
+        <>
+            <header />
+            <main className={styles.container}>{children}</main>
+        </>
     )
 }
+export default Layout
