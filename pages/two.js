@@ -5,6 +5,7 @@ import classNames from 'classnames';
 const type = 'success'
 const Two = () => {
     return (
+        // https://nextjs.org/learn/basics/data-fetching/two-forms
         <Layout>
             <Head>
                 <title>페이지 투!</title>
@@ -32,6 +33,6 @@ const Two = () => {
             </style>
         </Layout>
     )
-}
 
+}
 export default Two;
