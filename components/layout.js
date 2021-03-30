@@ -1,10 +1,11 @@
 import styles from './Layout.module.css'
+import Header from './Header'
 
 const Layout = ({ children }) => {
     return (
         <>
-            <header />
-            <main className={styles.container}>{children}</main>
+            <Header />
+            <main className={styles.main}>{children}</main>
         </>
     )
 }
