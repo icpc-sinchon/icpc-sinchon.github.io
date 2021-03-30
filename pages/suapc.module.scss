@@ -1,0 +1,15 @@
+$sinchon-color: #009D3E;
+
+.suapc_wrap {
+	width: 1000px;
+    height: 1000px;
+    border: 3px solid $sinchon-color;
+    
+    margin:0 auto;
+    padding: 3rem 4rem 0 4rem;
+}
+
+.season-selected{
+    color: $sinchon-color;
+    border-bottom: 3px solid $sinchon-color;
+}
