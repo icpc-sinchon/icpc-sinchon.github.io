@@ -1,8 +1,10 @@
 $sinchon-color: #009D3E;
 
 .suapc_wrap {
+    position: relative;
+
 	width: 1000px;
-    height: 1000px;
+    height: auto;
     border: 3px solid $sinchon-color;
     
     margin:0 auto;
