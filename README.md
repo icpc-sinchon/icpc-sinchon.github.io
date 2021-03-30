@@ -3,7 +3,7 @@
 # Practicing Next.js
 > Additional information or tag line
 
-Exercising Next.js
+New Website For ICPC Sinchon
 
 ## Installing / Getting started
 
