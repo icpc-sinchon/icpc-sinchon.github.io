@@ -3,6 +3,11 @@ const HeaderWrap = styled.header`
     display:flex;
     align-items: center;
     
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+
     height:75px;
     padding: 0 3.2rem;
 
