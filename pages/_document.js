@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
                     {/* Step 5: Output the styles in the head  */}
                     {this.props.styleTags}
                 </Head>
-                <body style={{ maxWidth: `1800px`, margin:`0 auto` }}>
+                <body style={{ maxWidth: `2300px`, margin:`0 auto` }}>
                     <Main />
                     <NextScript />
                 </body>
