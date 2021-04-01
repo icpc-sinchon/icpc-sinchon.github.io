@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import Head from 'next/head'
 import styled, { css } from 'styled-components'
 
@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { setCurrentSeasonIdx } from '../reducers/currentSeasonIdx'
 import { setCurrentSeasonData } from '../reducers/currentSeasonData'
+import { setCurrentYear } from '../reducers/currentYear'
+import { setCurrentSeason } from '../reducers/currentSeason'
+import { setSeasonList } from '../reducers/seasonList'
 
 import SeasonSwitchArrow from '../components/Arrow/SeasonSwitchArrow'
 import TextWrap from '../components/ContestWrap/ContestItem/TextWrap/TextWrap'
@@ -36,16 +39,23 @@ const ItemTitle = styled.h3`
     margin: 1em 0 0.4em 0;
 `
 
-const HallOfFame = ({ seasonData_ }) => {
+const HallOfFame = ({ seasonList_, seasonData_ }) => {
     const title = `HALL OF FAME`
-    
+
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
     const currentSeasonData = useSelector(state => state.currentSeasonData)
-    const seasonList = useSelector(state=>state.seasonList)
+    const currentYear = useSelector(state => state.currentYear)
+    const currentSeason = useSelector(state => state.currentSeason)
+    const seasonList = useSelector(state => state.seasonList)
 
-    const [year, setYear] = useState(seasonData_.year)
-    const [season, setSeason] = useState(seasonData_.season)
+    useEffect(() => {
+        dispatch(setSeasonList(seasonList_))
+        dispatch(setCurrentSeasonData(seasonData_))
+        dispatch(setCurrentSeason(seasonData_.season))
+        dispatch(setCurrentYear(seasonData_.year))
+        dispatch(setCurrentSeasonIdx(seasonList_.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
+    }, [])
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
@@ -65,16 +75,14 @@ const HallOfFame = ({ seasonData_ }) => {
     }
 
     const switchSeasonData = idx => {
-        console.log(idx)
         let season = seasonList[idx]
 
         fetchSeasonData(season).then(data => {
             dispatch(setCurrentSeasonData(data))
         })
 
-        setYear(season.split(' ')[0])
-        setSeason(season.split(' ')[1])
-
+        dispatch(setCurrentYear(season.split(' ')[0]))
+        dispatch(setCurrentSeason(season.split(' ')[1]))
         dispatch(setCurrentSeasonIdx(idx))
 
         adjustSelectedNav(idx)
@@ -92,7 +100,7 @@ const HallOfFame = ({ seasonData_ }) => {
 
     const fetchSeasonData = async (season) => {
         try {
-            let response = await fetch(`http://localhost:3000/history/hall-of-fame/${season}.json`)
+            let response = await fetch(`http://localhost:3000/history/halloffame/${season}.json`)
             let data = await response.json();
 
             return data;
@@ -117,8 +125,8 @@ const HallOfFame = ({ seasonData_ }) => {
                     <TitleWrap
                         isSuapc={false}
                         title={title}
-                        year={year}
-                        season={season}
+                        year={currentYear}
+                        season={currentSeason}
                     />
                     <TextWrap
                         title="명예의 전당 소개"
@@ -190,19 +198,13 @@ const HallOfFame = ({ seasonData_ }) => {
 }
 
 HallOfFame.getInitialProps = async ({ req, res, match, history, location }) => {
-
-
-    let response0 = await fetch(`http://localhost:3000/history/hall-of-fame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
+    let response0 = await fetch(`http://localhost:3000/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
     let data0 = await response0.json();
-
-    let response1 = await fetch(`http://localhost:3000/history/hall-of-fame/list.json`)
+    let response1 = await fetch(`http://localhost:3000/history/halloffame/list.json`)
     let data1 = await response1.json();
-
     return {
         seasonData_: data0,
         seasonList_: data1
     }
-
 }
-
 export default HallOfFame
