@@ -1,45 +1,45 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const SinchonColor = `#009D3E`;
 
 const WinnerTableWrap = styled.div`
-    ${'' /* display: flex; */}
+
 `
 
 const WinnerTableTitle = styled.div`
     width: 5rem;
     padding: calc(0.725rem - 1px) 0;
-    font-size: 1.2em;
+    font-size: 0.9rem;
     font-weight: 600;
-`
-
-const BorderedTh = styled.th`
-    border-bottom: 1px solid #666;
 `
 
 export default function WinnerTable({ data }) {
     return (
         <WinnerTableWrap className="test">
-            <WinnerTableTitle className="test--title">
-                {data.div ? <p>Div. {data.div}</p> : ""}
+            {data.div ?
+                <WinnerTableTitle className="test--title">
+                    Div {data.div}
             </WinnerTableTitle>
-            <table className="rank">
+                : ""}
+            <table>
                 <thead>
                     <tr>
-                        <BorderedTh>순위</BorderedTh>
-                        <BorderedTh>푼 문제 수</BorderedTh>
-                        <BorderedTh>팀명</BorderedTh>
-                        <BorderedTh>구성원</BorderedTh>
-                        <BorderedTh>소속</BorderedTh>
+                        <th css={{ width: "1rem" }}>순위</th>
+                        <th css={{ width: "4rem" }}>솔브 수</th>
+                        <th css={{ width: "15rem" }}>팀명</th>
+                        <th css={{ width: "8rem" }}>구성원</th>
+                        <th css={{ width: "6rem" }}>소속</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.winner.map(data => {
                         return (
                             <tr>
-                                <td>{data["prize"]}</td>
-                                <td>{data["solved"]}</td>
-                                <td css={{ width: "26rem" }}>{data["team"]}</td>
-                                <td>{data["member"]}</td>
-                                <td>{data["school"]}</td>
+                                <td >{data["prize"]}</td>
+                                <td >{data["solved"]}</td>
+                                <td >{data["team"]}</td>
+                                <td >{data["member"]}</td>
+                                <td >{data["school"]}</td>
                             </tr>
                         )
                     })}
