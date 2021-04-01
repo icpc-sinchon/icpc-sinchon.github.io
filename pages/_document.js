@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
                 <Head>
                     {this.props.styleTags}
                 </Head>
-                <body style={{ maxWidth: `2300px`, margin:`0 auto`, paddinTop: `75px` }}>
+                <body style={{ maxWidth: `2300px`, margin: `0 auto`, paddinTop: `75px`, overflowX: `hidden` }}>
                     <Main />
                     <NextScript />
                 </body>
