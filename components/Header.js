@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Link from 'next/link'
+
 const HeaderWrap = styled.header`
     display:flex;
     align-items: center;
@@ -7,6 +9,7 @@ const HeaderWrap = styled.header`
     background-color: white;
     z-index: 1000;
     width: 100%;
+    max-width: 2300px;
 
     height:75px;
     padding: 0 3.2rem;
@@ -36,9 +39,9 @@ const Header = () => {
                 <LogoImg src="/res/header/240logo.svg" />
             </LogoImgWrap>
             <div style={{ flexGrow: "1" }} />
-            <HeaderElem>SUAPC 2021</HeaderElem>
-            <HeaderElem>Hall Of Fame</HeaderElem>
-            <HeaderElem>Organizers</HeaderElem>
+            <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
+            <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
+            <HeaderElem>ORGANIZERS</HeaderElem>
         </HeaderWrap>
     )
 }
