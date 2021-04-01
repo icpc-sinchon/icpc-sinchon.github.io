@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux"
-
 const currentSeasonData = require('../public/history/suapc/2021 Winter.json')
 
 
