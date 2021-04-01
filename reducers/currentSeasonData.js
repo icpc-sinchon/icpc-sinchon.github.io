@@ -5,14 +5,15 @@ const seasonData = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CU
 export const setSD = `SET_SD`
 export const setCurrentSeasonData = (data) => ({
     type: setSD,
-    data
+    data: data
 })
 
 const reducer = (state = seasonData, action) => {
-    if (action.type === setSD) {
-        return action.data
-    } else {
-        return state
+    switch(action.type){
+        case setSD:
+            return action.data
+        default:
+            return state
     }
 }
 
