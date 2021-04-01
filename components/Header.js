@@ -29,7 +29,13 @@ const HeaderElem = styled.div`
     font-size: 0.8rem;
     letter-spacing: -0.4px;
 
-    margin-left: 2.2rem;
+    padding: 0 1.1rem;
+
+    cursor: pointer;
+
+    &:last-child{
+        padding-right: 0;
+    }
 `
 
 const Header = () => {
