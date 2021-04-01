@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import Head from 'next/head'
 
@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentSeasonIdx } from '../reducers/currentSeasonIdx'
 import { setCurrentSeasonData } from '../reducers/currentSeasonData'
 import { setCurrentYear } from '../reducers/currentYear'
+import { setCurrentSeason } from '../reducers/currentSeason'
+import { setSeasonList } from '../reducers/seasonList'
 
 import Layout from '../components/Layout'
 import WinnerTableWrap from '../components/WinnerTable/WinnerTableWrap'
@@ -70,16 +72,21 @@ const SponserCI = styled.img`
     } */}
 `
 
-const Suapc = ({ seasonList_, seasonData_ }) => {
+const Suapc = ({ seasonData_, seasonList_ }) => {
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
     const currentSeasonData = useSelector(state => state.currentSeasonData)
     const currentYear = useSelector(state => state.currentYear)
+    const currentSeason = useSelector(state => state.currentSeason)
     const seasonList = useSelector(state => state.seasonList)
 
-    // const [year, setYear] = useState(seasonData_.year)
-    const [season, setSeason] = useState(seasonData_.season)
-
+    useEffect(() => {
+        dispatch(setSeasonList(seasonList_))
+        dispatch(setCurrentSeasonData(seasonData_))
+        dispatch(setCurrentSeason(seasonData_.season))
+        dispatch(setCurrentYear(seasonData_.year))
+        dispatch(setCurrentSeasonIdx(seasonList_.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)))
+    }, [])
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
@@ -103,11 +110,10 @@ const Suapc = ({ seasonList_, seasonData_ }) => {
         fetchSeasonData(season).then(data => {
             dispatch(setCurrentSeasonData(data))
         })
-        // setTitle("SUAPC " + season)
-        dispatch(setCurrentYear(season.split(' ')[0]))
-        // setYear(season.split(' ')[0])
-        setSeason(season.split(' ')[1])
+            .catch(err => { console.log(err) })
 
+        dispatch(setCurrentYear(season.split(' ')[0]))
+        dispatch(setCurrentSeason(season.split(' ')[1]))
         dispatch(setCurrentSeasonIdx(idx))
 
         adjustSelectedNav(idx)
@@ -150,9 +156,9 @@ const Suapc = ({ seasonList_, seasonData_ }) => {
                     />
                     <TitleWrap
                         isSuapc={true}
-                        title={`SUAPC ${currentYear} ${season}`}
+                        title={`SUAPC ${currentYear} ${currentSeason}`}
                         year={currentYear}
-                        season={season}
+                        season={currentSeason}
                     />
                     <TextWrap
                         title="대회 일자"
@@ -199,14 +205,14 @@ const Suapc = ({ seasonList_, seasonData_ }) => {
                                     <th>소속</th>
                                 </thead>
                                 <tbody>
-                                    {Array.from(currentSeasonData.examiner).map(elem => {
+                                    {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
                                         return (
                                             <tr>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>
                                         )
-                                    })}
+                                    }) : ""}
                                 </tbody>
                             </table>
                         </ItemWrap>
@@ -218,14 +224,14 @@ const Suapc = ({ seasonList_, seasonData_ }) => {
                                     <th>소속</th>
                                 </thead>
                                 <tbody>
-                                    {Array.from(currentSeasonData.checker).map(elem => {
+                                    {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
                                         return (
                                             <tr>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>
                                         )
-                                    })}
+                                    }) : ""}
                                 </tbody>
                             </table>
                         </ItemWrap>
@@ -239,7 +245,6 @@ const Suapc = ({ seasonList_, seasonData_ }) => {
 Suapc.getInitialProps = async ({ req, res, match, history, location }) => {
     let response0 = await fetch(`http://localhost:3000/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
     let data0 = await response0.json();
-
     let response1 = await fetch(`http://localhost:3000/history/suapc/list.json`)
     let data1 = await response1.json();
 
