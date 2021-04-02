@@ -29,7 +29,7 @@ const configStore = ctx => {
       applyMiddleware(...middleWares)
     );
 
-  if(!ctx.router)return createStore(reducer, enhancer)
+  if (!ctx.router) return createStore(reducer, enhancer)
 
   const data = require(`../public/history/${ctx.router.pathname.substring(1)}/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
   const seasonList = require(`../public/history/${ctx.router.pathname.substring(1)}/list.json`)
