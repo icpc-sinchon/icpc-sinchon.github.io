@@ -1,17 +1,21 @@
+import { HYDRATE } from 'next-redux-wrapper'
 const currentSeasonData = require('../public/history/suapc/2021 Winter.json')
 
 
-export const setY = `SET_YEAR`
-export const setCurrentYear = (year) => ({
-    type: setY,
-    val: year
+export const SET_Y = `SET_YEAR`
+export const setCurrentYear = val => ({
+    type: SET_Y,
+    val
 })
 
 const reducer = (state = currentSeasonData.year, action) => {
-    if (action.type === setY) {
-        return action.val
-    } else {
-        return state
+    switch (action.type) {
+        case HYDRATE:
+            return action.payload.currentYear
+        case SET_Y:
+            return action.val
+        default:
+            return state
     }
 }
 
