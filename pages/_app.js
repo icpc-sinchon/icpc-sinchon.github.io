@@ -5,7 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import reducer from '../reducers';
 
 import '../styles/global.scss'
-import { useRouter } from 'next/router'
+import { useRouter, withRouter } from 'next/router'
 
 import '../styles/SeasonNav.scss'
 import '../public/fonts/fonts.css'
@@ -20,16 +20,19 @@ const App = ({ Component, pageProps, store }) => {
   )
 }
 
-const configStore = (options) => {
-  const router = useRouter()
+const configStore = ctx => {
+
   const middleWares = []
   const enhancer = process.env.NODE_ENV === 'production' ?
     compose(applyMiddleware(...middleWares)) :
     composeWithDevTools(
       applyMiddleware(...middleWares)
     );
-  const data = require(`../public/history/${router.pathname.substring(1)}/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
-  const seasonList = require(`../public/history/${router.pathname.substring(1)}/list.json`)
+
+  if(!ctx.router)return createStore(reducer, enhancer)
+
+  const data = require(`../public/history/${ctx.router.pathname.substring(1)}/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
+  const seasonList = require(`../public/history/${ctx.router.pathname.substring(1)}/list.json`)
 
   const initialState = {
     currentSeasonData: data,
@@ -39,6 +42,19 @@ const configStore = (options) => {
     seasonList
   }
   return createStore(reducer, initialState, enhancer);
+}
+
+// 전역적으로 props에 context를 넣어준다
+App.getInitialProps = async context => {
+
+  const { ctx, Component } = context;
+
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = await context.Component.getInitialProps(ctx);
+  }
+
+  return { pageProps };
 }
 
 // store Props가 withRedux를 통해 주입된다.
