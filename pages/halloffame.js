@@ -40,6 +40,15 @@ const ItemTitle = styled.h3`
 `
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
+
+    useEffect(() => {
+        let previewContainer = document.querySelectorAll(".preview-container")
+        let contestWrapHeight = document.querySelector(".contest-wrap").offsetHeight
+        previewContainer.forEach(ele => {
+            ele.style.height = contestWrapHeight + "px"
+        })
+    })
+    
     const title = `HALL OF FAME`
 
     const dispatch = useDispatch();
@@ -49,13 +58,6 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     const currentSeason = useSelector(state => state.currentSeason)
     const seasonList = useSelector(state => state.seasonList)
 
-    useEffect(() => {
-        dispatch(setSeasonList(seasonList_))
-        dispatch(setCurrentSeasonData(seasonData_))
-        dispatch(setCurrentSeason(seasonData_.season))
-        dispatch(setCurrentYear(seasonData_.year))
-        dispatch(setCurrentSeasonIdx(seasonList_.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
-    }, [])
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
@@ -142,10 +144,12 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                             <ItemTitle><span style={{ color: 'white', backgroundColor: '#23a33d' }}>{study.topic}</span> 수상자</ItemTitle>
                                             <table>
                                                 <thead>
-                                                    <th style={{ width: `4rem` }}>순위</th>
-                                                    <th>수상자</th>
-                                                    <th style={{ width: `10rem` }}>BOJ Handle</th>
-                                                    <th style={{ width: `7rem` }}>소속</th>
+                                                    <tr>
+                                                        <th style={{ width: `4rem` }}>순위</th>
+                                                        <th>수상자</th>
+                                                        <th style={{ width: `10rem` }}>BOJ Handle</th>
+                                                        <th style={{ width: `7rem` }}>소속</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                     {Array.from(contest.awards).map((award, idx) => {
@@ -166,10 +170,12 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                             <ItemTitle><span style={{ color: 'white', backgroundColor: '#23a33d' }}>{study.topic}</span> {contest.contest_name}</ItemTitle>
                                             <table>
                                                 <thead>
-                                                    <th style={{ width: `1rem` }}>#</th>
-                                                    <th>문제</th>
-                                                    <th>출제자</th>
-                                                    <th style={{ width: `5rem` }}>소속</th>
+                                                    <tr>
+                                                        <th style={{ width: `1rem` }}>#</th>
+                                                        <th>문제</th>
+                                                        <th>출제자</th>
+                                                        <th style={{ width: `5rem` }}>소속</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                     {Array.from(contest.problem_list).map((problem, idx) => {
@@ -197,11 +203,18 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     )
 }
 
-HallOfFame.getInitialProps = async ({ req, res, match, history, location }) => {
+HallOfFame.getInitialProps = async ({ store }) => {
     let response0 = await fetch(`http://localhost:3000/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
     let data0 = await response0.json();
     let response1 = await fetch(`http://localhost:3000/history/halloffame/list.json`)
     let data1 = await response1.json();
+
+    store.dispatch(setSeasonList(data1))
+    store.dispatch(setCurrentSeasonData(data0))
+    store.dispatch(setCurrentSeason(data0.season))
+    store.dispatch(setCurrentYear(data0.year))
+    store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
+
     return {
         seasonData_: data0,
         seasonList_: data1

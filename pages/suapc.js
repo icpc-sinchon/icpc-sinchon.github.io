@@ -73,6 +73,15 @@ const SponserCI = styled.img`
 `
 
 const Suapc = ({ seasonData_, seasonList_ }) => {
+    
+    useEffect(() => {
+        let previewContainer = document.querySelectorAll(".preview-container")
+        let contestWrapHeight = document.querySelector(".contest-wrap").offsetHeight
+        previewContainer.forEach(ele => {
+            ele.style.height = contestWrapHeight + "px"
+        })
+    })
+
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
     const currentSeasonData = useSelector(state => state.currentSeasonData)
@@ -80,13 +89,6 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
     const currentSeason = useSelector(state => state.currentSeason)
     const seasonList = useSelector(state => state.seasonList)
 
-    useEffect(() => {
-        dispatch(setSeasonList(seasonList_))
-        dispatch(setCurrentSeasonData(seasonData_))
-        dispatch(setCurrentSeason(seasonData_.season))
-        dispatch(setCurrentYear(seasonData_.year))
-        dispatch(setCurrentSeasonIdx(seasonList_.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)))
-    }, [])
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
@@ -201,8 +203,10 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                             <ItemTitle>출제진</ItemTitle>
                             <table>
                                 <thead>
-                                    <th style={{ width: `8rem` }}>이름</th>
-                                    <th>소속</th>
+                                    <tr>
+                                        <th style={{ width: `8rem` }}>이름</th>
+                                        <th>소속</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
@@ -220,8 +224,10 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                             <ItemTitle>검수진</ItemTitle>
                             <table>
                                 <thead>
-                                    <th style={{ width: `8rem` }}>이름</th>
-                                    <th>소속</th>
+                                    <tr>
+                                        <th style={{ width: `8rem` }}>이름</th>
+                                        <th>소속</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
@@ -242,11 +248,19 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
     )
 }
 
-Suapc.getInitialProps = async ({ req, res, match, history, location }) => {
+Suapc.getInitialProps = async ({ store }) => {
+
     let response0 = await fetch(`http://localhost:3000/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
     let data0 = await response0.json();
     let response1 = await fetch(`http://localhost:3000/history/suapc/list.json`)
     let data1 = await response1.json();
+
+    console.log(store)
+    store.dispatch(setSeasonList(data1))
+    store.dispatch(setCurrentSeasonData(data0))
+    store.dispatch(setCurrentSeason(data0.season))
+    store.dispatch(setCurrentYear(data0.year))
+    store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)))
 
     return {
         seasonData_: data0,
