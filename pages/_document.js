@@ -23,10 +23,11 @@ export default class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <meta name="theme-color" content="#009D3E" />
                     <link rel="icon" href="/favicon.png" />
                     {this.props.styleTags}
                 </Head>
-                <body style={{ maxWidth: `2300px`, margin: `0 auto`, paddinTop: `75px`, overflowX: `hidden` }}>
+                <body style={{ maxWidth: `2300px`, margin: `0 auto`, overflowX: `hidden` }}>
                     <Main />
                     <NextScript />
                 </body>
