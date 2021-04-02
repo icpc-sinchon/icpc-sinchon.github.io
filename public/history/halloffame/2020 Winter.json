@@ -39,17 +39,20 @@
             {
               "prize": 1,
               "name": "강상원",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "kevink1113"
             },
             {
               "prize": 2,
               "name": "주상민",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "jsm3465"
             },
             {
               "prize": 3,
               "name": "윤상현",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "tkdgus0782"
             }
           ]
         },
@@ -77,17 +80,20 @@
             {
               "prize": 1,
               "name": "강상원",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "kevink1113"
             },
             {
               "prize": 2,
               "name": "주상민",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"jsm3465"
             },
             {
               "prize": 3,
               "name": "임세홍",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "sehjong1602"
             }
           ]
         }
@@ -122,17 +128,20 @@
             {
               "prize": 1,
               "name": "백성익",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle":"906bc"
             },
             {
               "prize": 2,
               "name": "정재현",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle": "dicohy27"
             },
             {
               "prize": 3,
               "name": "강승구",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "v010309"
             }
           ]
         },
@@ -152,17 +161,20 @@
             {
               "prize": 1,
               "name": "장주호",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "jayjangjooho"
             },
             {
               "prize": 2,
               "name": "백성익",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle":"906bc"
             },
             {
               "prize": 3,
               "name": "정재현",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle":"dicohy27"
             }
           ]
         }

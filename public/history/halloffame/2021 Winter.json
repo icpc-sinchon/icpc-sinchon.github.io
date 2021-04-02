@@ -88,17 +88,20 @@
             {
               "prize": 1,
               "name": "강민서",
-              "school": "연세대"
+              "school": "연세대",
+              "handle":"namoo"
             },
             {
               "prize": 2,
               "name": "정영우",
-              "school": "연세대"
+              "school": "연세대",
+              "handle":"existrei01"
             },
             {
               "prize": 3,
               "name": "오재석",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"whitehorse"
             }
           ]
         }
@@ -198,17 +201,20 @@
             {
               "prize": 1,
               "name": "조원빈",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"wonbin0504"
             },
             {
               "prize": 2,
               "name": "박재형",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"pjh6792"
             },
             {
               "prize": 3,
               "name": "남유진",
-              "school": "연세대"
+              "school": "연세대",
+              "handle": "youx"
             }
           ]
         }

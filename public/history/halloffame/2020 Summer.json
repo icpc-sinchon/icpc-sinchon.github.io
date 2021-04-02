@@ -122,17 +122,20 @@
             {
               "prize": 1,
               "name": "김태윤",
-              "school": "연세대"
+              "school": "연세대",
+              "handle": "ystaeyoon113"
             },
             {
               "prize": 2,
               "name": "김도현",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle":"swoon"
             },
             {
               "prize": 3,
               "name": "김경민",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle": "kgmin604"
             }
           ]
         }
@@ -254,17 +257,20 @@
             {
               "prize": 1,
               "name": "김관우",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"rhksdn6227"
             },
             {
               "prize": 2,
               "name": "남유진",
-              "school": "연세대"
+              "school": "연세대",
+              "handle":"youx"
             },
             {
               "prize": 3,
               "name": "이승은",
-              "school": "서강대"
+              "school": "서강대",
+              "handle":"leese0425"
             }
           ]
         }
