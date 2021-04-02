@@ -44,8 +44,8 @@ const PreviewWrap = () => {
 
     return (
         <>
-            <LeftPreview />
-            <RightPreview />
+            <LeftPreview className={"preview-container"} />
+            <RightPreview className={"preview-container"} />
         </>
     )
 }

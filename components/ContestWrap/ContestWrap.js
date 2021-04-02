@@ -14,7 +14,7 @@ const ContestWrap_ = styled.div`
 
 const ContestWrap = ({ children }) => {
     return (
-        <ContestWrap_>
+        <ContestWrap_ className={"contest-wrap"}>
             {children}
         </ContestWrap_>
     )
