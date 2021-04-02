@@ -9,7 +9,7 @@ const ContestWrap_ = styled.div`
     border: 3px solid ${sinchonColor};
 
     margin: 0 auto 3rem auto;
-    padding: 3rem 4rem;
+    padding: 3.6rem 4.4rem;
 `
 
 const ContestWrap = ({ children }) => {
