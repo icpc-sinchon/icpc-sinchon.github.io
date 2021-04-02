@@ -157,7 +157,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                             <tr>
                                                                 <td>{idx + 1}위</td>
                                                                 <td>{award.name}</td>
-                                                                <td>nant0313</td>
+                                                                <td>{award.handle}</td>
                                                                 <td>{award.school}</td>
                                                             </tr>
                                                         )
