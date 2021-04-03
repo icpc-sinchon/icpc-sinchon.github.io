@@ -9,6 +9,8 @@ import { useRouter, withRouter } from 'next/router'
 
 import '../styles/SeasonNav.scss'
 import '../public/fonts/fonts.css'
+import '../components/Arrow_Preview.scss'
+import '../components/ContestWrap.scss'
 
 const App = ({ Component, pageProps, store }) => {
   return (
