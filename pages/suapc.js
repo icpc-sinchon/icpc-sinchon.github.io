@@ -238,7 +238,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 </tbody>
                             </table>
                         </ItemWrap>
-                        <ItemWrap>
+                        <ItemWrap className="maker-checker">
                             <ItemTitle>검수진</ItemTitle>
                             <table>
                                 <thead>
