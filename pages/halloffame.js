@@ -167,7 +167,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                 <TopicTitle>{study.topic}</TopicTitle>
                                 <div style={{ width: `100%` }}>
                                     {study.lecturers ? <ItemWrap className="lecturer-wrap">
-                                        <ItemTitle style={{ paddingLeft: `0.4rem` }}>강사진</ItemTitle>
+                                        <ItemTitle className="hof-item-title">강사진</ItemTitle>
                                         <table>
                                             <thead>
                                                 <tr>
@@ -191,7 +191,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                         return (
                                             <>
                                                 {contest.awards ? <ItemWrap key={contest.contest_name + '-award'}>
-                                                    <ItemTitle style={{ paddingLeft: `0.4rem` }}>{contest.contest_name} 수상자</ItemTitle>
+                                                    <ItemTitle className="hof-item-title">{contest.contest_name} 수상자</ItemTitle>
                                                     <table>
                                                         <thead>
                                                             <tr>
@@ -217,7 +217,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
                                                 </ItemWrap> : ""}
                                                 {contest.problem_list ? <ItemWrap key={contest.contest_name + '-past-problem'}>
-                                                    <ItemTitle style={{ paddingLeft: `0.4rem` }}>{contest.contest_name} 기출 문항</ItemTitle>
+                                                    <ItemTitle className="hof-item-title">{contest.contest_name} 기출 문항</ItemTitle>
                                                     <table>
                                                         <thead>
                                                             <tr>
