@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux'
 import styled, { css } from 'styled-components'
 
-
 const PreviewWrap = () => {
 
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
@@ -13,11 +12,11 @@ const PreviewWrap = () => {
     return (
         <>
             <LeftPreview
-                className={"preview-container"}
+                className={"preview-container left-preview"}
                 css={!showLeftPreview ? VisibilityHide : ""}
             />
             <RightPreview
-                className={"preview-container"}
+                className={"preview-container right-preview"}
                 css={!showRightPreview ? VisibilityHide : ""}
             />
         </>
@@ -26,31 +25,40 @@ const PreviewWrap = () => {
 
 export default PreviewWrap
 
-let LeftPreview = styled.div`
+const Common = css`
+    height: 100%;
+    margin: 0 auto 3rem auto;
+    padding: 3rem 0;
+
+    border: 3px solid #009D3E;
+    @media(max-width: 2300px){
+        width: calc((100% - 1043px - 260px - 57px - 57px) / 2);
+    }
+
+    @media(max-width: 1522px){
+        ${'' /* display: none; */}
+    }
+`
+// 1522px 마지노선
+const LeftPreview = styled.div`
     position: absolute;
     left: calc(50% - 520px - 130px - 57px);
     transform: translateX(-100%);
     
     width: calc(1150px - 520px - 130px - 57px);
-    height: 100%;
-    margin: 0 auto 3rem auto;
-    padding: 3rem 4rem;
     
-    border: 3px solid #009D3E;
+    ${Common}
     border-left: none;
 `
 
-let RightPreview = styled.div`
+const RightPreview = styled.div`
     position: absolute;
     right: calc(50% - 520px - 130px - 57px);
     transform: translateX(+100%);
     
     width: calc(1150px - 520px - 130px - 57px);
-    height: 100%;
-    margin: 0 auto 3rem auto;
-    padding: 3rem 4rem;
-    
-    border: 3px solid #009D3E;
+
+    ${Common}
     border-right: none;
 `
 
