@@ -27,7 +27,7 @@ const Title = styled.h1`
 const SubTitle = styled.p`
     ${NotoSansBold}
     
-    margin: 0 0 3rem 0;
+    margin: 0 0 3.2rem 0;
 `
 
 const TitleWrap = ({ title, isSuapc, year, season }) => {
