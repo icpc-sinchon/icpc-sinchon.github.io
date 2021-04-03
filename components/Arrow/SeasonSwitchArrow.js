@@ -9,7 +9,7 @@ const SeasonSwitchArrow = ({ onArrowClick }) => {
     const showLeftArrow = currentSeasonIdx !== 0
     const showRightArrow = currentSeasonIdx !== seasonList.length - 1
 
-    return <ArrowWrap>
+    return <ArrowWrap className="arrow-wrap">
         <ArrowLeft
             css={!showLeftArrow ? VisibilityHide : ""}
             onClick={onArrowClick}
