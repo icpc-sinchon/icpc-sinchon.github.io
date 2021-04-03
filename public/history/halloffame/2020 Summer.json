@@ -35,17 +35,20 @@
             {
               "prize": 1,
               "name": "김태윤",
-              "school": "연세대"
+              "school": "연세대",
+              "handle": "ystaeyoon113"
             },
             {
               "prize": 2,
               "name": "김도현",
-              "school": "홍익대"
+              "school": "홍익대",
+              "handle": "swoon"
             },
             {
               "prize": 3,
               "name": "윤이빈",
-              "school": "숙명여대"
+              "school": "숙명여대",
+              "handle": "yibin99"
             }
           ]
         },
@@ -170,17 +173,20 @@
             {
               "prize": 1,
               "name": "박재형",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "pjh6792"
             },
             {
               "prize": 2,
               "name": "남유진",
-              "school": "연세대"
+              "school": "연세대",
+              "handle": "youx"
             },
             {
               "prize": 3,
               "name": "박준성",
-              "school": "서강대"
+              "school": "서강대",
+              "handle": "wnstjd13245"
             }
           ]
         },
