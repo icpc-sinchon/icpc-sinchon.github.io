@@ -42,6 +42,9 @@ table {
 	font-size: 0.8rem;
 
 	border-collapse: collapse;
+
+	overflow-x: auto;
+    white-space: nowrap;
 }
 
 th{
