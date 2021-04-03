@@ -79,3 +79,7 @@ td {
 	background-clip: content-box;
 
 }
+
+main{
+	min-height: calc(100vh - 100px);
+}
