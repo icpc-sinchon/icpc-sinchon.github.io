@@ -178,7 +178,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         year={currentYear}
                         season={currentSeason}
                     />
-                    <ItemWrap style={{ display: `flex`, padding: `0` }}>
+                    <ItemWrap style={{ display: `flex`, padding: `0`, overflowX: `scroll`, whiteSpace: `nowrap` }}>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
@@ -216,8 +216,8 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                             <WinnerTableWrap data={currentSeasonData.awards} />
                         </ItemWrap>
                         : ""}
-                    <div style={{ display: `flex`, justifyContent: `space-between` }}>
-                        <ItemWrap style={{ width: `45%` }}>
+                    <div className="maker-checker-wrap">
+                        <ItemWrap className="maker-checker">
                             <ItemTitle>출제진</ItemTitle>
                             <table>
                                 <thead>
@@ -238,7 +238,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 </tbody>
                             </table>
                         </ItemWrap>
-                        <ItemWrap style={{ width: `45%` }}>
+                        <ItemWrap>
                             <ItemTitle>검수진</ItemTitle>
                             <table>
                                 <thead>
