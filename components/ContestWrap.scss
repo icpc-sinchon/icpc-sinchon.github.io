@@ -1,0 +1,45 @@
+@media (max-width: 1134px) {
+	.contest-wrap {
+		width: 92vw;
+	}
+}
+
+@media (max-width: 900px) {
+	table {
+		width: 100%;
+		display: block;
+	}
+	.contest-wrap {
+		padding: 3.6rem 3rem;
+	}
+}
+
+.maker-checker-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 770px){
+    .lecturer-wrap{
+        table{
+            display: table;
+            width:100%;
+        }
+    }
+    .maker-checker-wrap{
+        display: block;
+
+        table{
+            display: table;
+            width:100%;
+        }
+    }
+}
+@media (max-width: 500px) {
+	.contest-wrap {
+        width:100%;
+
+		padding: 3.6rem 2rem;
+		border-left: none;
+		border-right: none;
+	}
+}
