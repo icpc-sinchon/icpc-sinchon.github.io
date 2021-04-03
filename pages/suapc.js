@@ -178,7 +178,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         year={currentYear}
                         season={currentSeason}
                     />
-                    <ItemWrap style={{ display: `flex`, padding: `0`, overflowX: `scroll`, whiteSpace: `nowrap` }}>
+                    <ItemWrap style={{ display: `flex`, padding: `0`, overflowX: `auto`, whiteSpace: `nowrap` }}>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
