@@ -4,8 +4,8 @@ const ItemWrap_ = styled.div`
     padding-bottom: 1rem;
 `
 
-const ItemWrap = ({ children, style }) => {
-    return (<ItemWrap_ style={style}>
+const ItemWrap = ({ children, className, style }) => {
+    return (<ItemWrap_ className={className} style={style} >
         {children}
     </ItemWrap_>)
 }
