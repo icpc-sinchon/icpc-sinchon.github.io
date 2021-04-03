@@ -273,7 +273,7 @@ Suapc.getInitialProps = async ({ store }) => {
     let response1 = await fetch(`http://localhost:3000/history/suapc/list.json`)
     let data1 = await response1.json();
 
-    console.log(store)
+    // console.log(store)
     store.dispatch(setSeasonList(data1))
     store.dispatch(setCurrentSeasonData(data0))
     store.dispatch(setCurrentSeason(data0.season))
