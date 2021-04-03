@@ -117,7 +117,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
     const fetchSeasonData = async (season) => {
         try {
-            let response = await fetch(`${NEXT_PUBLIC_URL}/history/halloffame/${season}.json`)
+            let response = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${season}.json`)
             let data = await response.json();
 
             return data;
@@ -245,9 +245,9 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 }
 
 HallOfFame.getInitialProps = async ({ store }) => {
-    let response0 = await fetch(`${NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
+    let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
     let data0 = await response0.json();
-    let response1 = await fetch(`${NEXT_PUBLIC_URL}/history/halloffame/list.json`)
+    let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/list.json`)
     let data1 = await response1.json();
 
     store.dispatch(setSeasonList(data1))
