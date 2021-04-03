@@ -3,7 +3,10 @@ import styled, { css } from 'styled-components'
 const SinchonColor = `#009D3E`;
 
 const WinnerTableWrap = styled.div`
-
+    margin-bottom: 1.4rem;
+    &:last-child{
+        margin: 0;
+    }
 `
 
 const WinnerTableTitle = styled.div`
