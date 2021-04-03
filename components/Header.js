@@ -1,6 +1,21 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+
+const Header = () => {
+    return (
+        <HeaderWrap>
+            <LogoImgWrap>
+                <LogoImg src="/res/header/240logo.svg" />
+            </LogoImgWrap>
+            <div style={{ flexGrow: "1" }} />
+            <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
+            <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
+            <HeaderElem>ORGANIZERS</HeaderElem>
+        </HeaderWrap>
+    )
+}
+
 const HeaderWrap = styled.header`
     display:flex;
     align-items: center;
@@ -14,9 +29,16 @@ const HeaderWrap = styled.header`
     height:75px;
     padding: 0 3.2rem;
 
+    @media(max-width: 700px){
+        padding: 0 6vw;
+    }
 `
 const LogoImgWrap = styled.div`
     width:36px;
+
+    @media(max-width: 700px){
+        width:32px;
+    }
 `
 
 const LogoImg = styled.img`
@@ -36,20 +58,10 @@ const HeaderElem = styled.div`
     &:last-child{
         padding-right: 0;
     }
+
+    @media(max-width: 700px){
+        font-size: 0.6rem;
+        padding:0 0.6rem;
+    }
 `
-
-const Header = () => {
-    return (
-        <HeaderWrap>
-            <LogoImgWrap>
-                <LogoImg src="/res/header/240logo.svg" />
-            </LogoImgWrap>
-            <div style={{ flexGrow: "1" }} />
-            <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
-            <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
-            <HeaderElem>ORGANIZERS</HeaderElem>
-        </HeaderWrap>
-    )
-}
-
 export default Header;
