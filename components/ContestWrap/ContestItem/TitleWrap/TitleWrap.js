@@ -25,9 +25,6 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.p`
-    ${NotoSansBold}
-    ${KeepCalmPreset}
-    
     margin: 0 0 3.2rem 0;
 `
 
@@ -36,9 +33,9 @@ const TitleWrap = ({ title, isSuapc, year, season }) => {
         <TitleWrap_>
             <Title>{title}</Title>
             {isSuapc ?
-                <SubTitle>{year} 신촌지역 대학교 프로그래밍 동아리 연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
+                <SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 프로그래밍 동아리 연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
                 :
-                <SubTitle css={SinchonColor}>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
+                <SubTitle css={SinchonColor, KeepCalmPreset}>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
             }
         </TitleWrap_>
     )
