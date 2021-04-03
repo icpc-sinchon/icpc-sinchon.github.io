@@ -17,6 +17,7 @@ import ContestWrap from '../components/ContestWrap/ContestWrap'
 import Layout from '../components/Layout'
 import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import SeasonNav from '../components/SeasonNav/SeasonNav'
+import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
 
 const NotoSansBold = css`
     font-family: 'Noto Sans KR';
@@ -39,6 +40,20 @@ const ItemTitle = styled.h3`
     margin: 1em 0 0.4em 0;
 `
 
+const TopicWrap = styled.h3`
+    ${NotoSansBold}
+    ${SinchonColor}
+
+    width: 3rem;
+    margin: 1em 0.3rem 0.4em 0;
+
+    text-align: center;
+    align-self: baseline;
+
+    background-color: #23a33d;
+    color: white;
+`
+
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
     useEffect(() => {
@@ -48,7 +63,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
             ele.style.height = contestWrapHeight + "px"
         })
     })
-    
+
     const title = `HALL OF FAME`
 
     const dispatch = useDispatch();
@@ -110,6 +125,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
             return [];
         }
     }
+
     return (
         <Layout>
             <Head>
@@ -131,72 +147,97 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                         season={currentSeason}
                     />
                     <TextWrap
-                        title="명예의 전당 소개"
-                        content="ICPC 신촌 연합 활동에 기여를 해주신 분들과 열심히 활동하여 우수한 성적을 거둔 사람들을 기립니다"
+                        title={currentSeasonData.length !== 0 ? "명예의 전당 소개" : "이 곳의 주인공이 되세요"}
+                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에 기여를 해주신 분들과 우수한 성적을 거둔 사람들을 기립니다." : "이 곳의 주인공이 되세요"}
                     />
 
                     {currentSeasonData.studies ? Array.from(currentSeasonData.studies).map(study => {
                         return (
-                            study.contests ? Array.from(study.contests).map(contest => {
-                                return (
-                                    <>
-                                        {contest.awards ? <>
-                                            <ItemTitle><span style={{ color: 'white', backgroundColor: '#23a33d' }}>{study.topic}</span> 수상자</ItemTitle>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th style={{ width: `4rem` }}>순위</th>
-                                                        <th>수상자</th>
-                                                        <th style={{ width: `10rem` }}>BOJ Handle</th>
-                                                        <th style={{ width: `7rem` }}>소속</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {Array.from(contest.awards).map((award, idx) => {
-                                                        return (
+                            <div id={study.topic} style={{ display: `flex` }} key={study.topic}>
+                                <TopicWrap>{study.topic}</TopicWrap>
+                                <div style={{ width: `100%` }}>
+                                    {study.lecturers ? <ItemWrap>
+                                        <ItemTitle style={{ paddingLeft: `0.4rem` }}>강사진</ItemTitle>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>이름</th>
+                                                    <th>소속</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {Array.from(study.lecturers).map(lecturer => {
+                                                    return (
+                                                        <tr key={'lecturer-' + lecturer.name}>
+                                                            <td>{lecturer.name}</td>
+                                                            <td>{lecturer.school}</td>
+                                                        </tr>
+                                                    )
+                                                })}
+                                            </tbody>
+                                        </table>
+                                    </ItemWrap> : ""}
+                                    {study.contests ? Array.from(study.contests).map(contest => {
+                                        return (
+                                            <>
+                                                {contest.awards ? <ItemWrap key={contest.contest_name + '-award'}>
+                                                    <ItemTitle style={{ paddingLeft: `0.4rem` }}>{contest.contest_name} 수상자</ItemTitle>
+                                                    <table>
+                                                        <thead>
                                                             <tr>
-                                                                <td>{idx + 1}위</td>
-                                                                <td>{award.name}</td>
-                                                                <td>{award.handle}</td>
-                                                                <td>{award.school}</td>
+                                                                <th style={{ width: `4rem` }}>순위</th>
+                                                                <th>수상자</th>
+                                                                <th style={{ width: `10rem` }}>BOJ Handle</th>
+                                                                <th style={{ width: `7rem` }}>소속</th>
                                                             </tr>
-                                                        )
-                                                    })}
-                                                </tbody>
-                                            </table>
+                                                        </thead>
+                                                        <tbody>
+                                                            {Array.from(contest.awards).map((award, idx) => {
+                                                                return (
+                                                                    <tr>
+                                                                        <td>{idx + 1}위</td>
+                                                                        <td>{award.name}</td>
+                                                                        <td>{award.handle}</td>
+                                                                        <td>{award.school}</td>
+                                                                    </tr>
+                                                                )
+                                                            })}
+                                                        </tbody>
+                                                    </table>
 
-                                        </> : ""}
-                                        {contest.problem_list ? <>
-                                            <ItemTitle><span style={{ color: 'white', backgroundColor: '#23a33d' }}>{study.topic}</span> {contest.contest_name}</ItemTitle>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th style={{ width: `1rem` }}>#</th>
-                                                        <th>문제</th>
-                                                        <th>출제자</th>
-                                                        <th style={{ width: `5rem` }}>소속</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {Array.from(contest.problem_list).map((problem, idx) => {
-                                                        return (
+                                                </ItemWrap> : ""}
+                                                {contest.problem_list ? <ItemWrap key={contest.contest_name + '-past-problem'}>
+                                                    <ItemTitle style={{ paddingLeft: `0.4rem` }}>{contest.contest_name} 기출 문항</ItemTitle>
+                                                    <table>
+                                                        <thead>
                                                             <tr>
-                                                                <td>{String.fromCharCode(idx + 65)}</td>
-                                                                <td><a href={problem.link}>{problem.problem_name}</a></td>
-                                                                <td>{problem.organizer.name}</td>
-                                                                <td>{problem.organizer.school}</td>
+                                                                <th style={{ width: `1rem` }}>#</th>
+                                                                <th>문제</th>
+                                                                <th>출제자</th>
+                                                                <th style={{ width: `5rem` }}>소속</th>
                                                             </tr>
-                                                        )
-                                                    })}
-                                                </tbody>
-                                            </table>
-                                        </> : ""}
-                                    </>
-                                )
-                            }) : ""
+                                                        </thead>
+                                                        <tbody>
+                                                            {Array.from(contest.problem_list).map((problem, idx) => {
+                                                                return (
+                                                                    <tr key={problem.problem_name}>
+                                                                        <td>{String.fromCharCode(idx + 65)}</td>
+                                                                        <td><a href={problem.link}>{problem.problem_name}</a></td>
+                                                                        <td>{problem.organizer.name}</td>
+                                                                        <td>{problem.organizer.school}</td>
+                                                                    </tr>
+                                                                )
+                                                            })}
+                                                        </tbody>
+                                                    </table>
+                                                </ItemWrap> : ""}
+                                            </>
+                                        )
+                                    }) : ""}
+                                </div>
+                            </div>
                         )
                     }) : ""}
-
                 </ContestWrap>
             </>
         </Layout>
