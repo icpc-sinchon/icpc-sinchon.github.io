@@ -5,8 +5,6 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import reducer from '../reducers';
 
 import '../styles/global.scss'
-import { useRouter, withRouter } from 'next/router'
-
 import '../styles/SeasonNav.scss'
 import '../public/fonts/fonts.css'
 import '../components/Arrow_Preview.scss'
