@@ -40,7 +40,7 @@ const ItemTitle = styled.h3`
     margin: 1em 0 0.4em 0;
 `
 
-const TopicWrap = styled.h3`
+const TopicTitle = styled.h3`
     ${NotoSansBold}
     ${SinchonColor}
 
@@ -52,6 +52,16 @@ const TopicWrap = styled.h3`
 
     background-color: #23a33d;
     color: white;
+`
+
+const TopicWrap = styled.div`
+    display: flex;
+
+    @media(max-width: 900px){
+        display: block;
+
+        padding: 0.8rem 0;
+    }
 `
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
@@ -153,10 +163,10 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
                     {currentSeasonData.studies ? Array.from(currentSeasonData.studies).map(study => {
                         return (
-                            <div id={study.topic} style={{ display: `flex` }} key={study.topic}>
-                                <TopicWrap>{study.topic}</TopicWrap>
+                            <TopicWrap id={study.topic} key={study.topic}>
+                                <TopicTitle>{study.topic}</TopicTitle>
                                 <div style={{ width: `100%` }}>
-                                    {study.lecturers ? <ItemWrap>
+                                    {study.lecturers ? <ItemWrap className="lecturer-wrap">
                                         <ItemTitle style={{ paddingLeft: `0.4rem` }}>강사진</ItemTitle>
                                         <table>
                                             <thead>
@@ -235,7 +245,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                         )
                                     }) : ""}
                                 </div>
-                            </div>
+                            </TopicWrap>
                         )
                     }) : ""}
                 </ContestWrap>
