@@ -8,7 +8,7 @@ export const setSeasonList = val => ({
 })
 
 const reducer = (state = [], action) => {
-    console.log(action.type)
+    // console.log(action.type)
     switch (action.type) {
         case HYDRATE:
             return action.payload.seasonList
