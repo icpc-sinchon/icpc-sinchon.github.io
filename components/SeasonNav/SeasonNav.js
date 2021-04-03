@@ -23,12 +23,20 @@ const KeepCalmPreset = css`
 `
 
 const SeasonNavWrap = styled.div`
-    padding: 18px 0 38px 0;
+    padding: 1rem 0 2.4rem 0;
     
     display: flex;
 
     white-space: nowrap;
     overflow-x: auto;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @media(max-width: 500px){
+        padding: 1rem 0 1.2rem 0;
+    }
 `
 
 const SeasonNavElem = styled.div`
