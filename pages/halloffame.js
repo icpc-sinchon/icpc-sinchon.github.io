@@ -232,7 +232,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                                 return (
                                                                     <tr key={problem.problem_name}>
                                                                         <td>{String.fromCharCode(idx + 65)}</td>
-                                                                        <td><a href={problem.link}>{problem.problem_name}</a></td>
+                                                                        <td><a href={problem.link} style={{ textDecoration: 'underline' }}>{problem.problem_name}</a></td>
                                                                         <td>{problem.organizer.name}</td>
                                                                         <td>{problem.organizer.school}</td>
                                                                     </tr>
