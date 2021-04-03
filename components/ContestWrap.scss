@@ -13,30 +13,34 @@
 		padding: 3.6rem 3rem;
 	}
 }
-
-.maker-checker-wrap{
-    display: flex;
-    justify-content: space-between;
+.maker-checker {
+	width: 45%;
 }
-@media (max-width: 770px){
-    .lecturer-wrap{
-        table{
-            display: table;
-            width:100%;
-        }
-    }
-    .maker-checker-wrap{
-        display: block;
-
-        table{
-            display: table;
-            width:100%;
-        }
-    }
+.maker-checker-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+@media (max-width: 770px) {
+	.lecturer-wrap {
+		table {
+			display: table;
+			width: 100%;
+		}
+	}
+	.maker-checker-wrap {
+		display: block;
+		.maker-checker {
+			width: 100%;
+		}
+		table {
+			display: table;
+			width: 100%;
+		}
+	}
 }
 @media (max-width: 500px) {
 	.contest-wrap {
-        width:100%;
+		width: 100%;
 
 		padding: 1.6rem 2rem;
 		border: none;
