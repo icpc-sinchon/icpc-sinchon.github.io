@@ -18,6 +18,7 @@ import TitleWrap from '../components/ContestWrap/ContestItem/TitleWrap/TitleWrap
 import TextWrap from '../components/ContestWrap/ContestItem/TextWrap/TextWrap'
 import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
 import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
+import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
 
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(연세, 서강, 이화, 홍익, 숙명)의
@@ -72,8 +73,23 @@ const SponserCI = styled.img`
     } */}
 `
 
+const CustomButton = styled.div`
+    border: 2px solid #009D3E;
+
+    padding: 0.4rem 1.2rem;
+    margin-left: 1.2rem;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #009D3E;
+
+    &:first-child{
+        margin-left: 0;
+    }
+`
+
 const Suapc = ({ seasonData_, seasonList_ }) => {
-    
+
     useEffect(() => {
         let previewContainer = document.querySelectorAll(".preview-container")
         let contestWrapHeight = document.querySelector(".contest-wrap").offsetHeight
@@ -162,6 +178,12 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         year={currentYear}
                         season={currentSeason}
                     />
+                    <ItemWrap style={{ display: `flex`, padding: `0` }}>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
+                    </ItemWrap>
                     <TextWrap
                         title="대회 일자"
                         content={currentSeasonData.date}
@@ -183,13 +205,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     <ItemWrap>
                         <ItemTitle>후원사</ItemTitle>
                         <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `space-between` }}>
-                            <SponserCI src='/res/sponser-ci/kakao.png' />
-                            <SponserCI src='/res/sponser-ci/naver.png' />
-                            <SponserCI src='/res/sponser-ci/hanbit.png' />
-                            <SponserCI src='/res/sponser-ci/jpub.png' />
-                            <SponserCI src='/res/sponser-ci/youngjin.png' />
-                            <SponserCI src='/res/sponser-ci/vuno.png' />
-                            {/* <SponserCI src='/res/sponser-ci/jetbrains.png' /> */}
+                            {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
+                                return <SponserCI src={`/res/sponser-ci/${data}.png`} />
+                            }) : ""}
                         </SchoolLogoWrap>
                     </ItemWrap>
                     {currentSeasonData.awards ?
@@ -199,7 +217,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         </ItemWrap>
                         : ""}
                     <div style={{ display: `flex`, justifyContent: `space-between` }}>
-                        <ItemWrap>
+                        <ItemWrap style={{ width: `45%` }}>
                             <ItemTitle>출제진</ItemTitle>
                             <table>
                                 <thead>
@@ -220,7 +238,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 </tbody>
                             </table>
                         </ItemWrap>
-                        <ItemWrap>
+                        <ItemWrap style={{ width: `45%` }}>
                             <ItemTitle>검수진</ItemTitle>
                             <table>
                                 <thead>
