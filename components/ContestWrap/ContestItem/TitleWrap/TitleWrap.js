@@ -26,6 +26,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.p`
     ${NotoSansBold}
+    ${KeepCalmPreset}
     
     margin: 0 0 3.2rem 0;
 `
