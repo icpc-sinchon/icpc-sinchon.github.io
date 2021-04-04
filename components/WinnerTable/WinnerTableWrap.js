@@ -2,8 +2,8 @@ import WinnerTable from './WinnerTable'
 
 const WinnerTableWrap = ({ data }) => {
     return (
-        data.map(elem => {
-            return <WinnerTable data={elem} />
+        data.map((elem, idx) => {
+            return <WinnerTable key={"winnertable-" + idx} data={elem} />
         })
     )
 }

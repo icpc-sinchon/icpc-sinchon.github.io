@@ -206,7 +206,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         <ItemTitle>후원사</ItemTitle>
                         <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `space-between` }}>
                             {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
-                                return <SponserCI src={`/res/sponser-ci/${data}.png`} />
+                                return <SponserCI key={"sponser-"+data} src={`/res/sponser-ci/${data}.png`} />
                             }) : ""}
                         </SchoolLogoWrap>
                     </ItemWrap>
@@ -229,7 +229,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 <tbody>
                                     {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
                                         return (
-                                            <tr>
+                                            <tr key={"checker-"+elem.name}>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>
@@ -250,7 +250,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 <tbody>
                                     {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
                                         return (
-                                            <tr>
+                                            <tr key={"maker-"+elem.name}>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>

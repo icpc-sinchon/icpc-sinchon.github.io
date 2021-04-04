@@ -10,7 +10,7 @@ const SeasonNav = ({ onSeasonNavClick }) => {
         <SeasonNavWrap>
             {seasonList.map((elem, idx) => {
                 return (
-                    <SeasonNavElem onClick={onSeasonNavClick} alt={idx} className={"season-nav " + (idx === currentSeasonIdx ? 'season-selected' : "")} > {elem}</SeasonNavElem>
+                    <SeasonNavElem key={"season-nav-" + elem} onClick={onSeasonNavClick} alt={idx} className={"season-nav " + (idx === currentSeasonIdx ? 'season-selected' : "")} > {elem}</SeasonNavElem>
                 )
             })}
         </SeasonNavWrap>

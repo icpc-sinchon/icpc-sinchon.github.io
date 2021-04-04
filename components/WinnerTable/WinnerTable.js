@@ -22,7 +22,7 @@ export default function WinnerTable({ data }) {
             {data.div ?
                 <WinnerTableTitle className="test--title">
                     Div {data.div}
-            </WinnerTableTitle>
+                </WinnerTableTitle>
                 : ""}
             <table>
                 <thead>
@@ -37,12 +37,12 @@ export default function WinnerTable({ data }) {
                 <tbody>
                     {data.winner.map(data => {
                         return (
-                            <tr>
-                                <td >{data["prize"]}</td>
-                                <td >{data["solved"]}</td>
-                                <td >{data["team"]}</td>
-                                <td >{data["member"]}</td>
-                                <td >{data["school"]}</td>
+                            <tr key={"winner-" + data["team"]}>
+                                <td>{data["prize"]}</td>
+                                <td>{data["solved"]}</td>
+                                <td>{data["team"]}</td>
+                                <td>{data["member"]}</td>
+                                <td>{data["school"]}</td>
                             </tr>
                         )
                     })}

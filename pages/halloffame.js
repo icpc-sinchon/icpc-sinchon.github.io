@@ -66,6 +66,8 @@ const TopicWrap = styled.div`
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
+    const title = `HALL OF FAME`
+
     useEffect(() => {
         let previewContainer = document.querySelectorAll(".preview-container")
         let contestWrapHeight = document.querySelector(".contest-wrap").offsetHeight
@@ -74,7 +76,6 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
         })
     })
 
-    const title = `HALL OF FAME`
 
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
@@ -131,8 +132,9 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
             let data = await response.json();
 
             return data;
-        } catch (error) {
-            return [];
+        } catch (err) {
+            console.error(err)
+            return []
         }
     }
 
@@ -254,21 +256,26 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     )
 }
 
-HallOfFame.getInitialProps = async ({ store }) => {
-    let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
-    let data0 = await response0.json();
-    let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/list.json`)
-    let data1 = await response1.json();
+HallOfFame.getInitialProps = async ({ window, store }) => {
+    try {
+        let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
+        let data0 = await response0.json();
+        let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/list.json`)
+        let data1 = await response1.json();
 
-    store.dispatch(setSeasonList(data1))
-    store.dispatch(setCurrentSeasonData(data0))
-    store.dispatch(setCurrentSeason(data0.season))
-    store.dispatch(setCurrentYear(data0.year))
-    store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
+        store.dispatch(setSeasonList(data1))
+        store.dispatch(setCurrentSeasonData(data0))
+        store.dispatch(setCurrentSeason(data0.season))
+        store.dispatch(setCurrentYear(data0.year))
+        store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
+    
+        return {
+            seasonData_: data0,
+            seasonList_: data1
+        }
 
-    return {
-        seasonData_: data0,
-        seasonList_: data1
+    } catch (err) {
+        console.log(err)
     }
 }
 export default HallOfFame
