@@ -64,8 +64,9 @@ const SchoolLogo = styled.img`
 `
 
 const SponserCI = styled.img`
-    height: 1.5rem;
+    height: 1.6rem;
 
+    margin: 0.8rem 1.8rem 0.6rem 0;
     ${'' /* margin-left: 1.1rem; */}
 
     ${'' /* &:first-child{
@@ -204,7 +205,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     </ItemWrap>
                     <ItemWrap>
                         <ItemTitle>후원사</ItemTitle>
-                        <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `space-between` }}>
+                        <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `start` }}>
                             {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
                                 return <SponserCI key={"sponser-"+data} src={`/res/sponser-ci/${data}.png`} />
                             }) : ""}
