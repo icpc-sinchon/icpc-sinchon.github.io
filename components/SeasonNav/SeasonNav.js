@@ -40,19 +40,22 @@ const SeasonNavWrap = styled.div`
 `
 
 const SeasonNavElem = styled.div`
-    ${KeepCalmPreset}
-    color: #C8C8C8;
+    height: 2rem;
+    line-height: 2rem;
 
-    padding: 0.3rem 1rem;
+    padding: 0 1rem;
+    margin-left: 2.3rem;
     border-radius: 1rem;
 
-    margin-left: 2.3rem;
+    ${KeepCalmPreset}
+    color: #C8C8C8;
     font-size: 0.85rem;
     cursor: pointer;
 
     &:first-child{
         margin-left: 3.2rem;
     }
+
     @media(max-width: 500px){
         &:first-child{
             margin-left: 1.2rem;
