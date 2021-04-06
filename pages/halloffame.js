@@ -173,8 +173,9 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th>이름</th>
-                                                    <th>소속</th>
+                                                    <th>강사명</th>
+                                                    <th style={{ width: `10rem` }}>BOJ</th>
+                                                    <th style={{ width: `7rem` }}>소속</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -182,6 +183,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                     return (
                                                         <tr key={'lecturer-' + lecturer.name}>
                                                             <td>{lecturer.name}</td>
+                                                            <td>{lecturer.handle}</td>
                                                             <td>{lecturer.school}</td>
                                                         </tr>
                                                     )
@@ -199,7 +201,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                             <tr>
                                                                 <th style={{ width: `4rem` }}>순위</th>
                                                                 <th>수상자</th>
-                                                                <th style={{ width: `10rem` }}>BOJ Handle</th>
+                                                                <th style={{ width: `10rem` }}>BOJ</th>
                                                                 <th style={{ width: `7rem` }}>소속</th>
                                                             </tr>
                                                         </thead>
@@ -207,7 +209,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                             {Array.from(contest.awards).map((award, idx) => {
                                                                 return (
                                                                     <tr>
-                                                                        <td>{idx + 1}위</td>
+                                                                        <td>{idx + 1}<sup>{idx + 1 === 1 ? `st` : idx + 1 === 2 ? `nd` : `rd`}</sup></td>
                                                                         <td>{award.name}</td>
                                                                         <td>{award.handle}</td>
                                                                         <td>{award.school}</td>
@@ -268,7 +270,7 @@ HallOfFame.getInitialProps = async ({ window, store }) => {
         store.dispatch(setCurrentSeason(data0.season))
         store.dispatch(setCurrentYear(data0.year))
         store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
-    
+
         return {
             seasonData_: data0,
             seasonList_: data1
