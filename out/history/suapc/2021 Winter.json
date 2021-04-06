@@ -1,0 +1,131 @@
+{
+  "year": 2021,
+  "season": "Winter",
+  "date":"2021년 2월 28일 오후 12시 ~ 오후 5시",
+  "awards": [
+    {
+      "div": null,
+      "winner": [
+        {
+          "prize": 1,
+          "solved": 12,
+          "team": "Supported by LKY",
+          "school": "연세대학교",
+          "member": "윤인섭, 황준호, 남현우"
+        },
+        {
+          "prize": 2,
+          "solved": 9,
+          "team": 151719,
+          "school": "서강대학교",
+          "member": "전해성, 정재훈, 이준석"
+        },
+        {
+          "prize": 3,
+          "solved": 9,
+          "team": "NO ORANGE CANT WIN",
+          "school": "서강대학교",
+          "member": "김관우, 박재형, 이윤제"
+        },
+        {
+          "prize": 4,
+          "solved": 8,
+          "team": "TERRA",
+          "school": "서강대학교",
+          "member": "이동주, 이민희, 조원빈"
+        },
+        {
+          "prize": 5,
+          "solved": 8,
+          "team": "팬케이크맛 쿠키",
+          "school": "연세대학교",
+          "member": "박선종, 김태윤, 김민재"
+        },
+        {
+          "prize": 6,
+          "solved": 7,
+          "team": "APP",
+          "school": "서강대학교",
+          "member": "강문해, 강다혜, 전민수"
+        },
+        {
+          "prize": 7,
+          "solved": 7,
+          "team": "전생했더니 박건이었던 건에 대하여",
+          "school": "서강대학교",
+          "member": "강효규, 박건, 손기령"
+        },
+        {
+          "prize": 8,
+          "solved": 6,
+          "team": "서수삼",
+          "school": "서강대학교",
+          "member": "홍서준, 유호영, 오재석"
+        },
+        {
+          "prize": 9,
+          "solved": 6,
+          "team": "동동박",
+          "school": "연세대학교",
+          "member": "권동욱, 동용훈, 박영한"
+        },
+        {
+          "prize": 10,
+          "solved": 6,
+          "team": "상금타서소고기사먹자",
+          "school": "홍익대학교",
+          "member": "정윤석, 김종욱, 서영진"
+        }
+      ]
+    }
+  ],
+  "examiner": [
+    {
+      "name": "이국렬",
+      "school": "연세대학교"
+    },
+    {
+      "name": "정연두",
+      "school": "홍익대학교"
+    },
+    {
+      "name": "박수현",
+      "school": "서강대학교"
+    },
+    {
+      "name": "정기웅",
+      "school": "연세대학교"
+    },
+    {
+      "name": "이상원",
+      "school": "서강대학교"
+    }
+  ],
+  "checker": [
+    {
+      "name": "최재민",
+      "school": "KAIST"
+    },
+    {
+      "name": "조경완",
+      "school": "숭실대학교"
+    },
+    {
+      "name": "남현욱",
+      "school": "Team Samoyed"
+    },
+    {
+      "name": "권일우",
+      "school": "인천대학교"
+    }
+  ],
+  "sponser":[
+    "kakao",
+    "naver",
+    "mnsoft",
+    "jetbrains",
+    "hanbit",
+    "jpub",
+    "youngjin"
+  ]
+}

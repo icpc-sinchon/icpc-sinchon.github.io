@@ -1,0 +1,243 @@
+{
+  "year": 2021,
+  "season": "Winter",
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "강효규",
+          "school": "서강대",
+          "handle":"djs100201"
+        },
+        {
+          "name": "김기선",
+          "school": "홍익대",
+          "handle": "xkdlaldtjfnl"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "모의고사",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "영단어 암기는 괴로워",
+              "link": "https://www.acmicpc.net/problem/20920",
+              "organizer": {
+                "name": "김도은",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "그렇고 그런 사이",
+              "link": "https://www.acmicpc.net/problem/20921",
+              "organizer": {
+                "name": "정기웅",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "겹치는 건 싫어",
+              "link": "https://www.acmicpc.net/problem/20922",
+              "organizer": {
+                "name": "김도현",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "숫자 할리갈리 게임",
+              "link": "https://www.acmicpc.net/problem/20923",
+              "organizer": {
+                "name": "김도은",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "트리의 기둥과 가지",
+              "link": "https://www.acmicpc.net/problem/20924",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "메이플스토리",
+              "link": "https://www.acmicpc.net/problem/20925",
+              "organizer": {
+                "name": "이상원",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "얼음 미로",
+              "link": "https://www.acmicpc.net/problem/20926",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "Degree Bounded Minimum Spanning Tree",
+              "link": "https://www.acmicpc.net/problem/20927",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "강민서",
+              "school": "연세대",
+              "handle":"namoo"
+            },
+            {
+              "prize": 2,
+              "name": "정영우",
+              "school": "연세대",
+              "handle":"existrei01"
+            },
+            {
+              "prize": 3,
+              "name": "오재석",
+              "school": "서강대",
+              "handle":"whitehorse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "윤인섭",
+          "school": "연세대",
+          "handle":"pinebananais"
+        },
+        {
+          "name": "한동규",
+          "school": "UNIST",
+          "handle": "queued_q"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "모의고사",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "그렇고 그런 사이",
+              "link": "https://www.acmicpc.net/problem/20921",
+              "organizer": {
+                "name": "정기웅",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "걷는 건 귀찮아",
+              "link": "https://www.acmicpc.net/problem/20928",
+              "organizer": {
+                "name": "김주현",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "중간",
+              "link": "https://www.acmicpc.net/problem/20929",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "우주 정거장",
+              "link": "https://www.acmicpc.net/problem/20930",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "혹 떼러 갔다 혹 붙여 온다",
+              "link": "https://www.acmicpc.net/problem/20931",
+              "organizer": {
+                "name": "정연두",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "약수 의식",
+              "link": "https://www.acmicpc.net/problem/20932",
+              "organizer": {
+                "name": "정연두",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "마스크펑크 2077",
+              "link": "https://www.acmicpc.net/problem/20933",
+              "organizer": {
+                "name": "김주현",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "카드 모래성",
+              "link": "https://www.acmicpc.net/problem/20934",
+              "organizer": {
+                "name": "김주현",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "Parity Constraint Perfect Matching",
+              "link": "https://www.acmicpc.net/problem/20935",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "조원빈",
+              "school": "서강대",
+              "handle":"wonbin0504"
+            },
+            {
+              "prize": 2,
+              "name": "박재형",
+              "school": "서강대",
+              "handle":"pjh6792"
+            },
+            {
+              "prize": 3,
+              "name": "남유진",
+              "school": "연세대",
+              "handle": "youx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "고급",
+      "lecturers": [
+        {
+          "name": "전해성",
+          "school": "서강대",
+          "handle": "seastar105"
+        },
+        {
+          "name": "이국렬",
+          "school": "연세대",
+          "handle": "lky7674"
+        }
+      ]
+    }
+  ]
+}
