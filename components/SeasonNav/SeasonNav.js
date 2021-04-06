@@ -23,7 +23,7 @@ const KeepCalmPreset = css`
 `
 
 const SeasonNavWrap = styled.div`
-    padding: 1rem 0 2.4rem 0;
+    padding: 1rem 0 2rem 0;
     
     display: flex;
 
@@ -42,6 +42,9 @@ const SeasonNavWrap = styled.div`
 const SeasonNavElem = styled.div`
     ${KeepCalmPreset}
     color: #C8C8C8;
+
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
 
     margin-left: 2.3rem;
     font-size: 0.85rem;
