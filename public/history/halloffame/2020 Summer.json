@@ -7,11 +7,13 @@
       "lecturers": [
         {
           "name": "배철환",
-          "school": "서강대"
+          "school": "서강대",
+          "handle":"bcc0830"
         },
         {
           "name": "백성익",
-          "school": "홍익대"
+          "school": "홍익대",
+          "handle": "906bc"
         }
       ],
       "contests": [
@@ -149,11 +151,13 @@
       "lecturers": [
         {
           "name": "윤인섭",
-          "school": "연세대"
+          "school": "연세대",
+          "handle": "pinebananais"
         },
         {
           "name": "이준석",
-          "school": "서강대"
+          "school": "서강대",
+          "handle":"semteo04"
         }
       ],
       "contests": [
@@ -287,7 +291,8 @@
       "lecturers": [
         {
           "name": "전해성",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "seastar105"
         }
       ]
     }

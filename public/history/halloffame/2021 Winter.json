@@ -7,11 +7,13 @@
       "lecturers": [
         {
           "name": "강효규",
-          "school": "서강대"
+          "school": "서강대",
+          "handle":"djs100201"
         },
         {
           "name": "김기선",
-          "school": "홍익대"
+          "school": "홍익대",
+          "handle": "xkdlaldtjfnl"
         }
       ],
       "contests": [
@@ -112,11 +114,13 @@
       "lecturers": [
         {
           "name": "윤인섭",
-          "school": "연세대"
+          "school": "연세대",
+          "handle":"pinebananais"
         },
         {
           "name": "한동규",
-          "school": "UNIST"
+          "school": "UNIST",
+          "handle": "queued_q"
         }
       ],
       "contests": [
@@ -225,11 +229,13 @@
       "lecturers": [
         {
           "name": "전해성",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "seastar105"
         },
         {
           "name": "이국렬",
-          "school": "연세대"
+          "school": "연세대",
+          "handle": "lky7674"
         }
       ]
     }
