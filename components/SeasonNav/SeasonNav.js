@@ -35,7 +35,7 @@ const SeasonNavWrap = styled.div`
     }
 
     @media(max-width: 500px){
-        padding: 1rem 0 1.2rem 0;
+        padding: 1rem 0 0.8rem 0;
     }
 `
 
@@ -52,6 +52,12 @@ const SeasonNavElem = styled.div`
 
     &:first-child{
         margin-left: 3.2rem;
+    }
+    @media(max-width: 500px){
+        &:first-child{
+            margin-left: 1.2rem;
+        }
+        margin-left: 0.5rem;
     }
 `
 
