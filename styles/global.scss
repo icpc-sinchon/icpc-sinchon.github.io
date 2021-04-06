@@ -2,8 +2,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'KeepCalmMed', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	line-height: 1.6;
 	font-size: 18px;
 }
@@ -74,12 +74,11 @@ td {
 	border-radius: 8px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
 	background: lightgray;
 	background-clip: content-box;
-
 }
 
-main{
+main {
 	min-height: calc(100vh - 100px);
 }
