@@ -41,26 +41,35 @@ table {
 	font-size: 0.8rem;
 
 	border-collapse: collapse;
+	// border: 1px solid $sinchonColor;
 
 	overflow-x: auto;
 	white-space: nowrap;
 }
-
+tr:nth-child(even){
+	background-color: rgba(0, 0, 0, 0.02);
+}
 th {
-	background: #009d3e;
-
+	font-weight: 500;
+	
 	padding: $padd;
 	padding: 0.5rem 0.96667rem !important;
-	// border-bottom: 2px solid $sinchonColor;
-	
-    color: white;
-    font-weight: 500;
+
+	border-bottom: 1px solid $sinchonColor;
+	border-left: 1px solid $sinchonColor;
+	&:first-child {
+		border-left: none;
+	}
 }
 
 td {
 	padding: $padd;
 	// border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-	border: 1px solid rgba(0, 0, 0, 0.12);
+
+	border-left: 1px solid $sinchonColor;
+	&:first-child {
+		border-left: none;
+	}
 }
 
 ::-webkit-scrollbar {
