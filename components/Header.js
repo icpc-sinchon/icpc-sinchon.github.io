@@ -33,7 +33,7 @@ const HeaderWrap = styled.header`
     padding: 0 3.2rem;
 
     @media(max-width: 700px){
-        padding: 0 6vw;
+        padding: 0 8vw;
     }
 `
 const LogoImgWrap = styled.div`
