@@ -12,6 +12,9 @@ const Header = () => {
             <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
             <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
             <HeaderElem>ORGANIZERS</HeaderElem>
+            <NavBarWrap>
+                <LogoImg src="res/header/navbar.svg" />
+            </NavBarWrap>
         </HeaderWrap>
     )
 }
@@ -62,6 +65,17 @@ const HeaderElem = styled.div`
     @media(max-width: 700px){
         font-size: 0.6rem;
         padding:0 0.6rem;
+    }
+
+    @media(max-width: 400px){
+        display: none;
+    }
+`
+
+const NavBarWrap = styled.div`
+    display: none;
+    @media(max-width: 400px){
+        display: block;
     }
 `
 export default Header;
