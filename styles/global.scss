@@ -56,20 +56,20 @@ th {
 	padding: 0.5rem 0.96667rem !important;
 
 	border-bottom: 1px solid $sinchonColor;
-	border-left: 1px solid $sinchonColor;
-	&:first-child {
-		border-left: none;
-	}
+	// border-left: 1px solid $sinchonColor;
+	// &:first-child {
+	// 	border-left: none;
+	// }
 }
 
 td {
 	padding: $padd;
 	// border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 
-	border-left: 1px solid $sinchonColor;
-	&:first-child {
-		border-left: none;
-	}
+	// border-left: 1px solid $sinchonColor;
+	// &:first-child {
+	// 	border-left: none;
+	// }
 }
 
 ::-webkit-scrollbar {
