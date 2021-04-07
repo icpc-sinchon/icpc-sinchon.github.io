@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import organizer from '../public/history/organizer.json'
-import Mailto from 'react-protected-mailto'
 
 const Footer_ = styled.footer`
     height: 260px;
@@ -71,14 +70,12 @@ const Footer = () => {
                 <div>2021 Summer</div>
                 <IconWrap>
                     <a href="https://pf.kakao.com/_xehxhAK"><img src="/res/footer/talk_white.svg" /></a>
-                    <Mailto email="icpc.sinchon@gmail.com">
-                        <img src="/res/footer/mail_white.svg" />
-                    </Mailto>
+                    <a href="mailto:icpc.sinchon@gmail.com"><img src="/res/footer/mail_white.svg" /></a>
                 </IconWrap>
             </TopWrap>
             <BottomWrap>
                 <OrganizerWrap>운영진</OrganizerWrap>
-                {organizer[0].member.map(person => {
+                {organizer[0].member.map(person=>{
                     return person.name
                 })}
                 <CIWrap1>
