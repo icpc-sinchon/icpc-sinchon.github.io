@@ -35,7 +35,7 @@ const BottomWrap = styled.div`
 `
 
 const OrganizerWrap = styled.div`
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
     word-break: keep-all;
     span{
@@ -47,7 +47,7 @@ const OrganizerWrap = styled.div`
 `
 
 const OrgTitle = styled.div`
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
 `
 
