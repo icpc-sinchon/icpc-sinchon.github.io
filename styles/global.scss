@@ -47,9 +47,14 @@ table {
 }
 
 th {
+	background: #009d3e;
+
 	padding: $padd;
 	padding: 0.5rem 0.96667rem !important;
-	border-bottom: 2px solid $sinchonColor;
+	// border-bottom: 2px solid $sinchonColor;
+	
+    color: white;
+    font-weight: 500;
 }
 
 td {
