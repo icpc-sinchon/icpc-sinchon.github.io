@@ -77,6 +77,7 @@ const CopyRight = styled.div`
 
 const IconWrap = styled.div`
     display: flex;
+    align-items: center;
 
     a {
         padding: 0 .5rem;
