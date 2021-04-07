@@ -199,7 +199,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                     <table>
                                                         <thead>
                                                             <tr>
-                                                                <th style={{ width: `4rem` }}>순위</th>
+                                                                <th style={{ width: `3rem` }}>순위</th>
                                                                 <th>수상자</th>
                                                                 <th style={{ width: `10rem` }}>BOJ</th>
                                                                 <th style={{ width: `7rem` }}>소속</th>
