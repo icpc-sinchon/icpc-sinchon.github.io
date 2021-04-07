@@ -34,7 +34,7 @@ const CIWrap = styled.div`
 `
 
 const CopyRight = styled.div`
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 `
 
 const Footer = () => {
