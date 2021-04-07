@@ -67,14 +67,14 @@ const HeaderElem = styled.div`
         padding:0 0.6rem;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         display: none;
     }
 `
 
 const NavBarWrap = styled.div`
     display: none;
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         display: block;
     }
 `
