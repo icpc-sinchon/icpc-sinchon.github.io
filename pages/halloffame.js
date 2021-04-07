@@ -160,7 +160,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                     />
                     <TextWrap
                         title={currentSeasonData.length !== 0 ? "명예의 전당 소개" : "이 곳의 주인공이 되세요"}
-                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에 기여를 해주신 분들과 우수한 성적을 거둔 사람들을 기립니다." : "이 곳의 주인공이 되세요"}
+                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에 기여를 해주신 분들과 Camp Contest에서 우수한 성적을 거둔 사람들을 기립니다." : "이 곳의 주인공이 되세요"}
                     />
 
                     {currentSeasonData.studies ? Array.from(currentSeasonData.studies).map(study => {
