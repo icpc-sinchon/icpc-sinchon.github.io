@@ -35,7 +35,7 @@ const SeasonNavWrap = styled.div`
     }
 
     @media(max-width: 500px){
-        padding: 1rem 0 0.8rem 0;
+        padding: 1rem 0 0rem 0;
     }
 `
 
