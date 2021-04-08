@@ -18,6 +18,7 @@ const Title = styled.h1`
     ${KeepCalmPreset}
     ${SinchonColor}
     font-size: 2.6em;
+    letter-spacing: -1.2px;
     
     line-height: 1.2;
     
