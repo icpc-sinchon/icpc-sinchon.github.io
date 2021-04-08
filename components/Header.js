@@ -5,9 +5,11 @@ import Link from 'next/link'
 const Header = () => {
     return (
         <HeaderWrap>
-            <LogoImgWrap>
-                <LogoImg src="/res/header/240logo.svg" />
-            </LogoImgWrap>
+            <Link href="/">
+                <LogoImgWrap>
+                    <LogoImg src="/res/header/240logo.svg" />
+                </LogoImgWrap>
+            </Link>
             <div style={{ flexGrow: "1" }} />
             <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
             <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
@@ -39,6 +41,7 @@ const HeaderWrap = styled.header`
 const LogoImgWrap = styled.div`
     width:36px;
 
+    cursor: pointer;
     @media(max-width: 700px){
         width:32px;
     }
