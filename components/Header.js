@@ -11,9 +11,9 @@ const Header = () => {
                 </LogoImgWrap>
             </Link>
             <div style={{ flexGrow: "1" }} />
-            <Link href="/suapc"><HeaderElem>SUAPC 2021</HeaderElem></Link>
-            <Link href="/halloffame"><HeaderElem>HALL OF FAME</HeaderElem></Link>
-            <HeaderElem>ORGANIZERS</HeaderElem>
+            <Link href="/suapc"><HeaderElem style={{ color: '#009d3e' }}>SUAPC 2021</HeaderElem></Link>
+            <Link href="/halloffame"><HeaderElem>명예의 전당</HeaderElem></Link>
+            <HeaderElem>문의 및 협업 제안</HeaderElem>
             <NavBarWrap>
                 <LogoImg src="res/header/navbar.svg" />
             </NavBarWrap>
@@ -53,8 +53,9 @@ const LogoImg = styled.img`
 `
 
 const HeaderElem = styled.div`
-    font-family: 'KeepCalmMed';
+    font-family: 'KeepCalmMed', 'Noto Sans KR';
     font-size: 0.8rem;
+    font-weight: 500;
     letter-spacing: -0.02rem;
 
     padding: 0 1.1rem;
