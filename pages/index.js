@@ -14,7 +14,7 @@ const MainBottom = css`
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin: 2.4rem 0;
+    margin: 2.4rem 0 1rem 0;
 `
 
 const Main = () => {
