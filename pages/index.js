@@ -29,7 +29,7 @@ const Main = () => {
                     <TextSubTitle>신촌지역 대학교 프로그래밍 대회 동아리 연합</TextSubTitle>
                 </ContentWrap>
                 <MainImageWrap>
-
+                    {/* <img src="res/hand.jpg"/> */}
                 </MainImageWrap>
                 <ContentWrap css={MainBottom} className="content-wrap-main">
                     <ContentItem className="ContentItem">
@@ -128,7 +128,8 @@ const MainImageWrap = styled.div`
 `
 
 const ContentItem = styled.div`
-    width: 20rem;
+    width: 26vw;
+    max-width: 30rem;
 `
 
 const ContentTitle = styled.h3`
@@ -147,6 +148,10 @@ const SchoolWrap = styled.p`
     display: flex;
     justify-content: space-between;
 
+    @media(min-width: 1505px){
+        justify-content: space-evenly;
+    }
+    
     @media(max-width:1135px){
         justify-content: space-evenly;
     }
