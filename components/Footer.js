@@ -94,13 +94,16 @@ const TopWrap = styled.div`
 `
 
 const Footer = () => {
+    const onMailIconClick = () => {
+        window.open("mailto:icpc.sinchon@gmail.com");
+    }
     return (
         <Footer_>
             <TopWrap>
                 <div>2021 Summer</div>
                 <IconWrap>
                     <a href="https://pf.kakao.com/_xehxhAK" target="_blank"><img src="/res/footer/talk_white.svg" /></a>
-                    <a href="mailto:icpc.sinchon@gmail.com" target="_blank"><img src="/res/footer/mail_white.svg" /></a>
+                    <a onClick={onMailIconClick}><img src="/res/footer/mail_white.svg" /></a>
                 </IconWrap>
             </TopWrap>
             <BottomWrap>
