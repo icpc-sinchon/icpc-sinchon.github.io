@@ -1,0 +1,38 @@
+.ContentItem-PC {
+}
+
+.ContentItem-Tablet {
+	display: none;
+}
+
+@media (max-width: 1375px) {
+	.ContentItem-PC {
+		display: none;
+	}
+
+	.ContentItem-Tablet {
+		display: block;
+	}
+
+    .ContentItem{
+        width: 25rem;
+    }
+}
+
+@media(max-width:1135px){
+    .ContentItem{
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+	.content-wrap-main {
+		padding: 0 3rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.content-wrap-main {
+		padding: 0 1.4rem;
+	}
+}

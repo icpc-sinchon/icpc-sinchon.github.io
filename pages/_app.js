@@ -9,6 +9,7 @@ import '../styles/SeasonNav.scss'
 import '../public/fonts/fonts.css'
 import '../components/Arrow_Preview.scss'
 import '../components/ContestWrap.scss'
+import '../pages/index.scss'
 
 const App = ({ Component, pageProps, store }) => {
   return (
