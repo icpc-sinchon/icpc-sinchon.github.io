@@ -29,7 +29,7 @@ const HeaderWrap = styled.header`
     background-color: white;
     z-index: 1000;
     width: 100%;
-    max-width: 2300px;
+    max-width: 2000px;
 
     height:75px;
     padding: 0 3.2rem;

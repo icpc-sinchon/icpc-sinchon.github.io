@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
                     <link rel="icon" href="/favicon.png" />
                     {this.props.styleTags}
                 </Head>
-                <body style={{ maxWidth: `2300px`, margin: `0 auto`, overflowX: `hidden` }}>
+                <body style={{ maxWidth: `2000px`, margin: `0 auto`, overflowX: `hidden` }}>
                     <Main />
                     <NextScript />
                 </body>
