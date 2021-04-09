@@ -55,7 +55,7 @@ const LogoImg = styled.img`
 const HeaderElem = styled.div`
     font-family: 'KeepCalmMed';
     font-size: 0.8rem;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.02rem;
 
     padding: 0 1.1rem;
 
