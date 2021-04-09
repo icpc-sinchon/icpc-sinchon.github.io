@@ -1,6 +1,6 @@
-![Logo of the project](./images/logo.sample.png)
+![Logo of the project](./public/favicon.png)
 
-# Practicing Next.js
+# New Website For ICPC Sinchon
 > Additional information or tag line
 
 New Website For ICPC Sinchon
