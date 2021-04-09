@@ -53,7 +53,7 @@ const OrgTitle = styled.div`
 
 const CIWrap1 = styled.div`
     @media(max-width: 900px){
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 `
 const CIWrap2 = styled.div`
