@@ -13,7 +13,7 @@ const MainBottom = css`
     display: flex;
     justify-content: space-between;
 
-    margin-top: 2.4rem;
+    margin: 2.4rem 0;
 `
 
 const Main = () => {
@@ -128,11 +128,9 @@ const ContentText = styled.p`
     line-height: 1.4;
 `
 
-const SchoolWrap = styled.div`
+const SchoolWrap = styled.p`
     display: flex;
     justify-content: space-between;
-
-    padding: 0 0.4rem;
 `
 
 const SchoolItem = styled.div`
@@ -148,6 +146,8 @@ const SchoolItem = styled.div`
         font-weight: 500;
 
         text-align: center;
+
+        line-height: 1.2;
     }
 `
 
