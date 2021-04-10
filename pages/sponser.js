@@ -33,7 +33,7 @@ const Sponser = () => {
                         </TextSubTitle>
                     </ItemWrap>
                     <ItemWrap style={{ marginTop: '2rem' }}>
-                        <TextTitle>다음의 후원품들을 제공받고 싶습니다</TextTitle>
+                        <TextTitle>다음의 후원품들을 제공받고 있습니다</TextTitle>
                         <ul>
                             <li>후원금</li>
                             <li>컴퓨터 과학 서적</li>
@@ -50,6 +50,7 @@ const Sponser = () => {
                             <li>후원사 기술 커뮤니티 내 대회 결과 보고 관련 게시글 작성</li>
                             <li>1등상 혹은 특별상의 이름을 후원사의 이름이 반영되도록 지정</li>
                             <li>대회 이후 진행되는 스트리밍 화면 하단을 후원사 로고가 보여지도록 구성</li>
+                            <li>대회 수상자의 개인정보(이름, 나이, 소속 학교) 제공</li>
                         </ul>
                     </ItemWrap>
                 </div>
@@ -59,6 +60,7 @@ const Sponser = () => {
 }
 
 const ItemWrap = styled.div`
+
     padding-bottom: 1rem;
 `
 const MainTextTitle = styled.h1`
