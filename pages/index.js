@@ -14,7 +14,7 @@ const MainBottom = css`
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin: 2.4rem 0 1rem 0;
+    margin: 1.6rem 0 1rem 0;
 `
 
 const Main = () => {
@@ -23,7 +23,7 @@ const Main = () => {
             <Head>
                 <title>Main | ICPC Sinchon</title>
             </Head>
-            <MainWrap>
+            <MainWrap className="main-wrap">
                 <ContentWrap className="content-wrap-main">
                     <TextTitle>ICPC Sinchon</TextTitle>
                     <TextSubTitle>신촌지역 대학교 프로그래밍 대회 동아리 연합</TextSubTitle>
@@ -34,11 +34,14 @@ const Main = () => {
                 <ContentWrap css={MainBottom} className="content-wrap-main">
                     <ContentItem className="ContentItem">
                         <ContentTitle>소개</ContentTitle>
-                        <ContentText>
-                            신촌지역 대학교 프로그래밍 대회 동아리 연합입니다.
+                        <ContentText style={{ fontFamily: 'Noto Sans KR' }}>
+                            안녕하세요 신촌지역 대학교 프로그래밍 대회 동아리 연합입니다.
                             서강대학교, 숙명여자대학교, 연세대학교,
                             이화여자대학교, 홍익대학교 프로그래밍
-                            동아리가 연합하여 활동중입니다.
+                            동아리의 연합 동아리로, 각 학교 컴퓨터공학과 전공생
+                            180명으로 구성되어 있습니다.
+                            2020년 겨울부터 활동을 시작하여 
+                            매 시즌 정기적인 활동을 이어 나가고 있습니다.
                             </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem">
@@ -69,22 +72,34 @@ const Main = () => {
                     <ContentItem className="ContentItem ContentItem-PC">
                         <ContentTitle>활동</ContentTitle>
                         <ContentText>
-                            매 시즌 프로그래밍 대회를 개최하며 알고리즘 캠프를 통해
+                            매 시즌 프로그래밍 대회 <span css={SinchonColor}>SUAPC</span>를 개최하여
+                            팀원과의 협업을 통해 <span style={{ fontFamily: 'Noto Sans KR' }}>ICPC</span>를 준비할 수 있는 환경을 제공합니다.
+                            <br />
+                            강의 형식의 스터디인 <span css={SinchonColor}> Algorithm Camp</span>도 진행하여
                             연합원들에게 알고리즘 공부의 기회를 제공합니다.
-                            </ContentText>
+                            <br />
+                            캠프 이후에는 <span css={SinchonColor}>Camp Contest</span>를 통해
+                            다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는 모의고사를 치릅니다.
+                        </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
                         <ContentTitle>SUAPC</ContentTitle>
                         <ContentText>
-                            매 시즌 프로그래밍 대회를 개최하며 알고리즘 캠프를 통해
-                            연합원들에게 알고리즘 공부의 기회를 제공합니다.
+                            매 시즌 프로그래밍 대회를 개최하여
+                            팀원과의 협업을 통해 <span style={{ fontFamily: 'Noto Sans KR' }}>ICPC</span>를
+                             준비할 수 있는 환경을 제공합니다.
+                            <br />
+                            신촌 5개 학교 학부생이라면 누구나 참여 가능합니다.
                             </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
                         <ContentTitle>Algorithm Camp</ContentTitle>
                         <ContentText>
-                            매 시즌 프로그래밍 대회를 개최하며 알고리즘 캠프를 통해
+                            강의 형식의 스터디인 <span css={SinchonColor}> Algorithm Camp</span>를 진행하여
                             연합원들에게 알고리즘 공부의 기회를 제공합니다.
+                            <br />
+                            캠프 이후에는 <span css={SinchonColor}>Camp Contest</span>를 통해
+                            다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는 모의고사를 치릅니다.
                             </ContentText>
                     </ContentItem>
                 </ContentWrap>
@@ -114,7 +129,7 @@ const TextTitle = styled.div`
 
 const TextSubTitle = styled.div`
     font-size: 1.02rem;
-    font-weight: 700;
+    font-weight: 500;
 `
 
 const MainImageWrap = styled.div`
@@ -135,13 +150,16 @@ const ContentItem = styled.div`
 const ContentTitle = styled.h3`
     ${NotoSansBold}
     ${SinchonColor}
+    font-size: 1.2rem;
 
     margin: 1em 0 0.4em 0;
 `
 
 const ContentText = styled.p`
-    font-weight: 500;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1.44;
 `
 
 const SchoolWrap = styled.p`
@@ -151,7 +169,7 @@ const SchoolWrap = styled.p`
     @media(min-width: 1505px){
         justify-content: space-evenly;
     }
-    
+
     @media(max-width:1135px){
         justify-content: space-evenly;
     }
