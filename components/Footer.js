@@ -8,6 +8,7 @@ const Footer_ = styled.footer`
     flex-direction: column;
     justify-content: space-between;
 
+    margin-top: auto;
     padding: 2.4rem 3.2rem 3rem 3.2rem;
 
     color: white;
