@@ -13,7 +13,7 @@ const Header = () => {
             <div style={{ flexGrow: "1" }} />
             <Link href="/suapc"><HeaderElem style={{ color: '#009d3e' }}>SUAPC 2021</HeaderElem></Link>
             <Link href="/halloffame"><HeaderElem>명예의 전당</HeaderElem></Link>
-            <HeaderElem>문의 및 협업 제안</HeaderElem>
+            <Link href="/contact"><HeaderElem>문의 및 협업 제안</HeaderElem></Link>
             <NavBarWrap>
                 <LogoImg src="res/header/navbar.svg" />
             </NavBarWrap>
