@@ -1,14 +1,20 @@
 html,
 body {
-	height:100%;
+	height: 100%;
 	padding: 0;
 	margin: 0;
 
 	line-height: 1.6;
-	
+
 	font-family: 'KeepCalmMed', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 18px;
+}
+
+#__next {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 }
 
 * {
@@ -49,13 +55,13 @@ table {
 	overflow-x: auto;
 	white-space: nowrap;
 }
-tr:nth-child(even){
+tr:nth-child(even) {
 	background-color: rgba(0, 0, 0, 0.02);
 }
 th {
 	color: $sinchonColor;
 	font-weight: 500;
-	
+
 	padding: $padd;
 	padding: 0.5rem 0.96667rem !important;
 
