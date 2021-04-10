@@ -30,10 +30,13 @@ a {
 
 	cursor: pointer;
 }
+li{
+    font-family: 'Noto Sans KR';
 
-li::marker{
-	font-size: .8rem;
-	color: $sinchonColor;
+	&::marker{
+		font-size: .8rem;
+		color: $sinchonColor;
+	}
 }
 
 a:hover {
