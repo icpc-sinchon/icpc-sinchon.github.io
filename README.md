@@ -1,4 +1,4 @@
-![Logo of the project](./public/favicon.png)
+<!-- ![Logo of the project](./public/favicon.png) -->
 
 # New Website For ICPC Sinchon
 > Additional information or tag line
