@@ -12,6 +12,8 @@ const WinnerTableWrap = styled.div`
 const WinnerTableTitle = styled.div`
     width: 5rem;
     padding: calc(0.725rem - 1px) 0;
+    
+    font-family: 'Noto Sans KR';
     font-size: 0.9rem;
     font-weight: 600;
 `
