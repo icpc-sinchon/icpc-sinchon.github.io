@@ -24,14 +24,20 @@ const Contact = () => {
                 <ItemWrap>
                         <MainTextTitle>ICPC Sinchon 연합 활동에 함께하세요</MainTextTitle>
                         <TextSubTitle>
-                            {/* <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>과 함께할 후원사를 모집하고 있습니다
-                    <br /> */}
-                    지금까지의 모든 연합 활동은 후원사의 후원을 통해 성공적으로 개최될 수 있었습니다
-                    <br />
-                    참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면, <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
-                    참가자들을 상대로 기업에 대한 홍보를 진행합니다
-                    <br />
-                    매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
+                            서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교 각 학교 알고리즘 학회 소속이라면 
+                            <span css={[SinchonColor, KeepCalmFont]}> ICPC Sinchon</span> 활동에 함께하실 수 있습니다.
+                            <br />
+                            가입 관련 문의는 각 학교 학회의 학회장에게 연락해주세요.
+                            <br />
+                            서강대학교 - Sogang ICPC Team
+                            <br />
+                            숙명여자대학교 - Algos
+                            <br />
+                            연세대학교 - Morgorithm
+                            <br />
+                            이화여자대학교 - EDOC
+                            <br />
+                            홍익대학교 - HI-ARC
                         </TextSubTitle>
                     </ItemWrap>
                 </div>
