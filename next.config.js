@@ -8,7 +8,8 @@ module.exports = {
         return {
             '/': { page: '/' },
             '/suapc': { page: '/suapc' },
-            '/halloffame': { page: '/halloffame' }
+            '/halloffame': { page: '/halloffame' },
+            '/contact': { page: '/contact' }
         };
     },
     assetPrefix: !debug ? '' : '',
