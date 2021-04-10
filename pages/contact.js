@@ -2,6 +2,15 @@ import Layout from "../components/Layout"
 import styled, { css } from "styled-components"
 import Head from "next/head"
 
+
+const SinchonColor = css`
+    color: #009D3E;
+`
+
+const KeepCalmFont = css`
+    font-family: 'KeepCalmMed';
+`
+
 const Contact = () => {
 
     return (
@@ -11,20 +20,34 @@ const Contact = () => {
             </Head>
             <div className="main-wrap">
                 <div className="content-wrap-main">
-                    {/* <TextTitle>연합에 가입하려면 각 학교 학회의 학회장에게 연락해주세요</TextTitle> */}
-                    <TextTitle>후원 및 협업</TextTitle>
-                    <TextSubTitle>ICPC Sinchon과 함께 성장하실 기업을 모집하고 있습니다
+                    
+                <ItemWrap>
+                        <MainTextTitle>ICPC Sinchon 연합 활동에 함께하세요</MainTextTitle>
+                        <TextSubTitle>
+                            {/* <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>과 함께할 후원사를 모집하고 있습니다
+                    <br /> */}
+                    지금까지의 모든 연합 활동은 후원사의 후원을 통해 성공적으로 개최될 수 있었습니다
                     <br />
-                    매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 연합 활동을 진행하는 우리 동아리와 함께하세요
-                    </TextSubTitle>
+                    참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면, <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
+                    참가자들을 상대로 기업에 대한 홍보를 진행합니다
+                    <br />
+                    매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
+                        </TextSubTitle>
+                    </ItemWrap>
                 </div>
             </div>
         </Layout>
     )
 }
 
-const SinchonColor = css`
-    color: #009D3E;
+const ItemWrap = styled.div`
+    padding-bottom: 1rem;
+`
+const MainTextTitle = styled.h1`
+    ${SinchonColor}    
+
+    font-size: 1.8rem;
+    font-weight: 700;
 `
 
 const TextTitle = styled.div`
@@ -35,8 +58,12 @@ const TextTitle = styled.div`
 `
 
 const TextSubTitle = styled.div`
+    font-family: 'Noto Sans KR';
     font-size: 1.02rem;
     font-weight: 500;
+`
+
+const TopicTitle = styled.h3`   
 `
 
 export default Contact
