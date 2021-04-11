@@ -26,9 +26,9 @@ const Contact = () => {
                         <TextSubTitle>
                             서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교 각 학교 알고리즘 학회 소속이라면 
                             <span css={[SinchonColor, KeepCalmFont]}> ICPC Sinchon</span> 활동에 함께하실 수 있습니다.
-                            <br />
+                            <br /><br />
                             가입 관련 문의는 각 학교 학회의 학회장에게 연락해주세요.
-                            <br />
+                            {/* <br />
                             서강대학교 - Sogang ICPC Team
                             <br />
                             숙명여자대학교 - Algos
@@ -37,7 +37,7 @@ const Contact = () => {
                             <br />
                             이화여자대학교 - EDOC
                             <br />
-                            홍익대학교 - HI-ARC
+                            홍익대학교 - HI-ARC */}
                         </TextSubTitle>
                     </ItemWrap>
                 </div>
@@ -54,6 +54,10 @@ const MainTextTitle = styled.h1`
 
     font-size: 1.8rem;
     font-weight: 700;
+
+    @media(max-width: 470px){
+        font-size: 1.6rem;
+    }
 `
 
 const TextTitle = styled.div`
@@ -61,6 +65,10 @@ const TextTitle = styled.div`
 
     font-size: 1.4rem;
     font-weight: 700;
+
+    @media(max-width: 470px){
+        font-size: 1.2rem;
+    }
 `
 
 const TextSubTitle = styled.div`

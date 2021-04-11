@@ -28,7 +28,7 @@ const Sponser = () => {
                     <br />
                     참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면, <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
                     참가자들을 상대로 기업에 대한 홍보를 진행합니다
-                    <br />
+                    <br /><br />
                     매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
                         </TextSubTitle>
                     </ItemWrap>
@@ -68,6 +68,10 @@ const MainTextTitle = styled.h1`
 
     font-size: 1.8rem;
     font-weight: 700;
+
+    @media(max-width: 470px){
+        font-size: 1.6rem;
+    }
 `
 
 const TextTitle = styled.div`
@@ -75,6 +79,10 @@ const TextTitle = styled.div`
 
     font-size: 1.4rem;
     font-weight: 700;
+
+    @media(max-width: 470px){
+        font-size: 1.2rem;
+    }
 `
 
 const TextSubTitle = styled.div`
