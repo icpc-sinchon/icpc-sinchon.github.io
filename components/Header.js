@@ -21,11 +21,11 @@ const Header = () => {
         cursor: pointer;
 
         circle{
-            fill: ${isNavClicked ? "#009D3E" : ""};
+            fill: ${isNavClicked ? "white" : ""};
         }
 
         path{
-            fill: ${isNavClicked ? "white" : ""};
+            fill: ${isNavClicked ? "#009D3E" : ""};
         }
 
         @media(max-width: 700px){
