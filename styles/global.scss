@@ -21,6 +21,12 @@ body {
 	box-sizing: border-box;
 }
 
+.show-if-mobile {
+	display: none;
+	@media (max-width: 633px) {
+		display: block;
+	}
+}
 $sinchonColor: #009d3e;
 
 a {
@@ -30,17 +36,18 @@ a {
 
 	cursor: pointer;
 }
-li{
-    font-family: 'Noto Sans KR';
-
-	&::marker{
-		font-size: .8rem;
-		color: $sinchonColor;
-	}
-}
 
 a:hover {
 	text-decoration: underline;
+}
+
+li {
+	font-family: 'Noto Sans KR';
+
+	&::marker {
+		font-size: 0.8rem;
+		color: $sinchonColor;
+	}
 }
 
 img {
