@@ -11,6 +11,13 @@ body {
 	font-size: 18px;
 }
 
+.email {
+	&::after {
+		content: 'icpc.sinchon@gmail.com';
+		text-decoration: underline;
+	}
+}
+
 #__next {
 	display: flex;
 	flex-direction: column;
@@ -23,10 +30,12 @@ body {
 
 .show-if-mobile {
 	display: none;
+
 	@media (max-width: 633px) {
 		display: block;
 	}
 }
+
 $sinchonColor: #009d3e;
 
 a {
