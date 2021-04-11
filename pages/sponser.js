@@ -54,7 +54,7 @@ const Sponser = () => {
                         </ul>
                     </ItemWrap>
                     <ItemWrap>
-                        <TextTitle>다음과 같은 홍보를 진행해오고 있습니다</TextTitle>
+                        <TextTitle>다음과 같은 기업 맞춤 홍보를 진행해오고 있습니다</TextTitle>
                         <SponserWrap>
                             <SponserItem>
                                 <SponserImgWrap><img src="res/sponser-ci/kakao.png" /></SponserImgWrap>
@@ -67,6 +67,9 @@ const Sponser = () => {
                                         카카오 관련 대회 문제 출제<br />
                                         <UnderlinedLink href="https://www.acmicpc.net/problem/20942">G번 링크</UnderlinedLink> &nbsp;
                                         <UnderlinedLink href="https://www.acmicpc.net/problem/20943">H번 링크</UnderlinedLink>
+                                    </li>
+                                    <li>
+                                        Beyond Kakao를 1등상 명칭으로 사용
                                     </li>
                                 </ul>
                             </SponserItem>
