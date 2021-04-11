@@ -28,7 +28,7 @@ const Sponser = () => {
                     참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면, <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
                     참가자들을 상대로 기업에 대한 홍보를 진행합니다
                     <br />
-                    <br className="show-if-mobile"/>
+                            <br className="show-if-mobile" />
                     매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
                         </TextSubTitle>
                     </ItemWrap>
@@ -55,13 +55,56 @@ const Sponser = () => {
                     </ItemWrap>
                     <ItemWrap>
                         <TextTitle>다음과 같은 홍보를 진행해오고 있습니다</TextTitle>
-                        <SponserImg src="/res/sponser-ci/kakao.png"/>
-                        이러쿵 저러쿵 추천팀 홍보 세션 제공<br/>
-                        카카오 관련 문제 출제
-                        <SponserImg src="/res/sponser-ci/vuno.png"/>
-                        이러쿵 저러쿵 세션 제공
-                        <SponserImg src="res/sponser-ci/naver.png"/>
-                        이러쿵 저러쿵 관련 문제 출제 
+                        <SponserWrap>
+                            <SponserItem>
+                                <SponserImgWrap><img src="res/sponser-ci/kakao.png" /></SponserImgWrap>
+                                <ul>
+                                    <li>
+                                        카카오 추천팀 홍보 세션 제공<br />
+                                        <UnderlinedLink href="https://youtu.be/JS8UKTQ2iW0">링크</UnderlinedLink>
+                                    </li>
+                                    <li>
+                                        카카오 관련 대회 문제 출제<br />
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20942">G번 링크</UnderlinedLink> &nbsp;
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20943">H번 링크</UnderlinedLink>
+                                    </li>
+                                </ul>
+                            </SponserItem>
+                            <SponserItem>
+                                <SponserImgWrap><img src="res/sponser-ci/naver.png" /></SponserImgWrap>
+                                <ul>
+                                    <li>
+                                        네이버 관련 대회 문제 출제<br />
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20937">B번 링크</UnderlinedLink> &nbsp;
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20948">M번 링크</UnderlinedLink>
+                                    </li>
+                                </ul>
+                            </SponserItem>
+                            <SponserItem>
+                                <SponserImgWrap><img src="res/sponser-ci/pubg.png" /></SponserImgWrap>
+                                <ul>
+                                    <li>
+                                        펍지 / 크래프톤 기업 홍보 세션 제공<br />
+                                    </li>
+                                </ul>
+                            </SponserItem>
+                            <SponserItem>
+                                <SponserImgWrap><img src="res/sponser-ci/vuno.png" /></SponserImgWrap>
+                                <ul>
+                                    <li>
+                                        뷰노 기업 홍보 세션 제공<br />
+                                    </li>
+                                </ul>
+                            </SponserItem>
+                        </SponserWrap>
+                    </ItemWrap>
+                    <ItemWrap>
+                        <TextTitle>언제든지 ICPC Sinchon과 함께하세요</TextTitle>
+                        <TextSubTitle>
+                            후원에 함께해주시는 만큼 저희도 후원사 홍보에 최선을 다할 것을 약속드립니다.
+                            <br />
+                            관련 문의는 <span className="email" />으로 연락주시면 감사드리겠습니다.
+                        </TextSubTitle>
                     </ItemWrap>
                 </div>
             </div>
@@ -70,7 +113,6 @@ const Sponser = () => {
 }
 
 const ItemWrap = styled.div`
-
     padding-bottom: 1rem;
 `
 const MainTextTitle = styled.h1`
@@ -104,7 +146,35 @@ const TextSubTitle = styled.div`
 const TopicTitle = styled.h3`   
 `
 
-const SponserImg = styled.img`
-    height: 2.4rem;
+const SponserImgWrap = styled.div`
+    width: 12rem;
+
+    img{
+        height: 1.8rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+`
+
+const UnderlinedLink = styled.a`
+    text-decoration: underline;
+`
+
+const SponserWrap = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 1em;
+`
+
+const SponserItem = styled.div`
+    ${'' /* display: flex; */}
+
+    margin: 1rem 1rem 1rem 0;
+
+    ul{
+        margin-top: 0;
+    }
 `
 export default Sponser
