@@ -1,6 +1,15 @@
-const SVG = () => {
+const SVG = ({ isNavClicked }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.36 89.36">
+            <style jsx>{`    
+            circle{
+                fill: ${isNavClicked ? `white` : ""};
+            }
+
+            path{
+                fill: ${isNavClicked ? `#009D3E` : ""};
+            }`}
+            </style>
             <g id="레이어_2" data-name="레이어 2">
                 <g id="레이어_1-2" data-name="레이어 1">
                     <circle fill="#009D3E" cx="44.68" cy="44.68" r="44.68" />

@@ -20,14 +20,6 @@ const Header = () => {
 
         cursor: pointer;
 
-        circle{
-            ${isNavClicked ? css`fill: white;` : ""};
-        }
-
-        path{
-            ${isNavClicked ? css`fill: #009D3E;` : ""};
-        }
-
         @media(max-width: 700px){
             width:32px;
         }
@@ -36,10 +28,6 @@ const Header = () => {
     const NavBarWrap = styled.div`
         display: none;
         z-index: 10002;
-
-        path{
-            fill: ${isNavClicked ? "white" : ""};
-        }
 
         @media(max-width: 500px){
             display: block;
@@ -66,7 +54,7 @@ const Header = () => {
                 </NavBarWindow> : ""}
                 <Link href="/">
                     <LogoImgWrap>
-                        <LogoSVG />
+                        <LogoSVG isNavClicked={isNavClicked}/>
                     </LogoImgWrap>
                 </Link>
                 <div style={{ flexGrow: "1" }} />
@@ -75,7 +63,7 @@ const Header = () => {
                 <Link href="/sponser"><HeaderElem>후원 및 협업</HeaderElem></Link>
                 <Link href="/contact"><HeaderElem>문의하기</HeaderElem></Link>
                 <NavBarWrap onClick={onNavClick}>
-                    <NavSVG />
+                    <NavSVG isNavClicked={isNavClicked}/>
                 </NavBarWrap>
             </HeaderWrap>
         </>
