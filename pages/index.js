@@ -40,7 +40,7 @@ const Main = () => {
                             이화여자대학교, 홍익대학교 프로그래밍
                             동아리의 연합 동아리로, 각 학교 컴퓨터공학과 전공생
                             180명으로 구성되어 있습니다.
-                            2020년 겨울부터 활동을 시작하여 
+                            2020년 겨울부터 활동을 시작하여
                             매 시즌 정기적인 활동을 이어 나가고 있습니다.
                             </ContentText>
                     </ContentItem>
@@ -83,7 +83,7 @@ const Main = () => {
                         </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
-                        <ContentTitle>SUAPC</ContentTitle>
+                        <ContentTitle style={{ fontFamily: `KeepCalmMed`, fontWeight: `unset` }}>SUAPC</ContentTitle>
                         <ContentText>
                             매 시즌 프로그래밍 대회를 개최하여
                             팀원과의 협업을 통해 <span style={{ fontFamily: 'Noto Sans KR' }}>ICPC</span>를
@@ -93,7 +93,7 @@ const Main = () => {
                             </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
-                        <ContentTitle>Algorithm Camp</ContentTitle>
+                        <ContentTitle style={{ fontFamily: `KeepCalmMed`, fontWeight: `unset` }}>Algorithm Camp</ContentTitle>
                         <ContentText>
                             강의 형식의 스터디인 <span css={SinchonColor}> Algorithm Camp</span>를 진행하여
                             연합원들에게 알고리즘 공부의 기회를 제공합니다.
