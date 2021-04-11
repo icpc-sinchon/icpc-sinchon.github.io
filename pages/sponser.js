@@ -61,12 +61,12 @@ const Sponser = () => {
                                 <ul>
                                     <li>
                                         카카오 추천팀 홍보 세션 제공<br />
-                                        <UnderlinedLink href="https://youtu.be/JS8UKTQ2iW0">링크</UnderlinedLink>
+                                        <UnderlinedLink href="https://youtu.be/JS8UKTQ2iW0" target="_blank">링크</UnderlinedLink>
                                     </li>
                                     <li>
                                         카카오 관련 대회 문제 출제<br />
-                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20942">G번 링크</UnderlinedLink> &nbsp;
-                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20943">H번 링크</UnderlinedLink>
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20942" target="_blank">G번 링크</UnderlinedLink> &nbsp;
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20943" target="_blank">H번 링크</UnderlinedLink>
                                     </li>
                                     <li>
                                         Beyond Kakao를 1등상 명칭으로 사용
@@ -78,8 +78,8 @@ const Sponser = () => {
                                 <ul>
                                     <li>
                                         네이버 관련 대회 문제 출제<br />
-                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20937">B번 링크</UnderlinedLink> &nbsp;
-                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20948">M번 링크</UnderlinedLink>
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20937" target="_blank">B번 링크</UnderlinedLink> &nbsp;
+                                        <UnderlinedLink href="https://www.acmicpc.net/problem/20948" target="_blank">M번 링크</UnderlinedLink>
                                     </li>
                                 </ul>
                             </SponserItem>
