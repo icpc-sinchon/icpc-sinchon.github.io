@@ -23,10 +23,20 @@ const Title = styled.h1`
     line-height: 1.2;
     
     margin: 0;
+    @media(max-width: 470px){
+        font-size: 2.3rem;
+
+    }
+    @media(max-width: 400px){
+
+    }
 `
 
 const SubTitle = styled.p`
     margin: 0 0 3.2rem 0;
+    @media(max-width: 470px){
+        font-size: .9rem;
+    }
 `
 
 const TitleWrap = ({ title, isSuapc, year, season }) => {
