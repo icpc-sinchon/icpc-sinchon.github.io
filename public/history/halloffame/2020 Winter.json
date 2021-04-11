@@ -7,15 +7,18 @@
       "lecturers": [
         {
           "name": "이태한",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "sogangcse"
         },
         {
           "name": "이재열",
-          "school": "홍익대"
+          "school": "홍익대",
+          "handle":"malkoring"
         },
         {
           "name": "김성민",
-          "school": "홍익대"
+          "school": "홍익대",
+          "handle": "tolelom"
         }
       ],
       "contests": [
@@ -104,11 +107,13 @@
       "lecturers": [
         {
           "name": "임지환",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "raararaara"
         },
         {
           "name": "이기현",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "sbrus_1213"
         }
       ],
       "contests": [
@@ -185,11 +190,13 @@
       "lecturers": [
         {
           "name": "박수현",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "shiftpsh"
         },
         {
           "name": "이상원",
-          "school": "서강대"
+          "school": "서강대",
+          "handle": "gumgood"
         }
       ]
     }
