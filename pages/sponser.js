@@ -2,7 +2,6 @@ import Layout from "../components/Layout"
 import styled, { css } from "styled-components"
 import Head from "next/head"
 
-
 const SinchonColor = css`
     color: #009D3E;
 `
@@ -28,7 +27,8 @@ const Sponser = () => {
                     <br />
                     참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면, <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
                     참가자들을 상대로 기업에 대한 홍보를 진행합니다
-                    <br /><br />
+                    <br />
+                    <br className="show-if-mobile"/>
                     매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
                         </TextSubTitle>
                     </ItemWrap>
@@ -52,6 +52,16 @@ const Sponser = () => {
                             <li>대회 이후 진행되는 스트리밍 화면 하단을 후원사 로고가 보여지도록 구성</li>
                             <li>대회 수상자의 개인정보(이름, 나이, 소속 학교) 제공</li>
                         </ul>
+                    </ItemWrap>
+                    <ItemWrap>
+                        <TextTitle>다음과 같은 홍보를 진행해오고 있습니다</TextTitle>
+                        <SponserImg src="/res/sponser-ci/kakao.png"/>
+                        이러쿵 저러쿵 추천팀 홍보 세션 제공<br/>
+                        카카오 관련 문제 출제
+                        <SponserImg src="/res/sponser-ci/vuno.png"/>
+                        이러쿵 저러쿵 세션 제공
+                        <SponserImg src="res/sponser-ci/naver.png"/>
+                        이러쿵 저러쿵 관련 문제 출제 
                     </ItemWrap>
                 </div>
             </div>
@@ -94,4 +104,7 @@ const TextSubTitle = styled.div`
 const TopicTitle = styled.h3`   
 `
 
+const SponserImg = styled.img`
+    height: 2.4rem;
+`
 export default Sponser
