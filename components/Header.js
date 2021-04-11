@@ -15,17 +15,17 @@ const Header = () => {
     }
 
     const LogoImgWrap = styled.div`
-        width:36px;
+        width: 36px;
         z-index: 10002;
 
         cursor: pointer;
 
         circle{
-            ${isNavClicked ? "fill: white;" : ""}
+            fill: ${isNavClicked ? "white" : "#009D3E"};
         }
 
         path{
-            ${isNavClicked ? "fill: #009D3E;" : ""}
+            fill: ${isNavClicked ? "#009D3E" : "white"};
         }
 
         @media(max-width: 700px){
@@ -38,7 +38,7 @@ const Header = () => {
         z-index: 10002;
 
         path{
-            ${isNavClicked ? "fill: white;" : ""}
+            fill: ${isNavClicked ? "white" : "#009D3E"};
         }
 
         @media(max-width: 500px){
