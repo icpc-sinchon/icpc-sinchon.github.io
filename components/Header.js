@@ -21,11 +21,11 @@ const Header = () => {
         cursor: pointer;
 
         circle{
-            fill: ${isNavClicked ? "white" : "#009D3E"};
+            fill: ${isNavClicked ? "#009D3E" : ""};
         }
 
         path{
-            fill: ${isNavClicked ? "#009D3E" : "white"};
+            fill: ${isNavClicked ? "white" : ""};
         }
 
         @media(max-width: 700px){
@@ -38,7 +38,7 @@ const Header = () => {
         z-index: 10002;
 
         path{
-            fill: ${isNavClicked ? "white" : "#009D3E"};
+            fill: ${isNavClicked ? "white" : ""};
         }
 
         @media(max-width: 500px){
