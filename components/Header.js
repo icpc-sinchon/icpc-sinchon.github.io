@@ -19,7 +19,7 @@ const Header = () => {
 
         document.querySelector("sitemask").classList.toggle("hide")
     }
-
+    
     const LogoImgWrap = styled.div`
         width: 36px;
         z-index: 10002;
@@ -54,14 +54,14 @@ const Header = () => {
         <>
             <HeaderWrap>
                 {isNavClicked ? <NavBarWindow>
-                    <Link href="/suapc"><NavBarElem>SUAPC 2021</NavBarElem></Link>
-                    <Link href="/halloffame"><NavBarElem>명예의 전당</NavBarElem></Link>
-                    <Link href="/sponser"><NavBarElem>후원 및 협업</NavBarElem></Link>
-                    <Link href="/contact"><NavBarElem>문의하기</NavBarElem></Link>
+                    <Link href="/suapc"><NavBarElem onClick={onNavClick}>SUAPC 2021</NavBarElem></Link>
+                    <Link href="/halloffame"><NavBarElem onClick={onNavClick}>명예의 전당</NavBarElem></Link>
+                    <Link href="/sponser"><NavBarElem onClick={onNavClick}>후원 및 협업</NavBarElem></Link>
+                    <Link href="/contact"><NavBarElem onClick={onNavClick}>문의하기</NavBarElem></Link>
                 </NavBarWindow> : ""}
                 <Link href="/">
                     <LogoImgWrap>
-                        <LogoSVG isNavClicked={isNavClicked} />
+                        <LogoSVG />
                     </LogoImgWrap>
                 </Link>
                 <div style={{ flexGrow: "1" }} />
@@ -70,7 +70,7 @@ const Header = () => {
                 <Link href="/sponser"><HeaderElem>후원 및 협업</HeaderElem></Link>
                 <Link href="/contact"><HeaderElem>문의하기</HeaderElem></Link>
                 <NavBarWrap onClick={onNavClick}>
-                    <NavSVG isNavClicked={isNavClicked} />
+                    <NavSVG />
                 </NavBarWrap>
             </HeaderWrap>
         </>
