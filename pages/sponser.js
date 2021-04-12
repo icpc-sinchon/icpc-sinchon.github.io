@@ -2,6 +2,8 @@ import Layout from "../components/Layout"
 import styled, { css } from "styled-components"
 import Head from "next/head"
 
+
+
 const SinchonColor = css`
     color: #009D3E;
 `

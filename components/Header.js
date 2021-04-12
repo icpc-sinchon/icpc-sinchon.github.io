@@ -4,14 +4,18 @@ import { useEffect, useState } from 'react'
 import NavSVG from '../components/HeaderNavSVG'
 import LogoSVG from '../components/HeaderLogoSVG'
 
+import { setIsNavClicked } from '../reducers/isNavClicked'
+import { useDispatch, useSelector } from 'react-redux'
+
 const Header = () => {
-    const [isNavClicked, setIsNavClicked] = useState(false)
+    const dispatch = useDispatch();
+    const isNavClicked = useSelector(state => state.isNavClicked)
 
     const onNavClick = () => {
         if (isNavClicked)
-            setIsNavClicked(false)
+            dispatch(setIsNavClicked(false))
         else
-            setIsNavClicked(true)
+            dispatch(setIsNavClicked(true))
 
         document.querySelector("sitemask").classList.toggle("hide")
     }
@@ -36,18 +40,13 @@ const Header = () => {
         }
     `
 
-    useEffect(() => {
+    useEffect(()=>{
         document.querySelector("main").addEventListener("click", e => {
-            setIsNavClicked(false);
+            dispatch(setIsNavClicked(false))
         })
-
+        
         document.querySelector("footer").addEventListener("click", e => {
-            setIsNavClicked(false);
-        })
-
-        document.querySelector("sitemask").addEventListener("click", e => {
-            setIsNavClicked(false);
-            document.querySelector("sitemask").classList.toggle("hide")
+            dispatch(setIsNavClicked(false))
         })
     }, [])
 
@@ -62,7 +61,7 @@ const Header = () => {
                 </NavBarWindow> : ""}
                 <Link href="/">
                     <LogoImgWrap>
-                        <LogoSVG isNavClicked={isNavClicked}/>
+                        <LogoSVG isNavClicked={isNavClicked} />
                     </LogoImgWrap>
                 </Link>
                 <div style={{ flexGrow: "1" }} />
@@ -71,7 +70,7 @@ const Header = () => {
                 <Link href="/sponser"><HeaderElem>후원 및 협업</HeaderElem></Link>
                 <Link href="/contact"><HeaderElem>문의하기</HeaderElem></Link>
                 <NavBarWrap onClick={onNavClick}>
-                    <NavSVG isNavClicked={isNavClicked}/>
+                    <NavSVG isNavClicked={isNavClicked} />
                 </NavBarWrap>
             </HeaderWrap>
         </>

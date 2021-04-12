@@ -40,7 +40,8 @@ const configStore = ctx => {
     currentYear: data.year,
     currentSeason: data.season,
     currentSeasonIdx: seasonList.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON),
-    seasonList
+    seasonList,
+    isNavClicked: false
   }
   return createStore(reducer, initialState, enhancer);
 }
