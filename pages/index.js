@@ -29,7 +29,7 @@ const Main = () => {
                     <TextSubTitle>신촌지역 대학교 프로그래밍 대회 동아리 연합</TextSubTitle>
                 </ContentWrap>
                 <MainImageWrap>
-                    {/* <img src="res/hand.jpg"/> */}
+                    <img src="res/c-4.jpg"/>
                 </MainImageWrap>
                 <ContentWrap css={MainBottom} className="content-wrap-main">
                     <ContentItem className="ContentItem">
@@ -128,18 +128,26 @@ const TextTitle = styled.div`
 `
 
 const TextSubTitle = styled.div`
+    ${SinchonColor}
+    
     font-size: 1.02rem;
-    font-weight: 500;
+    font-weight: 700;
 `
 
 const MainImageWrap = styled.div`
     width: 100%;
-    height: 265px;
+    height: 340px;
 
     margin: 1.2rem 0 0 0;
 
-    border-top: 1px solid #707070;
-    border-bottom: 1px solid #707070;
+    ${'' /* border-top: 1px solid #707070; */}
+    ${'' /* border-bottom: 1px solid #707070; */}
+
+    overflow: hidden;
+
+    @media(max-width: 1000px){
+        height: 50vw;
+    }
 `
 
 const ContentItem = styled.div`
