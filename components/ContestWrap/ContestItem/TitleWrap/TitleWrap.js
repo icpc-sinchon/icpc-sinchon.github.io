@@ -35,7 +35,10 @@ const Title = styled.h1`
 const SubTitle = styled.p`
     margin: 0 0 3.2rem 0;
     @media(max-width: 470px){
-        font-size: .9rem;
+        font-size: 1rem;
+    }
+    @media(max-width: 320px){
+        font-size: 1rem;
     }
 `
 
@@ -44,7 +47,7 @@ const TitleWrap = ({ title, isSuapc, year, season }) => {
         <TitleWrap_>
             <Title>{title}</Title>
             {isSuapc ?
-                <SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 프로그래밍 동아리 연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
+                <SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 <br className="show-if-small" />프로그래밍 동아리 <br className="show-if-mobile" />연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
                 :
                 <SubTitle css={SinchonColor}>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
             }
