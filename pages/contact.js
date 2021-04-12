@@ -12,13 +12,12 @@ const KeepCalmFont = css`
 `
 
 const Contact = () => {
-
     return (
         <Layout>
             <Head>
                 <title>Contact | ICPC Sinchon</title>
             </Head>
-            <div className="main-wrap">
+            <div className="main-wrap" style={{paddingTop: '1.2rem'}}>
                 <div className="content-wrap-main">
                     
                 <ItemWrap>
