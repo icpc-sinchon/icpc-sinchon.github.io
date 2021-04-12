@@ -74,9 +74,19 @@ a:hover {
 	text-decoration: underline;
 }
 
+ul{
+	@media(max-width: 633px){
+		padding-left: 1rem;
+	}
+}
+
 li {
 	font-family: 'Noto Sans KR';
-
+	
+	@media(max-width: 633px){
+		font-size: .9rem;
+	}
+	
 	&::marker {
 		font-size: 0.8rem;
 		color: $sinchonColor;
