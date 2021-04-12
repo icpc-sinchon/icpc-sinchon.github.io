@@ -35,10 +35,20 @@ body {
 		display: block;
 	}
 }
+.hide-if-mobile{
+	@media (max-width: 633px) {
+		display: none;
+	}
+}
 .show-if-small{
 	display: none;
 
 	@media (max-width: 370px) {
+		display: block;
+	}
+}
+.hide-if-small{
+	@media (max-width: 633px) {
 		display: block;
 	}
 }
