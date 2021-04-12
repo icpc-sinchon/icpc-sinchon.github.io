@@ -35,7 +35,13 @@ body {
 		display: block;
 	}
 }
+.show-if-small{
+	display: none;
 
+	@media (max-width: 370px) {
+		display: block;
+	}
+}
 $sinchonColor: #009d3e;
 
 a {
