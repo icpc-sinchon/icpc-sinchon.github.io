@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
         <>
             <Header />
             <main className={styles.main}>{children}</main>
+            <sitemask className="hide" />
             <Footer />
         </>
     )
