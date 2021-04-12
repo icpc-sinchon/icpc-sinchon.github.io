@@ -33,7 +33,10 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.p`
+    ${SinchonColor}
+
     margin: 0 0 3rem 0;
+
     @media(max-width: 470px){
         font-size: 1rem;
     }
@@ -49,7 +52,7 @@ const TitleWrap = ({ title, isSuapc, year, season }) => {
             {isSuapc ?
                 <SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 <br className="show-if-small" />프로그래밍 동아리 <br className="show-if-mobile" />연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
                 :
-                <SubTitle css={SinchonColor}>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
+                <SubTitle>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
             }
         </TitleWrap_>
     )
