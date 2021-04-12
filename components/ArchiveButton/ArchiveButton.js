@@ -9,6 +9,11 @@ const CustomButton = styled.div`
     font-size: 0.8rem;
     font-weight: 700;
     color: #009D3E;
+
+	@media (max-width: 633px) {
+        border: none;
+        padding: 0.2rem 0;
+    }
 `
 
 const ATag = styled.a`
@@ -20,6 +25,10 @@ const ATag = styled.a`
 
     &:hover{
         text-decoration: none;
+    }
+
+	@media (max-width: 633px) {
+        margin-left: 0;
     }
 `
 
