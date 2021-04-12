@@ -16,7 +16,11 @@ const ImgWrap = styled.div`
      margin: 1rem 0 4rem 0;
 
      @media(max-width: 1000px){
-         height: 30vw;
+         height: 50vw;
+         img{
+             height: 50vw;
+             max-width: unset;
+         }
      }
 `
 
