@@ -12,6 +12,8 @@ const Header = () => {
             setIsNavClicked(false)
         else
             setIsNavClicked(true)
+
+        document.querySelector("sitemask").classList.toggle("hide")
     }
 
     const LogoImgWrap = styled.div`
@@ -38,8 +40,14 @@ const Header = () => {
         document.querySelector("main").addEventListener("click", e => {
             setIsNavClicked(false);
         })
+
         document.querySelector("footer").addEventListener("click", e => {
             setIsNavClicked(false);
+        })
+
+        document.querySelector("sitemask").addEventListener("click", e => {
+            setIsNavClicked(false);
+            document.querySelector("sitemask").classList.toggle("hide")
         })
     }, [])
 
