@@ -8,7 +8,7 @@ const ContestWrap_ = styled.div`
     height: auto;
     border: 3px solid ${sinchonColor};
 
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2rem auto;
     padding: 3.6rem 4.4rem 4.4rem 4.4rem;
 `
 
