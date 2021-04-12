@@ -1,4 +1,8 @@
-const SVG = ({ isNavClicked }) => {
+import { useSelector } from "react-redux";
+
+const SVG = () => {
+    const isNavClicked = useSelector(state => state.isNavClicked)
+    
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="27.5" height="15.278" viewBox="0 0 27.5 15.278">
             <style jsx>{`
