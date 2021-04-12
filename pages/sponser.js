@@ -156,7 +156,7 @@ const TextTitle = styled.div`
     font-weight: 700;
 
     @media(max-width: 470px){
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 `
 
