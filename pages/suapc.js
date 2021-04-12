@@ -89,6 +89,17 @@ const CustomButton = styled.div`
     }
 `
 
+const ArchiveWrap = css`
+    display: flex;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+
+	@media (max-width: 633px) {
+        
+    }
+`
+
 const Suapc = ({ seasonData_, seasonList_ }) => {
 
     useEffect(() => {
@@ -179,7 +190,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         year={currentYear}
                         season={currentSeason}
                     />
-                    <ItemWrap style={{ display: `flex`, padding: `0`, overflowX: `auto`, whiteSpace: `nowrap` }}>
+                    <ItemWrap className="hide-if-mobile" css={ArchiveWrap}>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
                         <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
@@ -261,6 +272,12 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                             </table>
                         </ItemWrap>
                     </div>
+                    <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
+                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
+                    </ItemWrap>
                 </ContestWrap>
             </>
         </Layout>
