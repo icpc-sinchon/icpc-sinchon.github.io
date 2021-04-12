@@ -23,6 +23,9 @@ const ItemContent = styled.p`
     font-weight: 500;
 
     margin: 0;
+	@media (max-width: 633px) {
+        font-size: 0.9rem;
+    }
 `
 
 const TextWrap = ({ title, content }) => {
