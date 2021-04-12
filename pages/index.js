@@ -84,12 +84,15 @@ const Main = () => {
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
                         <ContentTitle style={{ fontFamily: `KeepCalmMed`, fontWeight: `unset` }}>SUAPC</ContentTitle>
-                        <ContentText>
+                        <ContentText style={{ fontFamily: 'Noto Sans KR' }}>
                             매 시즌 프로그래밍 대회를 개최하여
-                            팀원과의 협업을 통해 <span style={{ fontFamily: 'Noto Sans KR' }}>ICPC</span>를
+                            팀원과의 협업을 통해 ICPC를
                              준비할 수 있는 환경을 제공합니다.
                             <br />
-                            신촌 5개 학교 학부생이라면 누구나 참여 가능합니다.
+                            문제 또한 ICPC 서울 리저널의 경향을 따르며, 제한시간 동안 얼마나 많은 문제를 정확하게 풀어내는지를 평가하여
+                            순위를 결정합니다.
+                            <br />
+                            신촌지역 5개 학교 학부생이라면 누구나 참여 가능합니다.
                             </ContentText>
                     </ContentItem>
                     <ContentItem className="ContentItem ContentItem-Tablet">
@@ -129,7 +132,7 @@ const TextTitle = styled.div`
 
 const TextSubTitle = styled.div`
     ${SinchonColor}
-    
+
     font-size: 1.02rem;
     font-weight: 700;
 `
