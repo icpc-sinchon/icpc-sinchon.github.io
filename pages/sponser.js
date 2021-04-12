@@ -9,6 +9,16 @@ const SinchonColor = css`
 const KeepCalmFont = css`
     font-family: 'KeepCalmMed';
 `
+const ImgWrap = styled.div`
+     height: 400px;
+     overflow: hidden;
+
+     margin: 1rem 0 4rem 0;
+
+     @media(max-width: 1000px){
+         height: 30vw;
+     }
+`
 
 const Sponser = () => {
 
@@ -17,11 +27,10 @@ const Sponser = () => {
             <Head>
                 <title>Sponser | ICPC Sinchon</title>
             </Head>
-            <div className="main-wrap">
+            <div className="main-wrap" style={{ paddingTop: '1.2rem' }}>
                 <div className="content-wrap-main">
-                    {/* <TextTitle>연합에 가입하려면 각 학교 학회의 학회장에게 연락해주세요</TextTitle> */}
                     <ItemWrap>
-                        <MainTextTitle>ICPC Sinchon과 함께할 후원사를 모집하고 있습니다</MainTextTitle>
+                        <MainTextTitle>ICPC Sinchon과 함께할 <br className="show-if-mobile" />후원사를 모집하고 있습니다</MainTextTitle>
                         <TextSubTitle>
                             지금까지의 모든 연합 활동은 후원사의 후원을 통해 성공적으로 개최될 수 있었습니다
                     <br />
@@ -29,9 +38,12 @@ const Sponser = () => {
                     참가자들을 상대로 기업에 대한 홍보를 진행합니다
                     <br />
                             <br className="show-if-mobile" />
-                    매 시즌 신촌지역 5개 대학의 컴퓨터공학과 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
+                    매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요                    <br />
                         </TextSubTitle>
                     </ItemWrap>
+                    <ImgWrap>
+                        <img src="/res/stickers-2.jpg" />
+                    </ImgWrap>
                     <ItemWrap style={{ marginTop: '2rem' }}>
                         <TextTitle>다음의 후원품들을 제공받고 있습니다</TextTitle>
                         <ul>
@@ -127,6 +139,10 @@ const MainTextTitle = styled.h1`
     @media(max-width: 470px){
         font-size: 1.6rem;
     }
+
+	@media (max-width: 400px) {
+        font-size: 1.4rem;
+    }
 `
 
 const TextTitle = styled.div`
@@ -142,7 +158,7 @@ const TextTitle = styled.div`
 
 const TextSubTitle = styled.div`
     font-family: 'Noto Sans KR';
-    font-size: 1.02rem;
+    font-size: .9rem;
     font-weight: 500;
 `
 
