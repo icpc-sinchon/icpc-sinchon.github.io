@@ -169,11 +169,12 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                 <TopicTitle>{study.topic}</TopicTitle>
                                 <div style={{ width: `100%` }}>
                                     {study.lecturers ? <ItemWrap className="lecturer-wrap">
-                                        <ItemTitle className="hof-item-title">강사진</ItemTitle>
+                                        <ItemTitle className="hof-item-title">멘토 및 강사진</ItemTitle>
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th>강사명</th>
+                                                    <th>분류</th>
+                                                    <th>이름</th>
                                                     <th style={{ width: `10rem` }}>BOJ</th>
                                                     <th style={{ width: `7rem` }}>소속</th>
                                                 </tr>
@@ -182,12 +183,23 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                 {Array.from(study.lecturers).map(lecturer => {
                                                     return (
                                                         <tr key={'lecturer-' + lecturer.name}>
+                                                            <td>강사</td>
                                                             <td>{lecturer.name}</td>
                                                             <td>{lecturer.handle}</td>
                                                             <td>{lecturer.school}</td>
                                                         </tr>
                                                     )
                                                 })}
+                                                {study.mentors ? Array.from(study.mentors).map(lecturer => {
+                                                    return (
+                                                        <tr key={'mentor-' + lecturer.name}>
+                                                            <td>멘토</td>
+                                                            <td>{lecturer.name}</td>
+                                                            <td>{lecturer.handle}</td>
+                                                            <td>{lecturer.school}</td>
+                                                        </tr>
+                                                    )
+                                                }) : ""}
                                             </tbody>
                                         </table>
                                     </ItemWrap> : ""}
