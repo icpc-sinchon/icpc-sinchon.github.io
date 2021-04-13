@@ -8,12 +8,59 @@
         {
           "name": "강효규",
           "school": "서강대",
-          "handle":"djs100201"
+          "handle": "djs100201"
         },
         {
           "name": "김기선",
           "school": "홍익대",
           "handle": "xkdlaldtjfnl"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "박재형",
+          "school": "서강대",
+          "handle": "pjh6792"
+        },
+        {
+          "name": "고민재",
+          "school": "홍익대",
+          "handle": "minjae705"
+        },
+        {
+          "name": "김성현",
+          "school": "서강대",
+          "handle": "dart"
+        },
+        {
+          "name": "박건",
+          "school": "서강대",
+          "handle": "jkroll87"
+        },
+        {
+          "name": "박장성",
+          "school": "홍익대",
+          "handle": "kimchist"
+        },
+        {
+          "name": "권찬",
+          "school": "홍익대",
+          "handle": "kckc0608"
+        },
+        {
+          "name": "박원",
+          "school": "UNIST",
+          "handle": "chunghan"
+        },
+        {
+          "name": "박선종",
+          "school": "연세대",
+          "handle": "standingbell"
+        },
+        {
+          "name": "이민희",
+          "school": "서강대",
+          "handle": "minigimbob"
         }
       ],
       "contests": [
@@ -91,19 +138,19 @@
               "prize": 1,
               "name": "강민서",
               "school": "연세대",
-              "handle":"namoo"
+              "handle": "namoo"
             },
             {
               "prize": 2,
               "name": "정영우",
               "school": "연세대",
-              "handle":"existrei01"
+              "handle": "existrei01"
             },
             {
               "prize": 3,
               "name": "오재석",
               "school": "서강대",
-              "handle":"whitehorse"
+              "handle": "whitehorse"
             }
           ]
         }
@@ -115,12 +162,29 @@
         {
           "name": "윤인섭",
           "school": "연세대",
-          "handle":"pinebananais"
+          "handle": "pinebananais"
         },
         {
           "name": "한동규",
           "school": "UNIST",
           "handle": "queued_q"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "조원빈",
+          "school": "서강대",
+          "handle": "wbcho0504"
+        },
+        {
+          "name": "이윤제",
+          "school": "서강대",
+          "handle": "yjyj1027"
+        },
+        {
+          "name": "윤이빈",
+          "school": "숙명여대",
+          "handle": "yibin99"
         }
       ],
       "contests": [
@@ -206,13 +270,13 @@
               "prize": 1,
               "name": "조원빈",
               "school": "서강대",
-              "handle":"wonbin0504"
+              "handle": "wonbin0504"
             },
             {
               "prize": 2,
               "name": "박재형",
               "school": "서강대",
-              "handle":"pjh6792"
+              "handle": "pjh6792"
             },
             {
               "prize": 3,
@@ -236,6 +300,13 @@
           "name": "이국렬",
           "school": "연세대",
           "handle": "lky7674"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "이상원",
+          "school": "서강대",
+          "handle": "gumgood"
         }
       ]
     }
