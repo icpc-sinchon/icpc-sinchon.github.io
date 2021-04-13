@@ -48,7 +48,7 @@ const Sponser = () => {
                         </TextSubTitle>
                     </ItemWrap>
                     <ImgWrap>
-                        <img src="/res/stickers-2.jpg" />
+                        <img src="https://api.suapc.kr/res/stickers-2.jpg" />
                     </ImgWrap>
                     <ItemWrap style={{ marginTop: '2rem' }}>
                         <TextTitle>다음의 후원품들을 제공받고 있습니다</TextTitle>
@@ -75,7 +75,7 @@ const Sponser = () => {
                         <TextTitle>다음과 같은 기업 맞춤 홍보를 진행해오고 있습니다</TextTitle>
                         <SponserWrap>
                             <SponserItem>
-                                <SponserImgWrap><img src="res/sponser-ci/kakao.png" /></SponserImgWrap>
+                                <SponserImgWrap><img src="https://api.suapc.kr/res/sponser-ci/kakao.png" /></SponserImgWrap>
                                 <ul>
                                     <li>
                                         카카오 추천팀 홍보 세션 제공<br />
@@ -92,7 +92,7 @@ const Sponser = () => {
                                 </ul>
                             </SponserItem>
                             <SponserItem>
-                                <SponserImgWrap><img src="res/sponser-ci/naver.png" /></SponserImgWrap>
+                                <SponserImgWrap><img src="https://api.suapc.kr/res/sponser-ci/naver.png" /></SponserImgWrap>
                                 <ul>
                                     <li>
                                         네이버 관련 대회 문제 출제<br />
@@ -102,7 +102,7 @@ const Sponser = () => {
                                 </ul>
                             </SponserItem>
                             <SponserItem>
-                                <SponserImgWrap><img src="res/sponser-ci/pubg.png" /></SponserImgWrap>
+                                <SponserImgWrap><img src="https://api.suapc.kr/res/sponser-ci/pubg.png" /></SponserImgWrap>
                                 <ul>
                                     <li>
                                         펍지 / 크래프톤 기업 홍보 세션 제공<br />
@@ -110,7 +110,7 @@ const Sponser = () => {
                                 </ul>
                             </SponserItem>
                             <SponserItem>
-                                <SponserImgWrap><img src="res/sponser-ci/vuno.png" /></SponserImgWrap>
+                                <SponserImgWrap><img src="https://api.suapc.kr/res/sponser-ci/vuno.png" /></SponserImgWrap>
                                 <ul>
                                     <li>
                                         뷰노 기업 홍보 세션 제공<br />

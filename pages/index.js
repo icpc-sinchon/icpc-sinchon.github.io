@@ -29,7 +29,7 @@ const Main = () => {
                     <TextSubTitle>신촌지역 대학교 프로그래밍 대회 동아리 연합</TextSubTitle>
                 </ContentWrap>
                 <MainImageWrap>
-                    <img src="res/c-4.jpg"/>
+                    <img src="https://api.suapc.kr/res/c-4.jpg"/>
                 </MainImageWrap>
                 <ContentWrap css={MainBottom} className="content-wrap-main">
                     <ContentItem className="ContentItem">
@@ -48,23 +48,23 @@ const Main = () => {
                         <ContentTitle>소속 학교</ContentTitle>
                         <SchoolWrap>
                             <SchoolItem>
-                                <img src="res/school-logo/sogang.png" />
+                                <img src="https://api.suapc.kr/res/school-logo/sogang.png" />
                                 <h4>Sogang<br />ICPC Team</h4>
                             </SchoolItem>
                             <SchoolItem>
-                                <img src="res/school-logo/sookmyung.png" />
+                                <img src="https://api.suapc.kr/res/school-logo/sookmyung.png" />
                                 <h4>Algos</h4>
                             </SchoolItem>
                             <SchoolItem>
-                                <img src="res/school-logo/yonsei.png" />
+                                <img src="https://api.suapc.kr/res/school-logo/yonsei.png" />
                                 <h4>Morgorithm</h4>
                             </SchoolItem>
                             <SchoolItem>
-                                <img src="res/school-logo/ewha.png" />
+                                <img src="https://api.suapc.kr/res/school-logo/ewha.png" />
                                 <h4>EDOC</h4>
                             </SchoolItem>
                             <SchoolItem>
-                                <img src="res/school-logo/hongik.png" />
+                                <img src="https://api.suapc.kr/res/school-logo/hongik.png" />
                                 <h4>HI-ARC</h4>
                             </SchoolItem>
                         </SchoolWrap>

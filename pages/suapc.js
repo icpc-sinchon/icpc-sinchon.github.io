@@ -207,18 +207,18 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     <ItemWrap>
                         <ItemTitle>참여 대학</ItemTitle>
                         <SchoolLogoWrap>
-                            <SchoolLogo src='/res/school-logo/sogang.png' />
-                            <SchoolLogo src='/res/school-logo/sookmyung.png' />
-                            <SchoolLogo src='/res/school-logo/yonsei.png' />
-                            <SchoolLogo src='/res/school-logo/ewha.png' />
-                            <SchoolLogo src='/res/school-logo/hongik.png' />
+                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/sogang.png' />
+                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/sookmyung.png' />
+                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/yonsei.png' />
+                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/ewha.png' />
+                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/hongik.png' />
                         </SchoolLogoWrap>
                     </ItemWrap>
                     <ItemWrap>
                         <ItemTitle>후원사</ItemTitle>
                         <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `start` }}>
                             {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
-                                return <SponserCI key={"sponser-"+data} src={`/res/sponser-ci/${data}.png`} />
+                                return <SponserCI key={"sponser-"+data} src={`https://api.suapc.kr/res/sponser-ci/${data}.png`} />
                             }) : ""}
                         </SchoolLogoWrap>
                     </ItemWrap>
