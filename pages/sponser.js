@@ -32,6 +32,11 @@ const Sponser = () => {
         <Layout>
             <Head>
                 <title>Sponser | ICPC Sinchon</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="ko_KR" />
+                <meta property="og:url" content="https://icpc-sinchon.github.io/sponser" />
+                <meta property="og:description" content="매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요." />
+                {/* <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" /> */}
             </Head>
             <div className="main-wrap" style={{ paddingTop: '1.2rem' }}>
                 <div className="content-wrap-main">

@@ -22,6 +22,11 @@ const Main = () => {
         <Layout>
             <Head>
                 <title>Main | ICPC Sinchon</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="ko_KR" />
+                <meta property="og:url" content="https://icpc-sinchon.github.io/" />
+                <meta property="og:description" content="신촌지역 대학교 프로그래밍 대회 동아리 연합입니다. 서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교 프로그래밍 동아리의 연합 동아리로, 매 시즌 정기적인 활동을 이어 나가고 있습니다." />
+                <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
             </Head>
             <MainWrap className="main-wrap">
                 <ContentWrap className="content-wrap-main">

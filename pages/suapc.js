@@ -21,7 +21,7 @@ import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
 
 
-const SuapcDesc = `SUAPC는 신촌지역 5개 대학(연세, 서강, 이화, 홍익, 숙명)의
+const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화 홍익)의
  학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 
  대회 문제는 서울 리저널의 문제 출제 경향을 따르며 제한시간 동안 
  얼마나 많은 문제를 정확하게 풀 수 있는지를 평가하여 순위를 결정합니다.`
@@ -174,6 +174,11 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
         <Layout>
             <Head>
                 <title>SUAPC 2021 | ICPC Sinchon</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="ko_KR" />
+                <meta property="og:url" content="https://icpc-sinchon.github.io/suapc" />
+                <meta property="og:description" content="SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의 학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 대회 문제는 서울 리저널의 문제 출제 경향을 따르며 제한시간 동안 얼마나 많은 문제를 정확하게 풀 수 있는지를 평가하여 순위를 결정합니다." />
+                <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
             </Head>
             <>
                 <SeasonNav
