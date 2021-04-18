@@ -64,6 +64,11 @@ const TopicWrap = styled.div`
     }
 `
 
+const TableWrap = styled.div`
+    overflow-x: auto;
+    white-space: nowrap;
+`
+
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
     const title = `HALL OF FAME`
@@ -175,92 +180,97 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                 <div style={{ width: `100%` }}>
                                     {study.lecturers ? <ItemWrap className="lecturer-wrap">
                                         <ItemTitle className="hof-item-title">멘토 및 강사진</ItemTitle>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th style={{ width: `7rem` }}>분류</th>
-                                                    <th>이름</th>
-                                                    <th style={{ width: `10rem` }}>BOJ</th>
-                                                    <th style={{ width: `7rem` }}>소속</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {Array.from(study.lecturers).map(lecturer => {
-                                                    return (
-                                                        <tr key={'lecturer-' + lecturer.name}>
-                                                            <td>강사</td>
-                                                            <td>{lecturer.name}</td>
-                                                            <td>{lecturer.handle}</td>
-                                                            <td>{lecturer.school}</td>
-                                                        </tr>
-                                                    )
-                                                })}
-                                                {study.mentors ? Array.from(study.mentors).map(lecturer => {
-                                                    return (
-                                                        <tr key={'mentor-' + lecturer.name}>
-                                                            <td>멘토</td>
-                                                            <td>{lecturer.name}</td>
-                                                            <td>{lecturer.handle}</td>
-                                                            <td>{lecturer.school}</td>
-                                                        </tr>
-                                                    )
-                                                }) : ""}
-                                            </tbody>
-                                        </table>
+                                        <TableWrap>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th style={{ width: `7rem` }}>분류</th>
+                                                        <th>이름</th>
+                                                        <th style={{ width: `10rem` }}>BOJ</th>
+                                                        <th style={{ width: `7rem` }}>소속</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {Array.from(study.lecturers).map(lecturer => {
+                                                        return (
+                                                            <tr key={'lecturer-' + lecturer.name}>
+                                                                <td>강사</td>
+                                                                <td>{lecturer.name}</td>
+                                                                <td>{lecturer.handle}</td>
+                                                                <td>{lecturer.school}</td>
+                                                            </tr>
+                                                        )
+                                                    })}
+                                                    {study.mentors ? Array.from(study.mentors).map(lecturer => {
+                                                        return (
+                                                            <tr key={'mentor-' + lecturer.name}>
+                                                                <td>멘토</td>
+                                                                <td>{lecturer.name}</td>
+                                                                <td>{lecturer.handle}</td>
+                                                                <td>{lecturer.school}</td>
+                                                            </tr>
+                                                        )
+                                                    }) : ""}
+                                                </tbody>
+                                            </table>
+                                        </TableWrap>
                                     </ItemWrap> : ""}
                                     {study.contests ? Array.from(study.contests).map(contest => {
                                         return (
                                             <>
                                                 {contest.awards ? <ItemWrap key={contest.contest_name + '-award'}>
                                                     <ItemTitle className="hof-item-title">{contest.contest_name} 수상자</ItemTitle>
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th style={{ width: `3rem` }}>순위</th>
-                                                                <th>수상자</th>
-                                                                <th style={{ width: `10rem` }}>BOJ</th>
-                                                                <th style={{ width: `7rem` }}>소속</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {Array.from(contest.awards).map((award, idx) => {
-                                                                return (
-                                                                    <tr>
-                                                                        <td>{idx + 1}<sup>{idx + 1 === 1 ? `st` : idx + 1 === 2 ? `nd` : `rd`}</sup></td>
-                                                                        <td>{award.name}</td>
-                                                                        <td>{award.handle}</td>
-                                                                        <td>{award.school}</td>
-                                                                    </tr>
-                                                                )
-                                                            })}
-                                                        </tbody>
-                                                    </table>
-
+                                                    <TableWrap>
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style={{ width: `3rem` }}>순위</th>
+                                                                    <th>수상자</th>
+                                                                    <th style={{ width: `10rem` }}>BOJ</th>
+                                                                    <th style={{ width: `7rem` }}>소속</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {Array.from(contest.awards).map((award, idx) => {
+                                                                    return (
+                                                                        <tr>
+                                                                            <td>{idx + 1}<sup>{idx + 1 === 1 ? `st` : idx + 1 === 2 ? `nd` : `rd`}</sup></td>
+                                                                            <td>{award.name}</td>
+                                                                            <td>{award.handle}</td>
+                                                                            <td>{award.school}</td>
+                                                                        </tr>
+                                                                    )
+                                                                })}
+                                                            </tbody>
+                                                        </table>
+                                                    </TableWrap>
                                                 </ItemWrap> : ""}
                                                 {contest.problem_list ? <ItemWrap key={contest.contest_name + '-past-problem'}>
                                                     <ItemTitle className="hof-item-title">{contest.contest_name} 기출 문항</ItemTitle>
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th style={{ width: `1rem` }}>#</th>
-                                                                <th>문제</th>
-                                                                <th>출제자</th>
-                                                                <th style={{ width: `5rem` }}>소속</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {Array.from(contest.problem_list).map((problem, idx) => {
-                                                                return (
-                                                                    <tr key={problem.problem_name}>
-                                                                        <td>{String.fromCharCode(idx + 65)}</td>
-                                                                        <td><a href={problem.link} style={{ textDecoration: 'underline' }}>{problem.problem_name}</a></td>
-                                                                        <td>{problem.organizer.name}</td>
-                                                                        <td>{problem.organizer.school}</td>
-                                                                    </tr>
-                                                                )
-                                                            })}
-                                                        </tbody>
-                                                    </table>
+                                                    <TableWrap>
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style={{ width: `1rem` }}>#</th>
+                                                                    <th>문제</th>
+                                                                    <th>출제자</th>
+                                                                    <th style={{ width: `5rem` }}>소속</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {Array.from(contest.problem_list).map((problem, idx) => {
+                                                                    return (
+                                                                        <tr key={problem.problem_name}>
+                                                                            <td>{String.fromCharCode(idx + 65)}</td>
+                                                                            <td><a href={problem.link} style={{ textDecoration: 'underline' }}>{problem.problem_name}</a></td>
+                                                                            <td>{problem.organizer.name}</td>
+                                                                            <td>{problem.organizer.school}</td>
+                                                                        </tr>
+                                                                    )
+                                                                })}
+                                                            </tbody>
+                                                        </table>
+                                                    </TableWrap>
                                                 </ItemWrap> : ""}
                                             </>
                                         )
