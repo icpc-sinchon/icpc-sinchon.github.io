@@ -56,6 +56,7 @@ const ItemWrap = styled.div`
 const MainTextTitle = styled.h1`
     ${SinchonColor}    
 
+    font-family: 'KeepCalmMed', 'Noto Sans KR';
     font-size: 1.8rem;
     font-weight: 700;
 

@@ -142,8 +142,10 @@ const ItemWrap = styled.div`
     padding-bottom: 1rem;
 `
 const MainTextTitle = styled.h1`
+
     ${SinchonColor}    
 
+    font-family: 'KeepCalmMed', 'Noto Sans KR';
     font-size: 1.8rem;
     font-weight: 700;
 
@@ -159,6 +161,7 @@ const MainTextTitle = styled.h1`
 const TextTitle = styled.div`
     ${SinchonColor}    
 
+    font-family: 'KeepCalmMed', 'Noto Sans KR';
     font-size: 1.4rem;
     font-weight: 700;
 
