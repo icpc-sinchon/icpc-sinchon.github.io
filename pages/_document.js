@@ -26,6 +26,13 @@ export default class MyDocument extends Document {
                     <meta name="theme-color" content="#009D3E" />
                     <link rel="icon" href="/favicon.png" />
                     {this.props.styleTags}
+                    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYGWWVMTQ5" />
+                    <script dangerouslySetInnerHTML={{
+                        __html: `window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date()); gtag('config', 'G-QYGWWVMTQ5');`
+                    }} />
                 </Head>
                 <body style={{ maxWidth: `2000px`, margin: `0 auto`, overflowX: `hidden` }}>
                     <Main />
