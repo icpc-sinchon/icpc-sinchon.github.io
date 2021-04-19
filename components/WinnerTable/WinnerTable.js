@@ -18,6 +18,11 @@ const WinnerTableTitle = styled.div`
     font-weight: 600;
 `
 
+const TableWrap = styled.div`
+    overflow-x: auto;
+    white-space: nowrap;
+`
+
 export default function WinnerTable({ data }) {
     return (
         <WinnerTableWrap className="test">
@@ -26,30 +31,32 @@ export default function WinnerTable({ data }) {
                     Div {data.div}
                 </WinnerTableTitle>
                 : ""}
-            <table>
-                <thead>
-                    <tr>
-                        <th css={{ width: "1rem" }}>순위</th>
-                        <th css={{ width: "4rem" }}>솔브 수</th>
-                        <th css={{ width: "15rem" }}>팀명</th>
-                        <th css={{ width: "8rem" }}>구성원</th>
-                        <th css={{ width: "6rem" }}>소속</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.winner.map(data => {
-                        return (
-                            <tr key={"winner-" + data["team"]}>
-                                <td>{data["prize"]}</td>
-                                <td>{data["solved"]}</td>
-                                <td>{data["team"]}</td>
-                                <td>{data["member"]}</td>
-                                <td>{data["school"]}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
+            <TableWrap>
+                <table>
+                    <thead>
+                        <tr>
+                            <th css={{ width: "1rem" }}>순위</th>
+                            <th css={{ width: "4rem" }}>솔브 수</th>
+                            <th css={{ width: "15rem" }}>팀명</th>
+                            <th css={{ width: "8rem" }}>구성원</th>
+                            <th css={{ width: "6rem" }}>소속</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.winner.map(data => {
+                            return (
+                                <tr key={"winner-" + data["team"]}>
+                                    <td>{data["prize"]}</td>
+                                    <td>{data["solved"]}</td>
+                                    <td>{data["team"]}</td>
+                                    <td>{data["member"]}</td>
+                                    <td>{data["school"]}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+            </TableWrap>
         </WinnerTableWrap>
     )
 }
