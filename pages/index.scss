@@ -1,9 +1,9 @@
-.main-wrap{
+.main-wrap {
 	padding: 2rem 0px 4.4rem 0;
 }
-.content-wrap-main{
-    height: 100%;
-    padding: 0 5.2rem;
+.content-wrap-main {
+	height: 100%;
+	padding: 0 5.2rem;
 }
 .ContentItem-PC {
 }
@@ -21,16 +21,16 @@
 		display: block;
 	}
 
-    .ContentItem{
-        width: 25rem;
-    }
+	.ContentItem {
+		width: 25rem;
+	}
 }
 
-@media(max-width:1135px){
-    .ContentItem{
-        width: 100%;
-        max-width: unset;
-    }
+@media (max-width: 1135px) {
+	.ContentItem {
+		width: 100%;
+		max-width: unset;
+	}
 }
 
 @media (max-width: 900px) {
