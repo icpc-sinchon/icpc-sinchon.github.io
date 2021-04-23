@@ -207,6 +207,22 @@ const SchoolItem = styled.div`
 
         line-height: 1.2;
     }
+
+    @media(max-width: 390px){
+        img {
+            height: 3.3rem;
+        }
+    }
+    @media(max-width: 370px){
+        img {
+            height: 3rem;
+        }
+    }
+    @media(max-width: 360px){
+        h4{
+            font-size:0.65rem;
+        }
+    }
 `
 
 export default Main
