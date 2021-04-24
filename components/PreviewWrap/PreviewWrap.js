@@ -12,11 +12,11 @@ const PreviewWrap = () => {
     return (
         <>
             <LeftPreview
-                className={"preview-container left-preview"}
+                className={"preview-container left-preview fade-in"}
                 css={!showLeftPreview ? VisibilityHide : ""}
             />
             <RightPreview
-                className={"preview-container right-preview"}
+                className={"preview-container right-preview fade-in"}
                 css={!showRightPreview ? VisibilityHide : ""}
             />
         </>
@@ -31,6 +31,7 @@ const Common = css`
     padding: 3rem 0;
 
     border: 3px solid #009D3E;
+
     @media(max-width: 2300px){
         width: calc((100% - 1043px - 260px - 57px - 57px) / 2);
     }

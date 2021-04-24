@@ -29,14 +29,14 @@ const Main = () => {
                 <meta property="og:image" content="https://api.suapc.kr/res/og_image.png" />
             </Head>
             <MainWrap className="main-wrap">
-                <ContentWrap className="content-wrap-main">
+                <ContentWrap className="content-wrap-main fade-in">
                     <TextTitle>ICPC Sinchon</TextTitle>
                     <TextSubTitle>신촌지역 대학교 프로그래밍 대회 동아리 연합</TextSubTitle>
                 </ContentWrap>
-                <MainImageWrap>
+                <MainImageWrap className="fade-in">
                     <img src="https://api.suapc.kr/res/c-4.jpg"/>
                 </MainImageWrap>
-                <ContentWrap css={MainBottom} className="content-wrap-main">
+                <ContentWrap css={MainBottom} className="content-wrap-main fade-in">
                     <ContentItem className="ContentItem">
                         <ContentTitle>소개</ContentTitle>
                         <ContentText style={{ fontFamily: 'Noto Sans KR' }}>
