@@ -40,7 +40,7 @@ const Sponser = () => {
             </Head>
             <div className="main-wrap" style={{ paddingTop: '1.2rem' }}>
                 <div className="content-wrap-main">
-                    <ItemWrap>
+                    <ItemWrap className="slide-up" style={{ animationDelay: `300ms` }}>
                         <MainTextTitle>ICPC Sinchon과 함께할 <br className="show-if-mobile" />후원사를 모집하고 있습니다</MainTextTitle>
                         <TextSubTitle>
                             지금까지의 모든 연합 활동은 후원사의 후원을 통해 성공적으로 개최될 수 있었습니다
@@ -53,9 +53,9 @@ const Sponser = () => {
                         </TextSubTitle>
                     </ItemWrap>
                     <ImgWrap>
-                        <img src="https://api.suapc.kr/res/stickers-2.jpg" />
+                        <img src="https://api.suapc.kr/res/stickers-3.jpg" className="slide-up" style={{ animationDelay: `500ms` }} />
                     </ImgWrap>
-                    <ItemWrap style={{ marginTop: '2rem' }}>
+                    <ItemWrap className="slide-up" style={{ marginTop: '2rem', animationDelay: `700ms` }}>
                         <TextTitle>다음의 후원품들을 제공받고 있습니다</TextTitle>
                         <ul>
                             <li>후원금</li>
@@ -64,7 +64,7 @@ const Sponser = () => {
                             <li>기업 이름을 상 이름으로 한 특별상 상품</li>
                         </ul>
                     </ItemWrap>
-                    <ItemWrap>
+                    <ItemWrap className="slide-up" style={{ animationDelay: `900ms` }}>
                         <TextTitle>다음과 같은 기업 홍보 방안을 제공합니다</TextTitle>
                         <ul>
                             <li>대회 포스터 내 후원사 로고 포함</li>
@@ -76,8 +76,8 @@ const Sponser = () => {
                             <li>대회 수상자의 개인정보(이름, 나이, 소속 학교) 제공</li>
                         </ul>
                     </ItemWrap>
-                    <ItemWrap>
-                        <TextTitle>다음과 같은 기업 맞춤 홍보를 진행해오고 있습니다</TextTitle>
+                    <ItemWrap  className="slide-up" style={{ animationDelay: `1100ms` }}>
+                        <TextTitle>다음과 같은 기업 맞춤 홍보를 진행하고 있습니다</TextTitle>
                         <SponserWrap>
                             <SponserItem>
                                 <SponserImgWrap><img src="https://api.suapc.kr/res/sponser-ci/kakao.png" /></SponserImgWrap>
@@ -124,7 +124,7 @@ const Sponser = () => {
                             </SponserItem>
                         </SponserWrap>
                     </ItemWrap>
-                    <ItemWrap>
+                    <ItemWrap className="slide-up" style={{ animationDelay: `1300ms` }}>
                         <TextTitle>언제든지 ICPC Sinchon과 함께하세요</TextTitle>
                         <TextSubTitle>
                             후원에 함께해주시는 만큼 저희도 후원사 홍보에 최선을 다할 것을 약속드립니다.
