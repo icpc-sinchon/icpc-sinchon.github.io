@@ -10,6 +10,10 @@ const ContestWrap_ = styled.div`
 
     margin: 0 auto 6rem auto;
     padding: 3.6rem 4.4rem 4.4rem 4.4rem;
+
+    @media(max-width: 500px){
+        margin: 0 auto 2rem auto;
+    }
 `
 
 const ContestWrap = ({ children }) => {
