@@ -204,7 +204,8 @@ const SponserWrap = styled.div`
 const SponserItem = styled.div`
     ${'' /* display: flex; */}
 
-    margin: 1rem 1rem 1rem 0;
+    ${'' /* margin: 1rem 1rem 1rem 0; */}
+    margin: 0.4rem 1rem 0.4rem 0;
 
     ul{
         margin-top: 0;
