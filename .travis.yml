@@ -8,6 +8,10 @@ before_install:
   - npm run export
   - touch out/.nojekyll
 
+branches:
+  only:
+    - main
+
 deploy:
     provider: pages
     skip_cleanup: true
