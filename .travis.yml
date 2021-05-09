@@ -9,7 +9,7 @@ before_install:
   - touch out/.nojekyll
 
 branches:
-  only:
+  only: 
     - main
 
 deploy:
