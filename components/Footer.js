@@ -38,7 +38,7 @@ const BottomWrap = styled.div`
 const OrganizerWrap = styled.div`
     font-size: 0.8rem;
 
-    word-break: keep-all;
+    word-break: break-all;
     span{
         &::after{
             padding: 0 6px;
