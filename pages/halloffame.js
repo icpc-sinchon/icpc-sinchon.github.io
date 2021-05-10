@@ -149,8 +149,9 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                 <title>Hall Of Fame | ICPC Sinchon</title>
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="ko_KR" />
-                <meta property="og:url" content="https://icpc-sinchon.github.io/halloffame" />
-                <meta property="og:description" content="ICPC Sinchon Algorithm Camp에 기여를 해주신 분들과 Camp Contest에서 우수한 성적을 거둔 사람들을 기립니다." />
+                <meta property="og:title" content="Hall Of Fame | ICPC Sinchon" />
+                <meta property="og:url" content="https://icpc-sinchon.io/halloffame" />
+                <meta property="og:description" content="ICPC Sinchon 명예의 전당" />
                 <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
             </Head>
             <>
