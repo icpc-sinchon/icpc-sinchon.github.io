@@ -29,5 +29,5 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
       - run: npm ci
-      - run: npm run dev & (npm run build && npm run export && touch out/.nojekyll
+      - run: bash run.sh -xe
              
