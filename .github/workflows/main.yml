@@ -25,11 +25,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
-
+        
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
-      - run: npm ci
-      - run: bash run.sh -xe
-      - run: git add -f out/
-      - run: git commit -m "Deploy next.js"
-      - run: git subtree push --prefix out origin gh-pages
+        
+      - name: Export Next.js
+        run: |
+          npm ci
+          bash run.sh -xe
+          
+      - name: Deploy with GitHub Pages v3
+        uses: peaceiris/actions-github-pages@v3.1.12
+        with:
+          publish_dir: out/
+          github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
+          
+          
