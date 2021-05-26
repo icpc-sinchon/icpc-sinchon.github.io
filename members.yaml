@@ -1,0 +1,123 @@
+title: Staff
+content:
+  - season: 2021 Winter
+    organizers:
+      - position: 회장
+        name: 김도은
+        school: 숙명여대
+        address1: doeun536@gmail.com
+        address2: whaeundo25
+        address3: whaeun25
+      - position: 임원진
+        name: 남수연
+        school: 숙명여대
+        address1: kaithape@gmail.com
+        address2: mori8
+        address3: ccoco
+      - position: 임원진
+        name: 김도현
+        school: 홍익대
+        address1: bizdori01@gmail.com
+        address2: blueint323
+        address3: swoon
+      - position: 임원진
+        name: 이동주
+        school: 서강대
+        address1: nant0313@gmail.com
+        address2: nant0313
+        address3: k512
+      - position: 임원진
+        name: 김경근
+        school: 홍익대
+        address1: rlarudrms28@gmail.com
+        address2: juneK3
+        address3: juneK3
+      - position: 임원진
+        name: 강효규
+        school: 서강대
+        address1: djs080307@gmail.com
+        address2: djs100201
+        address3: djs100201
+      - position: 임원진
+        name: 홍재령
+        school: 이화여대
+        address1: fos990805@gmail.com
+        address2: Jar199
+        address3: fos0805
+      - position: 임원진
+        name: 이국렬
+        school: 연세대
+        address1: 3822c@naver.com
+        address2: lky7674
+        address3: lky7674
+  - season: 2020 Summer
+    organizers:
+      - position: 임원진
+        name: 임지환
+        school: 서강대
+        address1: raararaara@gmail.com
+        address2: raararaara
+        address3: raararaara
+      - position: 임원진
+        name: 이재열
+        school: 홍익대
+        address1: icpcsinchon@gmail.com
+        address2: malkoG
+        address3: malkoring
+      - position: 임원진
+        name: 이국렬
+        school: 연세대
+        address1: 3822c@gmail.com
+        address2: lky7674
+        address3: lky7674
+      - position: 임원진
+        name: 고민재
+        school: 홍익대
+        address1: minjae705@gmail.com
+        address2: minjae705
+        address3: minjae705
+      - position: 임원진
+        name: 반보영
+        school: 홍익대
+        address1: rosel0314@naver.com
+        address2: 2kkeullim
+        address3: rosel0314
+      - position: 임원진
+        name: 김예은
+        school: 이화여대
+        address1: ye1111k@gmail.com
+        address2: ye1111k
+        address3: ye1111k
+      - position: 운영보조
+        name: 남수연
+        school: 숙명여대
+        address1: kaithape@gmail.com
+        address2: mori8
+        address3: ccoco
+      - position: 운영보조
+        name: 김경근
+        school: 홍익대
+        address1: rlarudrms28@gmail.com
+        address2: juneK3
+        address3: juneK3
+  - season: 2020 Winter
+    organizers:
+      - position: 임원진
+        name: 임지환
+        school: 서강대
+        address1: raararaara@gmail.com
+        address2: raararaara
+        address3: raararaara
+      - position: 임원진
+        name: 이재열
+        school: 홍익대
+        address1: icpcsinchon@gmail.com
+        address2: malkoG
+        address3: malkoring
+      - position: 임원진
+        name: 박수현
+        school: 서강대
+        address1: me@shiftpsh.com
+        address2: shiftpsh
+        address3: shiftpsh
+  

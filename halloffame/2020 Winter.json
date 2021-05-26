@@ -1,0 +1,204 @@
+{
+  "year": 2020,
+  "season": "Winter",
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "이태한",
+          "school": "서강대",
+          "handle": "sogangcse"
+        },
+        {
+          "name": "이재열",
+          "school": "홍익대",
+          "handle":"malkoring"
+        },
+        {
+          "name": "김성민",
+          "school": "홍익대",
+          "handle": "tolelom"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "중간고사",
+          "problem_picker": [
+            {
+              "name": "이태한",
+              "school": "서강대"
+            },
+            {
+              "name": "이재열",
+              "school": "홍익대"
+            },
+            {
+              "name": "김성민",
+              "school": "홍익대"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "강상원",
+              "school": "서강대",
+              "handle": "kevink1113"
+            },
+            {
+              "prize": 2,
+              "name": "주상민",
+              "school": "서강대",
+              "handle": "jsm3465"
+            },
+            {
+              "prize": 3,
+              "name": "윤상현",
+              "school": "서강대",
+              "handle": "tkdgus0782"
+            }
+          ]
+        },
+        {
+          "contest_name": "기말고사",
+          "problem_picker": [
+            {
+              "name": "이태한",
+              "school": "서강대"
+            },
+            {
+              "name": "이재열",
+              "school": "홍익대"
+            },
+            {
+              "name": "김성민",
+              "school": "홍익대"
+            },
+            {
+              "name": "정연두",
+              "school": "홍익대"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "강상원",
+              "school": "서강대",
+              "handle": "kevink1113"
+            },
+            {
+              "prize": 2,
+              "name": "주상민",
+              "school": "서강대",
+              "handle":"jsm3465"
+            },
+            {
+              "prize": 3,
+              "name": "임세홍",
+              "school": "서강대",
+              "handle": "sehjong1602"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "임지환",
+          "school": "서강대",
+          "handle": "raararaara"
+        },
+        {
+          "name": "이기현",
+          "school": "서강대",
+          "handle": "sbrus_1213"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "중간고사",
+          "problem_picker": [
+            {
+              "name": "임지환",
+              "school": "서강대"
+            },
+            {
+              "name": "이기현",
+              "school": "서강대"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "백성익",
+              "school": "홍익대",
+              "handle":"906bc"
+            },
+            {
+              "prize": 2,
+              "name": "정재현",
+              "school": "홍익대",
+              "handle": "dicohy27"
+            },
+            {
+              "prize": 3,
+              "name": "강승구",
+              "school": "서강대",
+              "handle": "v010309"
+            }
+          ]
+        },
+        {
+          "contest_name": "기말고사",
+          "problem_picker": [
+            {
+              "name": "임지환",
+              "school": "서강대"
+            },
+            {
+              "name": "이기현",
+              "school": "서강대"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "장주호",
+              "school": "서강대",
+              "handle": "jayjangjooho"
+            },
+            {
+              "prize": 2,
+              "name": "백성익",
+              "school": "홍익대",
+              "handle":"906bc"
+            },
+            {
+              "prize": 3,
+              "name": "정재현",
+              "school": "홍익대",
+              "handle":"dicohy27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "고급",
+      "lecturers": [
+        {
+          "name": "박수현",
+          "school": "서강대",
+          "handle": "shiftpsh"
+        },
+        {
+          "name": "이상원",
+          "school": "서강대",
+          "handle": "gumgood"
+        }
+      ]
+    }
+  ]
+}
