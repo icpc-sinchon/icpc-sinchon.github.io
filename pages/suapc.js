@@ -101,13 +101,14 @@ const ArchiveWrap = css`
 `
 
 const Suapc = ({ seasonData_, seasonList_ }) => {
-
     useEffect(() => {
-        const previewContainer = document.querySelectorAll(".preview-container")
-        const contestWrap = document.querySelector(".contest-wrap").getBoundingClientRect();
-        previewContainer.forEach(ele => {
-            ele.style.height = contestWrap.height + "px"
-        })
+        window.onload = () => {
+            const previewContainer = document.querySelectorAll(".preview-container")
+            const contestWrap = document.querySelector('.contest-wrap').getBoundingClientRect()
+            previewContainer.forEach(ele => {
+                ele.style.height = contestWrap.height + "px"
+            })
+        }
     }, [])
 
     const dispatch = useDispatch();
@@ -224,7 +225,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         <ItemTitle>후원사</ItemTitle>
                         <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `start` }}>
                             {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
-                                return <SponserCI key={"sponser-"+data} src={`https://api.suapc.kr/res/sponser-ci/${data}.png`} />
+                                return <SponserCI key={"sponser-" + data} src={`https://api.suapc.kr/res/sponser-ci/${data}.png`} />
                             }) : ""}
                         </SchoolLogoWrap>
                     </ItemWrap>
@@ -247,7 +248,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 <tbody>
                                     {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
                                         return (
-                                            <tr key={"checker-"+elem.name}>
+                                            <tr key={"checker-" + elem.name}>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>
@@ -268,7 +269,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                 <tbody>
                                     {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
                                         return (
-                                            <tr key={"maker-"+elem.name}>
+                                            <tr key={"maker-" + elem.name}>
                                                 <td>{elem.name}</td>
                                                 <td>{elem.school}</td>
                                             </tr>
