@@ -32,7 +32,7 @@ npm run dev
 
 ## 배포하기
 
-### 배포에 앞서서
+<!-- ### 배포에 앞서서
 
 저도 익숙하지 않아서 더 간단한 방법으로 배포하는 방법을 싣지 못했습니다. 양해 부탁드립니다.
 
@@ -68,12 +68,12 @@ cp .nojekyll out/
 
 github pages로 배포하기 위해서 jekyll 프로젝트가 아님을 명시해야합니다.
 제가 메인 디렉토리에 만들어 놓은 `.nojekyll` 파일을 `out `폴더에 복사해주시거나, 
-이름이 `.nojekyll`인 빈 파일을 `out` 폴더에 생성해주시면 됩니다.
+이름이 `.nojekyll`인 빈 파일을 `out` 폴더에 생성해주시면 됩니다. -->
 
-### gh-pages 브랜치로 pull request 
+### main 브랜치로 pull request 
 
-기여자분의 `fork`한 레파지토리에서, 혹은 `branch`에서 `gh-pages` 브랜치로 `pull request`를 보내주세요.
-
+기여자분의 `fork`한 레파지토리에서, 혹은 `branch`에서 `main` 브랜치로 `pull request`를 보내주세요.
+`merge`가 완료되면 `github actions`를 통해 배포됩니다.
 
 
 
