@@ -103,12 +103,12 @@ const ArchiveWrap = css`
 const Suapc = ({ seasonData_, seasonList_ }) => {
 
     useEffect(() => {
-        let previewContainer = document.querySelectorAll(".preview-container")
-        let contestWrapHeight = document.querySelector(".contest-wrap").offsetHeight
+        const previewContainer = document.querySelectorAll(".preview-container")
+        const contestWrap = document.querySelector(".contest-wrap").getBoundingClientRect();
         previewContainer.forEach(ele => {
-            ele.style.height = contestWrapHeight + "px"
+            ele.style.height = contestWrap.height + "px"
         })
-    })
+    }, [])
 
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
