@@ -62,17 +62,16 @@ const CIWrap2 = styled.div`
     align-items: center;
     justify-content: flex-end;
 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 `
 
 const CIWrap = styled.div`
-    width: 2rem;
-
+    width: 1.5rem;
     margin-left: 0.6rem;
 `
 
 const CopyRight = styled.div`
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     text-align: right;
 `
 
