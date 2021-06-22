@@ -19,12 +19,19 @@ import TextWrap from '../components/ContestWrap/ContestItem/TextWrap/TextWrap'
 import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
 import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
+import AdmissionButton from '../components/AdmissionButton/AdmissionButton'
+import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
 
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의
  학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 
  대회 문제는 서울 리저널의 문제 출제 경향을 따르며 제한시간 동안 
  얼마나 많은 문제를 정확하게 풀 수 있는지를 평가하여 순위를 결정합니다.`
+
+const ParticipantDesc = `서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교의 재학/휴학생인 경우
+누구나 참여가능합니다.\u{000d}\u{000a}
+(단, 졸업 1년 차와 대학원생은 참여 가능하되, 대회 중 스코어보드에는 보여지지 않습니다.)
+`
 
 const NotoSansBold = css`
     font-family: 'Noto Sans KR';
@@ -86,17 +93,6 @@ const CustomButton = styled.div`
 
     &:first-child{
         margin-left: 0;
-    }
-`
-
-const ArchiveWrap = css`
-    display: flex;
-    padding: 0;
-    overflow-x: auto;
-    white-space: nowrap;
-
-	@media (max-width: 633px) {
-        
     }
 `
 
@@ -192,17 +188,24 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         onArrowClick={onArrowClick}
                     />
                     <TitleWrap
-                        isSuapc={true}
+                        pageType={"suapc"}
                         title={`SUAPC ${currentYear} ${currentSeason}`}
                         year={currentYear}
                         season={currentSeason}
                     />
-                    <ItemWrap className="hide-if-mobile" css={ArchiveWrap}>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
-                    </ItemWrap>
+                    {currentSeasonData.awards ?
+                        <ArchiveWrap>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
+                        </ArchiveWrap>
+                        :
+                        <ArchiveWrap>
+                            <AdmissionButton isDeprecated={true}>대회 신청</AdmissionButton>
+                            <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>대회 문의</AdmissionButton>
+                        </ArchiveWrap>
+                    }
                     <TextWrap
                         title="대회 일자"
                         content={currentSeasonData.date}
@@ -210,6 +213,10 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     <TextWrap
                         title="대회 소개"
                         content={SuapcDesc}
+                    />
+                    <TextWrap
+                        title="참여 대상"
+                        content={ParticipantDesc}
                     />
                     <ItemWrap>
                         <ItemTitle>참여 대학</ItemTitle>
@@ -224,67 +231,71 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     <ItemWrap>
                         <ItemTitle>후원사</ItemTitle>
                         <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `start` }}>
-                            {currentSeasonData.sponser ? currentSeasonData.sponser.map(data => {
+                            {currentSeasonData.sponser?.map(data => {
                                 return <SponserCI key={"sponser-" + data} src={`https://api.suapc.kr/res/sponser-ci/${data}.png`} />
-                            }) : ""}
+                            })}
                         </SchoolLogoWrap>
                     </ItemWrap>
-                    {currentSeasonData.awards ?
+
+                    {currentSeasonData.awards ? <>
                         <ItemWrap>
                             <ItemTitle>수상 내역</ItemTitle>
                             <WinnerTableWrap data={currentSeasonData.awards} />
                         </ItemWrap>
+
+                        <div className="maker-checker-wrap">
+                            <ItemWrap className="maker-checker">
+                                <ItemTitle>출제진</ItemTitle>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style={{ width: `8rem` }}>이름</th>
+                                            <th>소속</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
+                                            return (
+                                                <tr key={"checker-" + elem.name}>
+                                                    <td>{elem.name}</td>
+                                                    <td>{elem.school}</td>
+                                                </tr>
+                                            )
+                                        }) : ""}
+                                    </tbody>
+                                </table>
+                            </ItemWrap>
+                            <ItemWrap className="maker-checker">
+                                <ItemTitle>검수진</ItemTitle>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style={{ width: `8rem` }}>이름</th>
+                                            <th>소속</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
+                                            return (
+                                                <tr key={"maker-" + elem.name}>
+                                                    <td>{elem.name}</td>
+                                                    <td>{elem.school}</td>
+                                                </tr>
+                                            )
+                                        }) : ""}
+                                    </tbody>
+                                </table>
+                            </ItemWrap>
+                        </div>
+                    </> : ""}
+                    {currentSeasonData.awards ?
+                        <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
+                        </ItemWrap>
                         : ""}
-                    <div className="maker-checker-wrap">
-                        <ItemWrap className="maker-checker">
-                            <ItemTitle>출제진</ItemTitle>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th style={{ width: `8rem` }}>이름</th>
-                                        <th>소속</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
-                                        return (
-                                            <tr key={"checker-" + elem.name}>
-                                                <td>{elem.name}</td>
-                                                <td>{elem.school}</td>
-                                            </tr>
-                                        )
-                                    }) : ""}
-                                </tbody>
-                            </table>
-                        </ItemWrap>
-                        <ItemWrap className="maker-checker">
-                            <ItemTitle>검수진</ItemTitle>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th style={{ width: `8rem` }}>이름</th>
-                                        <th>소속</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
-                                        return (
-                                            <tr key={"maker-" + elem.name}>
-                                                <td>{elem.name}</td>
-                                                <td>{elem.school}</td>
-                                            </tr>
-                                        )
-                                    }) : ""}
-                                </tbody>
-                            </table>
-                        </ItemWrap>
-                    </div>
-                    <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
-                        <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
-                    </ItemWrap>
                 </ContestWrap>
             </>
         </Layout>
@@ -292,7 +303,6 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 }
 
 Suapc.getInitialProps = async ({ store }) => {
-
     let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
     let data0 = await response0.json();
     let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/list.json`)
