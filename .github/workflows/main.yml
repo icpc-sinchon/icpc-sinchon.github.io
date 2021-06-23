@@ -35,10 +35,9 @@ jobs:
           bash run.sh -xe
           
       - name: Deploy with GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          build_dir: out/
-          jekyll: false
-          GITHUB_TOKEN: ${{ secrets.ICPC_SINCHON_API_KEY }}
+          publish_dir: out/
+          github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
           
           
