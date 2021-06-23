@@ -29,6 +29,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         
+      - name: Setup CI env
+        run: npm ci
+        
       - name: Export Next.js
         run: npm run dev & (npm run build && npm run export)
           
