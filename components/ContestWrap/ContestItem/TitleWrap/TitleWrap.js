@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 const SinchonColor = css`color: #009D3E;`
@@ -45,15 +47,24 @@ const SubTitle = styled.p`
     }
 `
 
-const TitleWrap = ({ title, isSuapc, year, season }) => {
+const TitleWrap = ({ title, pageType, year, season }) => {
+    const [subTitle, setSubTitle] = useState();
+
+    useEffect(() => {
+        if (!pageType) return
+
+        if (pageType === "suapc")
+            setSubTitle(<SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 <br className="show-if-small" />프로그래밍 동아리 <br className="show-if-mobile" />연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>)
+        else if (pageType === "camp-contest")
+            setSubTitle(<SubTitle css={NotoSansBold}>{year} {season === "Winter" ? "겨울" : "여름"} 신촌지역 대학교 프로그래밍 동아리 연합 알고리즘 캠프 콘테스트</SubTitle>)
+        else if (pageType === "halloffame")
+            setSubTitle(<SubTitle>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>)
+    }, [year, season])
+
     return (
         <TitleWrap_>
             <Title>{title}</Title>
-            {isSuapc ?
-                <SubTitle css={NotoSansBold}>{year} 신촌지역 대학교 <br className="show-if-small" />프로그래밍 동아리 <br className="show-if-mobile" />연합 {season === "Winter" ? "겨울" : "여름"} 대회</SubTitle>
-                :
-                <SubTitle>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>
-            }
+            {subTitle}
         </TitleWrap_>
     )
 }
