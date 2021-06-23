@@ -39,6 +39,6 @@ jobs:
         with:
           build_dir: out/
           jekyll: false
-          #github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.ICPC_SINCHON_API_KEY }}
           
           
