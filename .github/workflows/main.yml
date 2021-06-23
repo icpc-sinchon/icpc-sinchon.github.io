@@ -35,7 +35,7 @@ jobs:
           bash run.sh -xe
           
       - name: Deploy with GitHub Pages v3
-        uses: peaceiris/actions-github-pages@v3.1.12
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: out/
           github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
