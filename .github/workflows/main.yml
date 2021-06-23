@@ -30,10 +30,11 @@ jobs:
         uses: actions/setup-node@v2.1.5
         
       - name: Export Next.js
-        run: |
-          npm ci
-          bash run.sh -xe
+        run: npm run dev & (npm run build && npm run export)
           
+      - name: Touch .nojekyll
+        run: touch out/.nojekyll
+        
       - name: Deploy with GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
