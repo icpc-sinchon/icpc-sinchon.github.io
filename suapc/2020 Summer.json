@@ -1,0 +1,150 @@
+{
+  "year": 2020,
+  "season": "Summer",
+  "date": "2020년 8월 15일 오후 2시 ~ 오후 5시",
+  "awards": [
+    {
+      "div": 1,
+      "winner": [
+        {
+          "prize": 1,
+          "solved": 8,
+          "team": "햇빛이 선명하게 문제를 핥고 있었다",
+          "school": "연세대학교",
+          "member": "윤인섭, 황준호, 남현우"
+        },
+        {
+          "prize": 2,
+          "solved": 6,
+          "team": "talsogang",
+          "school": "서강대학교",
+          "member": "김주현, 이상원, 이태한"
+        },
+        {
+          "prize": 3,
+          "solved": 5,
+          "team": "BlackWeasel",
+          "school": "서강대학교",
+          "member": "임지환, 이기현, 이윤제"
+        },
+        {
+          "prize": 4,
+          "solved": 4,
+          "team": "개강시켜조",
+          "school": "연세대학교",
+          "member": "김형진, 함태완, 동용훈"
+        },
+        {
+          "prize": 5,
+          "solved": 3,
+          "team": "처음보는사람들끼리신청마감1시간전에만든팀",
+          "school": "서강대학교",
+          "member": "김성현, 전해성, 박재형"
+        }
+      ]
+    },
+    {
+      "div": 2,
+      "winner": [
+        {
+          "prize": 1,
+          "solved": 6,
+          "team": "Terra",
+          "school": "서강대학교",
+          "member": "이민희, 이동주, 조원빈"
+        },
+        {
+          "prize": 2,
+          "solved": 5,
+          "team": "한놈만노린다",
+          "school": "서강대학교",
+          "member": "최재영, 이수빈, 황성민"
+        },
+        {
+          "prize": 3,
+          "solved": 4,
+          "team": "corini",
+          "school": "연세대학교",
+          "member": "박시원, 이동렬, 전현성"
+        },
+        {
+          "prize": 4,
+          "solved": 4,
+          "team": "먹고살자고하는짓",
+          "school": "연세대학교",
+          "member": "김태윤, 정은서, 송상윤"
+        },
+        {
+          "prize": 5,
+          "solved": 4,
+          "team": "기시디한테 롤 진 팀",
+          "school": "홍익대학교",
+          "member": "노정윤, 김도현, 김연욱"
+        }
+      ]
+    }
+  ],
+  "examiner": [
+    {
+      "name": "이국렬",
+      "school": "연세대학교"
+    },
+    {
+      "name": "이재열",
+      "school": "홍익대학교"
+    },
+    {
+      "name": "정연두",
+      "school": "홍익대학교"
+    },
+    {
+      "name": "김규진",
+      "school": "서강대학교"
+    },
+    {
+      "name": "박수현",
+      "school": "서강대학교"
+    },
+    {
+      "name": "이준석",
+      "school": "서강대학교"
+    }
+  ],
+  "checker": [
+    {
+      "name": "최재민",
+      "school": "KAIST"
+    },
+    {
+      "name": "이종서",
+      "school": "KAIST"
+    },
+    {
+      "name": "홍은기",
+      "school": "삼성전자"
+    },
+    {
+      "name": "강인구",
+      "school": "고려대학교"
+    },
+    {
+      "name": "최윤영",
+      "school": "서울대학교(대학원)"
+    },
+    {
+      "name": "나정휘",
+      "school": "선린인터넷고등학교"
+    }
+  ],
+  "sponser": [
+    "naver",
+    "pubg",
+    "vuno",
+    "hanbit",
+    "jpub",
+    "youngjin",
+    "easys",
+    "insight",
+    "algospot"
+  ]
+}

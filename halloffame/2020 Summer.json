@@ -1,0 +1,300 @@
+{
+  "year": 2020,
+  "season": "Summer",
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "배철환",
+          "school": "서강대",
+          "handle":"bcc0830"
+        },
+        {
+          "name": "백성익",
+          "school": "홍익대",
+          "handle": "906bc"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "중간고사",
+          "problem_picker": [
+            {
+              "name": "이길원",
+              "school": "서강대"
+            },
+            {
+              "name": "전해성",
+              "school": "서강대"
+            },
+            {
+              "name": "남수연",
+              "school": "숙명여대"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김태윤",
+              "school": "연세대",
+              "handle": "ystaeyoon113"
+            },
+            {
+              "prize": 2,
+              "name": "김도현",
+              "school": "홍익대",
+              "handle": "swoon"
+            },
+            {
+              "prize": 3,
+              "name": "윤이빈",
+              "school": "숙명여대",
+              "handle": "yibin99"
+            }
+          ]
+        },
+        {
+          "contest_name": "기말고사",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "요요 시뮬레이션",
+              "link": "https://www.acmicpc.net/problem/19636",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "IF문 좀 대신 써줘",
+              "link": "https://www.acmicpc.net/problem/19637",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "센티와 마법의 뿅망치",
+              "link": "https://www.acmicpc.net/problem/19638",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "화장실의 규칙",
+              "link": "https://www.acmicpc.net/problem/19640",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "중첩 집합 모델",
+              "link": "https://www.acmicpc.net/problem/19641",
+              "organizer": {
+                "name": "이재열",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "TORIE",
+              "link": "https://www.acmicpc.net/problem/19642",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "좀비 떼가 전역 때보다 먼저 오다니",
+              "link": "https://www.acmicpc.net/problem/",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "좀비 떼가 기관총 진지에도 오다니",
+              "link": "https://www.acmicpc.net/problem/19644",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김태윤",
+              "school": "연세대",
+              "handle": "ystaeyoon113"
+            },
+            {
+              "prize": 2,
+              "name": "김도현",
+              "school": "홍익대",
+              "handle":"swoon"
+            },
+            {
+              "prize": 3,
+              "name": "김경민",
+              "school": "홍익대",
+              "handle": "kgmin604"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "윤인섭",
+          "school": "연세대",
+          "handle": "pinebananais"
+        },
+        {
+          "name": "이준석",
+          "school": "서강대",
+          "handle":"semteo04"
+        }
+      ],
+      "contests": [
+        {
+          "contest_name": "중간고사",
+          "problem_picker": [
+            {
+              "name": "이기현",
+              "school": "서강대"
+            },
+            {
+              "name": "최재민",
+              "school": "KAIST"
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "박재형",
+              "school": "서강대",
+              "handle": "pjh6792"
+            },
+            {
+              "prize": 2,
+              "name": "남유진",
+              "school": "연세대",
+              "handle": "youx"
+            },
+            {
+              "prize": 3,
+              "name": "박준성",
+              "school": "서강대",
+              "handle": "wnstjd13245"
+            }
+          ]
+        },
+        {
+          "contest_name": "기말고사",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "센티와 마법의 뿅망치",
+              "link": "https://www.acmicpc.net/problem/19638",
+              "organizer": {
+                "name": "백성익",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "배틀로얄",
+              "link": "https://www.acmicpc.net/problem/19639",
+              "organizer": {
+                "name": "이준석",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "햄최몇?",
+              "link": "https://www.acmicpc.net/problem/19645",
+              "organizer": {
+                "name": "임지환",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "Random Generator",
+              "link": "https://www.acmicpc.net/problem/19646",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "Unique Solution",
+              "link": "https://www.acmicpc.net/problem/19647",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "미하일 2마리",
+              "link": "https://www.acmicpc.net/problem/19648",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "미담 전하기",
+              "link": "https://www.acmicpc.net/problem/19649",
+              "organizer": {
+                "name": "임지환",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "개미여행",
+              "link": "https://www.acmicpc.net/problem/19650",
+              "organizer": {
+                "name": "이준석",
+                "school": "서강대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김관우",
+              "school": "서강대",
+              "handle":"rhksdn6227"
+            },
+            {
+              "prize": 2,
+              "name": "남유진",
+              "school": "연세대",
+              "handle":"youx"
+            },
+            {
+              "prize": 3,
+              "name": "이승은",
+              "school": "서강대",
+              "handle":"leese0425"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "고급",
+      "lecturers": [
+        {
+          "name": "전해성",
+          "school": "서강대",
+          "handle": "seastar105"
+        }
+      ]
+    }
+  ]
+}
