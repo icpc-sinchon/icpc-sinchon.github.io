@@ -34,10 +34,11 @@ jobs:
           npm ci
           bash run.sh -xe
           
-      - name: Deploy with GitHub Pages v3
-        uses: peaceiris/actions-github-pages@v3.1.12
+      - name: Deploy with GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
-          publish_dir: out/
-          github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
+          build_dir: out/
+          jekyll: false
+          #github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
           
           
