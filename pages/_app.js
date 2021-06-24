@@ -30,10 +30,13 @@ const configStore = ctx => {
       applyMiddleware(...middleWares)
     );
 
-  if (!ctx.router || (ctx.router.pathname !== '/suapc' && ctx.router.pathname!=='/halloffame')) return createStore(reducer, enhancer)
+  if (!ctx.router || (ctx.router.pathname !== '/suapc' && ctx.router.pathname !== '/halloffame' && ctx.router.pathname !== '/camp-contest')) return createStore(reducer, enhancer)
 
-  const data = require(`../public/history/${ctx.router.pathname.substring(1)}/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
-  const seasonList = require(`../public/history/${ctx.router.pathname.substring(1)}/list.json`)
+  let pathname = ctx.router.pathname
+  if (pathname === '/camp-contest') pathname = '/halloffame'
+
+  const data = require(`../public/history/${pathname.substring(1)}/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
+  const seasonList = require(`../public/history/${pathname.substring(1)}/list.json`)
 
   const initialState = {
     currentSeasonData: data,
