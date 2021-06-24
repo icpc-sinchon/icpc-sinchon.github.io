@@ -149,7 +149,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="ko_KR" />
                 <meta property="og:title" content="Camp Contest | ICPC Sinchon" />
-                <meta property="og:url" content="https://icpc-sinchon.io/camp-contest" />
+                <meta property="og:url" content="https://icpc-sinchon.io/campcontest" />
                 <meta property="og:description" content="ICPC Sinchon Camp Contest" />
                 <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
             </Head>
@@ -163,7 +163,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                         onArrowClick={onArrowClick}
                     />
                     <TitleWrap
-                        pageType={"camp-contest"}
+                        pageType={"campcontest"}
                         title={title}
                         year={currentYear}
                         season={currentSeason}

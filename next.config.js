@@ -11,7 +11,7 @@ module.exports = {
             '/halloffame': { page: '/halloffame' },
             '/contact': { page: '/contact' },
             '/sponser': { page: '/sponser' },
-            '/camp-contest': { page: '/camp-contest' }
+            '/campcontest': { page: '/campcontest' }
         };
     },
     assetPrefix: !debug ? '' : '',

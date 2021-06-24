@@ -55,7 +55,7 @@ const Header = () => {
             <HeaderWrap>
                 {isNavClicked ? <NavBarWindow>
                     <Link href="/suapc"><NavBarElem onClick={onNavClick}>SUAPC 2021</NavBarElem></Link>
-                    <Link href="/camp-contest"><NavBarElem onClick={onNavClick}>Camp Contest</NavBarElem></Link>
+                    <Link href="/campcontest"><NavBarElem onClick={onNavClick}>Camp Contest</NavBarElem></Link>
                     <Link href="/halloffame"><NavBarElem onClick={onNavClick}>명예의 전당</NavBarElem></Link>
                     <Link href="/sponser"><NavBarElem onClick={onNavClick}>후원 및 협업</NavBarElem></Link>
                     {/* <Link href="/contact"><NavBarElem onClick={onNavClick}>문의하기</NavBarElem></Link> */}
@@ -67,7 +67,7 @@ const Header = () => {
                 </Link>
                 <div style={{ flexGrow: "1" }} />
                 <Link href="/suapc"><HeaderElem style={{ color: '#009d3e' }}>SUAPC 2021</HeaderElem></Link>
-                <Link href="/camp-contest"><HeaderElem style={{ color: '#009d3e' }}>Camp Contest</HeaderElem></Link>
+                <Link href="/campcontest"><HeaderElem style={{ color: '#009d3e' }}>Camp Contest</HeaderElem></Link>
                 <Link href="/halloffame"><HeaderElem>명예의 전당</HeaderElem></Link>
                 <Link href="/sponser"><HeaderElem>후원 및 협업</HeaderElem></Link>
                 {/* <Link href="/contact"><HeaderElem>문의하기</HeaderElem></Link> */}
