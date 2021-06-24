@@ -69,7 +69,7 @@ const TableWrap = styled.div`
     white-space: nowrap;
 `
 
-const HallOfFame = ({ seasonList_, seasonData_ }) => {
+const CampContest = ({ seasonList_, seasonData_ }) => {
 
     const title = `ICPC Sinchon Camp Contest`
 
@@ -148,9 +148,9 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                 <title>Camp Contest | ICPC Sinchon</title>
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="ko_KR" />
-                <meta property="og:title" content="Hall Of Fame | ICPC Sinchon" />
-                <meta property="og:url" content="https://icpc-sinchon.io/halloffame" />
-                <meta property="og:description" content="ICPC Sinchon 명예의 전당" />
+                <meta property="og:title" content="Camp Contest | ICPC Sinchon" />
+                <meta property="og:url" content="https://icpc-sinchon.io/camp-contest" />
+                <meta property="og:description" content="ICPC Sinchon Camp Contest" />
                 <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
             </Head>
             <>
@@ -260,7 +260,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     )
 }
 
-HallOfFame.getInitialProps = async ({ window, store }) => {
+CampContest.getInitialProps = async ({ window, store }) => {
     try {
         let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
         let data0 = await response0.json();
@@ -282,4 +282,4 @@ HallOfFame.getInitialProps = async ({ window, store }) => {
         console.log(err)
     }
 }
-export default HallOfFame
+export default CampContest
