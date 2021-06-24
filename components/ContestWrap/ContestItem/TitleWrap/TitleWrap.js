@@ -58,7 +58,7 @@ const TitleWrap = ({ title, pageType, year, season }) => {
         else if (pageType === "camp-contest")
             setSubTitle(<SubTitle css={NotoSansBold}>{year} {season === "Winter" ? "겨울" : "여름"} 신촌지역 대학교 프로그래밍 동아리 연합 알고리즘 캠프 콘테스트</SubTitle>)
         else if (pageType === "halloffame")
-            setSubTitle(<SubTitle>{year} ICPC Sinchon {season} Algorithm Camp Contest</SubTitle>)
+            setSubTitle(<SubTitle css={NotoSansBold}>{year} {season === "Winter" ? "겨울" : "여름"} 신촌지역 대학교 프로그래밍 동아리 연합 알고리즘 캠프</SubTitle>)
     }, [year, season])
 
     return (

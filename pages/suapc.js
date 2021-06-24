@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled, { css } from 'styled-components'
 import Head from 'next/head'
 
@@ -21,6 +21,7 @@ import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
 import AdmissionButton from '../components/AdmissionButton/AdmissionButton'
 import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
+import TextBubble from '../components/TextBubble/TextBubble'
 
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의
@@ -107,7 +108,8 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
         }
     }, [])
 
-    const dispatch = useDispatch();
+    const registerContestBtnRef = useRef(null)
+    const dispatch = useDispatch()
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
     const currentSeasonData = useSelector(state => state.currentSeasonData)
     const currentYear = useSelector(state => state.currentYear)
@@ -179,6 +181,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                 <meta property="og:image" content="https://api.suapc.kr/res/og_image.png" />
             </Head>
             <>
+                <TextBubble text="현재 신청기간이 아닙니다." triggerRef={registerContestBtnRef} />
                 <SeasonNav
                     onSeasonNavClick={onSeasonNavClick}
                 />
@@ -194,7 +197,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         season={currentSeason}
                     />
                     {currentSeasonData.awards ?
-                        <ArchiveWrap>
+                        <ArchiveWrap className="hide-if-mobile">
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
@@ -202,7 +205,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         </ArchiveWrap>
                         :
                         <ArchiveWrap>
-                            <AdmissionButton isDeprecated={true}>대회 신청</AdmissionButton>
+                            <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton>
                             <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>대회 문의</AdmissionButton>
                         </ArchiveWrap>
                     }

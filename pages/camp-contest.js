@@ -70,8 +70,9 @@ const TableWrap = styled.div`
 `
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
-    const title = `HALL OF FAME`
-    
+
+    const title = `ICPC Sinchon Camp Contest`
+
     useEffect(() => {
         const previewContainer = document.querySelectorAll(".preview-container")
         const contestWrap = document.querySelector(".contest-wrap").getBoundingClientRect();
@@ -144,7 +145,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     return (
         <Layout>
             <Head>
-                <title>Hall Of Fame | ICPC Sinchon</title>
+                <title>Camp Contest | ICPC Sinchon</title>
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="ko_KR" />
                 <meta property="og:title" content="Hall Of Fame | ICPC Sinchon" />
@@ -162,59 +163,34 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                         onArrowClick={onArrowClick}
                     />
                     <TitleWrap
-                        pageType={"halloffame"}
+                        pageType={"camp-contest"}
                         title={title}
                         year={currentYear}
                         season={currentSeason}
                     />
                     <TextWrap
-                        title={currentSeasonData.length !== 0 ? "명예의 전당 소개" : "이 곳의 주인공이 되세요"}
-                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에 강의와 멘토 활동으로 기여를 해주신 분들을 기립니다." : "이 곳의 주인공이 되세요"}
+                        title={currentSeasonData.length !== 0 ? "콘테스트 일자" : "이 곳의 주인공이 되세요"}
+                        content={currentSeasonData.length !== 0 ?
+                            currentSeasonData.date
+                            : "이 곳의 주인공이 되세요"}
                     />
-
+                    <TextWrap
+                        title={currentSeasonData.length !== 0 ? "캠프 콘테스트 소개" : "이 곳의 주인공이 되세요"}
+                        content={currentSeasonData.length !== 0 ?
+                            `캠프 콘테스트는 캠프 기간동안 배운 알고리즘을 적용해볼 수 있는 모의고사 형식의 대회입니다.
+                            개인전으로 진행되며, ICPC Sinchon Algorithm Camp 참가자만 참여할 수 있습니다.`
+                            : "이 곳의 주인공이 되세요"}
+                    />
+                    <TextWrap
+                        title={"출제 경향"}
+                        content={`ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다.`}
+                    />
                     {currentSeasonData.studies ? Array.from(currentSeasonData.studies).map(study => {
                         return (
                             <TopicWrap id={study.topic} key={study.topic}>
-                                <TopicTitle>{study.topic}</TopicTitle>
+                                {study.contests ? <TopicTitle>{study.topic}</TopicTitle> : ""}
                                 <div style={{ width: `100%` }}>
-                                    {study.lecturers ? <ItemWrap className="lecturer-wrap">
-                                        <ItemTitle className="hof-item-title">멘토 및 강사진</ItemTitle>
-                                        <TableWrap>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th style={{ width: `7rem` }}>분류</th>
-                                                        <th>이름</th>
-                                                        <th style={{ width: `10rem` }}>BOJ</th>
-                                                        <th style={{ width: `7rem` }}>소속</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {Array.from(study.lecturers).map(lecturer => {
-                                                        return (
-                                                            <tr key={'lecturer-' + lecturer.name}>
-                                                                <td>강사</td>
-                                                                <td>{lecturer.name}</td>
-                                                                <td>{lecturer.handle}</td>
-                                                                <td>{lecturer.school}</td>
-                                                            </tr>
-                                                        )
-                                                    })}
-                                                    {study.mentors ? Array.from(study.mentors).map(lecturer => {
-                                                        return (
-                                                            <tr key={'mentor-' + lecturer.name}>
-                                                                <td>멘토</td>
-                                                                <td>{lecturer.name}</td>
-                                                                <td>{lecturer.handle}</td>
-                                                                <td>{lecturer.school}</td>
-                                                            </tr>
-                                                        )
-                                                    }) : ""}
-                                                </tbody>
-                                            </table>
-                                        </TableWrap>
-                                    </ItemWrap> : ""}
-                                    {/* {study.contests ? Array.from(study.contests).map(contest => {
+                                    {study.contests ? Array.from(study.contests).map(contest => {
                                         return (
                                             <>
                                                 {contest.awards ? <ItemWrap key={contest.contest_name + '-award'}>
@@ -233,7 +209,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                                 {Array.from(contest.awards).map((award, idx) => {
                                                                     return (
                                                                         <tr>
-                                                                            <td>{idx + 1}<sup>{idx + 1 === 1 ? `st` : idx + 1 === 2 ? `nd` : `rd`}</sup></td>
+                                                                            <td style={{ position: `relative` }}>{idx + 1}<sup class={idx + 1 === 1 ? `medal-gold` : idx + 1 === 2 ? `medal-silver` : `medal-bronze`}>●</sup></td>
                                                                             <td>{award.name}</td>
                                                                             <td>{award.handle}</td>
                                                                             <td>{award.school}</td>
@@ -273,11 +249,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                                 </ItemWrap> : ""}
                                             </>
                                         )
-                                    }) : ""} */}
-                                    <ItemWrap>
-                                        <ItemTitle>커리큘럼</ItemTitle>
-                                        업데이트 예정입니다.
-                                    </ItemWrap>
+                                    }) : ""}
                                 </div>
                             </TopicWrap>
                         )

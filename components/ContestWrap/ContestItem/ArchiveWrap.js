@@ -11,8 +11,8 @@ const ArchiveWrap_ = css`
         
     }
 `
-const ArchiveWrap = ({ href, children }) => {
-    return <ItemWrap href={href} css={ArchiveWrap_}>
+const ArchiveWrap = ({ href, children, className }) => {
+    return <ItemWrap className={className} href={href} css={ArchiveWrap_}>
         {children}
     </ItemWrap>
 }

@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
 
 const CustomButton = styled.div`
@@ -28,14 +29,14 @@ const ATag = styled.a`
     }
 `
 
-const AdmissionButton = ({ href, isDeprecated, children }) => {
+const AdmissionButton = forwardRef(({ href, isDeprecated, children }, ref) => {
     return (
         <ATag href={href} target="_blank">
-            <CustomButton isDeprecated={isDeprecated}>
+            <CustomButton isDeprecated={isDeprecated} ref={ref}>
                 {children}
             </CustomButton>
         </ATag>
     )
-}
+})
 
 export default AdmissionButton

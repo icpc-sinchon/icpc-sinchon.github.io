@@ -49,6 +49,9 @@ sitemask {
 .hide {
 	display: none;
 }
+.vhide {
+	visibility: hidden;
+}
 .email {
 	&::after {
 		content: 'icpc.sinchon@gmail.com';
@@ -142,7 +145,7 @@ table {
 
 	overflow-x: auto;
 	white-space: nowrap;
-	
+
 	overflow-y: hidden;
 }
 tr:nth-child(even) {
