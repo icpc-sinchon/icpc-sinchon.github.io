@@ -10,7 +10,8 @@ module.exports = {
             '/suapc': { page: '/suapc' },
             '/halloffame': { page: '/halloffame' },
             '/contact': { page: '/contact' },
-            '/sponser': { page: '/sponser' }
+            '/sponser': { page: '/sponser' },
+            '/camp-contest': { page: '/camp-contest' }
         };
     },
     assetPrefix: !debug ? '' : '',
