@@ -1259,10 +1259,10 @@ eval("var map = {\n\t\"./halloffame/list.json\": \"./public/history/halloffame/l
 /*!****************************************************!*\
   !*** ./public/history/halloffame/2021 Summer.json ***!
   \****************************************************/
-/*! exports provided: year, season, studies, default */
+/*! exports provided: year, season, date, studies, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Summer\\\",\\\"studies\\\":[]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L2hhbGxvZmZhbWUvMjAyMSBTdW1tZXIuanNvbi5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./public/history/halloffame/2021 Summer.json\n");
+eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Summer\\\",\\\"date\\\":\\\"2021년 8월 21일 오후 2시 ~ 오후 5시\\\",\\\"studies\\\":[{\\\"topic\\\":\\\"초급\\\",\\\"lecturers\\\":[{\\\"name\\\":\\\"박재형\\\",\\\"school\\\":\\\"서강대\\\",\\\"handle\\\":\\\"pjh6792\\\"},{\\\"name\\\":\\\"윤인섭\\\",\\\"school\\\":\\\"연세대\\\",\\\"handle\\\":\\\"pinebananais\\\"}],\\\"mentors\\\":[],\\\"contests\\\":[]},{\\\"topic\\\":\\\"중급\\\",\\\"lecturers\\\":[{\\\"name\\\":\\\"이국렬\\\",\\\"school\\\":\\\"연세대\\\",\\\"handle\\\":\\\"lky7674\\\"},{\\\"name\\\":\\\"전해성\\\",\\\"school\\\":\\\"서강대\\\",\\\"handle\\\":\\\"seastar105\\\"}],\\\"mentors\\\":[],\\\"contests\\\":[]}]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L2hhbGxvZmZhbWUvMjAyMSBTdW1tZXIuanNvbi5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./public/history/halloffame/2021 Summer.json\n");
 
 /***/ }),
 
@@ -1270,10 +1270,10 @@ eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Summer
 /*!*********************************************!*\
   !*** ./public/history/halloffame/list.json ***!
   \*********************************************/
-/*! exports provided: 0, 1, 2, default */
+/*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"[\\\"2021 Winter\\\",\\\"2020 Summer\\\",\\\"2020 Winter\\\"]\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L2hhbGxvZmZhbWUvbGlzdC5qc29uLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./public/history/halloffame/list.json\n");
+eval("module.exports = JSON.parse(\"[\\\"2021 Summer\\\",\\\"2021 Winter\\\",\\\"2020 Summer\\\",\\\"2020 Winter\\\"]\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L2hhbGxvZmZhbWUvbGlzdC5qc29uLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./public/history/halloffame/list.json\n");
 
 /***/ }),
 

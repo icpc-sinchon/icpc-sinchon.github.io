@@ -1,7 +1,48 @@
 {
   "year": 2021,
   "season": "Summer",
+  "date": "2021년 8월 21일 오후 2시 ~ 오후 5시",
   "studies": [
-    
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "박재형",
+          "school": "서강대",
+          "handle": "pjh6792"
+        },
+        {
+          "name": "윤인섭",
+          "school": "연세대",
+          "handle": "pinebananais"
+        }
+      ],
+      "mentors": [
+        
+      ],
+      "contests": [
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "이국렬",
+          "school": "연세대",
+          "handle": "lky7674"
+        },
+        {
+          "name": "전해성",
+          "school": "서강대",
+          "handle": "seastar105"
+        }
+      ],
+      "mentors": [
+        
+      ],
+      "contests": [
+        
+      ]
+    }
   ]
 }
