@@ -1,14 +1,14 @@
 {
-    "year": 2021,
-    "season": "Summer",
-    "date":"2021년 8월 28일 오후 12시 ~ 오후 5시",  
-
-    "sponser":[
-      "kakao",
-      "naver",
-      "autoever",
-      "hanbit",
-      "youngjin",
-      "easys"
-    ]
-  }
+  "year": 2021,
+  "season": "Summer",
+  "date": "2021년 8월 28일 오후 12시 ~ 오후 5시",
+  "sponser": [
+    "kakao",
+    "autoever",
+    "naver",
+    "hanbit",
+    "youngjin",
+    "easys",
+    "startlink"
+  ]
+}

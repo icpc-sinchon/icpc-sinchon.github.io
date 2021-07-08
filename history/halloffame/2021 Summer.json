@@ -18,9 +18,16 @@
         }
       ],
       "mentors": [
-        
-      ],
-      "contests": [
+        {
+          "name": "강효규",
+          "school": "서강대",
+          "handle": "djs100201"
+        },
+        {
+          "name": "권찬",
+          "school": "홍익대",
+          "handle": "kckc0608"
+        }
       ]
     },
     {
@@ -38,10 +45,21 @@
         }
       ],
       "mentors": [
-        
-      ],
-      "contests": [
-        
+        {
+          "name": "강효규",
+          "school": "서강대",
+          "handle": "djs100201"
+        },
+        {
+          "name": "김태윤",
+          "school": "연세대",
+          "handle": "ystaeyoon113"
+        },
+        {
+          "name": "이상원",
+          "school": "서강대",
+          "handle": "gumgood"
+        }
       ]
     }
   ]
