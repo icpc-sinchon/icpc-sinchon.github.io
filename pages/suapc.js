@@ -306,9 +306,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 }
 
 Suapc.getInitialProps = async ({ store }) => {
-    let response0 = await fetch(`${process.env.NEXT_PUBLIC_LOCALHOST}/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
+    let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
     let data0 = await response0.json();
-    let response1 = await fetch(`${process.env.NEXT_PUBLIC_LOCALHOST}/history/suapc/list.json`)
+    let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/list.json`)
     let data1 = await response1.json();
 
     // console.log(store)
