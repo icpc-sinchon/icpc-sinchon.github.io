@@ -44,18 +44,18 @@ const Div = styled.div`
   font-size: 16px;
 
   z-index: 100;
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border: 7px solid transparent;
-      border-top-color: #555353;
-      border-bottom: 0;
-      margin-left: -7px;
-      margin-bottom: -7px;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top-color: #555353;
+    border-bottom: 0;
+    margin-left: -7px;
+    margin-bottom: -7px;
+  }
 `
 export default TextBubble
