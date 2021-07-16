@@ -53,6 +53,19 @@
           "school": "서강대",
           "handle": "raararaara"
         }
+      ],
+      "curriculum": [
+        "C언어 리뷰, C++ 기본",
+        "시간복잡도, Sorting",
+        "Stack, Queue, Deque",
+        "BackTracking, BruteForce",
+        "동적 계획법(DP)",
+        "Greedy Algorithm",
+        "분할정복, 이분탐색",
+        "Graph, Tree",
+        "DFS, BFS",
+        "Union-Find, MST",
+        "우선순위 큐, 다익스트라 알고리즘"
       ]
     },
     {
@@ -95,6 +108,19 @@
           "school": "서강대",
           "handle": "wbcho0504"
         }
+      ],
+      "curriculum": [
+        "Dynamic Programming 1",
+        "Divide & Conquer",
+        "기초 정수론(역원, 확장 유클리드)",
+        "SCC & 위상 정렬",
+        "Segment Tree",
+        "2-SAT",
+        "Dynamic Programming 2",
+        "DFS Tree & BCC",
+        "기하",
+        "이국렬의 Flow 1",
+        "이국렬의 Flow 2"
       ]
     }
   ]
