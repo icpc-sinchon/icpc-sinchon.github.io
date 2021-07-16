@@ -11,19 +11,17 @@ const TextBubble = ({ className, text, triggerRef }) => {
             const buttonBoundary = button.getBoundingClientRect();
 
             balloon.style.top = window.scrollY + buttonBoundary.top - buttonBoundary.height - 10 + "px"
-            balloon.style.left = buttonBoundary.left + buttonBoundary.width / 2 - balloonBoundary.width / 2 + "px"
+            balloon.style.left = buttonBoundary.left  + "px"
             balloon.classList.remove('vhide')
         })
 
         triggerRef?.current.addEventListener('mouseout', () => {
             const balloon = divRef.current;
-
             balloon.classList.add('vhide')
         })
 
         document.body.addEventListener('click', ({ target }) => {
             if (target === triggerRef?.current) return;
-
             const balloon = divRef.current;
             balloon?.classList.add('vhide')
         })
@@ -48,7 +46,7 @@ const Div = styled.div`
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 10%;
     width: 0;
     height: 0;
     border: 7px solid transparent;
