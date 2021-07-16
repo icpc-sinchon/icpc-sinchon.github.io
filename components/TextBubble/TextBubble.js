@@ -10,7 +10,7 @@ const TextBubble = ({ className, text, triggerRef }) => {
             const balloonBoundary = balloon.getBoundingClientRect();
             const buttonBoundary = button.getBoundingClientRect();
 
-            balloon.style.top = buttonBoundary.top - buttonBoundary.height - 10 + "px"
+            balloon.style.top = window.scrollY + buttonBoundary.top - buttonBoundary.height - 10 + "px"
             balloon.style.left = buttonBoundary.left + buttonBoundary.width / 2 - balloonBoundary.width / 2 + "px"
             balloon.classList.remove('vhide')
         })
