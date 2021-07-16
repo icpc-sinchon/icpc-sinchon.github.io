@@ -192,15 +192,15 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                         title={"출제 경향"}
                         content={`ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다.`}
                     />
-                    {currentSeasonData.studies ? Array.from(currentSeasonData.studies).map(study => {
+                    {currentSeasonData.studies && Array.from(currentSeasonData.studies).map(study => {
                         return (
                             <TopicWrap id={study.topic} key={study.topic}>
-                                {study.contests ? <TopicTitle>{study.topic}</TopicTitle> : ""}
+                                {study.contests && <TopicTitle>{study.topic}</TopicTitle>}
                                 <div style={{ width: `100%` }}>
-                                    {study.contests ? Array.from(study.contests).map(contest => {
+                                    {study.contests && Array.from(study.contests).map(contest => {
                                         return (
                                             <>
-                                                {contest.awards ? <ItemWrap key={contest.contest_name + '-award'}>
+                                                {contest.awards && <ItemWrap key={contest.contest_name + '-award'}>
                                                     <ItemTitle className="hof-item-title">{contest.contest_name} 수상자</ItemTitle>
                                                     <TableWrap>
                                                         <table>
@@ -226,8 +226,8 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                             </tbody>
                                                         </table>
                                                     </TableWrap>
-                                                </ItemWrap> : ""}
-                                                {contest.problem_list ? <ItemWrap key={contest.contest_name + '-past-problem'}>
+                                                </ItemWrap>}
+                                                {contest.problem_list && <ItemWrap key={contest.contest_name + '-past-problem'}>
                                                     <ItemTitle className="hof-item-title">{contest.contest_name} 기출 문항</ItemTitle>
                                                     <TableWrap>
                                                         <table>
@@ -253,14 +253,14 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                             </tbody>
                                                         </table>
                                                     </TableWrap>
-                                                </ItemWrap> : ""}
+                                                </ItemWrap>}
                                             </>
                                         )
-                                    }) : ""}
+                                    })}
                                 </div>
                             </TopicWrap>
                         )
-                    }) : ""}
+                    })}
                 </ContestWrap>
             </>
         </Layout>

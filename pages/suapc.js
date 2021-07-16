@@ -243,7 +243,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         </SchoolLogoWrap>
                     </ItemWrap>
 
-                    {currentSeasonData.awards ? <>
+                    {currentSeasonData.awards && <>
                         <ItemWrap>
                             <ItemTitle>수상 내역</ItemTitle>
                             <WinnerTableWrap data={currentSeasonData.awards} />
@@ -260,14 +260,14 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {currentSeasonData.examiner ? Array.from(currentSeasonData.examiner).map(elem => {
+                                        {currentSeasonData.examiner && Array.from(currentSeasonData.examiner).map(elem => {
                                             return (
                                                 <tr key={"checker-" + elem.name}>
                                                     <td>{elem.name}</td>
                                                     <td>{elem.school}</td>
                                                 </tr>
                                             )
-                                        }) : ""}
+                                        })}
                                     </tbody>
                                 </table>
                             </ItemWrap>
@@ -281,27 +281,26 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {currentSeasonData.checker ? Array.from(currentSeasonData.checker).map(elem => {
+                                        {currentSeasonData.checker && Array.from(currentSeasonData.checker).map(elem => {
                                             return (
                                                 <tr key={"maker-" + elem.name}>
                                                     <td>{elem.name}</td>
                                                     <td>{elem.school}</td>
                                                 </tr>
                                             )
-                                        }) : ""}
+                                        })}
                                     </tbody>
                                 </table>
                             </ItemWrap>
                         </div>
-                    </> : ""}
-                    {currentSeasonData.awards ?
+                    </>}
+                    {currentSeasonData.awards &&
                         <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
                             <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
-                        </ItemWrap>
-                        : ""}
+                        </ItemWrap>}
                 </ContestWrap>
             </>
         </Layout>
