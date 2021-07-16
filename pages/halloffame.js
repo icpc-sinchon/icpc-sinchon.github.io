@@ -224,7 +224,24 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                     </ItemWrap>}
                                     <ItemWrap>
                                         <ItemTitle>커리큘럼</ItemTitle>
-                                        업데이트 예정입니다.
+                                        {study.curriculum ? <table>
+                                            <thead>
+                                                <tr>
+                                                    <th style={{ width: `7rem` }}>주차</th>
+                                                    <th>강의 알고리즘</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {Array.from(study.curriculum).map((curri, idx) => {
+                                                    return (
+                                                        <tr>
+                                                            <td>{idx + 1}회차</td>
+                                                            <td>{curri}</td>
+                                                        </tr>
+                                                    )
+                                                })}
+                                            </tbody>
+                                        </table> : "업데이트 예정입니다."}
                                     </ItemWrap>
                                 </div>
                             </TopicWrap>
