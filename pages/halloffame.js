@@ -186,7 +186,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                 <TopicTitle>{study.topic}</TopicTitle>
                                 <div style={{ width: `100%` }}>
                                     {study.lecturers && <ItemWrap className="lecturer-wrap">
-                                        <ItemTitle className="hof-item-title">멘토 및 강사진</ItemTitle>
+                                        <ItemTitle className="hof-item-title">강사진 및 멘토</ItemTitle>
                                         <TableWrap>
                                             <table>
                                                 <thead>
