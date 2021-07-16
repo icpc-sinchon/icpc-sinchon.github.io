@@ -23,6 +23,8 @@ import AdmissionButton from '../components/AdmissionButton/AdmissionButton'
 import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
 import TextBubble from '../components/TextBubble/TextBubble'
 
+const data0 = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
+const data1 = require(`../public/history/suapc/list.json`)
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의
  학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 
@@ -98,16 +100,7 @@ const CustomButton = styled.div`
 `
 
 const Suapc = ({ seasonData_, seasonList_ }) => {
-    useEffect(() => {
-        window.onload = () => {
-            const previewContainer = document.querySelectorAll(".preview-container")
-            const contestWrap = document.querySelector('.contest-wrap').getBoundingClientRect()
-            previewContainer.forEach(ele => {
-                ele.style.height = contestWrap.height + "px"
-            })
-        }
-    }, [])
-
+    const contestWrapRef = useRef(null)
     const registerContestBtnRef = useRef(null)
     const dispatch = useDispatch()
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
@@ -116,10 +109,21 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
     const currentSeason = useSelector(state => state.currentSeason)
     const seasonList = useSelector(state => state.seasonList)
 
+    useEffect(() => {
+        if (!contestWrapRef.current) return
+        adjustPreviewWrapHeight()
+    })
+
+    const adjustPreviewWrapHeight = () => {
+        const previewContainer = document.querySelectorAll(".preview-container")
+        const contestWrapBoundary = contestWrapRef?.current?.getBoundingClientRect();
+        previewContainer.forEach(ele => {
+            ele.style.height = contestWrapBoundary.height + "px"
+        })
+    }
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
-
         switchSeasonData(idx)
     }
 
@@ -160,9 +164,8 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 
     const fetchSeasonData = async (season) => {
         try {
-            let response = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/${season}.json`)
-            let data = await response.json();
-
+            const response = await fetch(`/history/suapc/${season}.json`)
+            const data = await response.json();
             return data;
         } catch (error) {
             return [];
@@ -186,7 +189,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                     onSeasonNavClick={onSeasonNavClick}
                 />
                 <PreviewWrap />
-                <ContestWrap>
+                <ContestWrap ref={contestWrapRef}>
                     <SeasonSwitchArrow
                         onArrowClick={onArrowClick}
                     />
@@ -306,22 +309,11 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 }
 
 Suapc.getInitialProps = async ({ store }) => {
-    let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
-    let data0 = await response0.json();
-    let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/suapc/list.json`)
-    let data1 = await response1.json();
-
-    // console.log(store)
-    store.dispatch(setSeasonList(data1))
     store.dispatch(setCurrentSeasonData(data0))
     store.dispatch(setCurrentSeason(data0.season))
     store.dispatch(setCurrentYear(data0.year))
+    store.dispatch(setSeasonList(data1))
     store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)))
-
-    return {
-        seasonData_: data0,
-        seasonList_: data1
-    }
 }
 
 export default Suapc;

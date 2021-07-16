@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import styled, { css } from 'styled-components'
 
@@ -18,6 +18,9 @@ import Layout from '../components/Layout'
 import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import SeasonNav from '../components/SeasonNav/SeasonNav'
 import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
+
+const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
+const data1 = require(`../public/history/halloffame/list.json`)
 
 const NotoSansBold = css`
     font-family: 'Noto Sans KR';
@@ -71,15 +74,8 @@ const TableWrap = styled.div`
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
     const title = `HALL OF FAME`
-    
-    useEffect(() => {
-        const previewContainer = document.querySelectorAll(".preview-container")
-        const contestWrap = document.querySelector(".contest-wrap").getBoundingClientRect();
-        previewContainer.forEach(ele => {
-            ele.style.height = contestWrap.height + "px"
-        })
-    }, [])
 
+    const contestWrapRef = useRef(null)
     const dispatch = useDispatch();
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
     const currentSeasonData = useSelector(state => state.currentSeasonData)
@@ -87,6 +83,18 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
     const currentSeason = useSelector(state => state.currentSeason)
     const seasonList = useSelector(state => state.seasonList)
 
+    useEffect(() => {
+        if (!contestWrapRef.current) return
+        adjustPreviewWrapHeight()
+    })
+
+    const adjustPreviewWrapHeight = () => {
+        const previewContainer = document.querySelectorAll(".preview-container")
+        const contestWrapBoundary = contestWrapRef?.current?.getBoundingClientRect();
+        previewContainer.forEach(ele => {
+            ele.style.height = contestWrapBoundary.height + "px"
+        })
+    }
 
     const onSeasonNavClick = e => {
         let idx = parseInt(e.target.getAttribute('alt'))
@@ -157,7 +165,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                     onSeasonNavClick={onSeasonNavClick}
                 />
                 <PreviewWrap />
-                <ContestWrap>
+                <ContestWrap ref={contestWrapRef}>
                     <SeasonSwitchArrow
                         onArrowClick={onArrowClick}
                     />
@@ -289,25 +297,10 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 }
 
 HallOfFame.getInitialProps = async ({ window, store }) => {
-    try {
-        let response0 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
-        let data0 = await response0.json();
-        let response1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/history/halloffame/list.json`)
-        let data1 = await response1.json();
-
-        store.dispatch(setSeasonList(data1))
-        store.dispatch(setCurrentSeasonData(data0))
-        store.dispatch(setCurrentSeason(data0.season))
-        store.dispatch(setCurrentYear(data0.year))
-        store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
-
-        return {
-            seasonData_: data0,
-            seasonList_: data1
-        }
-
-    } catch (err) {
-        console.log(err)
-    }
+    store.dispatch(setSeasonList(data1))
+    store.dispatch(setCurrentSeasonData(data0))
+    store.dispatch(setCurrentSeason(data0.season))
+    store.dispatch(setCurrentYear(data0.year))
+    store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON)))
 }
 export default HallOfFame

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import styled, { css } from 'styled-components'
 
@@ -5,7 +6,6 @@ import styled, { css } from 'styled-components'
 const SeasonNav = ({ onSeasonNavClick }) => {
     const seasonList = useSelector(state => state.seasonList)
     const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
-
     return (
         <SeasonNavWrap>
             {seasonList.map((elem, idx) => {

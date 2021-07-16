@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 const sinchonColor = `#009D3E`
 
@@ -16,12 +17,12 @@ const ContestWrap_ = styled.div`
     }
 `
 
-const ContestWrap = ({ children }) => {
+const ContestWrap = forwardRef(({ children }, ref) => {
     return (
-        <ContestWrap_ className={"contest-wrap slide-up"}>
+        <ContestWrap_ className={"contest-wrap slide-up"} ref={ref}>
             {children}
         </ContestWrap_>
     )
-}
+})
 
 export default ContestWrap
