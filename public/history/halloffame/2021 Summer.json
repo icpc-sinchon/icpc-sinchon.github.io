@@ -27,6 +27,31 @@
           "name": "권찬",
           "school": "홍익대",
           "handle": "kckc0608"
+        },
+        {
+          "name": "김예은",
+          "school": "이화여대",
+          "handle": "ye1111k"
+        },
+        {
+          "name": "김태윤",
+          "school": "연세대",
+          "handle": "ystaeyoon113"
+        },
+        {
+          "name": "남유진",
+          "school": "연세대",
+          "handle": "youx"
+        },
+        {
+          "name": "송혜민",
+          "school": "숙명여대",
+          "handle": "songfox00"
+        },
+        {
+          "name": "임지환",
+          "school": "서강대",
+          "handle": "raararaara"
         }
       ]
     },
@@ -51,14 +76,24 @@
           "handle": "djs100201"
         },
         {
-          "name": "김태윤",
+          "name": "남유진",
           "school": "연세대",
-          "handle": "ystaeyoon113"
+          "handle": "youx"
         },
         {
           "name": "이상원",
           "school": "서강대",
           "handle": "gumgood"
+        },
+        {
+          "name": "임지환",
+          "school": "서강대",
+          "handle": "raararaara"
+        },
+        {
+          "name": "조원빈",
+          "school": "서강대",
+          "handle": "wbcho0504"
         }
       ]
     }
