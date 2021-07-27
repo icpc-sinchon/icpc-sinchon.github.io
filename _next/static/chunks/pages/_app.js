@@ -1284,7 +1284,7 @@ eval("module.exports = JSON.parse(\"[\\\"2021 Summer\\\",\\\"2021 Winter\\\",\\\
 /*! exports provided: year, season, date, sponser, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Summer\\\",\\\"date\\\":\\\"2021년 8월 28일 오후 12시 ~ 오후 5시\\\",\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"naver\\\",\\\"hanbit\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjEgU3VtbWVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2021 Summer.json\n");
+eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Summer\\\",\\\"date\\\":\\\"2021년 8월 28일 오후 12시 ~ 오후 5시\\\",\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"naver\\\",\\\"furiosa\\\",\\\"hanbit\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjEgU3VtbWVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2021 Summer.json\n");
 
 /***/ }),
 
