@@ -208,7 +208,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         </ArchiveWrap>
                         :
                         <ArchiveWrap>
-                            <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton>
+                            {/* for contest: apply link isn't created */}
+                            {/* <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton> */}
+                            <AdmissionButton href={`https://suapc.kr/apply`}>대회 신청</AdmissionButton>
                             <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>대회 문의</AdmissionButton>
                         </ArchiveWrap>
                     }
