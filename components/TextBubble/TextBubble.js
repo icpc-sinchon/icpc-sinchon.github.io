@@ -4,7 +4,7 @@ const TextBubble = ({ className, text, triggerRef }) => {
     const divRef = useRef(null)
 
     useEffect(() => {
-        triggerRef?.current.addEventListener('mouseover', () => {
+        triggerRef?.current?.addEventListener('mouseover', () => {
             const balloon = divRef.current;
             const button = triggerRef.current;
             const balloonBoundary = balloon.getBoundingClientRect();
@@ -15,7 +15,7 @@ const TextBubble = ({ className, text, triggerRef }) => {
             balloon.classList.remove('vhide')
         })
 
-        triggerRef?.current.addEventListener('mouseout', () => {
+        triggerRef?.current?.addEventListener('mouseout', () => {
             const balloon = divRef.current;
             balloon.classList.add('vhide')
         })
