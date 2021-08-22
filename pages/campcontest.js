@@ -18,6 +18,8 @@ import Layout from '../components/Layout'
 import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
 import SeasonNav from '../components/SeasonNav/SeasonNav'
 import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
+import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
+import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
 
 const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
 const data1 = require(`../public/history/halloffame/list.json`)
@@ -175,6 +177,13 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                         year={currentYear}
                         season={currentSeason}
                     />
+                    {currentSeasonData.hasPDF &&
+                        <ArchiveWrap className="hide-if-mobile">
+                            <ArchiveButton href={currentSeasonData.links[0]}>문제(BOJ 링크)</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/cc-solution`}>해설 PDF</ArchiveButton>
+                            <ArchiveButton href={currentSeasonData.links[1]}>초급 스코어보드</ArchiveButton>
+                            <ArchiveButton href={currentSeasonData.links[2]}>중급 스코어보드</ArchiveButton>
+                        </ArchiveWrap>}
                     <TextWrap
                         title={currentSeasonData.length !== 0 ? "콘테스트 일자" : "이 곳의 주인공이 되세요"}
                         content={currentSeasonData.length !== 0 ?
@@ -216,7 +225,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                                 {Array.from(contest.awards).map((award, idx) => {
                                                                     return (
                                                                         <tr>
-                                                                            <td style={{ position: `relative` }}>{idx + 1}<sup class={idx + 1 === 1 ? `medal-gold` : idx + 1 === 2 ? `medal-silver` : `medal-bronze`}>●</sup></td>
+                                                                            <td style={{ position: `relative` }}>{idx + 1}<sup className={idx + 1 === 1 ? `medal-gold` : idx + 1 === 2 ? `medal-silver` : `medal-bronze`}>●</sup></td>
                                                                             <td>{award.name}</td>
                                                                             <td>{award.handle}</td>
                                                                             <td>{award.school}</td>
@@ -261,6 +270,13 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                             </TopicWrap>
                         )
                     })}
+                    {currentSeasonData.hasPDF &&
+                        <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
+                            <ArchiveButton href={currentSeasonData.links[0]}>문제(BOJ 링크)</ArchiveButton>
+                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/cc-solution`}>해설 PDF</ArchiveButton>
+                            <ArchiveButton href={currentSeasonData.links[1]}>초급 스코어보드</ArchiveButton>
+                            <ArchiveButton href={currentSeasonData.links[2]}>중급 스코어보드</ArchiveButton>
+                        </ItemWrap>}
                 </ContestWrap>
             </>
         </Layout>
