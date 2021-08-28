@@ -72,6 +72,90 @@
         "DFS, BFS",
         "Union-Find, MST",
         "우선순위 큐, 다익스트라 알고리즘"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "이진수 나눗셈",
+              "link": "https://www.acmicpc.net/problem/22950",
+              "organizer": {
+                "name": "김도은",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "송이의 카드 게임",
+              "link": "https://www.acmicpc.net/problem/22951",
+              "organizer": {
+                "name": "송혜민",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "permutation making",
+              "link": "https://www.acmicpc.net/problem/22952",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "도도의 음식 준비",
+              "link": "https://www.acmicpc.net/problem/22953",
+              "organizer": {
+                "name": "김도현",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "그래프 트리 분할",
+              "link": "https://www.acmicpc.net/problem/22954",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "고양이 도도의 탈출기",
+              "link": "https://www.acmicpc.net/problem/22955",
+              "organizer": {
+                "name": "김도은",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "소나기",
+              "link": "https://www.acmicpc.net/problem/22956",
+              "organizer": {
+                "name": "김도현",
+                "school": "홍익대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김창민",
+              "school": "서강대",
+              "handle": "jakads"
+            },
+            {
+              "prize": 2,
+              "name": "전재현",
+              "school": "연세대",
+              "handle": "chrisj67"
+            },
+            {
+              "prize": 3,
+              "name": "김성현",
+              "school": "서강대",
+              "handle": "dart"
+            }
+          ]
+        }
       ]
     },
     {
@@ -127,6 +211,90 @@
         "기하",
         "이국렬의 Flow 1",
         "이국렬의 Flow 2"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "permutation making",
+              "link": "https://www.acmicpc.net/problem/22952",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "짝수싫어수",
+              "link": "https://www.acmicpc.net/problem/22957",
+              "organizer": {
+                "name": "김도현",
+                "school": "홍익대"
+              }
+            },
+            {
+              "problem_name": "안산 탐지기",
+              "link": "https://www.acmicpc.net/problem/22958",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "신촌의 수열과 쿼리",
+              "link": "https://www.acmicpc.net/problem/22959",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "미팅",
+              "link": "https://www.acmicpc.net/problem/22960",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "여행사 운영하기",
+              "link": "https://www.acmicpc.net/problem/22961",
+              "organizer": {
+                "name": "전해성",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "신촌방위본부",
+              "link": "https://www.acmicpc.net/problem/22962",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "조원빈",
+              "school": "서강대",
+              "handle": "wbcho0504"
+            },
+            {
+              "prize": 2,
+              "name": "김종민",
+              "school": "연세대",
+              "handle": "luciaholic"
+            },
+            {
+              "prize": 3,
+              "name": "김기현",
+              "school": "연세대",
+              "handle": "surface_03"
+            }
+          ]
+        }
       ]
     }
   ]
