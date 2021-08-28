@@ -57,10 +57,9 @@ const Sponser = () => {
               <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
               참가자들을 상대로 기업에 대한 홍보를 진행합니다
               <br />
-              <br className="show-if-mobile" />
-              매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로
-              이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요{" "}
-              <br />
+              <br className="show-if-mobile" />매 시즌 신촌지역 5개 대학의
+              컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로
+              참여하여 기업 홍보 효과를 누리세요 <br />
             </TextSubTitle>
           </ItemWrap>
           <ImgWrap>
@@ -137,6 +136,28 @@ const Sponser = () => {
                     </UnderlinedLink>
                   </li>
                   <li>Beyond Kakao를 1등상 명칭으로 사용</li>
+                  <li>Connect Kakao를 1등상 명칭으로 사용</li>
+                </ul>
+              </SponserItem>
+              <SponserItem>
+                <SponserImgWrap>
+                  <img src="https://api.suapc.kr/res/sponser-ci/autoever.png" />
+                </SponserImgWrap>
+                <ul>
+                  <li>
+                    현대오토에버 관련 문제 출제
+                    <br />
+                    {/* <UnderlinedLink
+                      href="https://www.acmicpc.net/problem/20937"
+                      target="_blank"
+                    >
+                      B번 링크
+                    </UnderlinedLink>{" "} */}
+                    <li>
+                    현대오토에버 기업 홍보 세션 제공
+                    <br />
+                  </li>
+                  </li>
                 </ul>
               </SponserItem>
               <SponserItem>
@@ -170,6 +191,17 @@ const Sponser = () => {
                 <ul>
                   <li>
                     펍지 / 크래프톤 기업 홍보 세션 제공
+                    <br />
+                  </li>
+                </ul>
+              </SponserItem>
+              <SponserItem>
+                <SponserImgWrap>
+                  <img src="https://api.suapc.kr/res/sponser-ci/furiosa.png" />
+                </SponserImgWrap>
+                <ul>
+                  <li>
+                    퓨리오사 AI 기업 홍보 세션 제공
                     <br />
                   </li>
                 </ul>
