@@ -245,7 +245,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                         </SchoolLogoWrap>
                     </ItemWrap>
 
-                    {currentSeasonData.awards && <>
+                    {currentSeasonData.awards?.length && <>
                         <ItemWrap>
                             <ItemTitle>수상 내역</ItemTitle>
                             <WinnerTableWrap data={currentSeasonData.awards} />
