@@ -13,5 +13,125 @@
     "startlink",
     "solvedac"
   ],
-  "awards": []
+  "awards": [
+    {
+      "div": null,
+      "winner": [
+        {
+          "prize": 1,
+          "solved": 8,
+          "team": "또또 나만 모르는 웰노운 낸다",
+          "school": "서강대학교",
+          "member": "강효규, 이상원, 조원빈"
+        },
+        {
+          "prize": 2,
+          "solved": 8,
+          "team": "스파르타Rebro클럽",
+          "school": "서강대학교",
+          "member": "박재형, 오재석, 진상우"
+        },
+        {
+          "prize": 3,
+          "solved": 8,
+          "team": "Order of One",
+          "school": "연세대학교",
+          "member": "김기현, 김종민, 정호용"
+        },
+        {
+          "prize": 4,
+          "solved": 8,
+          "team": "투머치코더",
+          "school": "연세대학교",
+          "member": "김형진, 동용훈, 이승재"
+        },
+        {
+          "prize": 5,
+          "solved": 7,
+          "team": "생수",
+          "school": "홍익대학교",
+          "member": "김기선, 김효원, 정재현"
+        },
+        {
+          "prize": 6,
+          "solved": 6,
+          "team": "우승못하면2학기휴학함",
+          "school": "홍익대학교",
+          "member": "권찬, 김도현, 정재현"
+        },
+        {
+          "prize": 7,
+          "solved": 5,
+          "team": "상금 못 받으면 회식 못해요 ㅠㅠ",
+          "school": "서강대학교",
+          "member": "김정모, 김준우, 박준서"
+        },
+        {
+          "prize": 8,
+          "solved": 5,
+          "team": "philmath12",
+          "school": "서강대학교",
+          "member": "김민형, 이호현, 한상필"
+        },
+        {
+          "prize": 9,
+          "solved": 5,
+          "team": "ECM",
+          "school": "서강대학교",
+          "member": "권지은, 김성현, 김창민"
+        },
+        {
+          "prize": 10,
+          "solved": 5,
+          "team": "재국이와 아이둘",
+          "school": "서강대학교",
+          "member": "조유화, 조재국, 한덕규"
+        }
+      ]
+    }
+  ],
+  "examiner": [
+    {
+      "name": "김규진",
+      "school": "서강대학교"
+    },
+    {
+      "name": "박수현",
+      "school": "서강대학교"
+    },
+    {
+      "name": "이국렬",
+      "school": "연세대학교"
+    },
+    {
+      "name": "이혜아",
+      "school": "KAIST"
+    },
+    {
+      "name": "전해성",
+      "school": "서강대학교"
+    }
+  ],
+  "checker": [
+    {
+      "name": "김채완",
+      "school": "선린인터넷고등학교"
+    },
+    {
+      "name": "김태영",
+      "school": "KAIST"
+    },
+    {
+      "name": "정치훈",
+      "school": "인하대학교"
+    },
+    {
+      "name": "정현서",
+      "school": "서울대학교"
+    },
+    {
+      "name": "홍은기",
+      "school": "삼성전자"
+    }
+  ]
 }
