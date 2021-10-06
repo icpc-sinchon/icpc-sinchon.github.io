@@ -1,5 +1,34 @@
 [
     {
+        "year": 2022,
+        "season": "Winter",
+        "president": [
+            {
+                "name": "한다현"
+            }
+        ],
+        "member": [
+            {
+                "name": "권예빈"
+            },
+            {
+                "name": "김가영"
+            },
+            {
+                "name": "김은서"
+            },
+            {
+                "name": "박예나"
+            },
+            {
+                "name": "전지수"
+            },
+            {
+                "name": "채정아"
+            }
+        ]
+    },
+    {
         "year": 2021,
         "season": "Summer",
         "president": [
