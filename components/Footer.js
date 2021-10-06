@@ -100,7 +100,7 @@ const Footer = () => {
     return (
         <Footer_>
             <TopWrap>
-                <div>2021 Summer</div>
+                <div>{organizer[0].year} {organizer[0].season}</div>
                 <IconWrap>
                     <a href="https://fb.com/icpc-sinchon" target="_blank"><img src="/res/footer/facebook.svg" /></a>
                     <a href="https://pf.kakao.com/_xehxhAK" target="_blank"><img src="/res/footer/talk_white.svg" /></a>
