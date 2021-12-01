@@ -46,7 +46,8 @@ const Sponser = () => {
         <div className="content-wrap-main">
           <ItemWrap className="slide-up" style={{ animationDelay: `300ms` }}>
             <MainTextTitle>
-              ICPC Sinchon과 함께할 <br className="show-if-mobile" />
+              <span style={{ letterSpacing: "-0.03rem" }}>ICPC Sinchon</span>과
+              함께할 <br className="show-if-mobile" />
               후원사를 모집하고 있습니다
             </MainTextTitle>
             <TextSubTitle>
