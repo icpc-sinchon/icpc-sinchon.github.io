@@ -24,14 +24,13 @@ import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
 const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
 const data1 = require(`../public/history/halloffame/list.json`)
 
-const NotoSansBold = css`
-    font-family: 'Noto Sans KR';
+const BoldText = css`
     font-weight: 700;
 `
 
 const KeepCalmPreset = css`
     font-family: 'KeepCalmMed';
-    font-weight: normal;
+    font-weight: 400;
 `
 
 const SinchonColor = css`
@@ -39,14 +38,14 @@ const SinchonColor = css`
 `
 
 const ItemTitle = styled.h3`
-    ${NotoSansBold}
+    ${BoldText}
     ${SinchonColor}
 
     margin: 1em 0 0.4em 0;
 `
 
 const TopicTitle = styled.h3`
-    ${NotoSansBold}
+    ${BoldText}
     ${SinchonColor}
 
     width: 3rem;
@@ -57,6 +56,8 @@ const TopicTitle = styled.h3`
 
     background-color: #23a33d;
     color: white;
+
+    border-radius: 0.4rem;
 `
 
 const TopicWrap = styled.div`

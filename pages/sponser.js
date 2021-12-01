@@ -155,9 +155,9 @@ const Sponser = () => {
                       B번 링크
                     </UnderlinedLink>{" "} */}
                     <li>
-                    현대오토에버 기업 홍보 세션 제공
-                    <br />
-                  </li>
+                      현대오토에버 기업 홍보 세션 제공
+                      <br />
+                    </li>
                   </li>
                 </ul>
               </SponserItem>
@@ -242,7 +242,7 @@ const ItemWrap = styled.div`
 const MainTextTitle = styled.h1`
   ${SinchonColor}
 
-  font-family: 'KeepCalmMed', 'Noto Sans KR';
+  font-family: 'KeepCalmMed', 'Apple SD Gothic Neo';
   font-size: 1.8rem;
   font-weight: 700;
 
@@ -258,7 +258,7 @@ const MainTextTitle = styled.h1`
 const TextTitle = styled.div`
   ${SinchonColor}
 
-  font-family: 'KeepCalmMed', 'Noto Sans KR';
+  font-family: 'KeepCalmMed', 'Apple SD Gothic Neo';
   font-size: 1.4rem;
   font-weight: 700;
 
@@ -268,7 +268,6 @@ const TextTitle = styled.div`
 `;
 
 const TextSubTitle = styled.div`
-  font-family: "Noto Sans KR";
   font-size: 0.9rem;
   font-weight: 500;
 `;

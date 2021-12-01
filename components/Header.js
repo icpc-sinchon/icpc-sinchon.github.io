@@ -66,7 +66,7 @@ const Header = () => {
                     </LogoImgWrap>
                 </Link>
                 <div style={{ flexGrow: "1" }} />
-                <Link href="/suapc"><HeaderElem style={{ color: '#009d3e' }}>SUAPC 2021</HeaderElem></Link>
+                <Link href="/suapc"><HeaderElem style={{ color: '#009d3e' }}>SUAPC 2022</HeaderElem></Link>
                 <Link href="/campcontest"><HeaderElem style={{ color: '#009d3e' }}>Camp Contest</HeaderElem></Link>
                 <Link href="/halloffame"><HeaderElem>명예의 전당</HeaderElem></Link>
                 <Link href="/sponser"><HeaderElem>후원 및 협업</HeaderElem></Link>
@@ -113,7 +113,7 @@ const HeaderWrap = styled.header`
 `
 
 const HeaderElem = styled.div`
-    font-family: 'KeepCalmMed', 'Noto Sans KR';
+    font-family: 'KeepCalmMed', 'Apple SD Gothic Neo';
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: -0.02rem;
@@ -137,7 +137,7 @@ const HeaderElem = styled.div`
 `
 
 const NavBarElem = styled.div`
-    font-family: 'KeepCalmMed', 'Noto Sans KR';
+    font-family: 'KeepCalmMed', 'Apple SD Gothic Neo';
     font-size: 0.8rem;
     font-weight: 500;
     color: white;

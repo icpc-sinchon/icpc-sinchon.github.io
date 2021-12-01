@@ -19,7 +19,7 @@ const SeasonNav = ({ onSeasonNavClick }) => {
 
 const KeepCalmPreset = css`
     font-family: 'KeepCalmMed';
-    font-weight: normal;
+    font-weight: 400;
 `
 
 const SeasonNavWrap = styled.div`

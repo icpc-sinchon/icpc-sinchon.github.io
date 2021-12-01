@@ -22,14 +22,13 @@ import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
 const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`)
 const data1 = require(`../public/history/halloffame/list.json`)
 
-const NotoSansBold = css`
-    font-family: 'Noto Sans KR';
+const BoldText = css`
     font-weight: 700;
 `
 
 const KeepCalmPreset = css`
     font-family: 'KeepCalmMed';
-    font-weight: normal;
+    font-weight: 400;
 `
 
 const SinchonColor = css`
@@ -37,14 +36,14 @@ const SinchonColor = css`
 `
 
 const ItemTitle = styled.h3`
-    ${NotoSansBold}
+    ${BoldText}
     ${SinchonColor}
 
     margin: 1em 0 0.4em 0;
 `
 
 const TopicTitle = styled.h3`
-    ${NotoSansBold}
+    ${BoldText}
     ${SinchonColor}
 
     width: 3rem;
@@ -177,7 +176,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                     />
                     <TextWrap
                         title={currentSeasonData.length !== 0 ? "명예의 전당 소개" : "이 곳의 주인공이 되세요"}
-                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에 강의와 멘토 활동으로 기여를 해주신 분들을 기립니다." : "이 곳의 주인공이 되세요"}
+                        content={currentSeasonData.length !== 0 ? "ICPC Sinchon Algorithm Camp에서 강의와 멘토 활동으로 기여해주신 분들을 기립니다." : "이 곳의 주인공이 되세요"}
                     />
 
                     {currentSeasonData.studies && Array.from(currentSeasonData.studies).map(study => {

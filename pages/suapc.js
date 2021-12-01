@@ -1,144 +1,97 @@
-import React, { useEffect, useRef } from 'react'
-import styled, { css } from 'styled-components'
-import Head from 'next/head'
+import React, { useEffect, useRef } from "react";
+import styled, { css } from "styled-components";
+import Head from "next/head";
 
-import { useDispatch, useSelector } from 'react-redux'
-import { setCurrentSeasonIdx } from '../reducers/currentSeasonIdx'
-import { setCurrentSeasonData } from '../reducers/currentSeasonData'
-import { setCurrentYear } from '../reducers/currentYear'
-import { setCurrentSeason } from '../reducers/currentSeason'
-import { setSeasonList } from '../reducers/seasonList'
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentSeasonIdx } from "../reducers/currentSeasonIdx";
+import { setCurrentSeasonData } from "../reducers/currentSeasonData";
+import { setCurrentYear } from "../reducers/currentYear";
+import { setCurrentSeason } from "../reducers/currentSeason";
+import { setSeasonList } from "../reducers/seasonList";
 
-import Layout from '../components/Layout'
-import WinnerTableWrap from '../components/WinnerTable/WinnerTableWrap'
-import SeasonSwitchArrow from '../components/Arrow/SeasonSwitchArrow'
-import SeasonNav from '../components/SeasonNav/SeasonNav'
-import ContestWrap from '../components/ContestWrap/ContestWrap'
-import TitleWrap from '../components/ContestWrap/ContestItem/TitleWrap/TitleWrap'
-import TextWrap from '../components/ContestWrap/ContestItem/TextWrap/TextWrap'
-import ItemWrap from '../components/ContestWrap/ContestItem/ItemWrap'
-import PreviewWrap from '../components/PreviewWrap/PreviewWrap'
-import ArchiveButton from '../components/ArchiveButton/ArchiveButton'
-import AdmissionButton from '../components/AdmissionButton/AdmissionButton'
-import ArchiveWrap from '../components/ContestWrap/ContestItem/ArchiveWrap'
-import TextBubble from '../components/TextBubble/TextBubble'
+import Layout from "../components/Layout";
+import WinnerTableWrap from "../components/WinnerTable/WinnerTableWrap";
+import SeasonSwitchArrow from "../components/Arrow/SeasonSwitchArrow";
+import SeasonNav from "../components/SeasonNav/SeasonNav";
+import ContestWrap from "../components/ContestWrap/ContestWrap";
+import TitleWrap from "../components/ContestWrap/ContestItem/TitleWrap/TitleWrap";
+import TextWrap from "../components/ContestWrap/ContestItem/TextWrap/TextWrap";
+import ItemWrap from "../components/ContestWrap/ContestItem/ItemWrap";
+import PreviewWrap from "../components/PreviewWrap/PreviewWrap";
+import ArchiveButton from "../components/ArchiveButton/ArchiveButton";
+import AdmissionButton from "../components/AdmissionButton/AdmissionButton";
+import ArchiveWrap from "../components/ContestWrap/ContestItem/ArchiveWrap";
+import TextBubble from "../components/TextBubble/TextBubble";
 
-const data0 = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`)
-const data1 = require(`../public/history/suapc/list.json`)
+const data0 = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`);
+const data1 = require(`../public/history/suapc/list.json`);
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의
  학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 
  대회 문제는 서울 리저널의 문제 출제 경향을 따르며 제한시간 동안 
- 얼마나 많은 문제를 정확하게 풀 수 있는지를 평가하여 순위를 결정합니다.`
+ 얼마나 많은 문제를 정확하게 풀 수 있는지를 평가하여 순위를 결정합니다.`;
 
 const ParticipantDesc = `서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교의 재학/휴학생인 경우
 누구나 참여가능합니다.\u{000d}\u{000a}
 (단, 졸업 1년 차와 대학원생은 참여 가능하되, 대회 중 스코어보드에는 보여지지 않습니다.)
-`
-
-const NotoSansBold = css`
-    font-family: 'Noto Sans KR';
-    font-weight: 700;
-`
-
-const KeepCalmPreset = css`
-    font-family: 'KeepCalmMed';
-    font-weight: normal;
-`
-
-const SinchonColor = css`
-    color: #009D3E;
-`
-
-const ItemTitle = styled.h3`
-    ${NotoSansBold}
-    ${SinchonColor}
-
-    margin: 1em 0 0.4em 0;
-`
-
-const SchoolLogoWrap = styled.div`
-    display:flex;
-    overflow-x: auto;
-`
-
-const SchoolLogo = styled.img`
-    ${'' /* width: 2.7rem; */}
-    height: 2.7rem;
-
-    margin-left: 1.1rem;
-
-    &:first-child{
-        margin-left: 0;
-    }
-`
-
-const SponserCI = styled.img`
-    height: 1.6rem;
-
-    margin: 0.8rem 1.8rem 0.6rem 0;
-    ${'' /* margin-left: 1.1rem; */}
-
-    ${'' /* &:first-child{
-        margin-left: 0;
-    } */}
-`
+`;
 
 const CustomButton = styled.div`
-    border: 2px solid #009D3E;
+  border: 2px solid #009d3e;
 
-    padding: 0.4rem 1.2rem;
-    margin-left: 1.2rem;
+  padding: 0.4rem 1.2rem;
+  margin-left: 1.2rem;
 
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #009D3E;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #009d3e;
 
-    &:first-child{
-        margin-left: 0;
-    }
-`
+  &:first-child {
+    margin-left: 0;
+  }
+`;
 
 const Suapc = ({ seasonData_, seasonList_ }) => {
-    const contestWrapRef = useRef(null)
-    const registerContestBtnRef = useRef(null)
-    const dispatch = useDispatch()
-    const currentSeasonIdx = useSelector(state => state.currentSeasonIdx)
-    const currentSeasonData = useSelector(state => state.currentSeasonData)
-    const currentYear = useSelector(state => state.currentYear)
-    const currentSeason = useSelector(state => state.currentSeason)
-    const seasonList = useSelector(state => state.seasonList)
+  const contestWrapRef = useRef(null);
+  const registerContestBtnRef = useRef(null);
+  const dispatch = useDispatch();
+  const currentSeasonIdx = useSelector((state) => state.currentSeasonIdx);
+  const currentSeasonData = useSelector((state) => state.currentSeasonData);
+  const currentYear = useSelector((state) => state.currentYear);
+  const currentSeason = useSelector((state) => state.currentSeason);
+  const seasonList = useSelector((state) => state.seasonList);
 
-    useEffect(() => {
-        if (!contestWrapRef.current) return
-        adjustPreviewWrapHeight()
-    })
+  useEffect(() => {
+    if (!contestWrapRef.current) return;
+    adjustPreviewWrapHeight();
+  });
 
-    const adjustPreviewWrapHeight = () => {
-        const previewContainer = document.querySelectorAll(".preview-container")
-        const contestWrapBoundary = contestWrapRef?.current?.getBoundingClientRect();
-        previewContainer.forEach(ele => {
-            ele.style.height = contestWrapBoundary.height + "px"
-        })
-    }
+  const adjustPreviewWrapHeight = () => {
+    const previewContainer = document.querySelectorAll(".preview-container");
+    const contestWrapBoundary =
+      contestWrapRef?.current?.getBoundingClientRect();
+    previewContainer.forEach((ele) => {
+      ele.style.height = contestWrapBoundary.height + "px";
+    });
+  };
 
-    const onSeasonNavClick = e => {
-        let idx = parseInt(e.target.getAttribute('alt'))
-        switchSeasonData(idx)
-    }
+  const onSeasonNavClick = (e) => {
+    let idx = parseInt(e.target.getAttribute("alt"));
+    switchSeasonData(idx);
+  };
 
-    const onArrowClick = e => {
-        let alt = e.target.getAttribute('alt')
-        let l_r = -1;
-        if (alt === "right-arrow") l_r = 1;
+  const onArrowClick = (e) => {
+    let alt = e.target.getAttribute("alt");
+    let l_r = -1;
+    if (alt === "right-arrow") l_r = 1;
 
-        if (!seasonList[l_r + currentSeasonIdx]) return;
+    if (!seasonList[l_r + currentSeasonIdx]) return;
 
-        switchSeasonData(l_r + currentSeasonIdx)
-    }
+    switchSeasonData(l_r + currentSeasonIdx);
+  };
 
-    const switchSeasonData = idx => {
-        let season = seasonList[idx]
+  const switchSeasonData = async (idx) => {
+    let season = seasonList[idx];
 
     try {
       const data = await fetchSeasonData(season);
@@ -147,176 +100,296 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
       console.error(err);
     }
 
-        dispatch(setCurrentYear(season.split(' ')[0]))
-        dispatch(setCurrentSeason(season.split(' ')[1]))
-        dispatch(setCurrentSeasonIdx(idx))
+    dispatch(setCurrentYear(season.split(" ")[0]));
+    dispatch(setCurrentSeason(season.split(" ")[1]));
+    dispatch(setCurrentSeasonIdx(idx));
 
-        adjustSelectedNav(idx)
+    adjustSelectedNav(idx);
+  };
+
+  const adjustSelectedNav = (idx) => {
+    document.querySelectorAll(".season-nav").forEach((ele) => {
+      if (ele.getAttribute("alt") == idx) {
+        ele.classList.add("season-selected");
+      } else {
+        ele.classList.remove("season-selected");
+      }
+    });
+  };
+
+  const fetchSeasonData = async (season) => {
+    try {
+      const response = await fetch(`/history/suapc/${season}.json`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      return [];
     }
+  };
 
-    const adjustSelectedNav = idx => {
-        document.querySelectorAll('.season-nav').forEach(ele => {
-            if (ele.getAttribute('alt') == idx) {
-                ele.classList.add('season-selected')
-            } else {
-                ele.classList.remove('season-selected')
-            }
-        })
-    }
+  return (
+    <Layout>
+      <Head>
+        <title>SUAPC 2022 | ICPC Sinchon</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:title" content="SUAPC 2022 | ICPC Sinchon" />
+        <meta property="og:url" content="https://icpc-sinchon.io/suapc" />
+        <meta
+          property="og:description"
+          content="SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의 학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다"
+        />
+        <meta
+          property="og:image"
+          content="https://api.suapc.kr/res/og_image.png"
+        />
+      </Head>
+      <>
+        <TextBubble
+          text="현재 신청기간이 아닙니다."
+          triggerRef={registerContestBtnRef}
+        />
+        <SeasonNav onSeasonNavClick={onSeasonNavClick} />
+        <PreviewWrap />
+        <ContestWrap ref={contestWrapRef}>
+          <SeasonSwitchArrow onArrowClick={onArrowClick} />
+          <TitleWrap
+            pageType={"suapc"}
+            title={`SUAPC ${currentYear} ${currentSeason}`}
+            year={currentYear}
+            season={currentSeason}
+          />
+          {currentSeasonData.awards ? (
+            <ArchiveWrap className="hide-if-mobile">
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/problem`}
+              >
+                문제 PDF
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/solution`}
+              >
+                해설 PDF
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/scoreboard`}
+              >
+                스코어보드
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
+              >
+                공식 포스터
+              </ArchiveButton>
+            </ArchiveWrap>
+          ) : (
+            <ArchiveWrap>
+              {/* for contest: apply link isn't created */}
+              {/* <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton> */}
+              <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>
+                대회 문의
+              </AdmissionButton>
+              <AdmissionButton>
+                검수진 지원{" "}
+                <span style={{ fontSize: "smaller" }}>12/05부터</span>
+              </AdmissionButton>
+              {/* <AdmissionButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
+              >
+                공식 포스터
+              </AdmissionButton> */}
+            </ArchiveWrap>
+          )}
+          <TextWrap title="대회 일자" content={currentSeasonData.date} isUncertain={currentYear === 2022} />
+          <TextWrap title="대회 소개" content={SuapcDesc} />
+          <TextWrap title="참여 대상" content={ParticipantDesc} />
+          <ItemWrap>
+            <ItemTitle>참여 대학</ItemTitle>
+            <SchoolLogoWrap>
+              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sogang.png" />
+              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sookmyung.png" />
+              <SchoolLogo src="https://api.suapc.kr/res/school-logo/yonsei.png" />
+              <SchoolLogo src="https://api.suapc.kr/res/school-logo/ewha.png" />
+              <SchoolLogo src="https://api.suapc.kr/res/school-logo/hongik.png" />
+            </SchoolLogoWrap>
+          </ItemWrap>
+          <ItemWrap>
+            <ItemTitle>후원사</ItemTitle>
+            <SchoolLogoWrap
+              style={{ flexWrap: `wrap`, justifyContent: `start` }}
+            >
+              {currentSeasonData.sponser?.map((data) => {
+                return (
+                  <SponserCI
+                    key={"sponser-" + data}
+                    src={`https://api.suapc.kr/res/sponser-ci/${data}.png`}
+                  />
+                );
+              })}
+            </SchoolLogoWrap>
+          </ItemWrap>
 
-    const fetchSeasonData = async (season) => {
-        try {
-            const response = await fetch(`/history/suapc/${season}.json`)
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            return [];
-        }
-    }
-
-    return (
-        <Layout>
-            <Head>
-                <title>SUAPC 2021 | ICPC Sinchon</title>
-                <meta property="og:type" content="website" />
-                <meta property="og:locale" content="ko_KR" />
-                <meta property="og:title" content="SUAPC 2021 | ICPC Sinchon" />
-                <meta property="og:url" content="https://icpc-sinchon.io/suapc" />
-                <meta property="og:description" content="SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의 학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다" />
-                <meta property="og:image" content="https://api.suapc.kr/res/og_image.png" />
-            </Head>
+          {currentSeasonData.awards?.length && (
             <>
-                <TextBubble text="현재 신청기간이 아닙니다." triggerRef={registerContestBtnRef} />
-                <SeasonNav
-                    onSeasonNavClick={onSeasonNavClick}
-                />
-                <PreviewWrap />
-                <ContestWrap ref={contestWrapRef}>
-                    <SeasonSwitchArrow
-                        onArrowClick={onArrowClick}
-                    />
-                    <TitleWrap
-                        pageType={"suapc"}
-                        title={`SUAPC ${currentYear} ${currentSeason}`}
-                        year={currentYear}
-                        season={currentSeason}
-                    />
-                    {currentSeasonData.awards ?
-                        <ArchiveWrap className="hide-if-mobile">
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
-                        </ArchiveWrap>
-                        :
-                        <ArchiveWrap>
-                            {/* for contest: apply link isn't created */}
-                            {/* <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton> */}
-                            <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>대회 문의</AdmissionButton>
-                            <AdmissionButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</AdmissionButton>
-                        </ArchiveWrap>
-                    }
-                    <TextWrap
-                        title="대회 일자"
-                        content={currentSeasonData.date}
-                    />
-                    <TextWrap
-                        title="대회 소개"
-                        content={SuapcDesc}
-                    />
-                    <TextWrap
-                        title="참여 대상"
-                        content={ParticipantDesc}
-                    />
-                    <ItemWrap>
-                        <ItemTitle>참여 대학</ItemTitle>
-                        <SchoolLogoWrap>
-                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/sogang.png' />
-                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/sookmyung.png' />
-                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/yonsei.png' />
-                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/ewha.png' />
-                            <SchoolLogo src='https://api.suapc.kr/res/school-logo/hongik.png' />
-                        </SchoolLogoWrap>
-                    </ItemWrap>
-                    <ItemWrap>
-                        <ItemTitle>후원사</ItemTitle>
-                        <SchoolLogoWrap style={{ flexWrap: `wrap`, justifyContent: `start` }}>
-                            {currentSeasonData.sponser?.map(data => {
-                                return <SponserCI key={"sponser-" + data} src={`https://api.suapc.kr/res/sponser-ci/${data}.png`} />
-                            })}
-                        </SchoolLogoWrap>
-                    </ItemWrap>
+              <ItemWrap>
+                <ItemTitle>수상 내역</ItemTitle>
+                <WinnerTableWrap data={currentSeasonData.awards} />
+              </ItemWrap>
 
-                    {currentSeasonData.awards?.length && <>
-                        <ItemWrap>
-                            <ItemTitle>수상 내역</ItemTitle>
-                            <WinnerTableWrap data={currentSeasonData.awards} />
-                        </ItemWrap>
-
-                        <div className="maker-checker-wrap">
-                            <ItemWrap className="maker-checker">
-                                <ItemTitle>출제진</ItemTitle>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th style={{ width: `8rem` }}>이름</th>
-                                            <th>소속</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {currentSeasonData.examiner && Array.from(currentSeasonData.examiner).map(elem => {
-                                            return (
-                                                <tr key={"checker-" + elem.name}>
-                                                    <td>{elem.name}</td>
-                                                    <td>{elem.school}</td>
-                                                </tr>
-                                            )
-                                        })}
-                                    </tbody>
-                                </table>
-                            </ItemWrap>
-                            <ItemWrap className="maker-checker">
-                                <ItemTitle>검수진</ItemTitle>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th style={{ width: `8rem` }}>이름</th>
-                                            <th>소속</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {currentSeasonData.checker && Array.from(currentSeasonData.checker).map(elem => {
-                                            return (
-                                                <tr key={"maker-" + elem.name}>
-                                                    <td>{elem.name}</td>
-                                                    <td>{elem.school}</td>
-                                                </tr>
-                                            )
-                                        })}
-                                    </tbody>
-                                </table>
-                            </ItemWrap>
-                        </div>
-                    </>}
-                    {currentSeasonData.awards &&
-                        <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/problem`}>문제 PDF</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/solution`}>해설 PDF</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/scoreboard`}>스코어보드</ArchiveButton>
-                            <ArchiveButton href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? 'w' : 's'}/poster`}>공식 포스터</ArchiveButton>
-                        </ItemWrap>}
-                </ContestWrap>
+              <div className="maker-checker-wrap">
+                <ItemWrap className="maker-checker">
+                  <ItemTitle>출제진</ItemTitle>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style={{ width: `8rem` }}>이름</th>
+                        <th>소속</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {currentSeasonData.examiner &&
+                        Array.from(currentSeasonData.examiner).map((elem) => {
+                          return (
+                            <tr key={"checker-" + elem.name}>
+                              <td>{elem.name}</td>
+                              <td>{elem.school}</td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </ItemWrap>
+                <ItemWrap className="maker-checker">
+                  <ItemTitle>검수진</ItemTitle>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style={{ width: `8rem` }}>이름</th>
+                        <th>소속</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {currentSeasonData.checker &&
+                        Array.from(currentSeasonData.checker).map((elem) => {
+                          return (
+                            <tr key={"maker-" + elem.name}>
+                              <td>{elem.name}</td>
+                              <td>{elem.school}</td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </ItemWrap>
+              </div>
             </>
-        </Layout>
-    )
-}
+          )}
+          {currentSeasonData.awards && (
+            <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/problem`}
+              >
+                문제 PDF
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/solution`}
+              >
+                해설 PDF
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/scoreboard`}
+              >
+                스코어보드
+              </ArchiveButton>
+              <ArchiveButton
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
+              >
+                공식 포스터
+              </ArchiveButton>
+            </ItemWrap>
+          )}
+        </ContestWrap>
+      </>
+    </Layout>
+  );
+};
 
+const BoldText = css`
+  font-weight: 700;
+`;
+
+const KeepCalmPreset = css`
+  font-family: "KeepCalmMed";
+  font-weight: 400;
+`;
+
+const SinchonColor = css`
+  color: #009d3e;
+`;
+
+const ItemTitle = styled.h3`
+  ${BoldText}
+  ${SinchonColor}
+
+    margin: 1em 0 0.4em 0;
+`;
+
+const SchoolLogoWrap = styled.div`
+  display: flex;
+  overflow-x: auto;
+`;
+
+const SchoolLogo = styled.img`
+  ${"" /* width: 2.7rem; */}
+  height: 2.7rem;
+
+  margin-left: 1.1rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+`;
+
+const SponserCI = styled.img`
+  height: 1.6rem;
+
+  margin: 0.8rem 1.8rem 0.6rem 0;
+  ${"" /* margin-left: 1.1rem; */}
+
+  ${
+    "" /* &:first-child{
+        margin-left: 0;
+    } */
+  }
+`;
 Suapc.getInitialProps = async ({ store }) => {
-    store.dispatch(setCurrentSeasonData(data0))
-    store.dispatch(setCurrentSeason(data0.season))
-    store.dispatch(setCurrentYear(data0.year))
-    store.dispatch(setSeasonList(data1))
-    store.dispatch(setCurrentSeasonIdx(data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)))
-}
+  store.dispatch(setCurrentSeasonData(data0));
+  store.dispatch(setCurrentSeason(data0.season));
+  store.dispatch(setCurrentYear(data0.year));
+  store.dispatch(setSeasonList(data1));
+  store.dispatch(
+    setCurrentSeasonIdx(
+      data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)
+    )
+  );
+};
 
 export default Suapc;

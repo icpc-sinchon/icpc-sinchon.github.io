@@ -5,7 +5,6 @@ const CustomButton = styled.div`
     
     padding: 0.4rem 1.2rem;
     
-    font-family: 'Noto Sans KR';
     font-size: 0.8rem;
     font-weight: 700;
     color: #009D3E;

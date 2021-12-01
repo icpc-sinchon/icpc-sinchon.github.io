@@ -57,7 +57,7 @@ const ItemWrap = styled.div`
 const MainTextTitle = styled.h1`
     ${SinchonColor}    
 
-    font-family: 'KeepCalmMed', 'Noto Sans KR';
+    font-family: 'KeepCalmMed', 'Apple SD Gothic Neo';
     font-size: 1.8rem;
     font-weight: 700;
 
@@ -78,7 +78,6 @@ const TextTitle = styled.div`
 `
 
 const TextSubTitle = styled.div`
-    font-family: 'Noto Sans KR';
     font-size: 1.02rem;
     font-weight: 500;
 `

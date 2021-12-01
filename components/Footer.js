@@ -1,151 +1,154 @@
-import styled from 'styled-components'
-import organizer from '../public/history/organizer.json'
+import styled from "styled-components";
+import organizer from "../public/history/organizer.json";
 
 const Footer_ = styled.footer`
-    height: 260px;
+  height: 260px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    margin-top: auto;
-    padding: 2.4rem 3.2rem 3rem 3.2rem;
+  margin-top: auto;
+  padding: 2.4rem 3.2rem 3rem 3.2rem;
 
-    color: white;
-    background-color: #009D3E;
+  color: white;
+  background-color: #009d3e;
 
-    @media(max-width: 900px){
-        height: auto;
-    }
+  @media (max-width: 900px) {
+    height: auto;
+  }
 
-    @media(max-width: 500px){
-        padding: 2.4rem 2rem 3rem 2rem;
-    }
-`
-
+  @media (max-width: 500px) {
+    padding: 2.4rem 2rem 3rem 2rem;
+  }
+`;
+const KeepCalm = styled.div`
+  font-family: "KeepCalmMed";
+`;
 const BottomWrap = styled.div`
-    display: flex;
-    
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
 
-    @media(max-width: 900px){
-        display: block;
-        margin-top: 4rem;
-    }
-`
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 900px) {
+    display: block;
+    margin-top: 4rem;
+  }
+`;
 
 const OrganizerWrap = styled.div`
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 
-    word-break: break-all;
-    span{
-        &::after{
-            padding: 0 6px;
-            content: "|";
-        }
+  word-break: break-all;
+  span {
+    &::after {
+      padding: 0 6px;
+      content: "|";
     }
-`
+  }
+`;
 
 const OrgTitle = styled.div`
-    font-size: 0.8rem;
-    font-weight: 700;
-`
+  font-size: 0.8rem;
+  font-weight: 700;
+`;
 
 const CIWrap1 = styled.div`
-    @media(max-width: 900px){
-        margin-top: 1rem;
-    }
-`
+  @media (max-width: 900px) {
+    margin-top: 3.2rem;
+  }
+`;
 const CIWrap2 = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    font-size: 1.2rem;
-`
+  font-size: 1.2rem;
+`;
 
 const CIWrap = styled.div`
-    width: 1.5rem;
-    margin-left: 0.6rem;
-`
+  width: 1.5rem;
+  margin-left: 0.6rem;
+`;
 
 const CopyRight = styled.div`
-  font-family: "Apple SD Gothic Neo";
   font-size: 0.7rem;
 
   text-align: right;
-`
+`;
 
 const IconWrap = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    a {
-        padding: 0 .5rem;
-        &:last-child{
-            padding-right: 0;
-        }
+  a {
+    padding: 0 0.5rem;
+    &:last-child {
+      padding-right: 0;
     }
-`
+  }
+`;
 
 const TopWrap = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Footer = () => {
-    const onMailIconClick = () => {
-        window.open("mailto:icpc.sinchon@gmail.com");
-    }
-    return (
-        <Footer_>
-            <TopWrap>
-                <div>{organizer[0].year} {organizer[0].season}</div>
-                <IconWrap>
-                    <a href="https://fb.com/icpc-sinchon" target="_blank"><img src="/res/footer/facebook.svg" /></a>
-                    <a href="https://pf.kakao.com/_xehxhAK" target="_blank"><img src="/res/footer/talk_white.svg" /></a>
-                    <a onClick={onMailIconClick}><img src="/res/footer/mail_white.svg" /></a>
-                </IconWrap>
-            </TopWrap>
-            <BottomWrap>
-                <OrganizerWrap>
-                    <OrgTitle>회장</OrgTitle>
-                    <div>
-                        {organizer[0].president.map((person, idx) => {
-                            if (idx != organizer[0].president.length - 1)
-                                return (
-                                    <span>{person.name}</span>
-                                )
-                            else
-                                return person.name
-                        })}
-                    </div>
-                    <OrgTitle style={{ marginTop: '0.2rem' }}>운영진</OrgTitle>
-                    <div>
-                        {organizer[0].member.map((person, idx) => {
-                            if (idx != organizer[0].member.length - 1)
-                                return (
-                                    <span>{person.name}</span>
-                                )
-                            else
-                                return person.name
-                        })}
-                    </div>
-                </OrganizerWrap>
-                <CIWrap1>
-                    <CIWrap2>
-                        <div>ICPC Sinchon</div>
-                        <CIWrap>
-                            <img src="/res/footer/240white.svg" />
-                        </CIWrap>
-                    </CIWrap2>
-                    <CopyRight>ⓒ 2020-2022 ICPC Sinchon. All Rights Reserved.</CopyRight>
-                </CIWrap1>
-            </BottomWrap>
-        </Footer_>
-    )
-}
+  const onMailIconClick = () => {
+    window.open("mailto:icpc.sinchon@gmail.com");
+  };
+  return (
+    <Footer_>
+      <TopWrap>
+        <KeepCalm>
+          {organizer[0].year} {organizer[0].season}
+        </KeepCalm>
+        <IconWrap>
+          <a href="https://fb.com/icpc-sinchon" target="_blank">
+            <img src="/res/footer/facebook.svg" />
+          </a>
+          <a href="https://pf.kakao.com/_xehxhAK" target="_blank">
+            <img src="/res/footer/talk_white.svg" />
+          </a>
+          <a onClick={onMailIconClick}>
+            <img src="/res/footer/mail_white.svg" />
+          </a>
+        </IconWrap>
+      </TopWrap>
+      <BottomWrap>
+        <OrganizerWrap>
+          <OrgTitle>회장</OrgTitle>
+          <div>
+            {organizer[0].president.map((person, idx) => {
+              if (idx != organizer[0].president.length - 1)
+                return <span>{person.name}</span>;
+              else return person.name;
+            })}
+          </div>
+          <OrgTitle style={{ marginTop: "0.2rem" }}>운영진</OrgTitle>
+          <div>
+            {organizer[0].member.map((person, idx) => {
+              if (idx != organizer[0].member.length - 1)
+                return <span>{person.name}</span>;
+              else return person.name;
+            })}
+          </div>
+        </OrganizerWrap>
+        <CIWrap1>
+          <CIWrap2>
+            <KeepCalm>ICPC Sinchon</KeepCalm>
+            <CIWrap>
+              <img src="/res/footer/240white.svg" />
+            </CIWrap>
+          </CIWrap2>
+          <CopyRight>ⓒ 2020-2022 ICPC Sinchon. All Rights Reserved.</CopyRight>
+        </CIWrap1>
+      </BottomWrap>
+    </Footer_>
+  );
+};
 
 export default Footer;
