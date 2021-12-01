@@ -140,10 +140,12 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
     const switchSeasonData = idx => {
         let season = seasonList[idx]
 
-        fetchSeasonData(season).then(data => {
-            dispatch(setCurrentSeasonData(data))
-        })
-            .catch(err => { console.log(err) })
+    try {
+      const data = await fetchSeasonData(season);
+      dispatch(setCurrentSeasonData(data));
+    } catch (err) {
+      console.error(err);
+    }
 
         dispatch(setCurrentYear(season.split(' ')[0]))
         dispatch(setCurrentSeason(season.split(' ')[1]))
