@@ -71,8 +71,10 @@ const CIWrap = styled.div`
 `
 
 const CopyRight = styled.div`
-    font-size: 0.6rem;
-    text-align: right;
+  font-family: "Apple SD Gothic Neo";
+  font-size: 0.7rem;
+
+  text-align: right;
 `
 
 const IconWrap = styled.div`
