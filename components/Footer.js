@@ -71,7 +71,7 @@ const CIWrap = styled.div`
 `
 
 const CopyRight = styled.div`
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     text-align: right;
 `
 
@@ -139,7 +139,7 @@ const Footer = () => {
                             <img src="/res/footer/240white.svg" />
                         </CIWrap>
                     </CIWrap2>
-                    <CopyRight>ⓒ 2020-2021 ICPC Sinchon. All Rights Reserved.</CopyRight>
+                    <CopyRight>ⓒ 2020-2022 ICPC Sinchon. All Rights Reserved.</CopyRight>
                 </CIWrap1>
             </BottomWrap>
         </Footer_>
