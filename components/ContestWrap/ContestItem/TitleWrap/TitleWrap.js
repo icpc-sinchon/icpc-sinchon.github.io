@@ -37,7 +37,7 @@ const Title = styled.h1`
 const SubTitle = styled.p`
     ${SinchonColor}
 
-    margin: 0 0 3rem 0;
+  margin: 0.4rem 0 3rem 0;
 
     @media(max-width: 470px){
         font-size: 1rem;
