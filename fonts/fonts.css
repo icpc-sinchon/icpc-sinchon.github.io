@@ -1,6 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 @font-face {
-	font-family: 'KeepCalmMed';
-	src: url('./KeepCalmMedium.woff2') format('woff2');
+  font-family: "KeepCalmMed";
+  src: url("./KeepCalmMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  src: url("./AppleSDGothicNeo-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  src: url("./AppleSDGothicNeo-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  src: url("./AppleSDGothicNeo-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  src: url("./AppleSDGothicNeo-Regular.woff2") format("woff2");
+  font-weight: 400;
 }
