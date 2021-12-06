@@ -210,7 +210,11 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
               </AdmissionButton> */}
             </ArchiveWrap>
           )}
-          <TextWrap title="대회 일자" content={currentSeasonData.date} isUncertain={currentYear === 2022} />
+          <TextWrap
+            title="대회 일자"
+            content={currentSeasonData.date}
+            isUncertain={currentYear === 2022}
+          />
           <TextWrap title="대회 소개" content={SuapcDesc} />
           <TextWrap title="참여 대상" content={ParticipantDesc} />
           <ItemWrap>
