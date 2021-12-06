@@ -194,10 +194,10 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
             <ArchiveWrap>
               {/* for contest: apply link isn't created */}
               {/* <AdmissionButton ref={registerContestBtnRef} isDeprecated={true}>대회 신청</AdmissionButton> */}
-              <AdmissionButton href={`https://pf.kakao.com/_xehxhAK`}>
+              <AdmissionButton href="https://pf.kakao.com/_xehxhAK">
                 대회 문의
               </AdmissionButton>
-              <AdmissionButton>
+              <AdmissionButton href="https://forms.gle/9T57pnjJHi3X92aF7">
                 검수진 지원{" "}
                 <span style={{ fontSize: "smaller" }}>12/05부터</span>
               </AdmissionButton>
