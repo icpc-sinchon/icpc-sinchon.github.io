@@ -1409,7 +1409,7 @@ eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Winter
 /*! exports provided: year, season, date, sponser, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"{\\\"year\\\":2022,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2022년 2월 26일(토) 오후 12시 ~ 오후 5시\\\",\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"helloalgo\\\",\\\"naver\\\",\\\"jetbrains\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"hanbit\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjIgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2022 Winter.json\n");
+eval("module.exports = JSON.parse(\"{\\\"year\\\":2022,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2022년 2월 26일(토) 오후 12시 ~ 오후 5시\\\",\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"helloalgo\\\",\\\"naver\\\",\\\"secmem\\\",\\\"jetbrains\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"hanbit\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjIgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2022 Winter.json\n");
 
 /***/ }),
 
