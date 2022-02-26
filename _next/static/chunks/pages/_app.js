@@ -1417,10 +1417,10 @@ eval("module.exports = JSON.parse(\"{\\\"year\\\":2021,\\\"season\\\":\\\"Winter
 /*!***********************************************!*\
   !*** ./public/history/suapc/2022 Winter.json ***!
   \***********************************************/
-/*! exports provided: year, season, date, sponser, default */
+/*! exports provided: year, season, date, awards, examiner, checker, sponser, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"{\\\"year\\\":2022,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2022년 2월 26일(토) 오후 12시 ~ 오후 5시\\\",\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"future-tech-academy\\\",\\\"naver\\\",\\\"secmem\\\",\\\"jetbrains\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"hanbit\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjIgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2022 Winter.json\n");
+eval("module.exports = JSON.parse(\"{\\\"year\\\":2022,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2022년 2월 26일(토) 오후 12시 ~ 오후 5시\\\",\\\"awards\\\":[],\\\"examiner\\\":[{\\\"name\\\":\\\"김태영\\\",\\\"school\\\":\\\"KAIST\\\"},{\\\"name\\\":\\\"박진식\\\",\\\"school\\\":\\\"크리마\\\"},{\\\"name\\\":\\\"박찬솔\\\",\\\"school\\\":\\\"동래고등학교\\\"},{\\\"name\\\":\\\"이국렬\\\",\\\"school\\\":\\\"연세대학교\\\"},{\\\"name\\\":\\\"이상원\\\",\\\"school\\\":\\\"삼성전자\\\"},{\\\"name\\\":\\\"조찬우\\\",\\\"school\\\":\\\"선린인터넷고등학교\\\"},{\\\"name\\\":\\\"홍은기\\\",\\\"school\\\":\\\"삼성전자\\\"}],\\\"checker\\\":[{\\\"name\\\":\\\"김동규\\\",\\\"school\\\":\\\"KAIST AI대학원\\\"},{\\\"name\\\":\\\"강희원\\\",\\\"school\\\":\\\"경기북과학고등학교\\\"},{\\\"name\\\":\\\"남현욱\\\",\\\"school\\\":\\\"Team Samoyed\\\"},{\\\"name\\\":\\\"서태수\\\",\\\"school\\\":\\\"삼성전자\\\"},{\\\"name\\\":\\\"최재민\\\",\\\"school\\\":\\\"KAIST\\\"}],\\\"sponser\\\":[\\\"kakao\\\",\\\"autoever\\\",\\\"future-tech-academy\\\",\\\"naver\\\",\\\"secmem\\\",\\\"jetbrains\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"hanbit\\\",\\\"startlink\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjIgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2022 Winter.json\n");
 
 /***/ }),
 
