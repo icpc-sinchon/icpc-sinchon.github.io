@@ -23,7 +23,38 @@
                     "handle": "raararaara"
                 }
             ],
-            "mentors": [],
+            "mentors": [
+                {
+                    "name": "권찬",
+                    "school": "홍익대",
+                    "handle": "kckc0608"
+                },
+                {
+                    "name": "김동건",
+                    "school": "서강대",
+                    "handle": "dong_gas"
+                },
+                {
+                    "name": "김서인",
+                    "school": "서강대",
+                    "handle": "seoin0110"
+                },
+                {
+                    "name": "김성민",
+                    "school": "홍익대",
+                    "handle": "tolelom"
+                },
+                {
+                    "name": "박준서",
+                    "school": "서강대",
+                    "handle": "p_jun"
+                },
+                {
+                    "name": "한상필",
+                    "school": "서강대",
+                    "handle": "tksvlf123"
+                }
+            ],
             "curriculum": [
                 "시간복잡도, 정렬",
                 "문자열",
@@ -131,7 +162,23 @@
                     "handle": "djs100201"
                 }
             ],
-            "mentors": [],
+            "mentors": [
+                {
+                    "name":"김도현",
+                    "school":"홍익대",
+                    "handle":"swoon"
+                },
+                {
+                    "name":"남유진",
+                    "school":"연세대",
+                    "handle":"youx"
+                },
+                {
+                    "name":"조원빈",
+                    "school":"서강대",
+                    "handle":"wbcho0504"
+                }
+            ],
             "curriculum": [
                 "Number Theory, Simple Math",
                 "DP",
