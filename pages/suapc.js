@@ -162,26 +162,30 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           {currentSeasonData.awards ? (
             <ArchiveWrap className="hide-if-mobile">
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/problem`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/problem`}
               >
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/solution`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/solution`}
               >
                 해설 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/scoreboard`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/scoreboard`}
               >
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/poster`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
               >
                 공식 포스터
               </ArchiveButton>
@@ -189,8 +193,8 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           ) : (
             <ArchiveWrap>
               {/* for contest: apply link isn't created */}
-              <AdmissionButton
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeKHQl43AEKF8llH6zh9bOzQu5puAil6NfREOg02D3m6-7cuw/viewform?usp=send_form">대회 신청{" "}
+              <AdmissionButton href="https://docs.google.com/forms/d/e/1FAIpQLSeKHQl43AEKF8llH6zh9bOzQu5puAil6NfREOg02D3m6-7cuw/viewform?usp=send_form">
+                대회 신청{" "}
                 <span style={{ fontSize: "smaller" }}>02/19 23시까지</span>
               </AdmissionButton>
               {/* <AdmissionButton href="https://pf.kakao.com/_xehxhAK">
@@ -201,8 +205,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                 <span style={{ fontSize: "smaller" }}>12/05부터</span>
               </AdmissionButton> */}
               <AdmissionButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/poster`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
               >
                 공식 포스터
               </AdmissionButton>
@@ -211,7 +216,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           <TextWrap
             title="대회 일자"
             content={currentSeasonData.date}
-            isUncertain={currentYear === 2022}
+            // isUncertain={currentYear === 2022}
           />
           <TextWrap title="대회 소개" content={SuapcDesc} />
           <TextWrap title="참여 대상" content={ParticipantDesc} />
@@ -241,13 +246,14 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
             </SchoolLogoWrap>
           </ItemWrap>
 
-          {currentSeasonData.awards?.length && (
+          {currentSeasonData.awards && (
             <>
-              <ItemWrap>
-                <ItemTitle>수상 내역</ItemTitle>
-                <WinnerTableWrap data={currentSeasonData.awards} />
-              </ItemWrap>
-
+              {!!currentSeasonData.awards.length && (
+                <ItemWrap>
+                  <ItemTitle>수상 내역</ItemTitle>
+                  <WinnerTableWrap data={currentSeasonData.awards} />
+                </ItemWrap>
+              )}
               <div className="maker-checker-wrap">
                 <ItemWrap className="maker-checker">
                   <ItemTitle>출제진</ItemTitle>
@@ -299,26 +305,30 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           {currentSeasonData.awards && (
             <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/problem`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/problem`}
               >
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/solution`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/solution`}
               >
                 해설 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/scoreboard`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/scoreboard`}
               >
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${currentSeason === "Winter" ? "w" : "s"
-                  }/poster`}
+                href={`https://archive.suapc.kr/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/poster`}
               >
                 공식 포스터
               </ArchiveButton>
@@ -372,7 +382,8 @@ const SponserCI = styled.img`
   margin: 0.8rem 1.8rem 0.6rem 0;
   ${"" /* margin-left: 1.1rem; */}
 
-  ${"" /* &:first-child{
+  ${
+    "" /* &:first-child{
         margin-left: 0;
     } */
   }
@@ -384,8 +395,8 @@ Suapc.getInitialProps = async ({ store }) => {
   store.dispatch(setSeasonList(data1));
   store.dispatch(
     setCurrentSeasonIdx(
-      data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON)
-    )
+      data1.indexOf(process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON),
+    ),
   );
 };
 

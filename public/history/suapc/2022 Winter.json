@@ -2,6 +2,59 @@
   "year": 2022,
   "season": "Winter",
   "date": "2022년 2월 26일(토) 오후 12시 ~ 오후 5시",
+  "awards": [],
+  "examiner": [
+    {
+      "name": "김태영",
+      "school": "KAIST"
+    },
+    {
+      "name": "박진식",
+      "school": "크리마"
+    },
+    {
+      "name": "박찬솔",
+      "school": "동래고등학교"
+    },
+    {
+      "name": "이국렬",
+      "school": "연세대학교"
+    },
+    {
+      "name": "이상원",
+      "school": "삼성전자"
+    },
+    {
+      "name": "조찬우",
+      "school": "선린인터넷고등학교"
+    },
+    {
+      "name": "홍은기",
+      "school": "삼성전자"
+    }
+  ],
+  "checker": [
+    {
+      "name": "김동규",
+      "school": "KAIST AI대학원"
+    },
+    {
+      "name": "강희원",
+      "school": "경기북과학고등학교"
+    },
+    {
+      "name": "남현욱",
+      "school": "Team Samoyed"
+    },
+    {
+      "name": "서태수",
+      "school": "삼성전자"
+    },
+    {
+      "name": "최재민",
+      "school": "KAIST"
+    }
+  ],
   "sponser": [
     "kakao",
     "autoever",
