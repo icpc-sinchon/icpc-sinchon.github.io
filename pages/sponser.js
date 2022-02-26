@@ -198,6 +198,29 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
+                  <img src="https://api.suapc.kr/res/sponser-ci/future-tech-academy.png" />
+                </SponserImgWrap>
+                <ul>
+                  <li>
+                    퓨처테크아카데미 관련 문제 출제
+                    <br />
+                  </li>
+                  <li>
+                    퓨처테크아카데미 기업 홍보 세션 제공
+                    <br />
+                  </li>
+                  <li>
+                    퓨처테크아카데미 HelloAlgo 를 3등상 명칭으로 사용
+                    <br />
+                  </li>
+                  <li>
+                    연합 학회별 5개 커뮤니티에 멘토 및 연구원 모집 홍보
+                    <br />
+                  </li>
+                </ul>
+              </SponserItem>
+              <SponserItem>
+                <SponserImgWrap>
                   <img src="https://api.suapc.kr/res/sponser-ci/furiosa.png" />
                 </SponserImgWrap>
                 <ul>
