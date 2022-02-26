@@ -1,0 +1,259 @@
+{
+    "year": 2022,
+    "season": "Winter",
+    "date": "2022년 2월 19일 오후 1시 ~ 오후 5시",
+    "hasPDF": true,
+    "links": [
+        "https://www.acmicpc.net/category/499",
+        "https://www.acmicpc.net/contest/spotboard/759",
+        "https://www.acmicpc.net/contest/spotboard/758"
+    ],
+    "studies": [
+        {
+            "topic": "초급",
+            "lecturers": [
+                {
+                    "name": "김성현",
+                    "school": "서강대",
+                    "handle": "dart"
+                },
+                {
+                    "name": "임지환",
+                    "school": "서강대",
+                    "handle": "raararaara"
+                }
+            ],
+            "mentors": [],
+            "curriculum": [
+                "시간복잡도, 정렬",
+                "문자열",
+                "DP",
+                "그리디",
+                "스택, 큐, 덱",
+                "백트래킹, 완전탐색",
+                "분할정복, 이분탐색",
+                "그래프, 그래프 순회",
+                "트리",
+                "최단경로 알고리즘",
+                "Union Find, MST 알고리즘"
+            ],
+            "contests": [
+                {
+                    "contest_name": "Camp Contest",
+                    "organizer_type": "출제자",
+                    "problem_list": [
+                        {
+                            "problem_name": "시간복잡도를 배운 도도",
+                            "link": "https://www.acmicpc.net/problem/24510",
+                            "organizer": {
+                                "name": "김도현",
+                                "school": "홍익대"
+                            }
+                        },
+                        {
+                            "problem_name": "상품의 주인은?",
+                            "link": "https://www.acmicpc.net/problem/24509",
+                            "organizer": {
+                                "name": "송혜민",
+                                "school": "숙명여대"
+                            }
+                        },
+                        {
+                            "problem_name": "queuestack",
+                            "link": "https://www.acmicpc.net/problem/24511",
+                            "organizer": {
+                                "name": "김도현",
+                                "school": "홍익대"
+                            }
+                        },
+                        {
+                            "problem_name": "Bottleneck Travelling Salesman Problem (Small)",
+                            "link": "https://www.acmicpc.net/problem/24512",
+                            "organizer": {
+                                "name": "이국렬",
+                                "school": "연세대"
+                            }
+                        },
+                        {
+                            "problem_name": "좀비 바이러스",
+                            "link": "https://www.acmicpc.net/problem/24513",
+                            "organizer": {
+                                "name": "송혜민",
+                                "school": "숙명여대"
+                            }
+                        },
+                        {
+                            "problem_name": "n번째 숫자 찾기",
+                            "link": "https://www.acmicpc.net/problem/24514",
+                            "organizer": {
+                                "name": "박준성",
+                                "school": "서강대"
+                            }
+                        },
+                        {
+                            "problem_name": "히히 못가",
+                            "link": "https://www.acmicpc.net/problem/24515",
+                            "organizer": {
+                                "name": "이상원",
+                                "school": "서강대"
+                            }
+                        }
+                    ],
+                    "awards": [
+                        {
+                            "prize": 1,
+                            "name": "이준하",
+                            "school": "서강대",
+                            "handle": "imearth01"
+                        },
+                        {
+                            "prize": 2,
+                            "name": "이지은",
+                            "school": "홍익대",
+                            "handle": "leeju1013"
+                        },
+                        {
+                            "prize": 3,
+                            "name": "김연웅",
+                            "school": "연세대",
+                            "handle": "sodapop95"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "topic": "중급",
+            "lecturers": [
+                {
+                    "name": "강효규",
+                    "school": "서강대",
+                    "handle": "djs100201"
+                }
+            ],
+            "mentors": [],
+            "curriculum": [
+                "Number Theory, Simple Math",
+                "DP",
+                "Game",
+                "Segment Tree",
+                "실전 문제 풀이 (1)",
+                "LCA, Sparse Table, Offline Query",
+                "SCC, 2-SAT",
+                "Flow, Bipartite Matching",
+                "실전 문제 풀이 (2)",
+                "KMP, Hashing",
+                "Lazy Segment Tree"
+            ],
+            "contests": [
+                {
+                    "contest_name": "Camp Contest",
+                    "organizer_type": "출제자",
+                    "problem_list": [
+                        {
+                            "problem_name": "잘 알려진 수열 구하기",
+                            "link": "https://www.acmicpc.net/problem/24516",
+                            "organizer": {
+                                "name": "강효규",
+                                "school": "서강대"
+                            }
+                        },
+                        {
+                            "problem_name": "잘 알려진 합 구하기",
+                            "link": "https://www.acmicpc.net/problem/24518",
+                            "organizer": {
+                                "name": "강효규",
+                                "school": "서강대"
+                            }
+                        },
+                        {
+                            "problem_name": "카드 게임과 쿼리",
+                            "link": "https://www.acmicpc.net/problem/24517",
+                            "organizer": {
+                                "name": "김도현",
+                                "school": "홍익대"
+                            }
+                        },
+                        {
+                            "problem_name": "Bottleneck Travelling Salesman Problem (Large)",
+                            "link": "https://www.acmicpc.net/problem/24519",
+                            "organizer": {
+                                "name": "이국렬",
+                                "school": "연세대"
+                            }
+                        },
+                        {
+                            "problem_name": "Meet In The Middle",
+                            "link": "https://www.acmicpc.net/problem/24520",
+                            "organizer": {
+                                "name": "이상원",
+                                "school": "서강대"
+                            }
+                        },
+                        {
+                            "problem_name": "스네이크 게임",
+                            "link": "https://www.acmicpc.net/problem/24522",
+                            "organizer": {
+                                "name": "이상원",
+                                "school": "서강대"
+                            }
+                        },
+                        {
+                            "problem_name": "토지 구입",
+                            "link": "https://www.acmicpc.net/problem/24521",
+                            "organizer": {
+                                "name": "이국렬",
+                                "school": "연세대"
+                            }
+                        }
+                    ],
+                    "awards": [
+                        {
+                            "prize": 1,
+                            "name": "김태윤",
+                            "school": "연세대",
+                            "handle": "ystaeyoon113"
+                        },
+                        {
+                            "prize": 2,
+                            "name": "김정모",
+                            "school": "서강대",
+                            "handle": "meque98"
+                        },
+                        {
+                            "prize": 3,
+                            "name": "박준서",
+                            "school": "서강대",
+                            "handle": "p_jun"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "topic": "고급",
+            "lecturers": [
+                {
+                    "name": "이국렬",
+                    "school": "연세대",
+                    "handle": "lky7674"
+                },
+                {
+                    "name": "전해성",
+                    "school": "서강대",
+                    "handle": "seastar105"
+                }
+            ],
+            "mentors": [],
+            "curriculum": [
+                "Suffix Array",
+                "Advanced Segment Tree (1)",
+                "Sqrt Decomposition & Mo's",
+                "Advanced Segment Tree (2)",
+                "Convex Hull Trick",
+                "Heavy-Light Decomposition",
+                "Fast Fourier Transform"
+            ]
+        }
+    ]
+}
