@@ -1,6 +1,41 @@
 [
     {
         "year": 2022,
+        "season": "Summer",
+        "president": [
+            {
+                "name": "김은서"
+            },
+            {
+                "name": "전지수"
+            }
+        ],
+        "member": [
+            {
+                "name": "김가영"
+            },
+            {
+                "name": "박예나"
+            },
+            {
+                "name": "유영서"
+            },
+            {
+                "name": "이가은"
+            },
+            {
+                "name": "이원주"
+            },
+            {
+                "name": "이재혁"
+            },
+            {
+                "name": "함윤주"
+            }
+        ]
+    },
+    {
+        "year": 2022,
         "season": "Winter",
         "president": [
             {
