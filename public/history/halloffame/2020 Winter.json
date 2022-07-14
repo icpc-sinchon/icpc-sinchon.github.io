@@ -22,6 +22,20 @@
           "handle": "tolelom"
         }
       ],
+      "curriculum": [
+        "백트래킹, 완전탐색",
+        "DP",
+        "그리",
+        "그래프",
+        "다익스트라 알고리즘",
+        "트리",
+        "플로이드 와샬, 벨만포드 알고리즘",
+        "Union Find",
+        "비트마스킹",
+        "최소 스패닝 트리",
+        "KMP",
+        "DP 심화"
+      ],
       "contests": [
         {
           "contest_name": "중간고사",
@@ -117,6 +131,20 @@
           "handle": "sbrus_1213"
         }
       ],
+      "curriculum": [
+        "Exponentiation by Squaring",
+        "Segment tree",
+        "Trie",
+        "Two-pointer & Sliding Window",
+        "DP with indicies",
+        "DP with data structure",
+        "Topological sort & SCC",
+        "Lowest Common Ancestor",
+        "Network flow",
+        "Offline query",
+        "Geometry",
+        "Sweeping algorithm"
+      ],
       "contests": [
         {
           "contest_name": "중간고사",
@@ -199,6 +227,20 @@
           "school": "서강대",
           "handle": "gumgood"
         }
+      ],
+      "curriculum": [
+        "Lazy propagation",
+        "Sqrt decomposition",
+        "Heavy-Light decomposition",
+        "Persistent Segment tree",
+        "Minimum Cost Maximum Flow",
+        "Game Theory",
+        "Merge Sort tree",
+        "Number Theoretics",
+        "Convex Hull Trick",
+        "DP optimizations",
+        "Aho-Corasick",
+        "Z & Manacher"
       ]
     }
   ]
