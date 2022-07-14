@@ -17,6 +17,20 @@
           "handle": "906bc"
         }
       ],
+      "curriculum": [
+        "브루트포스 & 시간복잡도 & 순열과 조합",
+        "백트래킹",
+        "정렬",
+        "이분탐색",
+        "스택",
+        "큐 & 덱",
+        "그리디",
+        "DFS & BFS",
+        "트리",
+        "Tree/Hash based Map/Set",
+        "우선순위 큐",
+        "다익스트라 알고리즘"
+      ],
       "contests": [
         {
           "contest_name": "중간고사",
@@ -161,6 +175,20 @@
           "handle":"semteo04"
         }
       ],
+      "curriculum": [
+        "DP",
+        "그리디",
+        "분할정복",
+        "정수론",
+        "Segment tree",
+        "위상정렬 & SCC",
+        "조합론",
+        "2-SAT",
+        "Network flow",
+        "패턴 매칭",
+        "이분 매칭",
+        "기하"
+      ],
       "contests": [
         {
           "contest_name": "중간고사",
@@ -295,6 +323,12 @@
           "school": "서강대",
           "handle": "seastar105"
         }
+      ],
+      "curriculum": [
+        "Fast Fourier Transform",
+        "Convex Hull Trick",
+        "Heavy-Light Decomposition",
+        "Persistent Segment tree"
       ]
     }
   ]

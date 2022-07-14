@@ -64,6 +64,19 @@
           "handle": "minigimbob"
         }
       ],
+      "curriculum": [
+        "그리디",
+        "완전탐색 & 백트래킹",
+        "DP",
+        "정렬 & 이분탐색",
+        "prefix sum & Two-pointer",
+        "스택, 큐, 덱",
+        "그래프",
+        "트리",
+        "우선순위 큐 & 다익스트라 알고리즘",
+        "벨만포드 & 플로이드 와샬 알고리즘",
+        "Map & Set, 정수론"
+      ],
       "contests": [
         {
           "contest_name": "Camp Contest",
@@ -188,6 +201,19 @@
           "handle": "yibin99"
         }
       ],
+      "curriculum": [
+        "DP",
+        "그리디",
+        "분리 집합 & MST",
+        "분할정복",
+        "세그먼트 트리",
+        "KMP",
+        "희소 테이블 & LCA",
+        "네트워크 플로우",
+        "DP 심화",
+        "확률적 알고리즘",
+        "조합론적 게임 이론"
+      ],
       "contests": [
         {
           "contest_name": "Camp Contest",
@@ -309,6 +335,19 @@
           "school": "서강대",
           "handle": "gumgood"
         }
+      ],
+      "curriculum": [
+        "Minimum Cost Maximum Flow",
+        "Hard Flow",
+        "Fast Fourier Transform",
+        "Suffix Array",
+        "Convex Hull Trick",
+        "Aho-Corasick",
+        "Divide and Conquer Optimization",
+        "Heavy-Light Decomposition",
+        "Centroid Decomposition",
+        "Persistent Segment tree",
+        "Splay tree"
       ]
     }
   ]
