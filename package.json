@@ -24,6 +24,7 @@
     "swr": "^0.5.4"
   },
   "devDependencies": {
+    "prettier": "^2.7.1",
     "redux-devtools-extension": "^2.13.9"
   }
 }
