@@ -86,9 +86,8 @@ const Main = () => {
             <ContentTitle>활동</ContentTitle>
             <ContentText>
               매 시즌 프로그래밍 대회 <span css={SinchonColor}>SUAPC</span>를
-              개최하여 팀원과의 협업을 통해{" "}
-              <span>ICPC</span>를
-              준비할 수 있는 환경을 제공합니다.
+              개최하여 팀원과의 협업을 통해 <span>ICPC</span>를 준비할 수 있는
+              환경을 제공합니다.
               <br />
               강의 형식의 스터디인{" "}
               <span css={SinchonColor}> Algorithm Camp</span>도 진행하여

@@ -9,7 +9,7 @@
         {
           "name": "배철환",
           "school": "서강대",
-          "handle":"bcc0830"
+          "handle": "bcc0830"
         },
         {
           "name": "백성익",
@@ -149,7 +149,7 @@
               "prize": 2,
               "name": "김도현",
               "school": "홍익대",
-              "handle":"swoon"
+              "handle": "swoon"
             },
             {
               "prize": 3,
@@ -172,7 +172,7 @@
         {
           "name": "이준석",
           "school": "서강대",
-          "handle":"semteo04"
+          "handle": "semteo04"
         }
       ],
       "curriculum": [
@@ -297,19 +297,19 @@
               "prize": 1,
               "name": "김관우",
               "school": "서강대",
-              "handle":"rhksdn6227"
+              "handle": "rhksdn6227"
             },
             {
               "prize": 2,
               "name": "남유진",
               "school": "연세대",
-              "handle":"youx"
+              "handle": "youx"
             },
             {
               "prize": 3,
               "name": "이승은",
               "school": "서강대",
-              "handle":"leese0425"
+              "handle": "leese0425"
             }
           ]
         }

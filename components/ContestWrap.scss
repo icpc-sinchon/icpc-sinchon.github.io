@@ -1,52 +1,52 @@
 @media (max-width: 1134px) {
-	.contest-wrap {
-		width: 92vw;
-	}
+  .contest-wrap {
+    width: 92vw;
+  }
 }
 
 @media (max-width: 900px) {
-	.contest-wrap {
-		padding: 3.6rem 3rem;
-	}
+  .contest-wrap {
+    padding: 3.6rem 3rem;
+  }
 }
 
 .hof-item-title {
-    padding-left: 0.4rem;
+  padding-left: 0.4rem;
 }
 .maker-checker {
-	width: 45%;
+  width: 45%;
 }
 .maker-checker-wrap {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 770px) {
-    .hof-item-title{
-        padding-left: 0;
-    }
+  .hof-item-title {
+    padding-left: 0;
+  }
 
-	.lecturer-wrap {
-		table {
-			display: table;
-			width: 100%;
-		}
-	}
-	.maker-checker-wrap {
-		display: block;
-		.maker-checker {
-			width: 100%;
-		}
-		table {
-			display: table;
-			width: 100%;
-		}
-	}
+  .lecturer-wrap {
+    table {
+      display: table;
+      width: 100%;
+    }
+  }
+  .maker-checker-wrap {
+    display: block;
+    .maker-checker {
+      width: 100%;
+    }
+    table {
+      display: table;
+      width: 100%;
+    }
+  }
 }
 @media (max-width: 500px) {
-	.contest-wrap {
-		width: 100%;
+  .contest-wrap {
+    width: 100%;
 
-		padding: 1.6rem 1.4rem;
-		border: none;
-	}
+    padding: 1.6rem 1.4rem;
+    border: none;
+  }
 }
