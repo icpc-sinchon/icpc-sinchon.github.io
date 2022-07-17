@@ -31,7 +31,10 @@ jobs:
         
       - name: Setup CI env
         run: npm ci
-        
+
+      - name: Check Prettier
+        run: npm run check-pretty
+
       - name: Export Next.js
         run: npm run dev & (npm run build && npm run export)
           
