@@ -14,7 +14,7 @@
         {
           "name": "이재열",
           "school": "홍익대",
-          "handle":"malkoring"
+          "handle": "malkoring"
         },
         {
           "name": "김성민",
@@ -105,7 +105,7 @@
               "prize": 2,
               "name": "주상민",
               "school": "서강대",
-              "handle":"jsm3465"
+              "handle": "jsm3465"
             },
             {
               "prize": 3,
@@ -163,7 +163,7 @@
               "prize": 1,
               "name": "백성익",
               "school": "홍익대",
-              "handle":"906bc"
+              "handle": "906bc"
             },
             {
               "prize": 2,
@@ -202,13 +202,13 @@
               "prize": 2,
               "name": "백성익",
               "school": "홍익대",
-              "handle":"906bc"
+              "handle": "906bc"
             },
             {
               "prize": 3,
               "name": "정재현",
               "school": "홍익대",
-              "handle":"dicohy27"
+              "handle": "dicohy27"
             }
           ]
         }
