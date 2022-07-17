@@ -44,10 +44,10 @@ const configStore = (ctx) => {
   }
 
   const data = require(`../public/history/${pathname.substring(
-    1
+    1,
   )}/${currentSeason}.json`);
   const seasonList = require(`../public/history/${pathname.substring(
-    1
+    1,
   )}/list.json`);
 
   const initialState = {

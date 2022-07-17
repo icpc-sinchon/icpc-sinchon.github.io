@@ -1,38 +1,39 @@
-import { useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import { useEffect, useRef } from "react";
+import styled from "styled-components";
 const TextBubble = ({ className, text, triggerRef }) => {
-    const divRef = useRef(null)
+  const divRef = useRef(null);
 
-    useEffect(() => {
-        triggerRef?.current?.addEventListener('mouseover', () => {
-            const balloon = divRef.current;
-            const button = triggerRef.current;
-            const balloonBoundary = balloon.getBoundingClientRect();
-            const buttonBoundary = button.getBoundingClientRect();
+  useEffect(() => {
+    triggerRef?.current?.addEventListener("mouseover", () => {
+      const balloon = divRef.current;
+      const button = triggerRef.current;
+      const balloonBoundary = balloon.getBoundingClientRect();
+      const buttonBoundary = button.getBoundingClientRect();
 
-            balloon.style.top = window.scrollY + buttonBoundary.top - buttonBoundary.height - 10 + "px"
-            balloon.style.left = buttonBoundary.left  + "px"
-            balloon.classList.remove('vhide')
-        })
+      balloon.style.top =
+        window.scrollY + buttonBoundary.top - buttonBoundary.height - 10 + "px";
+      balloon.style.left = buttonBoundary.left + "px";
+      balloon.classList.remove("vhide");
+    });
 
-        triggerRef?.current?.addEventListener('mouseout', () => {
-            const balloon = divRef.current;
-            balloon.classList.add('vhide')
-        })
+    triggerRef?.current?.addEventListener("mouseout", () => {
+      const balloon = divRef.current;
+      balloon.classList.add("vhide");
+    });
 
-        document.body.addEventListener('click', ({ target }) => {
-            if (target === triggerRef?.current) return;
-            const balloon = divRef.current;
-            balloon?.classList.add('vhide')
-        })
-    }, [])
+    document.body.addEventListener("click", ({ target }) => {
+      if (target === triggerRef?.current) return;
+      const balloon = divRef.current;
+      balloon?.classList.add("vhide");
+    });
+  }, []);
 
-    return (
-        <Div className={className + "text-bubble vhide"} ref={divRef}>
-            {text}
-        </Div>
-    )
-}
+  return (
+    <Div className={className + "text-bubble vhide"} ref={divRef}>
+      {text}
+    </Div>
+  );
+};
 const Div = styled.div`
   position: absolute;
   background: #555353;
@@ -55,5 +56,5 @@ const Div = styled.div`
     margin-left: -7px;
     margin-bottom: -7px;
   }
-`
-export default TextBubble
+`;
+export default TextBubble;

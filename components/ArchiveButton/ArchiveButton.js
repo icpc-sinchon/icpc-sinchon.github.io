@@ -1,44 +1,42 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const CustomButton = styled.div`
-    border: 2px solid #009D3E;
-    
-    padding: 0.4rem 1.2rem;
-    
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #009D3E;
+  border: 2px solid #009d3e;
 
-	@media (max-width: 633px) {
-        border: none;
-        padding: 0.2rem 0;
-    }
-`
+  padding: 0.4rem 1.2rem;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #009d3e;
+
+  @media (max-width: 633px) {
+    border: none;
+    padding: 0.2rem 0;
+  }
+`;
 
 const ATag = styled.a`
-    margin-left: 1.2rem;
-        
-    &:first-child{
-        margin-left: 0;
-    }
+  margin-left: 1.2rem;
 
-    &:hover{
-        text-decoration: none;
-    }
+  &:first-child {
+    margin-left: 0;
+  }
 
-	@media (max-width: 633px) {
-        margin-left: 0;
-    }
-`
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (max-width: 633px) {
+    margin-left: 0;
+  }
+`;
 
 const ArchiveButton = ({ href, children }) => {
-    return (
-        <ATag href={href} target="_blank">
-            <CustomButton>
-                {children}
-            </CustomButton>
-        </ATag>
-    )
-}
+  return (
+    <ATag href={href} target="_blank">
+      <CustomButton>{children}</CustomButton>
+    </ATag>
+  );
+};
 
-export default ArchiveButton
+export default ArchiveButton;
