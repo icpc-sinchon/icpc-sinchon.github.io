@@ -238,7 +238,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                 return (
                   <SponserCI
                     key={"sponser-" + data}
-                    src={`https://api.suapc.kr/res/sponser-ci/${data}.png`}
+                    src={`https://api.suapc.kr/sponser-ci/${data}.png`}
                   />
                 );
               })}
