@@ -159,7 +159,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
         <meta property="og:title" content="Hall Of Fame | ICPC Sinchon" />
         <meta property="og:url" content="https://icpc-sinchon.io/halloffame" />
         <meta property="og:description" content="ICPC Sinchon 명예의 전당" />
-        <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
+        <meta property="og:image" content="/res/c-4.jpg" />
       </Head>
       <>
         <SeasonNav onSeasonNavClick={onSeasonNavClick} />

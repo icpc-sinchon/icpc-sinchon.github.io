@@ -139,10 +139,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           property="og:description"
           content="SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의 학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다"
         />
-        <meta
-          property="og:image"
-          content="https://api.suapc.kr/res/og_image.png"
-        />
+        <meta property="og:image" content="/res/og_image.png" />
       </Head>
       <>
         <TextBubble
@@ -222,11 +219,11 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           <ItemWrap>
             <ItemTitle>참여 대학</ItemTitle>
             <SchoolLogoWrap>
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sogang.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sookmyung.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/yonsei.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/ewha.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/hongik.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/sogang.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/sookmyung.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/yonsei.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/ewha.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/hongik.png" />
             </SchoolLogoWrap>
           </ItemWrap>
           <ItemWrap>

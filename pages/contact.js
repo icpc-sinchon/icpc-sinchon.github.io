@@ -23,7 +23,7 @@ const Contact = () => {
           property="og:description"
           content="신촌지역 대학교 프로그래밍 동아리 연합"
         />
-        <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
+        <meta property="og:image" content="/res/c-4.jpg" />
       </Head>
       <div className="main-wrap" style={{ paddingTop: "1.2rem" }}>
         <div className="content-wrap-main">

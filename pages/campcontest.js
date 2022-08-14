@@ -162,7 +162,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
         <meta property="og:title" content="Camp Contest | ICPC Sinchon" />
         <meta property="og:url" content="https://icpc-sinchon.io/campcontest" />
         <meta property="og:description" content="ICPC Sinchon Camp Contest" />
-        <meta property="og:image" content="https://api.suapc.kr/res/c-4.jpg" />
+        <meta property="og:image" content="/res/c-4.jpg" />
       </Head>
       <>
         <SeasonNav onSeasonNavClick={onSeasonNavClick} />
