@@ -258,20 +258,32 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                 style={{ position: `relative` }}
                                               >
                                                 {idx + 1}
-                                                <sup
-                                                  className={
-                                                    idx + 1 === 1
-                                                      ? `medal-gold`
-                                                      : idx + 1 === 2
-                                                      ? `medal-silver`
-                                                      : `medal-bronze`
-                                                  }
-                                                >
-                                                  ●
-                                                </sup>
+                                                {idx + 1 <= 3 && (
+                                                  <sup
+                                                    className={
+                                                      idx + 1 === 1
+                                                        ? `medal-gold`
+                                                        : idx + 1 === 2
+                                                        ? `medal-silver`
+                                                        : `medal-bronze`
+                                                    }
+                                                  >
+                                                    ●
+                                                  </sup>
+                                                )}
                                               </td>
                                               <td>{award.name}</td>
-                                              <td>{award.handle}</td>
+                                              <td>
+                                                <a
+                                                  target="_blank"
+                                                  style={{
+                                                    textDecoration: "underline",
+                                                  }}
+                                                  href={`https://acmicpc.net/user/${award.handle}`}
+                                                >
+                                                  {award.handle}
+                                                </a>
+                                              </td>
                                               <td>{award.school}</td>
                                             </tr>
                                           );
@@ -309,6 +321,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                               </td>
                                               <td>
                                                 <a
+                                                  target="_blank"
                                                   href={problem.link}
                                                   style={{
                                                     textDecoration: "underline",
