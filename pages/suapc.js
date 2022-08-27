@@ -190,7 +190,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           ) : (
             <ArchiveWrap>
               {/* for contest: apply link isn't created */}
-              <AdmissionButton href="https://docs.google.com/forms/d/e/1FAIpQLSde_udVF6kZjR0tY2Mw5pr2GQNccoPQWZsa9wNPa0ZYCD8aCw/viewform">
+              <AdmissionButton href="https://docs.google.com/forms/d/e/1FAIpQLScWCL6vQ7KzKPrtfto98m5d-j7YMzFzO-Aq6ApPuW2sWrjHgQ/viewform">
                 대회 신청 <span style={{ fontSize: "smaller" }}>08/27까지</span>
               </AdmissionButton>
               {/* <AdmissionButton href="https://pf.kakao.com/_xehxhAK">
