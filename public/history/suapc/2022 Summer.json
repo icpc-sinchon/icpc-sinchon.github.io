@@ -2,8 +2,135 @@
   "year": 2022,
   "season": "Summer",
   "date": "2022년 9월 4일(일) 오후 12시 ~ 오후 5시",
-  "examiner": [],
-  "checker": [],
+  "awards": [
+    {
+      "div": null,
+      "winner": [
+        {
+          "prize": 1,
+          "solved": 11,
+          "team": "우승하러 왔습니다",
+          "school": "서강대학교",
+          "member": "강효규, 박재형, 채성우"
+        },
+        {
+          "prize": 2,
+          "solved": 10,
+          "team": "DSP",
+          "school": "서강대학교",
+          "member": "김동건, 이준석, 전민수"
+        },
+        {
+          "prize": 3,
+          "solved": 10,
+          "team": "백준검색창에lky7674를검색해보세요",
+          "school": "연세대학교",
+          "member": "김건우, 김종민, 정기웅"
+        },
+        {
+          "prize": 4,
+          "solved": 9,
+          "team": "정열맨",
+          "school": "홍익대학교",
+          "member": "김도현, 김재헌, 정재현"
+        },
+        {
+          "prize": 5,
+          "solved": 9,
+          "team": "삼대진미",
+          "school": "연세대학교",
+          "member": "강효규, 박재형, 채성우"
+        },
+        {
+          "prize": 6,
+          "solved": 8,
+          "team": "djs212222",
+          "school": "서강대학교",
+          "member": "김서인, 김정모, 이재혁"
+        },
+        {
+          "prize": 7,
+          "solved": 7,
+          "team": "ㅡㅡㅡㅡㅡ수상컷ㅡㅡㅡㅡㅡ",
+          "school": "서강대학교",
+          "member": "성주희, 조성훈, 정회윤"
+        },
+        {
+          "prize": 8,
+          "solved": 6,
+          "team": "신촌 노랑통닭",
+          "school": "연세대학교",
+          "member": "김민수, 곽재혁, 노준영"
+        },
+        {
+          "prize": 9,
+          "solved": 6,
+          "team": "전역 3일 전 SUAPC 하는 중",
+          "school": "연세대학교",
+          "member": "박광호, 조우현, 한의엽"
+        },
+        {
+          "prize": 10,
+          "solved": 6,
+          "team": "종환지훈준석",
+          "school": "서강대학교",
+          "member": "이지훈, 이준석, 임종환"
+        }
+      ]
+    }
+  ],
+  "examiner": [
+    {
+      "name": "강희원",
+      "school": "경기과학고등학교"
+    },
+    {
+      "name": "박진식",
+      "school": "크리마"
+    },
+    {
+      "name": "박찬솔",
+      "school": "숭실대학교"
+    },
+    {
+      "name": "신용명",
+      "school": "한양대학교"
+    },
+    {
+      "name": "신정환",
+      "school": "성균관대학교"
+    },
+    {
+      "name": "이국렬",
+      "school": "연세대학교"
+    },
+    {
+      "name": "장래오",
+      "school": "포항공과대학교"
+    }
+  ],
+  "checker": [
+    {
+      "name": "김동규",
+      "school": "KAIST AI대학원"
+    },
+    {
+      "name": "김태영",
+      "school": "KAIST"
+    },
+    {
+      "name": "남현욱",
+      "school": "팀 사모예드"
+    },
+    {
+      "name": "문정후",
+      "school": "경기과학고등학교"
+    },
+    {
+      "name": "이상원",
+      "school": "삼성전자"
+    }
+  ],
   "sponser": [
     "autoever",
     "kakao",
