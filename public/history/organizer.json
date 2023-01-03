@@ -1,36 +1,36 @@
 [
   {
-    "year": 2022,
-    "season": "Summer",
+    "year": 2023,
+    "season": "Winter",
     "president": [
       {
-        "name": "김은서"
+        "name": "이가은"
       },
       {
-        "name": "전지수"
+        "name": "함윤주"
       }
     ],
     "member": [
       {
-        "name": "김가영"
+        "name": "길수민"
       },
       {
-        "name": "박예나"
+        "name": "노현근"
       },
       {
-        "name": "유영서"
+        "name": "박주영"
       },
       {
-        "name": "이가은"
+        "name": "송상윤"
+      },
+      {
+        "name": "이성진"
       },
       {
         "name": "이원주"
       },
       {
-        "name": "이재혁"
-      },
-      {
-        "name": "함윤주"
+        "name": "이협"
       }
     ]
   },
