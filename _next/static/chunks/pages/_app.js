@@ -1405,7 +1405,7 @@ eval("module.exports = JSON.parse(\"{\\\"year\\\":2022,\\\"season\\\":\\\"Winter
 /*! exports provided: year, season, date, examiner, checker, sponser, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"{\\\"year\\\":2023,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2023년 2월 25일(토) 오후 12시 ~ 오후 5시\\\",\\\"examiner\\\":[],\\\"checker\\\":[],\\\"sponser\\\":[\\\"autoever\\\",\\\"nexon\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"devocean\\\",\\\"startlink\\\",\\\"moloco\\\",\\\"secmem\\\",\\\"solved\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjMgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2023 Winter.json\n");
+eval("module.exports = JSON.parse(\"{\\\"year\\\":2023,\\\"season\\\":\\\"Winter\\\",\\\"date\\\":\\\"2023년 2월 25일(토) 오후 12시 ~ 오후 5시\\\",\\\"examiner\\\":[],\\\"checker\\\":[],\\\"sponser\\\":[\\\"autoever\\\",\\\"nexon\\\",\\\"youngjin\\\",\\\"easys\\\",\\\"devocean\\\",\\\"startlink\\\",\\\"moloco\\\",\\\"secmem\\\",\\\"solvedac\\\"]}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9oaXN0b3J5L3N1YXBjLzIwMjMgV2ludGVyLmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/history/suapc/2023 Winter.json\n");
 
 /***/ }),
 
