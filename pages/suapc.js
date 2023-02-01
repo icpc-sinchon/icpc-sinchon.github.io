@@ -130,10 +130,10 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
   return (
     <Layout>
       <Head>
-        <title>SUAPC 2022 | ICPC Sinchon</title>
+        <title>SUAPC 2023 | ICPC Sinchon</title>
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:title" content="SUAPC 2022 | ICPC Sinchon" />
+        <meta property="og:title" content="SUAPC 2023 | ICPC Sinchon" />
         <meta property="og:url" content="https://icpc-sinchon.io/suapc" />
         <meta
           property="og:description"
@@ -190,8 +190,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           ) : (
             <ArchiveWrap>
               {/* for contest: apply link isn't created */}
-              <AdmissionButton href="https://docs.google.com/forms/d/e/1FAIpQLScWCL6vQ7KzKPrtfto98m5d-j7YMzFzO-Aq6ApPuW2sWrjHgQ/viewform">
-                대회 신청 <span style={{ fontSize: "smaller" }}>08/27까지</span>
+              <AdmissionButton href="https://forms.gle/AEfLfsbXDrGxPk7C8">
+                대회 신청{" "}
+                <span style={{ fontSize: "smaller" }}>02/18 오후 8시까지</span>
               </AdmissionButton>
               {/* <AdmissionButton href="https://pf.kakao.com/_xehxhAK">
                 대회 문의
