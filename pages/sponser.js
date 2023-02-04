@@ -309,18 +309,21 @@ const UnderlinedLink = styled.a`
 `;
 
 const SponserWrap = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 
   margin-top: 1em;
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const SponserItem = styled.div`
-  ${"" /* display: flex; */}
-
-  ${"" /* margin: 1rem 1rem 1rem 0; */}
-    margin: 0.4rem 1rem 0.4rem 0;
+  margin: 0.4rem 1rem 0.4rem 0;
 
   ul {
     margin-top: 0;
