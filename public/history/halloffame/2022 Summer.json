@@ -1,0 +1,268 @@
+{
+  "year": 2022,
+  "season": "Summer",
+  "date": "2022년 8월 21일 오후 1시 ~ 오후 5시",
+  "hasPDF": true,
+  "links": [
+    "https://www.acmicpc.net/category/499",
+    "https://www.acmicpc.net/contest/spotboard/841",
+    "https://www.acmicpc.net/contest/spotboard/842"
+  ],
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "김재헌",
+          "school": "홍익대",
+          "handle": "xhdtlsid2"
+        },
+        {
+          "name": "곽재혁",
+          "school": "연세대",
+          "handle": "dreami63"
+        }
+      ],
+      "mentors": [
+        { "name": "김동건", "school": "서강대", "handle": "dong_gas" },
+        { "name": "이선주", "school": "홍익대", "handle": "sunjoo9912" },
+        { "name": "이지은", "school": "홍익대", "handle": "leeju1013" },
+        { "name": "한상필", "school": "서강대", "handle": "tksvlf123" }
+      ],
+      "curriculum": [
+        "시간복잡도, 정렬",
+        "스택, 큐, 덱",
+        "이분탐색, 분할정복",
+        "완전탐색, 백트래킹",
+        "그리디",
+        "문제풀이 1",
+        "DP",
+        "그래프, 트리",
+        "최단경로, 우선순위 큐",
+        "Union-Find, MST",
+        "문제풀이 2"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "단순한 문제 (Small)",
+              "link": "https://www.acmicpc.net/problem/25494",
+              "organizer": {
+                "name": "신용명",
+                "school": "한양대"
+              }
+            },
+            {
+              "problem_name": "에어팟",
+              "link": "https://www.acmicpc.net/problem/25495",
+              "organizer": {
+                "name": "임민수",
+                "school": "서원대"
+              }
+            },
+            {
+              "problem_name": "장신구 명장 임스",
+              "link": "https://www.acmicpc.net/problem/25496",
+              "organizer": {
+                "name": "임민수",
+                "school": "서원대"
+              }
+            },
+            {
+              "problem_name": "기술 연계마스터 임스",
+              "link": "https://www.acmicpc.net/problem/25497",
+              "organizer": {
+                "name": "임민수",
+                "school": "서원대"
+              }
+            },
+            {
+              "problem_name": "핸들 뭘로 하지",
+              "link": "https://www.acmicpc.net/problem/25498",
+              "organizer": {
+                "name": "이상원",
+                "school": "삼성전자"
+              }
+            },
+            {
+              "problem_name": "Tipover Transform",
+              "link": "https://www.acmicpc.net/problem/25499",
+              "organizer": {
+                "name": "신용명",
+                "school": "한양대"
+              }
+            },
+            {
+              "problem_name": "무자비한 최단 경로",
+              "link": "https://www.acmicpc.net/problem/25500",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "박정빈",
+              "school": "서강대",
+              "handle": "jeongbin"
+            },
+            {
+              "prize": 2,
+              "name": "김영빈",
+              "school": "홍익대",
+              "handle": "bins9903"
+            },
+            {
+              "prize": 3,
+              "name": "이준석",
+              "school": "서강대",
+              "handle": "junlee1216"
+            },
+            {
+              "prize": 4,
+              "name": "이지은",
+              "school": "홍익대",
+              "handle": "leeju1013"
+            },
+            {
+              "prize": 4,
+              "name": "장유빈",
+              "school": "서강대",
+              "handle": "youvebeen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "구재원",
+          "school": "한양대",
+          "handle": "jjaewon9"
+        },
+        {
+          "name": "나정휘",
+          "school": "숭실대",
+          "handle": "jhnah917"
+        }
+      ],
+      "mentors": [],
+      "curriculum": [
+        "분할 정복",
+        "세그먼트 트리",
+        "모노톤 스택/큐",
+        "DP(위상정렬, 트리, 구간, 기댓값 등)",
+        "기초 정수론(확장 유클리드, 페르마 소정리, 중국인의 나머지 정리 등)",
+        "문제풀이 1",
+        "문자열(해싱, 트라이, KMP)",
+        "DP(그리디+DP, 게임, 자료구조 등)",
+        "DFS Tree, SCC, 2-SAT",
+        "오일러 투어 테크닉, 스파스 테이블, LCA",
+        "문제풀이 2"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "단순한 문제 (Large)",
+              "link": "https://www.acmicpc.net/problem/25487",
+              "organizer": {
+                "name": "신용명",
+                "school": "한양대"
+              }
+            },
+            {
+              "problem_name": "토큰",
+              "link": "https://www.acmicpc.net/problem/25488",
+              "organizer": {
+                "name": "신용명",
+                "school": "한양대"
+              }
+            },
+            {
+              "problem_name": "반짝반짝 3",
+              "link": "https://www.acmicpc.net/problem/25489",
+              "organizer": {
+                "name": "이국렬",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "수열의 점수",
+              "link": "https://www.acmicpc.net/problem/25490",
+              "organizer": {
+                "name": "이상원",
+                "school": "삼성전자"
+              }
+            },
+            {
+              "problem_name": "Mexor tree",
+              "link": "https://www.acmicpc.net/problem/25491",
+              "organizer": {
+                "name": "강효규",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "전깃줄 연결",
+              "link": "https://www.acmicpc.net/problem/25492",
+              "organizer": {
+                "name": "이상원",
+                "school": "삼성전자"
+              }
+            },
+            {
+              "problem_name": "까다로운 형제",
+              "link": "https://www.acmicpc.net/problem/25493",
+              "organizer": {
+                "name": "이상원",
+                "school": "삼성전자"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김동건",
+              "school": "서강대",
+              "handle": "dong_gas"
+            },
+            {
+              "prize": 2,
+              "name": "정회윤",
+              "school": "서강대",
+              "handle": "yunny_world"
+            },
+            {
+              "prize": 3,
+              "name": "정호용",
+              "school": "연세대",
+              "handle": "portal3046"
+            },
+            {
+              "prize": 4,
+              "name": "이협",
+              "school": "연세대",
+              "handle": "dlguq0107"
+            },
+            {
+              "prize": 5,
+              "name": "김종민",
+              "school": "연세대",
+              "handle": "luciaholic"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

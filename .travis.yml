@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - '14'
+  - "14"
 
 before_install:
   - npm run dev
@@ -9,18 +9,18 @@ before_install:
   - touch out/.nojekyll
 
 branches:
-  only: 
+  only:
     - main
 
 deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
-    keep_history: true
-    on:
-        branch: main
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main
 
 notifications:
- email:
-   recipients: 
-     - nant0313@gmail.com
+  email:
+    recipients:
+      - nant0313@gmail.com

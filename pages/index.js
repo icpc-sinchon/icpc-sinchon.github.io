@@ -29,10 +29,7 @@ const Main = () => {
           property="og:description"
           content="신촌지역 대학교 프로그래밍 동아리 연합"
         />
-        <meta
-          property="og:image"
-          content="https://api.suapc.kr/res/og_image.png"
-        />
+        <meta property="og:image" content="/res/og_image.png" />
       </Head>
       <MainWrap className="main-wrap">
         <ContentWrap className="content-wrap-main fade-in">
@@ -40,7 +37,7 @@ const Main = () => {
           <TextSubTitle>신촌지역 대학교 프로그래밍 동아리 연합</TextSubTitle>
         </ContentWrap>
         <MainImageWrap className="fade-in">
-          <img src="https://api.suapc.kr/res/c-4.jpg" />
+          <img src="/res/c-4.jpg" />
         </MainImageWrap>
         <ContentWrap css={MainBottom} className="content-wrap-main fade-in">
           <ContentItem className="ContentItem">
@@ -57,7 +54,7 @@ const Main = () => {
             <ContentTitle>소속 학교</ContentTitle>
             <SchoolWrap>
               <SchoolItem>
-                <img src="https://api.suapc.kr/res/school-logo/sogang.png" />
+                <img src="https://api.suapc.kr/school-logo/sogang.png" />
                 <h4>
                   Sogang
                   <br />
@@ -65,19 +62,19 @@ const Main = () => {
                 </h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/res/school-logo/sookmyung.png" />
+                <img src="https://api.suapc.kr/school-logo/sookmyung.png" />
                 <h4>Algos</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/res/school-logo/yonsei.png" />
+                <img src="https://api.suapc.kr/school-logo/yonsei.png" />
                 <h4>Morgorithm</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/res/school-logo/ewha.png" />
+                <img src="https://api.suapc.kr/school-logo/ewha.png" />
                 <h4>EDOC</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/res/school-logo/hongik.png" />
+                <img src="https://api.suapc.kr/school-logo/hongik.png" />
                 <h4>HI-ARC</h4>
               </SchoolItem>
             </SchoolWrap>
@@ -86,9 +83,8 @@ const Main = () => {
             <ContentTitle>활동</ContentTitle>
             <ContentText>
               매 시즌 프로그래밍 대회 <span css={SinchonColor}>SUAPC</span>를
-              개최하여 팀원과의 협업을 통해{" "}
-              <span>ICPC</span>를
-              준비할 수 있는 환경을 제공합니다.
+              개최하여 팀원과의 협업을 통해 <span>ICPC</span>를 준비할 수 있는
+              환경을 제공합니다.
               <br />
               강의 형식의 스터디인{" "}
               <span css={SinchonColor}> Algorithm Camp</span>도 진행하여

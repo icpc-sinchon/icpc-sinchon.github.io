@@ -130,19 +130,16 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
   return (
     <Layout>
       <Head>
-        <title>SUAPC 2022 | ICPC Sinchon</title>
+        <title>SUAPC 2023 | ICPC Sinchon</title>
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:title" content="SUAPC 2022 | ICPC Sinchon" />
+        <meta property="og:title" content="SUAPC 2023 | ICPC Sinchon" />
         <meta property="og:url" content="https://icpc-sinchon.io/suapc" />
         <meta
           property="og:description"
           content="SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의 학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다"
         />
-        <meta
-          property="og:image"
-          content="https://api.suapc.kr/res/og_image.png"
-        />
+        <meta property="og:image" content="/res/og_image.png" />
       </Head>
       <>
         <TextBubble
@@ -193,9 +190,9 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           ) : (
             <ArchiveWrap>
               {/* for contest: apply link isn't created */}
-              <AdmissionButton href="https://docs.google.com/forms/d/e/1FAIpQLSeKHQl43AEKF8llH6zh9bOzQu5puAil6NfREOg02D3m6-7cuw/viewform?usp=send_form">
+              <AdmissionButton href="https://forms.gle/AEfLfsbXDrGxPk7C8">
                 대회 신청{" "}
-                <span style={{ fontSize: "smaller" }}>02/19 23시까지</span>
+                <span style={{ fontSize: "smaller" }}>02/18 오후 8시까지</span>
               </AdmissionButton>
               {/* <AdmissionButton href="https://pf.kakao.com/_xehxhAK">
                 대회 문의
@@ -223,11 +220,11 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           <ItemWrap>
             <ItemTitle>참여 대학</ItemTitle>
             <SchoolLogoWrap>
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sogang.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/sookmyung.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/yonsei.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/ewha.png" />
-              <SchoolLogo src="https://api.suapc.kr/res/school-logo/hongik.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/sogang.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/sookmyung.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/yonsei.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/ewha.png" />
+              <SchoolLogo src="https://api.suapc.kr/school-logo/hongik.png" />
             </SchoolLogoWrap>
           </ItemWrap>
           <ItemWrap>
@@ -239,7 +236,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                 return (
                   <SponserCI
                     key={"sponser-" + data}
-                    src={`https://api.suapc.kr/res/sponser-ci/${data}.png`}
+                    src={`https://api.suapc.kr/sponser-ci/${data}.png`}
                   />
                 );
               })}

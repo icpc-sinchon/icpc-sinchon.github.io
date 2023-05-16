@@ -1,83 +1,84 @@
 .main-wrap {
-	padding: 2rem 0 3rem 0;
+  padding: 2rem 0 3rem 0;
 }
 .content-wrap-main {
-	height: 100%;
-	padding: 0 5.2rem;
+  height: 100%;
+  padding: 0 5.2rem;
 }
 .ContentItem-PC {
 }
 
 .ContentItem-Tablet {
-	display: none;
+  display: none;
 }
 $MedalTop: 9px;
-$MedalRight: 16px;.speech-bubble {
-	position: relative;
-	background: #475152;
-	border-radius: .4em;
+$MedalRight: 16px;
+.speech-bubble {
+  position: relative;
+  background: #475152;
+  border-radius: 0.4em;
 }
 
 .speech-bubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 28px solid transparent;
-	border-top-color: #475152;
-	border-bottom: 0;
-	margin-left: -28px;
-	margin-bottom: -28px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 28px solid transparent;
+  border-top-color: #475152;
+  border-bottom: 0;
+  margin-left: -28px;
+  margin-bottom: -28px;
 }
 .medal-gold {
-	position: absolute;
-	top: $MedalTop;
-	right: $MedalRight;
-	color: #ffba00;
+  position: absolute;
+  top: $MedalTop;
+  right: $MedalRight;
+  color: #ffba00;
 }
 .medal-silver {
-	position: absolute;
-	top: $MedalTop;
-	right: $MedalRight;
-	color: #acacac;
+  position: absolute;
+  top: $MedalTop;
+  right: $MedalRight;
+  color: #acacac;
 }
 .medal-bronze {
-	position: absolute;
-	top: $MedalTop;
-	right: $MedalRight;
-	color: #cc7d5d;
+  position: absolute;
+  top: $MedalTop;
+  right: $MedalRight;
+  color: #cc7d5d;
 }
 @media (max-width: 1375px) {
-	.ContentItem-PC {
-		display: none;
-	}
+  .ContentItem-PC {
+    display: none;
+  }
 
-	.ContentItem-Tablet {
-		display: block;
-	}
+  .ContentItem-Tablet {
+    display: block;
+  }
 
-	.ContentItem {
-		width: 25rem;
-	}
+  .ContentItem {
+    width: 25rem;
+  }
 }
 
 @media (max-width: 1135px) {
-	.ContentItem {
-		width: 100%;
-		max-width: unset;
-	}
+  .ContentItem {
+    width: 100%;
+    max-width: unset;
+  }
 }
 
 @media (max-width: 900px) {
-	.content-wrap-main {
-		padding: 0 3rem;
-	}
+  .content-wrap-main {
+    padding: 0 3rem;
+  }
 }
 
 @media (max-width: 500px) {
-	.content-wrap-main {
-		padding: 0 1.4rem;
-	}
+  .content-wrap-main {
+    padding: 0 1.4rem;
+  }
 }

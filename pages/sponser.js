@@ -37,10 +37,7 @@ const Sponser = () => {
           property="og:description"
           content="매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요."
         />
-        <meta
-          property="og:image"
-          content="https://api.suapc.kr/res/og_image.png"
-        />
+        <meta property="og:image" content="/res/og_image.png" />
       </Head>
       <div className="main-wrap" style={{ paddingTop: "1.2rem" }}>
         <div className="content-wrap-main">
@@ -65,7 +62,7 @@ const Sponser = () => {
           </ItemWrap>
           <ImgWrap>
             <img
-              src="https://api.suapc.kr/res/stickers-3.jpg"
+              src="/res/stickers-3.jpg"
               className="slide-up"
               style={{ animationDelay: `500ms` }}
             />
@@ -106,7 +103,7 @@ const Sponser = () => {
             <SponserWrap>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/kakao.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/kakao.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -142,7 +139,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/autoever.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/autoever.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -163,7 +160,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/naver.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/naver.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -187,7 +184,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/pubg.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/pubg.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -198,7 +195,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/future-tech-academy.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/future-tech-academy.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -221,7 +218,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/furiosa.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/furiosa.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -232,7 +229,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/res/sponser-ci/vuno.png" />
+                  <img src="https://api.suapc.kr/sponser-ci/vuno.png" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -312,18 +309,21 @@ const UnderlinedLink = styled.a`
 `;
 
 const SponserWrap = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 
   margin-top: 1em;
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const SponserItem = styled.div`
-  ${"" /* display: flex; */}
-
-  ${"" /* margin: 1rem 1rem 1rem 0; */}
-    margin: 0.4rem 1rem 0.4rem 0;
+  margin: 0.4rem 1rem 0.4rem 0;
 
   ul {
     margin-top: 0;
