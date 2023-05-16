@@ -1,12 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI Build Check
 
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -39,12 +37,3 @@ jobs:
 
       - name: Export Next.js
         run: npm run dev & (npm run build && npm run export)
-
-      - name: Touch .nojekyll
-        run: touch out/.nojekyll
-
-      - name: Deploy with GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.7.3
-        with:
-          publish_dir: out/
-          github_token: ${{ secrets.ICPC_SINCHON_API_KEY }}
