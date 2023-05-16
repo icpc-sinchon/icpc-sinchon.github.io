@@ -77,7 +77,7 @@ const Header = () => {
         </Link>
         <div style={{ flexGrow: "1" }} />
         <Link href="/suapc">
-          <HeaderElem style={{ color: "#009d3e" }}>SUAPC 2022</HeaderElem>
+          <HeaderElem style={{ color: "#009d3e" }}>SUAPC 2023</HeaderElem>
         </Link>
         <Link href="/campcontest">
           <HeaderElem style={{ color: "#009d3e" }}>Camp Contest</HeaderElem>
