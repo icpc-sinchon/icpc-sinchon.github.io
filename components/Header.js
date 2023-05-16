@@ -54,7 +54,7 @@ const Header = () => {
         <>
             <HeaderWrap>
                 {isNavClicked ? <NavBarWindow>
-                    <Link href="/suapc"><NavBarElem onClick={onNavClick}>SUAPC 2021</NavBarElem></Link>
+                    <Link href="/suapc"><NavBarElem onClick={onNavClick}>SUAPC 2023</NavBarElem></Link>
                     <Link href="/campcontest"><NavBarElem onClick={onNavClick}>Camp Contest</NavBarElem></Link>
                     <Link href="/halloffame"><NavBarElem onClick={onNavClick}>명예의 전당</NavBarElem></Link>
                     <Link href="/sponser"><NavBarElem onClick={onNavClick}>후원 및 협업</NavBarElem></Link>
