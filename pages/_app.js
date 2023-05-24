@@ -3,6 +3,8 @@ import { applyMiddleware, compose, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reducer from "../reducers";
 
+// TODO: 😭
+// import "../styles/reset.css";
 import "../styles/global.scss";
 import "../styles/SeasonNav.scss";
 import "../public/fonts/fonts.css";

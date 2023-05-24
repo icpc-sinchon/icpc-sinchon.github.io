@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import NavSVG from "../components/HeaderNavSVG";
 import LogoSVG from "../components/HeaderLogoSVG";
 
@@ -19,9 +19,12 @@ const Header = () => {
   };
 
   const LogoImgWrap = styled.div`
-    width: 36px;
-    z-index: 10002;
+    svg {
+      width: 42px;
+      height: 28px;
+    }
 
+    display: flex;
     cursor: pointer;
 
     @media (max-width: 700px) {
@@ -54,7 +57,7 @@ const Header = () => {
         {isNavClicked ? (
           <NavBarWindow>
             <Link href="/suapc">
-              <NavBarElem onClick={onNavClick}>SUAPC 2021</NavBarElem>
+              <NavBarElem onClick={onNavClick}>SUAPC 2023</NavBarElem>
             </Link>
             <Link href="/campcontest">
               <NavBarElem onClick={onNavClick}>Camp Contest</NavBarElem>
@@ -65,7 +68,6 @@ const Header = () => {
             <Link href="/sponser">
               <NavBarElem onClick={onNavClick}>후원 및 협업</NavBarElem>
             </Link>
-            {/* <Link href="/contact"><NavBarElem onClick={onNavClick}>문의하기</NavBarElem></Link> */}
           </NavBarWindow>
         ) : (
           ""
@@ -77,7 +79,7 @@ const Header = () => {
         </Link>
         <div style={{ flexGrow: "1" }} />
         <Link href="/suapc">
-          <HeaderElem style={{ color: "#009d3e" }}>SUAPC 2022</HeaderElem>
+          <HeaderElem style={{ color: "#009d3e" }}>SUAPC 2023</HeaderElem>
         </Link>
         <Link href="/campcontest">
           <HeaderElem style={{ color: "#009d3e" }}>Camp Contest</HeaderElem>
@@ -88,7 +90,6 @@ const Header = () => {
         <Link href="/sponser">
           <HeaderElem>후원 및 협업</HeaderElem>
         </Link>
-        {/* <Link href="/contact"><HeaderElem>문의하기</HeaderElem></Link> */}
         <NavBarWrap onClick={onNavClick}>
           <NavSVG />
         </NavBarWrap>
@@ -119,13 +120,12 @@ const HeaderWrap = styled.header`
   align-items: center;
 
   position: fixed;
-  background-color: white;
   z-index: 1000;
   width: 100%;
-  max-width: 2000px;
+  max-width: 1000px;
 
   height: 75px;
-  padding: 0 3.2rem;
+  padding: ${(props) => props.theme.main.frame.padding};
 
   @media (max-width: 700px) {
     padding: 0 8vw;
