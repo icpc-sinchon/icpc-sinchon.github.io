@@ -212,7 +212,17 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                   <tr key={"lecturer-" + lecturer.name}>
                                     <td>강사</td>
                                     <td>{lecturer.name}</td>
-                                    <td>{lecturer.handle}</td>
+                                    <td>
+                                      <a
+                                        target="_blank"
+                                        style={{
+                                          textDecoration: "underline",
+                                        }}
+                                        href={`https://acmicpc.net/user/${lecturer.handle}`}
+                                      >
+                                        {lecturer.handle}
+                                      </a>
+                                    </td>
                                     <td>{lecturer.school}</td>
                                   </tr>
                                 );
@@ -223,7 +233,17 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                     <tr key={"mentor-" + lecturer.name}>
                                       <td>멘토</td>
                                       <td>{lecturer.name}</td>
-                                      <td>{lecturer.handle}</td>
+                                      <td>
+                                        <a
+                                          target="_blank"
+                                          style={{
+                                            textDecoration: "underline",
+                                          }}
+                                          href={`https://acmicpc.net/user/${lecturer.handle}`}
+                                        >
+                                          {lecturer.handle}
+                                        </a>
+                                      </td>
                                       <td>{lecturer.school}</td>
                                     </tr>
                                   );
