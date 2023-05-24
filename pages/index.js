@@ -2,9 +2,6 @@ import Head from "next/head";
 import styled, { css } from "styled-components";
 import Layout from "../components/Layout";
 
-const SinchonColor = css`
-  color: #009d3e;
-`;
 const BoldText = css`
   font-weight: 700;
 `;
@@ -33,11 +30,34 @@ const Main = () => {
       </Head>
       <MainWrap className="main-wrap">
         <ContentWrap className="content-wrap-main fade-in">
-          <TextTitle>ICPC Sinchon</TextTitle>
-          <TextSubTitle>신촌지역 대학교 프로그래밍 동아리 연합</TextSubTitle>
+          <TextTitle>
+            THINK <br />
+            DIFFERENT
+          </TextTitle>
+          <TextSubTitle>
+            <span
+              css={css`
+                letter-spacing: -1px;
+              `}
+            >
+              ICPC Sinchon
+            </span>{" "}
+            에서 끝도 없이 넘치는 알고리즘 사고력을 길러보세요
+          </TextSubTitle>
         </ContentWrap>
         <MainImageWrap className="fade-in">
-          <img src="/res/c-4.jpg" />
+          <img
+            src="/res/hero-background.svg"
+            css={css`
+              position: fixed;
+              width: 1521px;
+              z-index: 100000;
+              height: 355px;
+              left: 0;
+              top: -33px;
+              zoom: 2.7;
+            `}
+          />
         </MainImageWrap>
         <ContentWrap css={MainBottom} className="content-wrap-main fade-in">
           <ContentItem className="ContentItem">
@@ -82,17 +102,37 @@ const Main = () => {
           <ContentItem className="ContentItem ContentItem-PC">
             <ContentTitle>활동</ContentTitle>
             <ContentText>
-              매 시즌 프로그래밍 대회 <span css={SinchonColor}>SUAPC</span>를
-              개최하여 팀원과의 협업을 통해 <span>ICPC</span>를 준비할 수 있는
-              환경을 제공합니다.
+              매 시즌 프로그래밍 대회{" "}
+              <span
+                css={css`
+                  color: ${(props) => props.theme.color.primary};
+                `}
+              >
+                SUAPC
+              </span>
+              를 개최하여 팀원과의 협업을 통해 <span>ICPC</span>를 준비할 수
+              있는 환경을 제공합니다.
               <br />
               강의 형식의 스터디인{" "}
-              <span css={SinchonColor}> Algorithm Camp</span>도 진행하여
-              연합원들에게 알고리즘 공부의 기회를 제공합니다.
+              <span
+                css={css`
+                  color: ${(props) => props.theme.color.primary};
+                `}
+              >
+                Algorithm Camp
+              </span>
+              도 진행하여 연합원들에게 알고리즘 공부의 기회를 제공합니다.
               <br />
-              캠프 이후에는 <span css={SinchonColor}>Camp Contest</span>를 통해
-              다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는 모의고사를
-              치릅니다.
+              캠프 이후에는{" "}
+              <span
+                css={css`
+                  color: ${(props) => props.theme.color.primary};
+                `}
+              >
+                Camp Contest
+              </span>
+              를 통해 다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는
+              모의고사를 치릅니다.
             </ContentText>
           </ContentItem>
           <ContentItem className="ContentItem ContentItem-Tablet">
@@ -119,12 +159,25 @@ const Main = () => {
             </ContentTitle>
             <ContentText>
               강의 형식의 스터디인{" "}
-              <span css={SinchonColor}> Algorithm Camp</span>를 진행하여
-              연합원들에게 알고리즘 공부의 기회를 제공합니다.
+              <span
+                css={css`
+                  color: ${(props) => props.theme.color.primary};
+                `}
+              >
+                Algorithm Camp
+              </span>
+              를 진행하여 연합원들에게 알고리즘 공부의 기회를 제공합니다.
               <br />
-              캠프 이후에는 <span css={SinchonColor}>Camp Contest</span>를 통해
-              다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는 모의고사를
-              치릅니다.
+              캠프 이후에는{" "}
+              <span
+                css={css`
+                  color: ${(props) => props.theme.color.primary};
+                `}
+              >
+                Camp Contest
+              </span>
+              를 통해 다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는
+              모의고사를 치릅니다.
             </ContentText>
           </ContentItem>
         </ContentWrap>
@@ -144,24 +197,37 @@ const ContentWrap = styled.div`
 `;
 
 const TextTitle = styled.div`
-  font-family: "KeepCalmMed";
-  ${SinchonColor}
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-size: 4.2rem;
   line-height: 1;
 
-  font-size: 2.1rem;
-  letter-spacing: -0.04rem;
+  color: ${(props) => props.theme.color.primary};
+
+  &::before {
+    content: "💡";
+    position: absolute;
+    transform: translateX(-100%);
+  }
+  &::after {
+    content: "⚡";
+    position: absolute;
+  }
 `;
 
 const TextSubTitle = styled.div`
-  ${SinchonColor}
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 600;
 
-  font-size: 1.02rem;
-  font-weight: 700;
+  color: ${(props) => props.theme.color.primary};
+
+  margin-top: 0.4rem;
 `;
 
 const MainImageWrap = styled.div`
   width: 100%;
-  height: 340px;
+  height: 120px;
 
   margin: 1.2rem 0 0 0;
 
@@ -176,14 +242,11 @@ const MainImageWrap = styled.div`
 `;
 
 const ContentItem = styled.div`
-  width: 26vw;
-  max-width: 30rem;
+  width: 100%;
 `;
 
 const ContentTitle = styled.h3`
-  ${BoldText}
-  ${SinchonColor}
-    font-size: 1.2rem;
+  color: ${(props) => props.theme.color.primary};
 
   margin: 1em 0 0.4em 0;
 `;
