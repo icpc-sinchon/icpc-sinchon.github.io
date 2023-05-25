@@ -1,121 +1,49 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { useEffect } from "react";
-import NavSVG from "../components/HeaderNavSVG";
-import LogoSVG from "../components/HeaderLogoSVG";
-
-import { setIsNavClicked } from "../reducers/isNavClicked";
 import { useDispatch, useSelector } from "react-redux";
 
-const Header = () => {
-  const dispatch = useDispatch();
-  const isNavClicked = useSelector((state) => state.isNavClicked);
+import { FlexBox } from "./ui/flex-box";
+import { HamburgerButtonSvg } from "./hamberger-button-svg";
+import { LogoSvg } from "./240-logo-svg";
+import { setIsNavClicked } from "../reducers/isNavClicked";
 
-  const onNavClick = () => {
-    if (isNavClicked) dispatch(setIsNavClicked(false));
-    else dispatch(setIsNavClicked(true));
+const routes = [
+  { title: "SUAPC 2023", href: "/suapc" },
+  { title: "Camp Contest", href: "/campcontest" },
+  { title: "명예의 전당", href: "/halloffame" },
+  { title: "후원 및 협업", href: "/sponser" },
+];
 
-    document.querySelector("sitemask").classList.toggle("hide");
-  };
+const Logo = styled(LogoSvg)`
+  width: 42px;
+  height: 28px;
 
-  const LogoImgWrap = styled.div`
-    svg {
-      width: 42px;
-      height: 28px;
-    }
+  cursor: pointer;
 
-    display: flex;
-    cursor: pointer;
+  z-index: 1001;
 
-    @media (max-width: 700px) {
-      width: 32px;
-    }
-  `;
-
-  const NavBarWrap = styled.div`
-    display: none;
-    z-index: 10002;
-
-    @media (max-width: 500px) {
-      display: block;
-    }
-  `;
-
-  useEffect(() => {
-    document.querySelector("main").addEventListener("click", (e) => {
-      dispatch(setIsNavClicked(false));
-    });
-
-    document.querySelector("footer").addEventListener("click", (e) => {
-      dispatch(setIsNavClicked(false));
-    });
-  }, []);
-
-  return (
-    <>
-      <HeaderWrap>
-        {isNavClicked ? (
-          <NavBarWindow>
-            <Link href="/suapc">
-              <NavBarElem onClick={onNavClick}>SUAPC 2023</NavBarElem>
-            </Link>
-            <Link href="/campcontest">
-              <NavBarElem onClick={onNavClick}>Camp Contest</NavBarElem>
-            </Link>
-            <Link href="/halloffame">
-              <NavBarElem onClick={onNavClick}>명예의 전당</NavBarElem>
-            </Link>
-            <Link href="/sponser">
-              <NavBarElem onClick={onNavClick}>후원 및 협업</NavBarElem>
-            </Link>
-          </NavBarWindow>
-        ) : (
-          ""
-        )}
-        <Link href="/">
-          <LogoImgWrap>
-            <LogoSVG />
-          </LogoImgWrap>
-        </Link>
-        <div style={{ flexGrow: "1" }} />
-        <Link href="/suapc">
-          <HeaderElem style={{ color: "#009d3e" }}>SUAPC 2023</HeaderElem>
-        </Link>
-        <Link href="/campcontest">
-          <HeaderElem style={{ color: "#009d3e" }}>Camp Contest</HeaderElem>
-        </Link>
-        <Link href="/halloffame">
-          <HeaderElem>명예의 전당</HeaderElem>
-        </Link>
-        <Link href="/sponser">
-          <HeaderElem>후원 및 협업</HeaderElem>
-        </Link>
-        <NavBarWrap onClick={onNavClick}>
-          <NavSVG />
-        </NavBarWrap>
-      </HeaderWrap>
-    </>
-  );
-};
-
-const NavBarWindow = styled.div`
-  position: fixed;
-  z-index: 10001;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 190px;
-  padding-top: 75px;
-
-  background: #009d3e;
-
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  @media ${(props) => props.theme.device.sm} {
+    width: 32px;
+  }
 `;
-
-const HeaderWrap = styled.header`
+const Header = styled(({ className }) => {
+  return (
+    <header className={className}>
+      <Link href="/">
+        <FlexBox>
+          <Logo />
+        </FlexBox>
+      </Link>
+      <div style={{ flexGrow: "1" }} />
+      {routes.map(({ title, href }) => (
+        <Link href={href}>
+          <DesktopTopbarItem>{title}</DesktopTopbarItem>
+        </Link>
+      ))}
+      <MobileWindow />
+    </header>
+  );
+})`
   display: flex;
   align-items: center;
 
@@ -132,8 +60,55 @@ const HeaderWrap = styled.header`
   }
 `;
 
-const HeaderElem = styled.div`
-  font-family: "KeepCalmMed", "Apple SD Gothic Neo";
+const HamburgerButton = styled(HamburgerButtonSvg)`
+  display: none;
+  z-index: 10002;
+
+  @media ${(props) => props.theme.device.sm} {
+    display: block;
+  }
+`;
+const MobileWindow = styled(({ className }) => {
+  const dispatch = useDispatch();
+  const isNavClicked = useSelector((state) => state.isNavClicked);
+
+  const handleClick = () => {
+    dispatch(setIsNavClicked(!isNavClicked));
+    document.querySelector("sitemask").classList.toggle("hide");
+  };
+
+  return (
+    <>
+      {isNavClicked && (
+        <div className={className}>
+          {routes.map(({ title, href }) => (
+            <Link href={href}>
+              <MobileTopbarItem onClick={handleClick}>{title}</MobileTopbarItem>
+            </Link>
+          ))}
+        </div>
+      )}
+      <HamburgerButton onClick={handleClick} />
+    </>
+  );
+})`
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 190px;
+  padding-top: 75px;
+
+  background: ${(props) => props.theme.color.primary};
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+`;
+
+const DesktopTopbarItem = styled.div`
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: -0.02rem;
@@ -146,18 +121,12 @@ const HeaderElem = styled.div`
     padding-right: 0;
   }
 
-  @media (max-width: 700px) {
-    font-size: 0.6rem;
-    padding: 0 0.6rem;
-  }
-
-  @media (max-width: 500px) {
+  @media ${(props) => props.theme.device.sm} {
     display: none;
   }
 `;
 
-const NavBarElem = styled.div`
-  font-family: "KeepCalmMed", "Apple SD Gothic Neo";
+const MobileTopbarItem = styled.div`
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
