@@ -54,7 +54,7 @@ const Footer = styled(({ className }) => {
   line-height: 0.7;
   margin: ${(props) => props.theme.main.frame.padding};
   margin-top: 4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 
   font-size: 0.8rem;
   color: #5d737e;
