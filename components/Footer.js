@@ -59,7 +59,7 @@ const Footer = styled(({ className }) => {
   font-size: 0.8rem;
   color: #5d737e;
 
-  ${(props) => props.theme.device.large} {
+  ${(props) => props.theme.device.lg} {
     margin-left: -2.4rem;
     padding: 33rem 2.4rem 3rem;
   }
