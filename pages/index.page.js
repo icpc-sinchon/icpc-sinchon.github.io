@@ -302,7 +302,6 @@ const HeroCatchPhrase = styled.span`
 `;
 
 const TextSubTitle = styled.div`
-  font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 600;
 
