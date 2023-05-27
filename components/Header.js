@@ -53,7 +53,7 @@ const Header = styled(({ className }) => {
   max-width: 1000px;
 
   height: 75px;
-  padding: ${(props) => props.theme.main.frame.padding};
+  ${(props) => props.theme.main.frame.padding};
 
   @media (max-width: 700px) {
     padding: 0 8vw;
@@ -110,10 +110,10 @@ const MobileWindow = styled(({ className }) => {
 
 const DesktopTopbarItem = styled.div`
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.02rem;
 
-  padding: 0 1.1rem;
+  padding-left: 2.4rem;
 
   cursor: pointer;
 

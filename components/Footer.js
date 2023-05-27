@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import classNames from "classnames";
+import styled, { css } from "styled-components";
 
 const SnsIcons = styled(({ className }) => {
   return (
@@ -19,7 +20,8 @@ const SnsIcons = styled(({ className }) => {
   gap: 1.2rem;
 
   position: absolute;
-  top: 0;
+  /*top: 0;*/
+  top: -0.6rem;
   right: 0;
 
   display: flex;
@@ -36,12 +38,19 @@ const Logo = styled(({ className }) => {
 
 const Footer = styled(({ className }) => {
   return (
-    <footer className={className}>
+    <footer className={classNames(className, "fade-in")}>
       <Logo />
       <br />
       <p>신촌지역 대학교 프로그래밍 동아리 연합</p>
       <br />
-      <p>
+      <p
+        css={css`
+          /* for mobile */
+          @media ${(props) => props.theme.device.sm} {
+            line-height: 1.3;
+          }
+        `}
+      >
         04107 서울시 마포구 백범로 35 (신수동) 서강대학교 김대건관(K관) 512호 |
         icpc.sinchon@gmail.com
       </p>
@@ -52,16 +61,17 @@ const Footer = styled(({ className }) => {
 })`
   position: relative;
   line-height: 0.7;
-  margin: ${(props) => props.theme.main.frame.padding};
+
+  ${(props) => props.theme.main.frame.margin};
   margin-top: 4rem;
   margin-bottom: 1.8rem;
 
   font-size: 0.8rem;
   color: #5d737e;
 
-  ${(props) => props.theme.device.lg} {
-    margin-left: -2.4rem;
-    padding: 33rem 2.4rem 3rem;
+  @media ${(props) => props.theme.device.sm} {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
   }
 `;
 
