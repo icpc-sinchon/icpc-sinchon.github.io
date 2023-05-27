@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="theme-color" content="#009D3E" />
+          <meta name="theme-color" content="#46D381" />
           <link rel="icon" href="/favicon.png" />
           {this.props.styleTags}
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
