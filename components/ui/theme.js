@@ -7,7 +7,8 @@ export const theme = {
   },
   main: {
     frame: {
-      padding: "0 5.2rem",
+      margin: "margin: 0 5.2rem",
+      padding: "padding: 0 5.2rem",
     },
   },
   device: {

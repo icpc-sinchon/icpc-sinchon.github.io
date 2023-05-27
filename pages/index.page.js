@@ -2,17 +2,6 @@ import Head from "next/head";
 import styled, { css } from "styled-components";
 import Layout from "../components/Layout";
 
-const BoldText = css`
-  font-weight: 700;
-`;
-const MainBottom = css`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  margin: 1.6rem 0 1rem 0;
-`;
-
 const Main = () => {
   return (
     <Layout>
@@ -28,12 +17,28 @@ const Main = () => {
         />
         <meta property="og:image" content="/res/og_image.png" />
       </Head>
+      <img
+        src="/res/hero-background.svg"
+        css={css`
+          width: 1521px;
+          height: 355px;
+
+          position: fixed;
+          left: 0;
+          top: -33px;
+
+          zoom: 2.7;
+
+          pointer-events: none;
+          z-index: -1;
+        `}
+      />
       <MainWrap className="main-wrap">
-        <ContentWrap className="content-wrap-main fade-in">
-          <TextTitle>
+        <ContentWrap className="fade-in">
+          <HeroCatchPhrase>
             THINK <br />
             DIFFERENT
-          </TextTitle>
+          </HeroCatchPhrase>
           <TextSubTitle>
             <span
               css={css`
@@ -45,33 +50,31 @@ const Main = () => {
             에서 끝도 없이 넘치는 알고리즘 사고력을 길러보세요
           </TextSubTitle>
         </ContentWrap>
-        <MainImageWrap className="fade-in">
-          <img
-            src="/res/hero-background.svg"
-            css={css`
-              position: fixed;
-              width: 1521px;
-              z-index: 100000;
-              height: 355px;
-              left: 0;
-              top: -33px;
-              zoom: 2.7;
-            `}
-          />
-        </MainImageWrap>
-        <ContentWrap css={MainBottom} className="content-wrap-main fade-in">
-          <ContentItem className="ContentItem">
-            <ContentTitle>소개</ContentTitle>
+        <ContentWrap
+          css={css`
+            display: flex;
+            justify-content: space-between;
+
+            gap: 2.4rem;
+
+            margin-top: 6.4rem !important;
+
+            @media ${(props) => props.theme.device.sm_md} {
+              gap: 0;
+              flex-wrap: wrap;
+            }
+          `}
+          className="fade-in"
+        >
+          {/* <ContentItem className="ContentItem">
             <ContentText>
-              안녕하세요 신촌지역 대학교 프로그래밍 동아리 연합입니다.
               서강대학교, 숙명여자대학교, 연세대학교, 이화여자대학교, 홍익대학교
               프로그래밍 동아리의 연합 동아리로, 각 학교 컴퓨터공학과 전공생
               180명으로 구성되어 있습니다. 2020년 겨울부터 활동을 시작하여 매
               시즌 정기적인 활동을 이어 나가고 있습니다.
             </ContentText>
-          </ContentItem>
+          </ContentItem> */}
           <ContentItem className="ContentItem">
-            <ContentTitle>소속 학교</ContentTitle>
             <SchoolWrap>
               <SchoolItem>
                 <img src="https://api.suapc.kr/school-logo/sogang.png" />
@@ -99,87 +102,155 @@ const Main = () => {
               </SchoolItem>
             </SchoolWrap>
           </ContentItem>
-          <ContentItem className="ContentItem ContentItem-PC">
-            <ContentTitle>활동</ContentTitle>
-            <ContentText>
-              매 시즌 프로그래밍 대회{" "}
-              <span
-                css={css`
-                  color: ${(props) => props.theme.color.primary};
-                `}
-              >
-                SUAPC
-              </span>
-              를 개최하여 팀원과의 협업을 통해 <span>ICPC</span>를 준비할 수
-              있는 환경을 제공합니다.
-              <br />
-              강의 형식의 스터디인{" "}
-              <span
-                css={css`
-                  color: ${(props) => props.theme.color.primary};
-                `}
-              >
-                Algorithm Camp
-              </span>
-              도 진행하여 연합원들에게 알고리즘 공부의 기회를 제공합니다.
-              <br />
-              캠프 이후에는{" "}
-              <span
-                css={css`
-                  color: ${(props) => props.theme.color.primary};
-                `}
-              >
-                Camp Contest
-              </span>
-              를 통해 다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는
-              모의고사를 치릅니다.
-            </ContentText>
-          </ContentItem>
-          <ContentItem className="ContentItem ContentItem-Tablet">
-            <ContentTitle
-              style={{ fontFamily: `KeepCalmMed`, fontWeight: `unset` }}
-            >
-              SUAPC
-            </ContentTitle>
-            <ContentText>
-              매 시즌 프로그래밍 대회를 개최하여 팀원과의 협업을 통해 ICPC를
-              준비할 수 있는 환경을 제공합니다.
-              <br />
-              문제 또한 ICPC 서울 리저널의 경향을 따르며, 제한시간 동안 얼마나
-              많은 문제를 정확하게 풀어내는지를 평가하여 순위를 결정합니다.
-              <br />
-              신촌지역 5개 학교 학부생이라면 누구나 참여 가능합니다.
-            </ContentText>
-          </ContentItem>
-          <ContentItem className="ContentItem ContentItem-Tablet">
-            <ContentTitle
-              style={{ fontFamily: `KeepCalmMed`, fontWeight: `unset` }}
-            >
-              Algorithm Camp
-            </ContentTitle>
-            <ContentText>
-              강의 형식의 스터디인{" "}
-              <span
-                css={css`
-                  color: ${(props) => props.theme.color.primary};
-                `}
-              >
-                Algorithm Camp
-              </span>
-              를 진행하여 연합원들에게 알고리즘 공부의 기회를 제공합니다.
-              <br />
-              캠프 이후에는{" "}
-              <span
-                css={css`
-                  color: ${(props) => props.theme.color.primary};
-                `}
-              >
-                Camp Contest
-              </span>
-              를 통해 다른 학회원들과 경쟁하며 본인의 실력을 확인할 수 있는
-              모의고사를 치릅니다.
-            </ContentText>
-          </ContentItem>
+        </ContentWrap>
+        <hr
+          css={css`
+            width: 16%;
+            height: 0.2px;
+
+            background: #b3b3b3;
+
+            border: 0;
+            border-radius: 20rem;
+          `}
+        />
+        <ContentWrap
+          className="fade-in"
+          css={css`
+            text-align: center;
+          `}
+        >
+          <img
+            src="/res/ferris-wheel.gif"
+            css={css`
+              width: 4rem;
+              margin: 0 auto;
+            `}
+          />
+          <div
+            css={css`
+              font-weight: 700;
+              font-size: 1.8rem;
+              letter-spacing: -0.04em;
+
+              margin-bottom: 0.6rem;
+            `}
+          >
+            신촌을 알고리즘 축제밭으로
+          </div>
+          <span
+            css={css`
+              display: inline-block;
+              max-width: 56vw;
+
+              margin: 0 auto;
+
+              line-height: 1.6;
+              word-break: keep-all;
+            `}
+          >
+            매 시즌마다 세 개의 알고리즘 행사를 개최합니다.
+            <br />
+            참가자들의 개인적인 성장을 돕는 Algorithm Camp, 캠프를 통해 학습한
+            내용을 테스트하는 개인전 Camp Contest,
+            <br />
+            그리고 친구들과 팀을 이루어 경쟁하는 SUAPC까지.
+          </span>
+        </ContentWrap>
+        <hr
+          css={css`
+            width: 16%;
+            height: 0.2px;
+
+            background: #b3b3b3;
+
+            border: 0;
+            border-radius: 20rem;
+          `}
+        />
+        <ContentWrap
+          className="fade-in"
+          css={css`
+            text-align: center;
+          `}
+        >
+          <img
+            src="/res/direct-hit.gif"
+            css={css`
+              width: 4rem;
+              margin: 0 auto;
+            `}
+          />
+          <div
+            css={css`
+              font-weight: 700;
+              font-size: 1.8rem;
+              letter-spacing: -0.04em;
+
+              margin-bottom: 0.6rem;
+            `}
+          >
+            최고의 목표를 지항하며
+          </div>
+          <span
+            css={css`
+              display: inline-block;
+              max-width: 56vw;
+
+              margin: 0 auto;
+
+              line-height: 1.6;
+              word-break: keep-all;
+            `}
+          >
+            국제 대학생 프로그래밍 대회 ICPC에서 우수한 성적을 거두는 것을
+            목표로 하고 있습니다. <br />
+            신촌 최고의 대회 SUAPC로 함께 대비합니다.
+          </span>
+        </ContentWrap>
+        <ContentWrap
+          className="fade-in"
+          css={css`
+            margin-top: 4.8rem;
+
+            position: relative;
+
+            padding: 1.6rem 2.4rem;
+
+            border: 0.3px solid #b3b3b3;
+            border-radius: 1.8rem;
+          `}
+        >
+          <div
+            css={css`
+              font-weight: 700;
+              font-size: 1.8rem;
+              letter-spacing: -0.04em;
+
+              margin-bottom: 0.6rem;
+            `}
+          >
+            <img
+              src="/res/raising-hands.svg"
+              css={css`
+                width: 3.2rem;
+
+                margin-bottom: 0.4rem;
+              `}
+            />
+            같이 공부해요!
+          </div>
+          <span
+            css={css`
+              line-height: 1.6;
+
+              word-break: keep-all;
+            `}
+          >
+            함께 성장하고 싶은 학회원들을 모집하고 있습니다.
+            <br />매 시즌마다 진행되는 ICPC Sinchon 활동에 참여하기를 원한다면
+            각 학교 학회의 학회장에게 문의해주세요.
+          </span>
         </ContentWrap>
       </MainWrap>
     </Layout>
@@ -191,13 +262,21 @@ const MainWrap = styled.div`
 `;
 
 const ContentWrap = styled.div`
-  height: 100%;
+  margin-left: 5.2rem;
+  margin-right: 5.2rem;
 
-  padding: 0 5.2rem;
+  @media ${(props) => props.theme.device.sm_md} {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+
+  & + * {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
 `;
 
-const TextTitle = styled.div`
-  font-family: "Pretendard";
+const HeroCatchPhrase = styled.span`
   font-weight: 900;
   font-size: 4.2rem;
   line-height: 1;
@@ -205,6 +284,9 @@ const TextTitle = styled.div`
   color: ${(props) => props.theme.color.primary};
 
   &::before {
+    @media ${(props) => props.theme.device.sm_md} {
+      content: "";
+    }
     content: "💡";
     position: absolute;
     transform: translateX(-100%);
@@ -212,6 +294,10 @@ const TextTitle = styled.div`
   &::after {
     content: "⚡";
     position: absolute;
+  }
+
+  @media ${(props) => props.theme.device.sm} {
+    font-size: 12.4vw;
   }
 `;
 
@@ -231,10 +317,7 @@ const MainImageWrap = styled.div`
 
   margin: 1.2rem 0 0 0;
 
-  ${"" /* border-top: 1px solid #707070; */}
-  ${"" /* border-bottom: 1px solid #707070; */}
-
-    overflow: hidden;
+  overflow: hidden;
 
   @media (max-width: 1000px) {
     height: 50vw;
@@ -243,12 +326,6 @@ const MainImageWrap = styled.div`
 
 const ContentItem = styled.div`
   width: 100%;
-`;
-
-const ContentTitle = styled.h3`
-  color: ${(props) => props.theme.color.primary};
-
-  margin: 1em 0 0.4em 0;
 `;
 
 const ContentText = styled.p`
@@ -260,15 +337,11 @@ const ContentText = styled.p`
 
 const SchoolWrap = styled.p`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
-  @media (min-width: 1505px) {
-    justify-content: space-evenly;
-  }
+  flex-wrap: wrap;
 
-  @media (max-width: 1135px) {
-    justify-content: space-evenly;
-  }
+  gap: 0.8rem 2.4rem;
 `;
 
 const SchoolItem = styled.div`
