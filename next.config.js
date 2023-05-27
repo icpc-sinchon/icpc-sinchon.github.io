@@ -10,7 +10,6 @@ module.exports = {
       "/": { page: "/" },
       "/suapc": { page: "/suapc" },
       "/halloffame": { page: "/halloffame" },
-      "/contact": { page: "/contact" },
       "/sponser": { page: "/sponser" },
       "/campcontest": { page: "/campcontest" },
     };
