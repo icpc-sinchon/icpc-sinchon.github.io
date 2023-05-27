@@ -103,17 +103,7 @@ const Main = () => {
             </SchoolWrap>
           </ContentItem>
         </ContentWrap>
-        <hr
-          css={css`
-            width: 16%;
-            height: 0.2px;
-
-            background: #b3b3b3;
-
-            border: 0;
-            border-radius: 20rem;
-          `}
-        />
+        <Hr />
         <ContentWrap
           className="fade-in"
           css={css`
@@ -157,17 +147,7 @@ const Main = () => {
             그리고 친구들과 팀을 이루어 경쟁하는 SUAPC까지.
           </span>
         </ContentWrap>
-        <hr
-          css={css`
-            width: 16%;
-            height: 0.2px;
-
-            background: #b3b3b3;
-
-            border: 0;
-            border-radius: 20rem;
-          `}
-        />
+        <Hr />
         <ContentWrap
           className="fade-in"
           css={css`
@@ -374,6 +354,22 @@ const SchoolItem = styled.div`
       font-size: 0.65rem;
     }
   }
+`;
+
+const Hr = styled.hr.attrs({
+  className: "fade-in",
+})`
+  width: 16%;
+  @media ${(props) => props.theme.device.sm_md} {
+    width: 24%;
+  }
+
+  height: 0.2px;
+
+  background: #b3b3b3;
+
+  border: 0;
+  border-radius: 20rem;
 `;
 
 export default Main;
