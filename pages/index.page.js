@@ -77,12 +77,14 @@ const Main = () => {
           <ContentItem className="ContentItem">
             <SchoolWrap>
               <SchoolItem>
-                <img src="https://api.suapc.kr/school-logo/sogang.png" />
-                <h4>
-                  Sogang
-                  <br />
-                  ICPC Team
-                </h4>
+                <a href="https://icpc.team" target="_blank">
+                  <img src="https://api.suapc.kr/school-logo/sogang.png" />
+                  <h4>
+                    Sogang
+                    <br />
+                    ICPC Team
+                  </h4>
+                </a>
               </SchoolItem>
               <SchoolItem>
                 <img src="https://api.suapc.kr/school-logo/sookmyung.png" />
@@ -97,8 +99,10 @@ const Main = () => {
                 <h4>EDOC</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/school-logo/hongik.png" />
-                <h4>HI-ARC</h4>
+                <a href="https://hi-arc.org" target="_blank">
+                  <img src="https://api.suapc.kr/school-logo/hongik.png" />
+                  <h4>HI-ARC</h4>
+                </a>
               </SchoolItem>
             </SchoolWrap>
           </ContentItem>
@@ -323,7 +327,17 @@ const SchoolWrap = styled.p`
   gap: 0.8rem 2.4rem;
 `;
 
+const zoomInOnHover = css`
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.14);
+  }
+`;
+
 const SchoolItem = styled.div`
+  ${zoomInOnHover}
+
   img {
     height: 3.6rem;
 
