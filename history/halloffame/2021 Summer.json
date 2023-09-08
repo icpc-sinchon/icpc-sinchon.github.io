@@ -3,6 +3,9 @@
   "season": "Summer",
   "date": "2021년 8월 21일 오후 2시 ~ 오후 5시",
   "hasPDF": true,
+  "fileNames": {
+    "solutionPdf": "21s-Camp-Contest-Solutions.zip"
+  },
   "links": [
     "https://www.acmicpc.net/category/499",
     "https://www.acmicpc.net/contest/spotboard/676",

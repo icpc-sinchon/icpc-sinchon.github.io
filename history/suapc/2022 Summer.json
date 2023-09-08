@@ -2,6 +2,14 @@
   "year": 2022,
   "season": "Summer",
   "date": "2022년 9월 4일(일) 오후 12시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://www.acmicpc.net/contest/spotboard/840"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2022s_Poster.jpg",
+    "testPdf": "SUAPC_2022_Summer_Problems.pdf",
+    "solutionPdf": "SUAPC_2022_Summer_Solutions.pdf"
+  },
   "awards": [
     {
       "div": null,

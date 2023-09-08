@@ -2,6 +2,13 @@
   "year": 2023,
   "season": "Winter",
   "date": "2023년 2월 25일(토) 오후 12시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://www.acmicpc.net/contest/spotboard/950"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2023w_Poster.jpeg",
+    "solutionPdf": "SUAPC_2023_Winter_Solution.pdf"
+  },
   "awards": [
     {
       "div": null,

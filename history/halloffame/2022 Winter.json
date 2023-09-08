@@ -3,6 +3,9 @@
   "season": "Winter",
   "date": "2022년 2월 19일 오후 1시 ~ 오후 5시",
   "hasPDF": true,
+  "fileNames": {
+    "solutionPdf": "22w-Camp-Contest-Solution.pdf"
+  },
   "links": [
     "https://www.acmicpc.net/category/499",
     "https://www.acmicpc.net/contest/spotboard/759",

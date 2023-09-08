@@ -2,6 +2,14 @@
   "year": 2022,
   "season": "Winter",
   "date": "2022년 2월 26일(토) 오후 12시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://www.acmicpc.net/contest/spotboard/764"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2022w_Poster.jpg",
+    "testPdf": "SUAPC_2022w_Problem.pdf",
+    "solutionPdf": "SUAPC_2022w_Solution.pdf"
+  },
   "awards": [
     {
       "div": null,
