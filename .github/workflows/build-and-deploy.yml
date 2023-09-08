@@ -35,6 +35,9 @@ jobs:
       - name: Check Prettier
         run: yarn pretty:check
 
+      - name: Check Eslint
+        run: yarn eslint:check
+
       - name: Export Next.js
         run: yarn dev & (yarn build && yarn export)
 
