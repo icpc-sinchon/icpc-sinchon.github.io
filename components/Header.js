@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 import { FlexBox } from "./ui/flex-box";
-import { HamburgerButtonSvg } from "./hamberger-button-svg";
+import { HamburgerButtonSvg } from "./hamburger-button-svg";
 import { LogoSvg } from "./240-logo-svg";
 import { setIsNavClicked } from "../reducers/isNavClicked";
 
