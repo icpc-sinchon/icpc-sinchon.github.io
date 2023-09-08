@@ -146,6 +146,7 @@ const Suapc = () => {
           {currentSeasonData.fileNames ? (
             <ArchiveWrap className="hide-if-mobile">
               <ArchiveButton
+                disabled={!Boolean(currentSeasonData.fileNames.testPdf)}
                 disabledText="문제 PDF가 제공되지 않는 대회입니다."
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
@@ -154,16 +155,21 @@ const Suapc = () => {
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
+                disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
-              <ArchiveButton href={currentSeasonData.links.scoreboard}>
+              <ArchiveButton
+                disabled={!Boolean(currentSeasonData.links.scoreboard)}
+                href={currentSeasonData.links.scoreboard}
+              >
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
+                disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData.fileNames.posterImage}`}
@@ -186,6 +192,7 @@ const Suapc = () => {
                 <span style={{ fontSize: "smaller" }}>12/05부터</span>
               </AdmissionButton> */}
               <AdmissionButton
+                disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData.fileNames.posterImage}`}

@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { useRef } from "react";
+import styled, { css } from "styled-components";
 
 const CustomButton = styled.div`
   border: 2px solid #009d3e;
@@ -9,13 +10,38 @@ const CustomButton = styled.div`
   font-weight: 700;
   color: #009d3e;
 
+  ${(props) =>
+    props.disabled &&
+    css`
+      cursor: not-allowed;
+      background-color: #eeeeee;
+      color: #aaaaaa;
+      border: none;
+    `}
+
   @media (max-width: 633px) {
     border: none;
     padding: 0.2rem 0;
   }
 `;
 
-const ATag = styled.a`
+const ArchiveButton = styled(
+  ({ className, href, children, disabled, disabledText }) => {
+    const customButtonRef = useRef(null);
+    if (disabled) {
+      return (
+        <CustomButton ref={customButtonRef} disabled={disabled}>
+          {children}
+        </CustomButton>
+      );
+    }
+    return (
+      <a className={className} href={href} target="_blank" rel="noreferrer">
+        <CustomButton>{children}</CustomButton>
+      </a>
+    );
+  },
+)`
   margin-left: 1.2rem;
 
   &:first-child {
@@ -30,13 +56,5 @@ const ATag = styled.a`
     margin-left: 0;
   }
 `;
-
-const ArchiveButton = ({ href, children }) => {
-  return (
-    <ATag href={href} target="_blank">
-      <CustomButton>{children}</CustomButton>
-    </ATag>
-  );
-};
 
 export default ArchiveButton;
