@@ -173,15 +173,15 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
             year={currentYear}
             season={currentSeason}
           />
-          {currentSeasonData.hasPDF && (
+          {currentSeasonData.fileNames && (
             <ArchiveWrap className="hide-if-mobile">
               <ArchiveButton href={currentSeasonData.links[0]}>
                 문제(BOJ 링크)
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/cc-solution`}
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
@@ -360,7 +360,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                 문제(BOJ 링크)
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/cc-solution`}
               >

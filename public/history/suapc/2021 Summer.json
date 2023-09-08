@@ -2,6 +2,14 @@
   "year": 2021,
   "season": "Summer",
   "date": "2021년 8월 28일 오후 12시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://www.acmicpc.net/contest/spotboard/678"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2021s_Poster.png",
+    "testPdf": "SUAPC_2021s_Problem.pdf",
+    "solutionPdf": "SUAPC_2021s_Solution.pdf"
+  },
   "sponser": [
     "kakao",
     "autoever",

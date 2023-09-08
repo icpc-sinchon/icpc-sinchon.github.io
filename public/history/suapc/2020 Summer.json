@@ -2,6 +2,13 @@
   "year": 2020,
   "season": "Summer",
   "date": "2020년 8월 15일 오후 2시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://api.suapc.kr/2020s/SUAPC_2020s_Scoreboard.html"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2020s_Poster.png",
+    "solutionPdf": "SUAPC_2020s_Solution.pdf"
+  },
   "awards": [
     {
       "div": 1,

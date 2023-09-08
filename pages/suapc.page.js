@@ -21,7 +21,6 @@ import PreviewWrap from "../components/PreviewWrap/PreviewWrap";
 import ArchiveButton from "../components/ArchiveButton/ArchiveButton";
 import AdmissionButton from "../components/AdmissionButton/AdmissionButton";
 import ArchiveWrap from "../components/ContestWrap/ContestItem/ArchiveWrap";
-import TextBubble from "../components/TextBubble/TextBubble";
 
 const data0 = require(
   `../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`,
@@ -40,7 +39,7 @@ const ParticipantDesc = `서강대학교, 숙명여자대학교, 연세대학교
 
 const Suapc = () => {
   const contestWrapRef = useRef(null);
-  const registerContestBtnRef = useRef(null);
+  // const registerContestBtnRef = useRef(null);
   const dispatch = useDispatch();
   const currentSeasonIdx = useSelector((state) => state.currentSeasonIdx);
   const currentSeasonData = useSelector((state) => state.currentSeasonData);
@@ -130,10 +129,10 @@ const Suapc = () => {
         <meta property="og:image" content="/res/og_image.png" />
       </Head>
       <>
-        <TextBubble
+        {/* <TextBubble
           text="현재 신청기간이 아닙니다."
           triggerRef={registerContestBtnRef}
-        />
+        /> */}
         <SeasonNav onSeasonNavClick={onSeasonNavClick} />
         <PreviewWrap />
         <ContestWrap ref={contestWrapRef}>
@@ -144,33 +143,30 @@ const Suapc = () => {
             year={currentYear}
             season={currentSeason}
           />
-          {currentSeasonData.awards ? (
+          {currentSeasonData.fileNames ? (
             <ArchiveWrap className="hide-if-mobile">
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                disabledText="문제 PDF가 제공되지 않는 대회입니다."
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/problem`}
+                }/${currentSeasonData.fileNames.testPdf}`}
               >
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/solution`}
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
-              <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/scoreboard`}
-              >
+              <ArchiveButton href={currentSeasonData.links.scoreboard}>
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/poster`}
+                }/${currentSeasonData.fileNames.posterImage}`}
               >
                 공식 포스터
               </ArchiveButton>
@@ -190,9 +186,9 @@ const Suapc = () => {
                 <span style={{ fontSize: "smaller" }}>12/05부터</span>
               </AdmissionButton> */}
               <AdmissionButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/poster`}
+                }/${currentSeasonData.fileNames.posterImage}`}
               >
                 공식 포스터
               </AdmissionButton>
@@ -290,28 +286,28 @@ const Suapc = () => {
           {currentSeasonData.awards && (
             <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/problem`}
               >
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/solution`}
               >
                 해설 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/scoreboard`}
               >
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
-                href={`https://archive.suapc.kr/${currentYear}${
+                href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/poster`}
               >

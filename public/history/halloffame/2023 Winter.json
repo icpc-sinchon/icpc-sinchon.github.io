@@ -2,7 +2,9 @@
   "year": 2023,
   "season": "Winter",
   "date": "2023년 2월 18일 오후 12시 ~ 오후 5시",
-  "hasPDF": true,
+  "fileNames": {
+    "solutionPdf": "2023_ICPC_Sinchon_Winter_Algorithm_Camp_Contest_Solution.pdf"
+  },
   "links": [
     "https://www.acmicpc.net/category/801",
     "https://www.acmicpc.net/contest/spotboard/947",

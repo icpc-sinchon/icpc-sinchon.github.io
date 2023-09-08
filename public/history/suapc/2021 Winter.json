@@ -2,6 +2,14 @@
   "year": 2021,
   "season": "Winter",
   "date": "2021년 2월 28일 오후 12시 ~ 오후 5시",
+  "links": {
+    "scoreboard": "https://www.acmicpc.net/contest/spotboard/586"
+  },
+  "fileNames": {
+    "posterImage": "SUAPC_2021w_Poster.png",
+    "testPdf": "SUAPC_2021w_Problem.pdf",
+    "solutionPdf": "SUAPC_2021w_Solution.pdf"
+  },
   "awards": [
     {
       "div": null,
