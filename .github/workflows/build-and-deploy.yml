@@ -27,16 +27,16 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Setup CI env
-        run: npm ci
+        run: yarn
 
       - name: Check Prettier
-        run: npm run check-pretty
+        run: yarn check-pretty
 
       - name: Export Next.js
-        run: npm run dev & (npm run build && npm run export)
+        run: yarn dev & (yarn build && yarn export)
 
       - name: Touch .nojekyll
         run: touch out/.nojekyll

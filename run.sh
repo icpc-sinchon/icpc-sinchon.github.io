@@ -1,3 +1,3 @@
-npm run dev & 
-(npm run build && npm run export) & 
+yarn dev & 
+(yarn build && yarn export) & 
 touch out/.nojekyll
