@@ -9,7 +9,9 @@
     "start": "next start -p 4789",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m \"Deploy Next.js\" && git subtree push --prefix out origin gh-pages",
     "pretty:check": "prettier -c .",
-    "pretty:fix": "prettier -w ."
+    "pretty:fix": "prettier -w .",
+    "eslint:check": "eslint './**/*.{js,jsx,ts,tsx}'",
+    "eslint:fix": "eslint --fix './**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
