@@ -1,4 +1,3 @@
-import seasonList from "../public/history/halloffame/list.json";
 import { HYDRATE } from "next-redux-wrapper";
 
 export const SET_SL = "SET_SL";
@@ -8,7 +7,6 @@ export const setSeasonList = (val) => ({
 });
 
 const reducer = (state = [], action) => {
-  // console.log(action.type)
   switch (action.type) {
     case HYDRATE:
       return action.payload.seasonList;

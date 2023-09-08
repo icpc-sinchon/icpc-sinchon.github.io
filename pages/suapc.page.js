@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import Head from "next/head";
 
@@ -38,22 +38,7 @@ const ParticipantDesc = `서강대학교, 숙명여자대학교, 연세대학교
 (단, 졸업 1년 차와 대학원생은 참여 가능하되, 대회 중 스코어보드에는 보여지지 않습니다.)
 `;
 
-const CustomButton = styled.div`
-  border: 2px solid #009d3e;
-
-  padding: 0.4rem 1.2rem;
-  margin-left: 1.2rem;
-
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #009d3e;
-
-  &:first-child {
-    margin-left: 0;
-  }
-`;
-
-const Suapc = ({ seasonData_, seasonList_ }) => {
+const Suapc = () => {
   const contestWrapRef = useRef(null);
   const registerContestBtnRef = useRef(null);
   const dispatch = useDispatch();
@@ -111,6 +96,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 
   const adjustSelectedNav = (idx) => {
     document.querySelectorAll(".season-nav").forEach((ele) => {
+      // eslint-disable-next-line eqeqeq
       if (ele.getAttribute("alt") == idx) {
         ele.classList.add("season-selected");
       } else {
@@ -341,11 +327,6 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
 
 const BoldText = css`
   font-weight: 700;
-`;
-
-const KeepCalmPreset = css`
-  font-family: "KeepCalmMed";
-  font-weight: 400;
 `;
 
 const SinchonColor = css`

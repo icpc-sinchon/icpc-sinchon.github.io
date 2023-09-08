@@ -36,7 +36,7 @@ const Header = styled(({ className }) => {
       </Link>
       <div style={{ flexGrow: "1" }} />
       {routes.map(({ title, href }) => (
-        <Link href={href}>
+        <Link key={title} href={href}>
           <DesktopTopbarItem>{title}</DesktopTopbarItem>
         </Link>
       ))}
@@ -82,7 +82,7 @@ const MobileWindow = styled(({ className }) => {
       {isNavClicked && (
         <div className={className}>
           {routes.map(({ title, href }) => (
-            <Link href={href}>
+            <Link key={title} href={href}>
               <MobileTopbarItem onClick={handleClick}>{title}</MobileTopbarItem>
             </Link>
           ))}

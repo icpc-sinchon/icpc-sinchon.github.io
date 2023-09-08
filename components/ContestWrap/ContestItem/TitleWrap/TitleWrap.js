@@ -13,8 +13,6 @@ const KeepCalmPreset = css`
   font-weight: 400;
 `;
 
-const TitleWrap_ = styled.div``;
-
 const Title = styled.h1`
   ${KeepCalmPreset}
   ${SinchonColor}
@@ -44,7 +42,7 @@ const SubTitle = styled.p`
   }
 `;
 
-const TitleWrap = ({ title, pageType, year, season }) => {
+const TitleWrap = styled(({ className, title, pageType, year, season }) => {
   const [subTitle, setSubTitle] = useState();
 
   useEffect(() => {
@@ -72,14 +70,15 @@ const TitleWrap = ({ title, pageType, year, season }) => {
           프로그래밍 동아리 연합 알고리즘 캠프
         </SubTitle>,
       );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [year, season]);
 
   return (
-    <TitleWrap_>
+    <div className={className}>
       <Title>{title}</Title>
       {subTitle}
-    </TitleWrap_>
+    </div>
   );
-};
+})``;
 
 export default TitleWrap;

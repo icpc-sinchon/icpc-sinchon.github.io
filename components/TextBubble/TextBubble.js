@@ -7,7 +7,6 @@ const TextBubble = ({ className, text, triggerRef }) => {
     triggerRef?.current?.addEventListener("mouseover", () => {
       const balloon = divRef.current;
       const button = triggerRef.current;
-      const balloonBoundary = balloon.getBoundingClientRect();
       const buttonBoundary = button.getBoundingClientRect();
 
       balloon.style.top =
@@ -26,6 +25,7 @@ const TextBubble = ({ className, text, triggerRef }) => {
       const balloon = divRef.current;
       balloon?.classList.add("vhide");
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

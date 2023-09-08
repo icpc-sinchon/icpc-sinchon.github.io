@@ -5,13 +5,14 @@ const SnsIcons = styled(({ className }) => {
   return (
     <span className={className}>
       <a href="https://fb.com/icpc-sinchon" target="_blank" rel="noreferrer">
-        <img src="/res/footer/facebook.svg" />
+        <img src="/res/footer/facebook.svg" alt="facebook-icon" />
       </a>
       <a href="https://pf.kakao.com/_xehxhAK" target="_blank" rel="noreferrer">
-        <img src="/res/footer/talk-gray.svg" />
+        <img src="/res/footer/talk-gray.svg" alt="kakaotalk-icon" />
       </a>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a onClick={() => window.open("mailto:icpc.sinchon@gmail.com")}>
-        <img src="/res/footer/mail-gray.svg" />
+        <img src="/res/footer/mail-gray.svg" alt="email-icon" />
       </a>
     </span>
   );

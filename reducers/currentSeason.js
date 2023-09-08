@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { HYDRATE } from "next-redux-wrapper";
 const currentSeasonData = require("../public/history/suapc/2021 Winter.json");
 

@@ -19,6 +19,7 @@ const Main = () => {
       </Head>
       <img
         src="/res/hero-background.svg"
+        alt="hero-background"
         css={css`
           width: 1521px;
           height: 355px;
@@ -78,7 +79,10 @@ const Main = () => {
             <SchoolWrap>
               <SchoolItem>
                 <a href="https://icpc.team" target="_blank" rel="noreferrer">
-                  <img src="https://api.suapc.kr/school-logo/sogang.png" />
+                  <img
+                    src="https://api.suapc.kr/school-logo/sogang.png"
+                    alt="sogang-univ-logo"
+                  />
                   <h4>
                     Sogang
                     <br />
@@ -87,20 +91,32 @@ const Main = () => {
                 </a>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/school-logo/sookmyung.png" />
+                <img
+                  src="https://api.suapc.kr/school-logo/sookmyung.png"
+                  alt="sookmyung-univ-logo"
+                />
                 <h4>Algos</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/school-logo/yonsei.png" />
+                <img
+                  src="https://api.suapc.kr/school-logo/yonsei.png"
+                  alt="yonsei-univ-logo"
+                />
                 <h4>Morgorithm</h4>
               </SchoolItem>
               <SchoolItem>
-                <img src="https://api.suapc.kr/school-logo/ewha.png" />
+                <img
+                  src="https://api.suapc.kr/school-logo/ewha.png"
+                  alt="ewha-univ-logo"
+                />
                 <h4>EDOC</h4>
               </SchoolItem>
               <SchoolItem>
                 <a href="https://hi-arc.org" target="_blank" rel="noreferrer">
-                  <img src="https://api.suapc.kr/school-logo/hongik.png" />
+                  <img
+                    src="https://api.suapc.kr/school-logo/hongik.png"
+                    alt="hongik-univ-logo"
+                  />
                   <h4>HI-ARC</h4>
                 </a>
               </SchoolItem>
@@ -116,6 +132,7 @@ const Main = () => {
         >
           <img
             src="/res/ferris-wheel.gif"
+            alt="ferris-wheel"
             css={css`
               width: 4rem;
               margin: 0 auto;
@@ -160,6 +177,7 @@ const Main = () => {
         >
           <img
             src="/res/direct-hit.gif"
+            alt="direct-hit"
             css={css`
               width: 4rem;
               margin: 0 auto;
@@ -216,6 +234,7 @@ const Main = () => {
           >
             <img
               src="/res/raising-hands.svg"
+              alt="raising-hands"
               css={css`
                 width: 3.2rem;
 
@@ -294,28 +313,8 @@ const TextSubTitle = styled.div`
   margin-top: 0.4rem;
 `;
 
-const MainImageWrap = styled.div`
-  width: 100%;
-  height: 120px;
-
-  margin: 1.2rem 0 0 0;
-
-  overflow: hidden;
-
-  @media (max-width: 1000px) {
-    height: 50vw;
-  }
-`;
-
 const ContentItem = styled.div`
   width: 100%;
-`;
-
-const ContentText = styled.p`
-  font-size: 0.9rem;
-  font-weight: 400;
-
-  line-height: 1.44;
 `;
 
 const SchoolWrap = styled.p`

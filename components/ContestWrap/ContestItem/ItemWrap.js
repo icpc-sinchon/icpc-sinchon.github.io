@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
-const ItemWrap_ = styled.div`
+const ItemWrap = styled(({ children, className, style }) => {
+  return (
+    <div className={className} style={style}>
+      {children}
+    </div>
+  );
+})`
   padding-bottom: 1rem;
 `;
-
-const ItemWrap = ({ children, className, style }) => {
-  return (
-    <ItemWrap_ className={className} style={style}>
-      {children}
-    </ItemWrap_>
-  );
-};
 
 export default ItemWrap;

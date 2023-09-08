@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
       dispatch(setIsNavClicked(false));
       document.querySelector("sitemask").classList.toggle("hide");
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

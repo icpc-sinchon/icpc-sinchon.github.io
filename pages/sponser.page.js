@@ -62,8 +62,9 @@ const Sponser = () => {
           </ItemWrap>
           <ImgWrap>
             <img
-              src="/res/stickers-3.jpg"
               className="slide-up"
+              src="/res/stickers-3.jpg"
+              alt="dev-community-stickers"
               style={{ animationDelay: "500ms" }}
             />
           </ImgWrap>
@@ -103,7 +104,10 @@ const Sponser = () => {
             <SponserWrap>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/kakao.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/kakao.png"
+                    alt="kakao-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -139,7 +143,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/autoever.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/autoever.png"
+                    alt="hyundai-autoever-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -160,7 +167,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/naver.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/naver.png"
+                    alt="naver-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -184,7 +194,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/pubg.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/pubg.png"
+                    alt="pubg-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -195,7 +208,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/future-tech-academy.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/future-tech-academy.png"
+                    alt="future-tech-academy-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -218,7 +234,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/furiosa.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/furiosa.png"
+                    alt="furiosa-ai-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -229,7 +248,10 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img src="https://api.suapc.kr/sponser-ci/vuno.png" />
+                  <img
+                    src="https://api.suapc.kr/sponser-ci/vuno.png"
+                    alt="vuno-logo"
+                  />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -291,8 +313,6 @@ const TextSubTitle = styled.div`
   font-size: 0.9rem;
   font-weight: 500;
 `;
-
-const TopicTitle = styled.h3``;
 
 const SponserImgWrap = styled.div`
   width: 12rem;

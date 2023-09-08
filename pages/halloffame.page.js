@@ -28,11 +28,6 @@ const BoldText = css`
   font-weight: 700;
 `;
 
-const KeepCalmPreset = css`
-  font-family: "KeepCalmMed";
-  font-weight: 400;
-`;
-
 const SinchonColor = css`
   color: #009d3e;
 `;
@@ -73,7 +68,7 @@ const TableWrap = styled.div`
   white-space: nowrap;
 `;
 
-const HallOfFame = ({ seasonList_, seasonData_ }) => {
+const HallOfFame = () => {
   const title = "HALL OF FAME";
 
   const contestWrapRef = useRef(null);
@@ -130,6 +125,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
 
   const adjustSelectedNav = (idx) => {
     document.querySelectorAll(".season-nav").forEach((ele) => {
+      // eslint-disable-next-line eqeqeq
       if (ele.getAttribute("alt") == idx) {
         ele.classList.add("season-selected");
       } else {
@@ -272,7 +268,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                               {Array.from(study.curriculum).map(
                                 (curri, idx) => {
                                   return (
-                                    <tr>
+                                    <tr key={curri}>
                                       <td>{idx + 1}회차</td>
                                       <td>{curri}</td>
                                     </tr>

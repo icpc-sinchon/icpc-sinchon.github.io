@@ -30,11 +30,6 @@ const BoldText = css`
   font-weight: 700;
 `;
 
-const KeepCalmPreset = css`
-  font-family: "KeepCalmMed";
-  font-weight: 400;
-`;
-
 const SinchonColor = css`
   color: #009d3e;
 `;
@@ -133,6 +128,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
 
   const adjustSelectedNav = (idx) => {
     document.querySelectorAll(".season-nav").forEach((ele) => {
+      // eslint-disable-next-line eqeqeq
       if (ele.getAttribute("alt") == idx) {
         ele.classList.add("season-selected");
       } else {
@@ -257,7 +253,9 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                       {Array.from(contest.awards).map(
                                         (award, idx) => {
                                           return (
-                                            <tr>
+                                            <tr
+                                              key={`${award.name}-${award.school}`}
+                                            >
                                               <td
                                                 style={{ position: "relative" }}
                                               >
