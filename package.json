@@ -25,6 +25,12 @@
     "swr": "^0.5.4"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "prettier": "^2.7.1",
     "redux-devtools-extension": "^2.13.9"
   },
