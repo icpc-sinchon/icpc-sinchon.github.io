@@ -4,10 +4,10 @@ import styled, { css } from "styled-components";
 const SnsIcons = styled(({ className }) => {
   return (
     <span className={className}>
-      <a href="https://fb.com/icpc-sinchon" target="_blank">
+      <a href="https://fb.com/icpc-sinchon" target="_blank" rel="noreferrer">
         <img src="/res/footer/facebook.svg" />
       </a>
-      <a href="https://pf.kakao.com/_xehxhAK" target="_blank">
+      <a href="https://pf.kakao.com/_xehxhAK" target="_blank" rel="noreferrer">
         <img src="/res/footer/talk-gray.svg" />
       </a>
       <a onClick={() => window.open("mailto:icpc.sinchon@gmail.com")}>

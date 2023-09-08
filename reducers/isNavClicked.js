@@ -1,6 +1,6 @@
 import { HYDRATE } from "next-redux-wrapper";
 
-export const SET_NAV_CLICK = `SET_NAV_CLICK`;
+export const SET_NAV_CLICK = "SET_NAV_CLICK";
 export const setIsNavClicked = (val) => ({
   type: SET_NAV_CLICK,
   val,

@@ -1,7 +1,7 @@
 import { HYDRATE } from "next-redux-wrapper";
 const currentSeasonData = require("../public/history/suapc/2021 Winter.json");
 
-export const SET_Y = `SET_YEAR`;
+export const SET_Y = "SET_YEAR";
 export const setCurrentYear = (val) => ({
   type: SET_Y,
   val,

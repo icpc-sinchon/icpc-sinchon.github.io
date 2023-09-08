@@ -35,9 +35,9 @@ export default class MyDocument extends Document {
         </Head>
         <body
           style={{
-            maxWidth: `1000px`,
-            margin: `0 auto`,
-            overflowX: `hidden`,
+            maxWidth: "1000px",
+            margin: "0 auto",
+            overflowX: "hidden",
           }}
         >
           <Main />

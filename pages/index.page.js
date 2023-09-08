@@ -77,7 +77,7 @@ const Main = () => {
           <ContentItem className="ContentItem">
             <SchoolWrap>
               <SchoolItem>
-                <a href="https://icpc.team" target="_blank">
+                <a href="https://icpc.team" target="_blank" rel="noreferrer">
                   <img src="https://api.suapc.kr/school-logo/sogang.png" />
                   <h4>
                     Sogang
@@ -99,7 +99,7 @@ const Main = () => {
                 <h4>EDOC</h4>
               </SchoolItem>
               <SchoolItem>
-                <a href="https://hi-arc.org" target="_blank">
+                <a href="https://hi-arc.org" target="_blank" rel="noreferrer">
                   <img src="https://api.suapc.kr/school-logo/hongik.png" />
                   <h4>HI-ARC</h4>
                 </a>

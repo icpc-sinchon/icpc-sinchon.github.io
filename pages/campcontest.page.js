@@ -21,8 +21,10 @@ import ItemWrap from "../components/ContestWrap/ContestItem/ItemWrap";
 import ArchiveButton from "../components/ArchiveButton/ArchiveButton";
 import ArchiveWrap from "../components/ContestWrap/ContestItem/ArchiveWrap";
 
-const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`);
-const data1 = require(`../public/history/halloffame/list.json`);
+const data0 = require(
+  `../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`,
+);
+const data1 = require("../public/history/halloffame/list.json");
 
 const BoldText = css`
   font-weight: 700;
@@ -76,7 +78,7 @@ const TableWrap = styled.div`
 `;
 
 const CampContest = ({ seasonList_, seasonData_ }) => {
-  const title = `ICPC Sinchon Camp Contest`;
+  const title = "ICPC Sinchon Camp Contest";
 
   const contestWrapRef = useRef(null);
   const dispatch = useDispatch();
@@ -222,14 +224,16 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
           />
           <TextWrap
             title={"출제 경향"}
-            content={`ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다.`}
+            content={
+              "ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다."
+            }
           />
           {currentSeasonData.studies &&
             Array.from(currentSeasonData.studies).map((study) => {
               return (
                 <TopicWrap id={study.topic} key={study.topic}>
                   {study.contests && <TopicTitle>{study.topic}</TopicTitle>}
-                  <div style={{ width: `100%` }}>
+                  <div style={{ width: "100%" }}>
                     {study.contests &&
                       Array.from(study.contests).map((contest) => {
                         return (
@@ -243,10 +247,10 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                   <table>
                                     <thead>
                                       <tr>
-                                        <th style={{ width: `3rem` }}>순위</th>
+                                        <th style={{ width: "3rem" }}>순위</th>
                                         <th>수상자</th>
-                                        <th style={{ width: `10rem` }}>BOJ</th>
-                                        <th style={{ width: `7rem` }}>소속</th>
+                                        <th style={{ width: "10rem" }}>BOJ</th>
+                                        <th style={{ width: "7rem" }}>소속</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -255,17 +259,17 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                           return (
                                             <tr>
                                               <td
-                                                style={{ position: `relative` }}
+                                                style={{ position: "relative" }}
                                               >
                                                 {idx + 1}
                                                 {idx + 1 <= 3 && (
                                                   <sup
                                                     className={
                                                       idx + 1 === 1
-                                                        ? `medal-gold`
+                                                        ? "medal-gold"
                                                         : idx + 1 === 2
-                                                        ? `medal-silver`
-                                                        : `medal-bronze`
+                                                        ? "medal-silver"
+                                                        : "medal-bronze"
                                                     }
                                                   >
                                                     ●
@@ -280,6 +284,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                     textDecoration: "underline",
                                                   }}
                                                   href={`https://acmicpc.net/user/${award.handle}`}
+                                                  rel="noreferrer"
                                                 >
                                                   {award.handle}
                                                 </a>
@@ -305,10 +310,10 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                   <table>
                                     <thead>
                                       <tr>
-                                        <th style={{ width: `1rem` }}>#</th>
+                                        <th style={{ width: "1rem" }}>#</th>
                                         <th>문제</th>
                                         <th>출제자</th>
-                                        <th style={{ width: `5rem` }}>소속</th>
+                                        <th style={{ width: "5rem" }}>소속</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -326,6 +331,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                                   style={{
                                                     textDecoration: "underline",
                                                   }}
+                                                  rel="noreferrer"
                                                 >
                                                   {problem.problem_name}
                                                 </a>

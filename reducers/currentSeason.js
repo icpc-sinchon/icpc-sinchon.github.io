@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { HYDRATE } from "next-redux-wrapper";
 const currentSeasonData = require("../public/history/suapc/2021 Winter.json");
 
-export const SET_SEASON = `SET_SEASON`;
+export const SET_SEASON = "SET_SEASON";
 export const setCurrentSeason = (val) => ({
   type: SET_SEASON,
   val,

@@ -1,7 +1,7 @@
 import { HYDRATE } from "next-redux-wrapper";
 import suapcList from "../public/history/suapc/list.json";
 
-export const SET_IDX = `SET_IDX`;
+export const SET_IDX = "SET_IDX";
 export const setCurrentSeasonIdx = (val) => ({
   type: SET_IDX,
   val,

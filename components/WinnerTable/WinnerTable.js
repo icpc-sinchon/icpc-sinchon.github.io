@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const SinchonColor = `#009D3E`;
+const SinchonColor = "#009D3E";
 
 const WinnerTableWrap = styled.div`
   margin-bottom: 1.4rem;

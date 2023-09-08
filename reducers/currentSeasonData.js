@@ -1,7 +1,9 @@
 import { HYDRATE } from "next-redux-wrapper";
-const seasonData = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`);
+const seasonData = require(
+  `../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`,
+);
 
-export const SET_SD = `SET_SD`;
+export const SET_SD = "SET_SD";
 export const setCurrentSeasonData = (val) => ({
   type: SET_SD,
   val,

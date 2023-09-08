@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled from "styled-components";
-const sinchonColor = `#009D3E`;
+const sinchonColor = "#009D3E";
 
 const ContestWrap_ = styled.div`
   position: relative;

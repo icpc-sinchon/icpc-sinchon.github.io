@@ -19,8 +19,10 @@ import PreviewWrap from "../components/PreviewWrap/PreviewWrap";
 import SeasonNav from "../components/SeasonNav/SeasonNav";
 import ItemWrap from "../components/ContestWrap/ContestItem/ItemWrap";
 
-const data0 = require(`../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`);
-const data1 = require(`../public/history/halloffame/list.json`);
+const data0 = require(
+  `../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`,
+);
+const data1 = require("../public/history/halloffame/list.json");
 
 const BoldText = css`
   font-weight: 700;
@@ -72,7 +74,7 @@ const TableWrap = styled.div`
 `;
 
 const HallOfFame = ({ seasonList_, seasonData_ }) => {
-  const title = `HALL OF FAME`;
+  const title = "HALL OF FAME";
 
   const contestWrapRef = useRef(null);
   const dispatch = useDispatch();
@@ -190,7 +192,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
               return (
                 <TopicWrap id={study.topic} key={study.topic}>
                   <TopicTitle>{study.topic}</TopicTitle>
-                  <div style={{ width: `100%` }}>
+                  <div style={{ width: "100%" }}>
                     {study.lecturers && (
                       <ItemWrap className="lecturer-wrap">
                         <ItemTitle className="hof-item-title">
@@ -200,10 +202,10 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                           <table>
                             <thead>
                               <tr>
-                                <th style={{ width: `7rem` }}>분류</th>
+                                <th style={{ width: "7rem" }}>분류</th>
                                 <th>이름</th>
-                                <th style={{ width: `10rem` }}>BOJ</th>
-                                <th style={{ width: `7rem` }}>소속</th>
+                                <th style={{ width: "10rem" }}>BOJ</th>
+                                <th style={{ width: "7rem" }}>소속</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -219,6 +221,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                           textDecoration: "underline",
                                         }}
                                         href={`https://acmicpc.net/user/${lecturer.handle}`}
+                                        rel="noreferrer"
                                       >
                                         {lecturer.handle}
                                       </a>
@@ -240,6 +243,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                                             textDecoration: "underline",
                                           }}
                                           href={`https://acmicpc.net/user/${lecturer.handle}`}
+                                          rel="noreferrer"
                                         >
                                           {lecturer.handle}
                                         </a>
@@ -260,7 +264,7 @@ const HallOfFame = ({ seasonList_, seasonData_ }) => {
                           <table>
                             <thead>
                               <tr>
-                                <th style={{ width: `7rem` }}>주차</th>
+                                <th style={{ width: "7rem" }}>주차</th>
                                 <th>강의 알고리즘</th>
                               </tr>
                             </thead>

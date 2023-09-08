@@ -23,8 +23,10 @@ import AdmissionButton from "../components/AdmissionButton/AdmissionButton";
 import ArchiveWrap from "../components/ContestWrap/ContestItem/ArchiveWrap";
 import TextBubble from "../components/TextBubble/TextBubble";
 
-const data0 = require(`../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`);
-const data1 = require(`../public/history/suapc/list.json`);
+const data0 = require(
+  `../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`,
+);
+const data1 = require("../public/history/suapc/list.json");
 
 const SuapcDesc = `SUAPC는 신촌지역 5개 대학(서강, 숙명, 연세, 이화, 홍익)의
  학부생 및 대학원 1년차를 대상으로 하는 프로그래밍 대회입니다. 
@@ -230,7 +232,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
           <ItemWrap>
             <ItemTitle>후원사</ItemTitle>
             <SchoolLogoWrap
-              style={{ flexWrap: `wrap`, justifyContent: `start` }}
+              style={{ flexWrap: "wrap", justifyContent: "start" }}
             >
               {currentSeasonData.sponser?.map((data) => {
                 return (
@@ -257,7 +259,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                   <table>
                     <thead>
                       <tr>
-                        <th style={{ width: `8rem` }}>이름</th>
+                        <th style={{ width: "8rem" }}>이름</th>
                         <th>소속</th>
                       </tr>
                     </thead>
@@ -279,7 +281,7 @@ const Suapc = ({ seasonData_, seasonList_ }) => {
                   <table>
                     <thead>
                       <tr>
-                        <th style={{ width: `8rem` }}>이름</th>
+                        <th style={{ width: "8rem" }}>이름</th>
                         <th>소속</th>
                       </tr>
                     </thead>

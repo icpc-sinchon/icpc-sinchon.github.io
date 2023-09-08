@@ -45,12 +45,12 @@ const configStore = (ctx) => {
     currentSeason = process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON;
   }
 
-  const data = require(`../public/history/${pathname.substring(
-    1,
-  )}/${currentSeason}.json`);
-  const seasonList = require(`../public/history/${pathname.substring(
-    1,
-  )}/list.json`);
+  const data = require(
+    `../public/history/${pathname.substring(1)}/${currentSeason}.json`,
+  );
+  const seasonList = require(
+    `../public/history/${pathname.substring(1)}/list.json`,
+  );
 
   const initialState = {
     currentSeasonData: data,
