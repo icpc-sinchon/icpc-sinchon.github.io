@@ -33,7 +33,7 @@ jobs:
         run: yarn
 
       - name: Check Prettier
-        run: yarn check-pretty
+        run: yarn pretty:check
 
       - name: Export Next.js
         run: yarn dev & (yarn build && yarn export)
