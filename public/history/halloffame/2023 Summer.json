@@ -1,0 +1,271 @@
+{
+  "year": 2023,
+  "season": "Summer",
+  "date": "2023년 8월 20일 오후 12시 ~ 오후 5시",
+  "fileNames": {
+    "solutionPdf": "2023_ICPC_Sinchon_Summer_Algorithm_Camp_Contest_Solution.pdf"
+  },
+  "links": [
+    "https://www.acmicpc.net/category/909",
+    "https://www.acmicpc.net/contest/spotboard/1101",
+    "https://www.acmicpc.net/contest/spotboard/1102"
+  ],
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "박찬솔",
+          "school": "숭실대",
+          "handle": "chansol"
+        },
+        {
+          "name": "정회윤",
+          "school": "서강대",
+          "handle": "yunny_world"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "김태윤",
+          "school": "연세대",
+          "handle": "ystaeyoon113"
+        },
+        {
+          "name": "이성진",
+          "school": "서강대",
+          "handle": "moralbook"
+        }
+      ],
+      "curriculum": [
+        "Problem Solving, Time complexity, Basic C++",
+        "Sorting, Linear data structure",
+        "Basic Math",
+        "Bruteforcing, Recursive function",
+        "Dynamic Programming",
+        "Binary Search, Divide and Conquer",
+        "Prefix Sum, Two Pointer",
+        "Tree, Graph",
+        "DFS, BFS",
+        "Dijkstra"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "Toe Jumps",
+              "link": "https://www.acmicpc.net/problem/28463",
+              "organizer": {
+                "name": "정회윤",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "Potato",
+              "link": "https://www.acmicpc.net/problem/28464",
+              "organizer": {
+                "name": "채성우",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "피보나치 사각형",
+              "link": "https://www.acmicpc.net/problem/28465",
+              "organizer": {
+                "name": "이협",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "좋은 팀이란?",
+              "link": "https://www.acmicpc.net/problem/28466",
+              "organizer": {
+                "name": "길수민",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "Spell Cards",
+              "link": "https://www.acmicpc.net/problem/28467",
+              "organizer": {
+                "name": "채성우",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "납이야 나비야",
+              "link": "https://www.acmicpc.net/problem/28468",
+              "organizer": {
+                "name": "최우현",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "Equilibrium Points",
+              "link": "https://www.acmicpc.net/problem/28469",
+              "organizer": {
+                "name": "정회윤",
+                "school": "서강대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "김현서",
+              "school": "서강대",
+              "handle": "alzflost"
+            },
+            {
+              "prize": 2,
+              "name": "변미담",
+              "school": "서강대",
+              "handle": "midamida"
+            },
+            {
+              "prize": 3,
+              "name": "임정연",
+              "school": "서강대",
+              "handle": "aprilfo01s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "길수민",
+          "school": "숙명여대",
+          "handle": "2093ab"
+        },
+        {
+          "name": "유호영",
+          "school": "서강대",
+          "handle": "tkfkddl59323"
+        },
+        {
+          "name": "최우현",
+          "school": "연세대",
+          "handle": "starwh03"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "윤인섭",
+          "school": "연세대",
+          "handle": "pinebananais"
+        },
+        {
+          "name": "이협",
+          "school": "연세대",
+          "handle": "dlguq0107"
+        },
+        {
+          "name": "임지환",
+          "school": "서강대",
+          "handle": "raararaara"
+        }
+      ],
+      "curriculum": [
+        "Problem Solving, Time Complexity",
+        "Number Theory",
+        "Shortest Path Algorithms",
+        "Union Find, Minimum Spanning Tree",
+        "Dynamic Programming",
+        "Greedy Algorithm",
+        "Segment Tree",
+        "Topological Sorting, Strongly Connected Component",
+        "Geometry",
+        "KMP, Rabin-Karp"
+      ],
+      "contests": [
+        {
+          "contest_name": "Camp Contest",
+          "organizer_type": "출제자",
+          "problem_list": [
+            {
+              "problem_name": "슥~빡! 빡~슥!",
+              "link": "https://www.acmicpc.net/problem/28470",
+              "organizer": {
+                "name": "정회윤",
+                "school": "서강대"
+              }
+            },
+            {
+              "problem_name": "W키가 빠진 성원이",
+              "link": "https://www.acmicpc.net/problem/28471",
+              "organizer": {
+                "name": "이도훈",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "Minimax Tree",
+              "link": "https://www.acmicpc.net/problem/28472",
+              "organizer": {
+                "name": "길수민",
+                "school": "숙명여대"
+              }
+            },
+            {
+              "problem_name": "도로 위의 표지판",
+              "link": "https://www.acmicpc.net/problem/28473",
+              "organizer": {
+                "name": "이도훈",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "피보나치 서로소",
+              "link": "https://www.acmicpc.net/problem/28474",
+              "organizer": {
+                "name": "이협",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "편광판",
+              "link": "https://www.acmicpc.net/problem/28475",
+              "organizer": {
+                "name": "최우현",
+                "school": "연세대"
+              }
+            },
+            {
+              "problem_name": "나비야 나비야",
+              "link": "https://www.acmicpc.net/problem/28476",
+              "organizer": {
+                "name": "채성우",
+                "school": "서강대"
+              }
+            }
+          ],
+          "awards": [
+            {
+              "prize": 1,
+              "name": "박건휘",
+              "school": "연세대",
+              "handle": "pgggggggggh"
+            },
+            {
+              "prize": 2,
+              "name": "한승준",
+              "school": "홍익대",
+              "handle": "dosawas"
+            },
+            {
+              "prize": 3,
+              "name": "김태현",
+              "school": "연세대",
+              "handle": "kth7493"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
