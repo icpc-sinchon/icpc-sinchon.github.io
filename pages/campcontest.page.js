@@ -179,9 +179,12 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                 문제(BOJ 링크)
               </ArchiveButton>
               <ArchiveButton
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/${currentSeasonData.fileNames.solutionPdf}`}
+                href={
+                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
+                    currentSeasonData.fileNames.solutionPdf
+                  }`
+                }
               >
                 해설 PDF
               </ArchiveButton>
