@@ -228,6 +228,9 @@ const Suapc = () => {
                   <SponserCI
                     key={"sponser-" + data}
                     src={`https://api.suapc.kr/sponser-ci/${data}.png`}
+                    onError={(e) => {
+                      e.target.src = `/res/sponser-ci/${data}.png`;
+                    }}
                   />
                 );
               })}
