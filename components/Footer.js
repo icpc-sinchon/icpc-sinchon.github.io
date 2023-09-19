@@ -4,6 +4,20 @@ import styled, { css } from "styled-components";
 const SnsIcons = styled(({ className }) => {
   return (
     <span className={className}>
+      <a
+        href="https://youtube.com/@icpcsinchonofficial"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src="/res/footer/youtube.svg" alt="youtube-icon" />
+      </a>
+      <a
+        href="https://instagram.com/icpc_sinchon_official"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src="/res/footer/instagram.svg" alt="instagram-icon" />
+      </a>
       <a href="https://fb.com/icpc-sinchon" target="_blank" rel="noreferrer">
         <img src="/res/footer/facebook.svg" alt="facebook-icon" />
       </a>
