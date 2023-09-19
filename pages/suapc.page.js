@@ -170,9 +170,12 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/${currentSeasonData.fileNames.posterImage}`}
+                href={
+                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
+                    currentSeasonData.fileNames.posterImage
+                  }`
+                }
               >
                 공식 포스터
               </ArchiveButton>
