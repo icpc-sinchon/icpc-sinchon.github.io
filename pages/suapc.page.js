@@ -156,9 +156,12 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/${currentSeasonData.fileNames.solutionPdf}`}
+                href={
+                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
+                    currentSeasonData.fileNames.solutionPdf
+                  }`
+                }
               >
                 해설 PDF
               </ArchiveButton>
