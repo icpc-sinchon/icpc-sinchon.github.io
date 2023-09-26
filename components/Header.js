@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -14,7 +14,17 @@ const routes = [
   { title: "후원 및 협업", href: "/sponser" },
 ];
 
+const zoomInOnHover = css`
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.14);
+  }
+`;
+
 const Logo = styled(LogoSvg)`
+  ${zoomInOnHover}
+
   width: 42px;
   height: 28px;
 
@@ -120,6 +130,10 @@ const DesktopTopbarItem = styled.div`
 
   &:last-child {
     padding-right: 0;
+  }
+
+  &:hover {
+    font-weight: 500;
   }
 
   @media ${(props) => props.theme.device.sm} {
