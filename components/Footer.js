@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import styled, { css } from "styled-components";
+import organizer from "../public/history/organizer.json";
 
 const SnsIcons = styled(({ className }) => {
   return (
@@ -51,12 +52,59 @@ const Logo = styled(({ className }) => {
   letter-spacing: -0.02rem;
 `;
 
+const OrganizerWrap = styled(({ className, children }) => {
+  return <div className={className}>{children}</div>;
+})`
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.8rem;
+
+  word-break: break-all;
+  span {
+    &::after {
+      padding: 0 6px;
+      content: "|";
+    }
+  }
+`;
+
+const OrgTitle = styled(({ className, children }) => {
+  return <div className={className}>{children}</div>;
+})`
+  font-size: 0.8rem;
+  font-weight: 700;
+`;
+
 const Footer = styled(({ className }) => {
   return (
     <footer className={classNames(className, "fade-in")}>
       <Logo />
       <br />
       <p>신촌지역 대학교 프로그래밍 동아리 연합</p>
+      <br />
+
+      <OrganizerWrap>
+        <OrgTitle>회장</OrgTitle>
+        <br />
+        <div>
+          {organizer[0].president.map((person, idx) => {
+            if (idx !== organizer[0].president.length - 1)
+              return <span>{person.name}</span>;
+            else return person.name;
+          })}
+        </div>
+        <br />
+        <br />
+        <OrgTitle>운영진</OrgTitle>
+        <br />
+        <div>
+          {organizer[0].member.map((person, idx) => {
+            if (idx !== organizer[0].member.length - 1)
+              return <span>{person.name}</span>;
+            else return person.name;
+          })}
+        </div>
+      </OrganizerWrap>
       <br />
       <p
         css={css`

@@ -1,6 +1,47 @@
 [
   {
     "year": 2023,
+    "season": "Summer",
+    "president": [
+      {
+        "name": "이성진"
+      },
+      {
+        "name": "이협"
+      }
+    ],
+    "member": [
+      {
+        "name": "길수민"
+      },
+      {
+        "name": "김예송"
+      },
+      {
+        "name": "김정민"
+      },
+      {
+        "name": "김정은"
+      },
+      {
+        "name": "노현근"
+      },
+      {
+        "name": "송상윤"
+      },
+      {
+        "name": "정은채"
+      },
+      {
+        "name": "조다니엘"
+      },
+      {
+        "name": "조수아"
+      }
+    ]
+  },
+  {
+    "year": 2023,
     "season": "Winter",
     "president": [
       {
