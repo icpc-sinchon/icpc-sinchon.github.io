@@ -42,6 +42,12 @@ const SnsIcons = styled(({ className }) => {
 
   display: flex;
   align-items: center;
+
+  /* for mobile */
+  @media ${(props) => props.theme.device.sm} {
+    scale: 0.7;
+    gap: 1rem;
+  }
 `;
 
 const Logo = styled(({ className }) => {
@@ -61,6 +67,8 @@ const OrganizerWrap = styled(({ className, children }) => {
 
   word-break: break-all;
   span {
+    display: inline-block;
+    padding: 6px 0;
     &::after {
       padding: 0 6px;
       content: "|";
@@ -82,7 +90,6 @@ const Footer = styled(({ className }) => {
       <br />
       <p>신촌지역 대학교 프로그래밍 동아리 연합</p>
       <br />
-
       <OrganizerWrap>
         <OrgTitle>회장</OrgTitle>
         <br />
