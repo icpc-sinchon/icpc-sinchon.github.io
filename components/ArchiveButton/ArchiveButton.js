@@ -17,6 +17,10 @@ const CustomButton = styled.div`
       background-color: #eeeeee;
       color: #aaaaaa;
       border: none;
+
+      @media (max-width: 766px) {
+        background-color: transparent;
+      }
     `}
 
   @media (max-width: 766px) {

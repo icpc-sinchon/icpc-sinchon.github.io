@@ -308,30 +308,45 @@ const Suapc = () => {
           {currentSeasonData.awards && (
             <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
               <ArchiveButton
+                disabled={!Boolean(currentSeasonData.links.bojProblem)}
+                href={currentSeasonData.links.bojProblem}
+              >
+                문제(BOJ 링크)
+              </ArchiveButton>
+              <ArchiveButton
+                disabled={!Boolean(currentSeasonData.fileNames.testPdf)}
+                disabledText="문제 PDF가 제공되지 않는 대회입니다."
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/problem`}
+                }/${currentSeasonData.fileNames.testPdf}`}
               >
                 문제 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/solution`}
+                disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
+                href={
+                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
+                    currentSeasonData.fileNames.solutionPdf
+                  }`
+                }
               >
                 해설 PDF
               </ArchiveButton>
               <ArchiveButton
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/scoreboard`}
+                disabled={!Boolean(currentSeasonData.links.scoreboard)}
+                href={currentSeasonData.links.scoreboard}
               >
                 스코어보드
               </ArchiveButton>
               <ArchiveButton
-                href={`https://api.suapc.kr/${currentYear}${
-                  currentSeason === "Winter" ? "w" : "s"
-                }/poster`}
+                disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
+                href={
+                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
+                    currentSeasonData.fileNames.posterImage
+                  }`
+                }
               >
                 공식 포스터
               </ArchiveButton>
