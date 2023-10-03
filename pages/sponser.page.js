@@ -158,10 +158,10 @@ const Sponser = () => {
                     >
                       B번 링크
                     </UnderlinedLink>{" "} */}
-                    <li>
-                      현대오토에버 기업 홍보 세션 제공
-                      <br />
-                    </li>
+                  </li>
+                  <li>
+                    현대오토에버 기업 홍보 세션 제공
+                    <br />
                   </li>
                 </ul>
               </SponserItem>
