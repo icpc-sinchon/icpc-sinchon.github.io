@@ -7,7 +7,7 @@ const ArchiveWrap_ = css`
   overflow-x: auto;
   white-space: nowrap;
 
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
   }
 `;
 const ArchiveWrap = ({ href, children, className }) => {

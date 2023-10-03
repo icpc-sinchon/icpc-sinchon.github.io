@@ -85,12 +85,12 @@ sitemask {
 .show-if-mobile {
   display: none;
 
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     display: block;
   }
 }
 .hide-if-mobile {
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     display: none;
   }
 }
@@ -102,7 +102,7 @@ sitemask {
   }
 }
 .hide-if-small {
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     display: block;
   }
 }
@@ -121,13 +121,13 @@ a:hover {
 }
 
 ul {
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     padding-left: 1rem;
   }
 }
 
 li {
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     font-size: 0.9rem;
   }
 

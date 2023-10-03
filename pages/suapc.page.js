@@ -146,6 +146,12 @@ const Suapc = () => {
           {currentSeasonData.fileNames ? (
             <ArchiveWrap className="hide-if-mobile">
               <ArchiveButton
+                disabled={!Boolean(currentSeasonData.links.bojProblem)}
+                href={currentSeasonData.links.bojProblem}
+              >
+                문제(BOJ 링크)
+              </ArchiveButton>
+              <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.testPdf)}
                 disabledText="문제 PDF가 제공되지 않는 대회입니다."
                 href={`https://api.suapc.kr/${currentYear}${

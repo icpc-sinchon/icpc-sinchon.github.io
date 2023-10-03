@@ -3,6 +3,7 @@
   "season": "Summer",
   "date": "2022년 9월 4일(일) 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/3180",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/840"
   },
   "fileNames": {

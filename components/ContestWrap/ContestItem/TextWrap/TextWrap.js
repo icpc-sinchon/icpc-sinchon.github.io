@@ -25,7 +25,7 @@ const ItemContent = styled.p`
     `}
 
   margin: 0;
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     font-size: 0.9rem;
     line-height: 1.6;
   }
