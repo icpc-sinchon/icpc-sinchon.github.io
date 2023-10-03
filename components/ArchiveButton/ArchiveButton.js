@@ -30,7 +30,11 @@ const ArchiveButton = styled(
     const customButtonRef = useRef(null);
     if (disabled) {
       return (
-        <CustomButton ref={customButtonRef} disabled={disabled}>
+        <CustomButton
+          className={className}
+          ref={customButtonRef}
+          disabled={disabled}
+        >
           {children}
         </CustomButton>
       );
