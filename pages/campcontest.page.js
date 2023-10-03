@@ -234,9 +234,9 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                   {study.contests && <TopicTitle>{study.topic}</TopicTitle>}
                   <div style={{ width: "100%" }}>
                     {study.contests &&
-                      Array.from(study.contests).map((contest) => {
+                      Array.from(study.contests).map((contest, idx) => {
                         return (
-                          <>
+                          <div key={idx}>
                             {contest.awards && (
                               <ItemWrap key={contest.contest_name + "-award"}>
                                 <ItemTitle className="hof-item-title">
@@ -350,7 +350,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                                 </TableWrap>
                               </ItemWrap>
                             )}
-                          </>
+                          </div>
                         );
                       })}
                   </div>

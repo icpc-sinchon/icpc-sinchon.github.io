@@ -317,7 +317,7 @@ const ContentItem = styled.div`
   width: 100%;
 `;
 
-const SchoolWrap = styled.p`
+const SchoolWrap = styled.div`
   display: flex;
   justify-content: space-evenly;
 
