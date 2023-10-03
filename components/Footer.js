@@ -64,6 +64,7 @@ const OrganizerWrap = styled(({ className, children }) => {
     &::after {
       padding: 0 6px;
       content: "|";
+      line-height: 1.75;
     }
   }
 `;
