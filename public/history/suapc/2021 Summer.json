@@ -3,6 +3,7 @@
   "season": "Summer",
   "date": "2021년 8월 28일 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/2757",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/678"
   },
   "fileNames": {

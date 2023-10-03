@@ -3,6 +3,7 @@
   "season": "Winter",
   "date": "2022년 2월 26일(토) 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/3032",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/764"
   },
   "fileNames": {

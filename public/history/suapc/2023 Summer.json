@@ -3,6 +3,7 @@
   "season": "Summer",
   "date": "2023년 8월 26일(토) 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/3855",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/1104"
   },
   "fileNames": {

@@ -3,6 +3,7 @@
   "season": "Summer",
   "date": "2020년 8월 15일 오후 2시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/799",
     "scoreboard": "https://api.suapc.kr/2020s/SUAPC_2020s_Scoreboard.html"
   },
   "fileNames": {

@@ -19,7 +19,7 @@ const CustomButton = styled.div`
       border: none;
     `}
 
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     border: none;
     padding: 0.2rem 0;
   }
@@ -56,7 +56,7 @@ const ArchiveButton = styled(
     text-decoration: none;
   }
 
-  @media (max-width: 633px) {
+  @media (max-width: 766px) {
     margin-left: 0;
   }
 `;
