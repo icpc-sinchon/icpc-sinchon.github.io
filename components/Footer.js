@@ -96,7 +96,7 @@ const Footer = styled(({ className }) => {
         <div>
           {organizer[0].president.map((person, idx) => {
             if (idx !== organizer[0].president.length - 1)
-              return <span>{person.name}</span>;
+              return <span key={idx}>{person.name}</span>;
             else return person.name;
           })}
         </div>
@@ -107,7 +107,7 @@ const Footer = styled(({ className }) => {
         <div>
           {organizer[0].member.map((person, idx) => {
             if (idx !== organizer[0].member.length - 1)
-              return <span>{person.name}</span>;
+              return <span key={idx}>{person.name}</span>;
             else return person.name;
           })}
         </div>
