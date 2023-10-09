@@ -68,7 +68,6 @@ const OrganizerWrap = styled(({ className, children }) => {
   word-break: break-all;
   span {
     display: inline-block;
-    padding: 6px 0;
     &::after {
       padding: 0 6px;
       content: "|";
