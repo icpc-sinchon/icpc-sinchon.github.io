@@ -3,6 +3,7 @@
   "season": "Winter",
   "date": "2023년 2월 25일(토) 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/3517",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/950"
   },
   "fileNames": {

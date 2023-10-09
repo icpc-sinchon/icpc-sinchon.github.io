@@ -3,6 +3,7 @@
   "season": "Winter",
   "date": "2021년 2월 28일 오후 12시 ~ 오후 5시",
   "links": {
+    "bojProblem": "https://www.acmicpc.net/category/detail/2446",
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/586"
   },
   "fileNames": {
