@@ -160,10 +160,9 @@ const Main = () => {
               word-break: keep-all;
             `}
           >
-            매 시즌마다 세 개의 알고리즘 행사를 개최합니다.
+            매 시즌마다 알고리즘 행사를 개최합니다.
             <br />
-            참가자들의 개인적인 성장을 돕는 Algorithm Camp, 캠프를 통해 학습한
-            내용을 테스트하는 개인전 Camp Contest,
+            참가자들의 개인적인 성장을 돕는 Algorithm Camp와 Algorithm seminar,
             <br />
             그리고 친구들과 팀을 이루어 경쟁하는 SUAPC까지.
           </span>
