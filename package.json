@@ -1,7 +1,7 @@
 {
-  "name": "learn-starter",
+  "name": "icpc-sinchon.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev -p 4789",
     "build": "next build",
