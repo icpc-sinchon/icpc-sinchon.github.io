@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled, { css } from "styled-components";
+
 import Layout from "../components/Layout";
 
 const Main = () => {
@@ -37,8 +38,10 @@ const Main = () => {
       <MainWrap className="main-wrap">
         <ContentWrap className="fade-in">
           <HeroCatchPhrase>
+            <img src="/res/lightbulb.png" alt="lightbulb-emoji" />
             THINK <br />
             DIFFERENT
+            <img src="/res/lightning.png" alt="lightbulb-emoji" />
           </HeroCatchPhrase>
           <TextSubTitle>
             <span
@@ -285,17 +288,24 @@ const HeroCatchPhrase = styled.span`
 
   color: ${(props) => props.theme.color.primary};
 
-  &::before {
-    @media ${(props) => props.theme.device.sm_md} {
-      content: "";
+  position: relative;
+
+  img {
+    position: absolute;
+
+    width: 4.2rem;
+
+    &:nth-of-type(1) {
+      transform: translateX(-100%);
     }
-    content: "💡";
-    position: absolute;
-    transform: translateX(-100%);
-  }
-  &::after {
-    content: "⚡";
-    position: absolute;
+    &:nth-of-type(2) {
+      right: 0;
+      transform: translate(100%, -100%);
+    }
+
+    @media ${(props) => props.theme.device.sm_md} {
+      display: none;
+    }
   }
 
   @media ${(props) => props.theme.device.sm} {
