@@ -117,10 +117,10 @@ const Suapc = () => {
   return (
     <Layout>
       <Head>
-        <title>SUAPC 2023 | ICPC Sinchon</title>
+        <title>SUAPC 2024 | ICPC Sinchon</title>
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:title" content="SUAPC 2023 | ICPC Sinchon" />
+        <meta property="og:title" content="SUAPC 2024 | ICPC Sinchon" />
         <meta property="og:url" content="https://icpc-sinchon.io/suapc" />
         <meta
           property="og:description"
@@ -163,7 +163,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.solutionPdf
                   }`
@@ -180,7 +180,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.posterImage
                   }`
@@ -325,7 +325,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.solutionPdf
                   }`
@@ -342,7 +342,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.posterImage
                   }`
