@@ -8,7 +8,7 @@ import { LogoSvg } from "./240-logo-svg";
 import { setIsNavClicked } from "../reducers/isNavClicked";
 
 const routes = [
-  { title: "SUAPC 2023", href: "/suapc" },
+  { title: "SUAPC 2024", href: "/suapc" },
   { title: "Camp Contest", href: "/campcontest" },
   { title: "명예의 전당", href: "/halloffame" },
   { title: "후원 및 협업", href: "/sponser" },
