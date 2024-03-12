@@ -54,6 +54,7 @@ const Header = styled(({ className }) => {
     </header>
   );
 })`
+  backdrop-filter: blur(1.5rem);
   display: flex;
   align-items: center;
 
