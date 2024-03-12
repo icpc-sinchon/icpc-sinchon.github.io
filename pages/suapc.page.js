@@ -204,10 +204,10 @@ const Suapc = () => {
                 <span style={{ fontSize: "smaller" }}>12/05부터</span>
               </AdmissionButton> */}
               <AdmissionButton
-                disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
+                disabled={!Boolean(currentSeasonData?.fileNames?.posterImage)}
                 href={`https://api.suapc.kr/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
-                }/${currentSeasonData.fileNames.posterImage}`}
+                }/${currentSeasonData?.fileNames?.posterImage}`}
               >
                 공식 포스터
               </AdmissionButton>
