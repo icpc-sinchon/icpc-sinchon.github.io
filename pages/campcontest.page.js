@@ -196,37 +196,30 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
               </ArchiveButton>
             </ArchiveWrap>
           )}
-          <TextWrap
-            title={
-              currentSeasonData.length !== 0
-                ? "콘테스트 일자"
-                : "이 곳의 주인공이 되세요"
-            }
-            content={
-              currentSeasonData.length !== 0
-                ? currentSeasonData.date
-                : "이 곳의 주인공이 되세요"
-            }
-          />
-          <TextWrap
-            title={
-              currentSeasonData.length !== 0
-                ? "캠프 콘테스트 소개"
-                : "이 곳의 주인공이 되세요"
-            }
-            content={
-              currentSeasonData.length !== 0
-                ? `캠프 콘테스트는 캠프 기간동안 배운 알고리즘을 적용해볼 수 있는 모의고사 형식의 대회입니다.
-                            개인전으로 진행되며, ICPC Sinchon Algorithm Camp 참가자만 참여할 수 있습니다.`
-                : "이 곳의 주인공이 되세요"
-            }
-          />
-          <TextWrap
-            title={"출제 경향"}
-            content={
-              "ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다."
-            }
-          />
+          {currentSeasonData.length !== 0 && currentSeasonData.date ? (
+            <>
+              <TextWrap
+                title={"콘테스트 일자"}
+                content={currentSeasonData.date}
+              />
+              <TextWrap
+                title={"캠프 콘테스트 소개"}
+                content={`캠프 콘테스트는 캠프 기간동안 배운 알고리즘을 적용해볼 수 있는 모의고사 형식의 대회입니다.
+                            개인전으로 진행되며, ICPC Sinchon Algorithm Camp 참가자만 참여할 수 있습니다.`}
+              />
+              <TextWrap
+                title={"출제 경향"}
+                content={
+                  "ICPC Sinchon Algorithm Camp을 통해 학습한 대부분의 알고리즘을 문제로 다루는 것을 목표로 합니다."
+                }
+              />
+            </>
+          ) : (
+            <TextWrap
+              title={"이번 시즌에는 Camp Contest가 진행되지 않았습니다"}
+              content={"다음 시즌을 기대해 주세요"}
+            />
+          )}
           {currentSeasonData.studies &&
             Array.from(currentSeasonData.studies).map((study) => {
               return (
