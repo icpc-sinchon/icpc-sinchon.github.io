@@ -180,7 +180,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
               </ArchiveButton>
               <ArchiveButton
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.solutionPdf
                   }`
@@ -352,7 +352,7 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
               </ArchiveButton>
               <ArchiveButton
                 href={
-                  (currentSeasonIdx !== 0 ? "https://api.suapc.kr/" : "/res/") +
+                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
                   `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
                     currentSeasonData.fileNames.solutionPdf
                   }`
