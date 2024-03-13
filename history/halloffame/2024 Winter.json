@@ -1,0 +1,104 @@
+{
+  "year": 2024,
+  "season": "Winter",
+  "studies": [
+    {
+      "topic": "초급",
+      "lecturers": [
+        {
+          "name": "박찬솔",
+          "school": "숭실대",
+          "handle": "chansol"
+        },
+        {
+          "name": "채성우",
+          "school": "서강대",
+          "handle": "lem0nad3"
+        },
+        {
+          "name": "황채원",
+          "school": "이화여대",
+          "handle": "chaerryos"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "이성진",
+          "school": "서강대",
+          "handle": "moralbook"
+        },
+        {
+          "name": "이지언",
+          "school": "연세대",
+          "handle": "ez_code"
+        },
+        {
+          "name": "천민재",
+          "school": "홍익대",
+          "handle": "open_mind"
+        }
+      ],
+      "curriculum": [
+        "Problem Solving, Time complexity, Basic C++, Linear data structure",
+        "Sorting",
+        "Basic Math",
+        "Prefix Sum, Two Pointer",
+        "BruteForcing, Recursive Function",
+        "Dynamic Programming",
+        "Binary Search, Divide and Conquer",
+        "Tree, Graph",
+        "DFS, BFS",
+        "Dijkstra"
+      ]
+    },
+    {
+      "topic": "중급",
+      "lecturers": [
+        {
+          "name": "김건우",
+          "school": "연세대",
+          "handle": "coconut99"
+        },
+        {
+          "name": "김영현",
+          "school": "서울대",
+          "handle": "kipa00"
+        },
+        {
+          "name": "김태윤",
+          "school": "연세대",
+          "handle": "ystaeyoon113"
+        }
+      ],
+      "mentors": [
+        {
+          "name": "길수민",
+          "school": "숙명여대",
+          "handle": "2093ab"
+        },
+        {
+          "name": "박경욱",
+          "school": "연세대",
+          "handle": "sk091204091204"
+        },
+        {
+          "name": "이협",
+          "school": "연세대",
+          "handle": "dlguq0107"
+        }
+      ],
+      "curriculum": [
+        "Shortest Path Algorithms",
+        "Dynamic Programming (1)",
+        "Segment Tree",
+        "Number Theory",
+        "Problem Solving Session (1)",
+        "Tree Algorithms",
+        "Greedy Algorithm",
+        "Dynamic Programming (2)",
+        "String Algorithms",
+        "Problem Solving Session (2)"
+      ]
+    }
+  ]
+}
