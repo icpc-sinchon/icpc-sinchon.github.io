@@ -121,7 +121,7 @@ const MobileWindow = styled(({ className }) => {
 `;
 
 const DesktopTopbarItem = styled.div`
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: -0.02rem;
 
@@ -143,7 +143,7 @@ const DesktopTopbarItem = styled.div`
 `;
 
 const MobileTopbarItem = styled.div`
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
   letter-spacing: -0.02rem;
