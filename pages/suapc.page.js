@@ -21,6 +21,8 @@ import PreviewWrap from "../components/PreviewWrap/PreviewWrap";
 import ArchiveButton from "../components/ArchiveButton/ArchiveButton";
 import AdmissionButton from "../components/AdmissionButton/AdmissionButton";
 import ArchiveWrap from "../components/ContestWrap/ContestItem/ArchiveWrap";
+import ManagementTeamTable from "../components/ManagementTeamTable/ManagementTeamTable";
+import organizer from "../public/history/organizer.json";
 
 const data0 = require(
   `../public/history/suapc/${process.env.NEXT_PUBLIC_CURRENT_SUAPC_SEASON}.json`,
@@ -248,7 +250,13 @@ const Suapc = () => {
               })}
             </SchoolLogoWrap>
           </ItemWrap>
-
+          {currentSeasonData.personalSponsor &&
+            Array.isArray(currentSeasonData.personalSponsor) && (
+              <TextWrap
+                title="개인후원"
+                content={currentSeasonData.personalSponsor.join(", ")}
+              />
+            )}
           {currentSeasonData.awards && (
             <>
               {!!currentSeasonData.awards.length && (
@@ -305,6 +313,27 @@ const Suapc = () => {
               </div>
             </>
           )}
+          <>
+            <ItemWrap>
+              {organizer.filter(
+                (item) =>
+                  item.year === parseInt(currentYear) &&
+                  item.season === currentSeason,
+              ).length > 0 && (
+                <div>
+                  <ItemTitle>운영진</ItemTitle>
+                  <ManagementTeamTable
+                    data={organizer.filter(
+                      (item) =>
+                        item.year === parseInt(currentYear) &&
+                        item.season === currentSeason,
+                    )}
+                  />
+                </div>
+              )}
+            </ItemWrap>
+          </>
+
           {currentSeasonData.awards && (
             <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
               <ArchiveButton
