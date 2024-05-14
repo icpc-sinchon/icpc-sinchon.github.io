@@ -67,7 +67,7 @@ const TitleWrap = styled(({ className, title, pageType, year, season }) => {
       setSubTitle(
         <SubTitle css={BoldText}>
           {year} {season === "Winter" ? "겨울" : "여름"} 신촌지역 대학교
-          프로그래밍 동아리 연합 알고리즘 캠프
+          프로그래밍 동아리 연합
         </SubTitle>,
       );
     // eslint-disable-next-line react-hooks/exhaustive-deps
