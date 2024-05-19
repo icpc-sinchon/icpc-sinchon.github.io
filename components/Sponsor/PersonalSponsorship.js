@@ -30,19 +30,21 @@ const PersonalSponsorship = () => {
           <TextTitle>다음과 혜택을 제공합니다.</TextTitle>
 
           <ul>
-            <li>신촌 연합 공식 홈페이지 SUAPC 섹션 개인 후원 부문 기록</li>
+            <li>신촌 연합 공식 홈페이지 SUAPC 섹션 개인 후원 명단에 기록</li>
           </ul>
           <TextSubTitle>10만원 이상</TextSubTitle>
           <ul>
-            <li>기본 + 스트리밍 세션, 포스터 개인 후원자 언급 </li>
+            <li>
+              기본 + SUAPC 2024 Winter 대회 스트리밍 세션에서 후원자 명단에 언급{" "}
+            </li>
           </ul>
           <TextSubTitle>20만원 이상</TextSubTitle>
           <ul>
-            <li>기본 + 10만원 옵션 + 문제에 백준 핸들 (또는 이름) 언급 </li>
+            <li>기본 + 10만원 옵션 + 문제에 백준 핸들 또는 이름 언급 </li>
           </ul>
           <TextSubTitle>30만원 이상</TextSubTitle>
           <ul>
-            <li>기본 + 10만원 옵션 + 특별상 제작 </li>
+            <li>기본 + 10만원 옵션 + 대회 특별상에 언급 </li>
           </ul>
         </ItemWrap>
 
@@ -60,16 +62,20 @@ const PersonalSponsorship = () => {
         >
           <TextTitle> 후원 후 다음의 폼을 작성해주세요.</TextTitle>
           <TextSubTitle>
-            희망자 / 옵션 금액 이상 후원자만 작성해주시면 됩니다.
+            원활한 특전 제공을 위해 아래의 폼을 작성하여 제출해주시길 바랍니다.
           </TextSubTitle>
-          <TextSubTitle>
-            미작성 시 입금자명으로 홈페이지에 기재됩니다.
-          </TextSubTitle>
+          <a
+            href="https://forms.gle/zTBdraCHA2J4PpVx5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://forms.gle/zTBdraCHA2J4PpVx5
+          </a>
         </ItemWrap>
 
         <ItemWrap
           className="slide-up"
-          style={{ marginTop: "2rem", animationDelay: "1300ms" }}
+          style={{ marginTop: "4rem", animationDelay: "1300ms" }}
         >
           <TextTitle>언제든지 ICPC Sinchon과 함께하세요</TextTitle>
           <TextSubTitle>
