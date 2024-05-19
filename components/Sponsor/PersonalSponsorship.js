@@ -8,10 +8,10 @@ const PersonalSponsorship = () => {
           <MainTextTitle>
             <span style={{ letterSpacing: "-0.03rem" }}>ICPC Sinchon</span>을
             도와주실 <br className="show-if-mobile" />
-            개인 후원자님을 환영합니다.
+            개인 후원자님을 환영합니다
           </MainTextTitle>
           <TextSubTitle>
-            지금까지의 모든 연합 활동에 후원자님의 후원이 큰 도움이 되었습니다.
+            지금까지의 모든 연합 활동에 후원자님의 후원이 큰 도움이 되었습니다
           </TextSubTitle>
         </ItemWrap>
         <ImgWrap>
@@ -27,7 +27,7 @@ const PersonalSponsorship = () => {
           className="slide-up"
           style={{ marginTop: "1rem", animationDelay: "700ms" }}
         >
-          <TextTitle>다음과 혜택을 제공합니다.</TextTitle>
+          <TextTitle>다음과 혜택을 제공합니다</TextTitle>
 
           <ul>
             <li>신촌 연합 공식 홈페이지 SUAPC 섹션 개인 후원 명단에 기록</li>
@@ -52,7 +52,7 @@ const PersonalSponsorship = () => {
           className="slide-up"
           style={{ marginTop: "2rem", animationDelay: "700ms" }}
         >
-          <TextTitle>다음의 계좌로 후원금을 받고 있습니다.</TextTitle>
+          <TextTitle>다음의 계좌로 후원금을 받고 있습니다</TextTitle>
           <TextSubTitle>79798752726 카카오뱅크 (예금주 : 김예송) </TextSubTitle>
         </ItemWrap>
 
@@ -60,9 +60,9 @@ const PersonalSponsorship = () => {
           className="slide-up"
           style={{ marginTop: "2rem", animationDelay: "700ms" }}
         >
-          <TextTitle> 후원 후 다음의 폼을 작성해주세요.</TextTitle>
+          <TextTitle> 후원 후 다음의 폼을 작성해주세요</TextTitle>
           <TextSubTitle>
-            원활한 특전 제공을 위해 아래의 폼을 작성하여 제출해주시길 바랍니다.
+            원활한 특전 제공을 위해 아래의 폼을 작성하여 제출해주시길 바랍니다
           </TextSubTitle>
           <a
             href="https://forms.gle/zTBdraCHA2J4PpVx5"
