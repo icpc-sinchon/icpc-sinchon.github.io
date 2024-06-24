@@ -82,10 +82,7 @@ const Main = () => {
             <SchoolWrap>
               <SchoolItem>
                 <a href="https://icpc.team" target="_blank" rel="noreferrer">
-                  <img
-                    src="https://api.suapc.kr/school-logo/sogang.png"
-                    alt="sogang-univ-logo"
-                  />
+                  <img src="/school-logo/sogang.png" alt="sogang-univ-logo" />
                   <h4>
                     Sogang
                     <br />
@@ -95,31 +92,22 @@ const Main = () => {
               </SchoolItem>
               <SchoolItem>
                 <img
-                  src="https://api.suapc.kr/school-logo/sookmyung.png"
+                  src="/school-logo/sookmyung.png"
                   alt="sookmyung-univ-logo"
                 />
                 <h4>Algos</h4>
               </SchoolItem>
               <SchoolItem>
-                <img
-                  src="https://api.suapc.kr/school-logo/yonsei.png"
-                  alt="yonsei-univ-logo"
-                />
+                <img src="/school-logo/yonsei.png" alt="yonsei-univ-logo" />
                 <h4>Morgorithm</h4>
               </SchoolItem>
               <SchoolItem>
-                <img
-                  src="https://api.suapc.kr/school-logo/ewha.png"
-                  alt="ewha-univ-logo"
-                />
+                <img src="/school-logo/ewha.png" alt="ewha-univ-logo" />
                 <h4>EDOC</h4>
               </SchoolItem>
               <SchoolItem>
                 <a href="https://hi-arc.org" target="_blank" rel="noreferrer">
-                  <img
-                    src="https://api.suapc.kr/school-logo/hongik.png"
-                    alt="hongik-univ-logo"
-                  />
+                  <img src="/school-logo/hongik.png" alt="hongik-univ-logo" />
                   <h4>HI-ARC</h4>
                 </a>
               </SchoolItem>
