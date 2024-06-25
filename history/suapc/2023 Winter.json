@@ -7,7 +7,7 @@
     "scoreboard": "https://www.acmicpc.net/contest/spotboard/950"
   },
   "fileNames": {
-    "posterImage": "SUAPC_2023w_Poster.jpeg",
+    "posterImage": "SUAPC_2023w_Poster.jpg",
     "solutionPdf": "SUAPC_2023_Winter_Solution.pdf"
   },
   "awards": [
@@ -143,7 +143,7 @@
     "autoever",
     "nexon",
     "youngjin",
-    "easys",
+    "easyspub",
     "devocean",
     "startlink",
     "moloco",
