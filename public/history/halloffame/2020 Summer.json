@@ -2,6 +2,14 @@
   "year": 2020,
   "season": "Summer",
   "date": "2020년 8월 31일 오후 2시 ~ 오후 5시",
+  "fileNames": {
+    "solutionPdf": "ICPC_Sinchon_2020_Summer_Camp_Contest.pdf"
+  },
+  "links": [
+    "https://www.acmicpc.net/category/794",
+    "https://www.acmicpc.net/contest/board/532",
+    "https://www.acmicpc.net/contest/board/533"
+  ],
   "studies": [
     {
       "topic": "초급",
