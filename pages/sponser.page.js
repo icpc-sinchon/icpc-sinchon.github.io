@@ -104,10 +104,7 @@ const Sponser = () => {
             <SponserWrap>
               <SponserItem>
                 <SponserImgWrap>
-                  <img
-                    src="https://api.suapc.kr/sponser-ci/kakao.png"
-                    alt="kakao-logo"
-                  />
+                  <img src="/res/sponser-ci/kakao.png" alt="kakao-logo" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -144,7 +141,7 @@ const Sponser = () => {
               <SponserItem>
                 <SponserImgWrap>
                   <img
-                    src="https://api.suapc.kr/sponser-ci/autoever.png"
+                    src="/res/sponser-ci/autoever.jpg"
                     alt="hyundai-autoever-logo"
                   />
                 </SponserImgWrap>
@@ -167,10 +164,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img
-                    src="https://api.suapc.kr/sponser-ci/naver.png"
-                    alt="naver-logo"
-                  />
+                  <img src="/res/sponser-ci/naver-d2.png" alt="naver-d2-logo" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -194,10 +188,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img
-                    src="https://api.suapc.kr/sponser-ci/pubg.png"
-                    alt="pubg-logo"
-                  />
+                  <img src="/res/sponser-ci/pubg.png" alt="pubg-logo" />
                 </SponserImgWrap>
                 <ul>
                   <li>
@@ -209,13 +200,13 @@ const Sponser = () => {
               <SponserItem>
                 <SponserImgWrap>
                   <img
-                    src="https://api.suapc.kr/sponser-ci/future-tech-academy.png"
-                    alt="future-tech-academy-logo"
+                    src="/res/sponser-ci/hello-algo.png"
+                    alt="hello-algo-logo"
                   />
                 </SponserImgWrap>
                 <ul>
                   <li>
-                    퓨처테크아카데미 관련 문제 출제
+                    퓨처테크아카데미 헬로알고 관련 문제 출제
                     <br />
                   </li>
                   <li>
@@ -235,7 +226,7 @@ const Sponser = () => {
               <SponserItem>
                 <SponserImgWrap>
                   <img
-                    src="https://api.suapc.kr/sponser-ci/furiosa.png"
+                    src="/res/sponser-ci/furiosa.png"
                     alt="furiosa-ai-logo"
                   />
                 </SponserImgWrap>
@@ -248,10 +239,7 @@ const Sponser = () => {
               </SponserItem>
               <SponserItem>
                 <SponserImgWrap>
-                  <img
-                    src="https://api.suapc.kr/sponser-ci/vuno.png"
-                    alt="vuno-logo"
-                  />
+                  <img src="/res/sponser-ci/vuno.png" alt="vuno-logo" />
                 </SponserImgWrap>
                 <ul>
                   <li>
