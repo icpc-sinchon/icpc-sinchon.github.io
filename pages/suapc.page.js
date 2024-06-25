@@ -154,7 +154,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.testPdf)}
                 disabledText="문제 PDF가 제공되지 않는 대회입니다."
-                href={`https://api.suapc.kr/${currentYear}${
+                href={`/res/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData.fileNames.testPdf}`}
               >
@@ -162,12 +162,9 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.solutionPdf
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
@@ -179,12 +176,9 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.posterImage
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.posterImage}`}
               >
                 공식 포스터
               </ArchiveButton>
@@ -205,7 +199,7 @@ const Suapc = () => {
               </AdmissionButton> */}
               <AdmissionButton
                 disabled={!Boolean(currentSeasonData?.fileNames?.posterImage)}
-                href={`https://api.suapc.kr/${currentYear}${
+                href={`/res/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData?.fileNames?.posterImage}`}
               >
@@ -223,11 +217,11 @@ const Suapc = () => {
           <ItemWrap>
             <ItemTitle>참여 대학</ItemTitle>
             <SchoolLogoWrap>
-              <SchoolLogo src="https://api.suapc.kr/school-logo/sogang.png" />
-              <SchoolLogo src="https://api.suapc.kr/school-logo/sookmyung.png" />
-              <SchoolLogo src="https://api.suapc.kr/school-logo/yonsei.png" />
-              <SchoolLogo src="https://api.suapc.kr/school-logo/ewha.png" />
-              <SchoolLogo src="https://api.suapc.kr/school-logo/hongik.png" />
+              <SchoolLogo src="/school-logo/sogang.png" />
+              <SchoolLogo src="/school-logo/sookmyung.png" />
+              <SchoolLogo src="/school-logo/yonsei.png" />
+              <SchoolLogo src="/school-logo/ewha.png" />
+              <SchoolLogo src="/school-logo/hongik.png" />
             </SchoolLogoWrap>
           </ItemWrap>
           <ItemWrap>
@@ -239,10 +233,7 @@ const Suapc = () => {
                 return (
                   <SponserCI
                     key={"sponser-" + data}
-                    src={`https://api.suapc.kr/sponser-ci/${data}.png`}
-                    onError={(e) => {
-                      e.target.src = `/res/sponser-ci/${data}.png`;
-                    }}
+                    src={`/res/sponser-ci/${data}.png`}
                   />
                 );
               })}
@@ -316,7 +307,7 @@ const Suapc = () => {
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.testPdf)}
                 disabledText="문제 PDF가 제공되지 않는 대회입니다."
-                href={`https://api.suapc.kr/${currentYear}${
+                href={`/res/${currentYear}${
                   currentSeason === "Winter" ? "w" : "s"
                 }/${currentSeasonData.fileNames.testPdf}`}
               >
@@ -324,12 +315,9 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.solutionPdf)}
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.solutionPdf
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
@@ -341,12 +329,9 @@ const Suapc = () => {
               </ArchiveButton>
               <ArchiveButton
                 disabled={!Boolean(currentSeasonData.fileNames.posterImage)}
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.posterImage
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.posterImage}`}
               >
                 공식 포스터
               </ArchiveButton>

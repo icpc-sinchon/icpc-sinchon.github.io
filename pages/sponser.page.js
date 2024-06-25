@@ -141,7 +141,7 @@ const Sponser = () => {
               <SponserItem>
                 <SponserImgWrap>
                   <img
-                    src="/res/sponser-ci/autoever.jpg"
+                    src="/res/sponser-ci/autoever.png"
                     alt="hyundai-autoever-logo"
                   />
                 </SponserImgWrap>
