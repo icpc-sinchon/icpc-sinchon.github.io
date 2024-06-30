@@ -62,7 +62,7 @@ const CorporateSponsorship = () => {
           <SponsorWrap>
             <SponsorItem>
               <SponsorImgWrap>
-                <img src="/res/Sponsor-ci/kakao.png" alt="kakao-logo" />
+                <img src="/res/sponsor-ci/kakao.png" alt="kakao-logo" />
               </SponsorImgWrap>
               <ul>
                 <li>
@@ -99,7 +99,7 @@ const CorporateSponsorship = () => {
             <SponsorItem>
               <SponsorImgWrap>
                 <img
-                  src="/res/Sponsor-ci/autoever.png"
+                  src="/res/sponsor-ci/autoever.png"
                   alt="hyundai-autoever-logo"
                 />
               </SponsorImgWrap>
@@ -122,7 +122,7 @@ const CorporateSponsorship = () => {
             </SponsorItem>
             <SponsorItem>
               <SponsorImgWrap>
-                <img src="/res/Sponsor-ci/naver-d2.png" alt="naver-logo" />
+                <img src="/res/sponsor-ci/naver-d2.png" alt="naver-logo" />
               </SponsorImgWrap>
               <ul>
                 <li>
@@ -146,7 +146,7 @@ const CorporateSponsorship = () => {
             </SponsorItem>
             <SponsorItem>
               <SponsorImgWrap>
-                <img src="/res/Sponsor-ci/pubg.png" alt="pubg-logo" />
+                <img src="/res/sponsor-ci/pubg.png" alt="pubg-logo" />
               </SponsorImgWrap>
               <ul>
                 <li>
@@ -158,7 +158,7 @@ const CorporateSponsorship = () => {
             <SponsorItem>
               <SponsorImgWrap>
                 <img
-                  src="/res/Sponsor-ci/hello-algo.png"
+                  src="/res/sponsor-ci/hello-algo.png"
                   alt="future-tech-academy-logo"
                 />
               </SponsorImgWrap>
@@ -183,7 +183,7 @@ const CorporateSponsorship = () => {
             </SponsorItem>
             <SponsorItem>
               <SponsorImgWrap>
-                <img src="/res/Sponsor-ci/furiosa.png" alt="furiosa-ai-logo" />
+                <img src="/res/sponsor-ci/furiosa.png" alt="furiosa-ai-logo" />
               </SponsorImgWrap>
               <ul>
                 <li>
@@ -194,7 +194,7 @@ const CorporateSponsorship = () => {
             </SponsorItem>
             <SponsorItem>
               <SponsorImgWrap>
-                <img src="/res/Sponsor-ci/vuno.png" alt="vuno-logo" />
+                <img src="/res/sponsor-ci/vuno.png" alt="vuno-logo" />
               </SponsorImgWrap>
               <ul>
                 <li>
