@@ -11,7 +11,7 @@ const routes = [
   { title: "SUAPC 2024", href: "/suapc" },
   { title: "Camp Contest", href: "/campcontest" },
   { title: "명예의 전당", href: "/halloffame" },
-  { title: "후원 및 협업", href: "/sponser" },
+  { title: "후원 및 협업", href: "/sponsor" },
 ];
 
 const zoomInOnHover = css`

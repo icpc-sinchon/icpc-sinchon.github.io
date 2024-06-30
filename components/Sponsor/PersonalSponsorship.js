@@ -17,7 +17,7 @@ const PersonalSponsorship = () => {
         <ImgWrap>
           <img
             className="slide-up"
-            src="/res/personalSponor.png"
+            src="/res/personalSponsor.png"
             alt="dev-community-stickers"
             style={{ animationDelay: "500ms" }}
           />

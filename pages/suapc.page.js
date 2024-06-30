@@ -229,11 +229,11 @@ const Suapc = () => {
             <SchoolLogoWrap
               style={{ flexWrap: "wrap", justifyContent: "start" }}
             >
-              {currentSeasonData.sponser?.map((data) => {
+              {currentSeasonData.sponsor?.map((data) => {
                 return (
-                  <SponserCI
-                    key={"sponser-" + data}
-                    src={`/res/sponser-ci/${data}.png`}
+                  <SponsorCI
+                    key={"sponsor-" + data}
+                    src={`/res/sponsor-ci/${data}.png`}
                   />
                 );
               })}
@@ -381,7 +381,7 @@ const SchoolLogo = styled.img`
   }
 `;
 
-const SponserCI = styled.img`
+const SponsorCI = styled.img`
   height: 1.6rem;
 
   margin: 0.8rem 1.8rem 0.6rem 0;

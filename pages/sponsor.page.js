@@ -6,7 +6,7 @@ import SponsorNav from "../components/SponsorNav/SponsorNav";
 import CorporateSponsorship from "../components/Sponsor/CorporateSponsorship";
 import PersonalSponsorship from "../components/Sponsor/PersonalSponsorship";
 
-const Sponser = () => {
+const Sponsor = () => {
   const [currentSponsorIdx, setCurrentSponsorIdx] = useState(0);
 
   const onSponsorNavClick = (idx) => {
@@ -16,11 +16,11 @@ const Sponser = () => {
   return (
     <Layout>
       <Head>
-        <title>Sponser | ICPC Sinchon</title>
+        <title>Sponsor | ICPC Sinchon</title>
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
-        <meta property="og:title" content="Sponser | ICPC Sinchon" />
-        <meta property="og:url" content="https://icpc-sinchon.io/sponser" />
+        <meta property="og:title" content="Sponsor | ICPC Sinchon" />
+        <meta property="og:url" content="https://icpc-sinchon.io/sponsor" />
         <meta
           property="og:description"
           content="매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요."
@@ -37,4 +37,4 @@ const Sponser = () => {
   );
 };
 
-export default Sponser;
+export default Sponsor;

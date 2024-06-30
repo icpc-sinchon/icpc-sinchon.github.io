@@ -59,11 +59,11 @@ const CorporateSponsorship = () => {
         </ItemWrap>
         <ItemWrap className="slide-up" style={{ animationDelay: "1100ms" }}>
           <TextTitle>다음과 같은 기업 맞춤 홍보를 진행하고 있습니다</TextTitle>
-          <SponserWrap>
-            <SponserItem>
-              <SponserImgWrap>
-                <img src="/res/sponser-ci/kakao.png" alt="kakao-logo" />
-              </SponserImgWrap>
+          <SponsorWrap>
+            <SponsorItem>
+              <SponsorImgWrap>
+                <img src="/res/Sponsor-ci/kakao.png" alt="kakao-logo" />
+              </SponsorImgWrap>
               <ul>
                 <li>
                   카카오 추천팀 홍보 세션 제공
@@ -95,14 +95,14 @@ const CorporateSponsorship = () => {
                 <li>Beyond Kakao를 1등상 명칭으로 사용</li>
                 <li>Connect Kakao를 1등상 명칭으로 사용</li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
                 <img
-                  src="/res/sponser-ci/autoever.png"
+                  src="/res/Sponsor-ci/autoever.png"
                   alt="hyundai-autoever-logo"
                 />
-              </SponserImgWrap>
+              </SponsorImgWrap>
               <ul>
                 <li>
                   현대오토에버 관련 문제 출제
@@ -119,11 +119,11 @@ const CorporateSponsorship = () => {
                   <br />
                 </li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
-                <img src="/res/sponser-ci/naver-d2.png" alt="naver-logo" />
-              </SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
+                <img src="/res/Sponsor-ci/naver-d2.png" alt="naver-logo" />
+              </SponsorImgWrap>
               <ul>
                 <li>
                   네이버 관련 대회 문제 출제
@@ -143,25 +143,25 @@ const CorporateSponsorship = () => {
                   </UnderlinedLink>
                 </li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
-                <img src="/res/sponser-ci/pubg.png" alt="pubg-logo" />
-              </SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
+                <img src="/res/Sponsor-ci/pubg.png" alt="pubg-logo" />
+              </SponsorImgWrap>
               <ul>
                 <li>
                   펍지 / 크래프톤 기업 홍보 세션 제공
                   <br />
                 </li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
                 <img
-                  src="/res/sponser-ci/hello-algo.png"
+                  src="/res/Sponsor-ci/hello-algo.png"
                   alt="future-tech-academy-logo"
                 />
-              </SponserImgWrap>
+              </SponsorImgWrap>
               <ul>
                 <li>
                   퓨처테크아카데미 관련 문제 출제
@@ -180,30 +180,30 @@ const CorporateSponsorship = () => {
                   <br />
                 </li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
-                <img src="/res/sponser-ci/furiosa.png" alt="furiosa-ai-logo" />
-              </SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
+                <img src="/res/Sponsor-ci/furiosa.png" alt="furiosa-ai-logo" />
+              </SponsorImgWrap>
               <ul>
                 <li>
                   퓨리오사 AI 기업 홍보 세션 제공
                   <br />
                 </li>
               </ul>
-            </SponserItem>
-            <SponserItem>
-              <SponserImgWrap>
-                <img src="/res/sponser-ci/vuno.png" alt="vuno-logo" />
-              </SponserImgWrap>
+            </SponsorItem>
+            <SponsorItem>
+              <SponsorImgWrap>
+                <img src="/res/Sponsor-ci/vuno.png" alt="vuno-logo" />
+              </SponsorImgWrap>
               <ul>
                 <li>
                   뷰노 기업 홍보 세션 제공
                   <br />
                 </li>
               </ul>
-            </SponserItem>
-          </SponserWrap>
+            </SponsorItem>
+          </SponsorWrap>
         </ItemWrap>
         <ItemWrap className="slide-up" style={{ animationDelay: "1300ms" }}>
           <TextTitle>언제든지 ICPC Sinchon과 함께하세요</TextTitle>
@@ -277,7 +277,7 @@ const TextSubTitle = styled.div`
   font-weight: 500;
 `;
 
-const SponserImgWrap = styled.div`
+const SponsorImgWrap = styled.div`
   width: 12rem;
 
   img {
@@ -291,7 +291,7 @@ const UnderlinedLink = styled.a`
   text-decoration: underline;
 `;
 
-const SponserWrap = styled.div`
+const SponsorWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
@@ -305,7 +305,7 @@ const SponserWrap = styled.div`
   }
 `;
 
-const SponserItem = styled.div`
+const SponsorItem = styled.div`
   margin: 0.4rem 1rem 0.4rem 0;
 
   ul {
