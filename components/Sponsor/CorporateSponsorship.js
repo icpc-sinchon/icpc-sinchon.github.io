@@ -17,10 +17,9 @@ const CorporateSponsorship = () => {
             참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면,{" "}
             <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
             참가자들을 상대로 기업에 대한 홍보를 진행합니다
+            <br />매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로
+            이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요{" "}
             <br />
-            <br className="show-if-mobile" />매 시즌 신촌지역 5개 대학의
-            컴퓨터공학 전공생들을 대상으로 이루어지는 연합 활동의 후원사로
-            참여하여 기업 홍보 효과를 누리세요 <br />
           </TextSubTitle>
         </ItemWrap>
         <ImgWrap>
@@ -63,10 +62,7 @@ const CorporateSponsorship = () => {
           <SponserWrap>
             <SponserItem>
               <SponserImgWrap>
-                <img
-                  src="https://api.suapc.kr/sponser-ci/kakao.png"
-                  alt="kakao-logo"
-                />
+                <img src="/res/sponser-ci/kakao.png" alt="kakao-logo" />
               </SponserImgWrap>
               <ul>
                 <li>
@@ -103,7 +99,7 @@ const CorporateSponsorship = () => {
             <SponserItem>
               <SponserImgWrap>
                 <img
-                  src="https://api.suapc.kr/sponser-ci/autoever.png"
+                  src="/res/sponser-ci/autoever.png"
                   alt="hyundai-autoever-logo"
                 />
               </SponserImgWrap>
@@ -126,10 +122,7 @@ const CorporateSponsorship = () => {
             </SponserItem>
             <SponserItem>
               <SponserImgWrap>
-                <img
-                  src="https://api.suapc.kr/sponser-ci/naver.png"
-                  alt="naver-logo"
-                />
+                <img src="/res/sponser-ci/naver-d2.png" alt="naver-logo" />
               </SponserImgWrap>
               <ul>
                 <li>
@@ -153,10 +146,7 @@ const CorporateSponsorship = () => {
             </SponserItem>
             <SponserItem>
               <SponserImgWrap>
-                <img
-                  src="https://api.suapc.kr/sponser-ci/pubg.png"
-                  alt="pubg-logo"
-                />
+                <img src="/res/sponser-ci/pubg.png" alt="pubg-logo" />
               </SponserImgWrap>
               <ul>
                 <li>
@@ -168,7 +158,7 @@ const CorporateSponsorship = () => {
             <SponserItem>
               <SponserImgWrap>
                 <img
-                  src="https://api.suapc.kr/sponser-ci/future-tech-academy.png"
+                  src="/res/sponser-ci/hello-algo.png"
                   alt="future-tech-academy-logo"
                 />
               </SponserImgWrap>
@@ -193,10 +183,7 @@ const CorporateSponsorship = () => {
             </SponserItem>
             <SponserItem>
               <SponserImgWrap>
-                <img
-                  src="https://api.suapc.kr/sponser-ci/furiosa.png"
-                  alt="furiosa-ai-logo"
-                />
+                <img src="/res/sponser-ci/furiosa.png" alt="furiosa-ai-logo" />
               </SponserImgWrap>
               <ul>
                 <li>
@@ -207,10 +194,7 @@ const CorporateSponsorship = () => {
             </SponserItem>
             <SponserItem>
               <SponserImgWrap>
-                <img
-                  src="https://api.suapc.kr/sponser-ci/vuno.png"
-                  alt="vuno-logo"
-                />
+                <img src="/res/sponser-ci/vuno.png" alt="vuno-logo" />
               </SponserImgWrap>
               <ul>
                 <li>
