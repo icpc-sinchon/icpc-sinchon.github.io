@@ -179,12 +179,9 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                 문제(BOJ 링크)
               </ArchiveButton>
               <ArchiveButton
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.solutionPdf
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>
@@ -351,12 +348,9 @@ const CampContest = ({ seasonList_, seasonData_ }) => {
                 문제(BOJ 링크)
               </ArchiveButton>
               <ArchiveButton
-                href={
-                  (currentSeasonIdx > 1 ? "https://api.suapc.kr/" : "/res/") +
-                  `${currentYear}${currentSeason === "Winter" ? "w" : "s"}/${
-                    currentSeasonData.fileNames.solutionPdf
-                  }`
-                }
+                href={`/res/${currentYear}${
+                  currentSeason === "Winter" ? "w" : "s"
+                }/${currentSeasonData.fileNames.solutionPdf}`}
               >
                 해설 PDF
               </ArchiveButton>

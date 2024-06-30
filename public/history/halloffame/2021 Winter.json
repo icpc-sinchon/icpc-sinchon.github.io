@@ -2,6 +2,14 @@
   "year": 2021,
   "season": "Winter",
   "date": "2021년 2월 20일 오후 1시 ~ 오후 5시",
+  "fileNames": {
+    "solutionPdf": "2021W-SinchonCamp-solutions.pdf"
+  },
+  "links": [
+    "https://www.acmicpc.net/category/795",
+    "https://www.acmicpc.net/contest/spotboard/588",
+    "https://www.acmicpc.net/contest/spotboard/589"
+  ],
   "studies": [
     {
       "topic": "초급",
