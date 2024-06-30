@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const SponsorNav = ({ onSponsorNavClick, currentSponsorIdx }) => {
   const sponsorOptions = ["기업 후원", "개인 후원"];
@@ -8,7 +8,7 @@ const SponsorNav = ({ onSponsorNavClick, currentSponsorIdx }) => {
       {sponsorOptions.map((option, idx) => {
         return (
           <SponsorNavElem
-            key={"sponsor-nav-" + option}
+            key={option}
             onClick={() => onSponsorNavClick(idx)}
             className={idx === currentSponsorIdx ? "selected" : ""}
           >
@@ -19,11 +19,6 @@ const SponsorNav = ({ onSponsorNavClick, currentSponsorIdx }) => {
     </SponsorNavWrap>
   );
 };
-
-const KeepCalmPreset = css`
-  font-family: "KeepCalmMed";
-  font-weight: 500;
-`;
 
 const SponsorNavWrap = styled.div`
   padding: 1rem 2rem 0;
@@ -49,8 +44,9 @@ const SponsorNavElem = styled.div`
   margin-left: 2.3rem;
   border-radius: 1rem;
 
-  ${KeepCalmPreset}
-  color: #C8C8C8;
+  font-family: "KeepCalmMed";
+  font-weight: 500;
+  color: #c8c8c8;
   font-size: 0.85rem;
   cursor: pointer;
 
