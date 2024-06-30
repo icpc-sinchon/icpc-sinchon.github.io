@@ -18,6 +18,8 @@ import Layout from "../components/Layout";
 import PreviewWrap from "../components/PreviewWrap/PreviewWrap";
 import SeasonNav from "../components/SeasonNav/SeasonNav";
 import ItemWrap from "../components/ContestWrap/ContestItem/ItemWrap";
+import ManagementTeamTable from "../components/ManagementTeamTable/ManagementTeamTable";
+import organizer from "../public/history/organizer.json";
 
 const data0 = require(
   `../public/history/halloffame/${process.env.NEXT_PUBLIC_CURRENT_HALLOFFAME_SEASON}.json`,
@@ -178,10 +180,30 @@ const HallOfFame = () => {
             }
             content={
               currentSeasonData.length !== 0
-                ? "ICPC Sinchon Algorithm Camp에서 강의와 멘토 활동으로 기여해주신 분들을 기립니다."
+                ? "ICPC Sinchon에서 SUAPC, Algorithm Camp의 운영을 맡아 주신 운영진 분들과 Algorithm Camp에서 강의와 멘토 활동으로 기여해주신 분들을 기립니다."
                 : "이 곳의 주인공이 되세요"
             }
           />
+          <>
+            <ItemWrap>
+              {organizer.filter(
+                (item) =>
+                  item.year === parseInt(currentYear) &&
+                  item.season === currentSeason,
+              ).length > 0 && (
+                <div>
+                  <ItemTitle>운영진</ItemTitle>
+                  <ManagementTeamTable
+                    data={organizer.filter(
+                      (item) =>
+                        item.year === parseInt(currentYear) &&
+                        item.season === currentSeason,
+                    )}
+                  />
+                </div>
+              )}
+            </ItemWrap>
+          </>
 
           {currentSeasonData.studies &&
             Array.from(currentSeasonData.studies).map((study) => {

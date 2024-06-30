@@ -163,7 +163,7 @@
       "school": "開拓団訓練所"
     }
   ],
-  "sponser": [
+  "sponsor": [
     "autoever",
     "hanbit",
     "youngjin",
@@ -174,5 +174,15 @@
     "goorm",
     "startlink",
     "elice"
+  ],
+
+  "personalSponsor": [
+    "이재열",
+    "pjshwa",
+    "신촌고라니",
+    "천민재",
+    "킹갓캠프장정은채",
+    "풀스택해커인공지능PS킹캣박경욱",
+    "정은체"
   ]
 }

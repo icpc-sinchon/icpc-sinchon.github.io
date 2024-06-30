@@ -229,17 +229,23 @@ const Suapc = () => {
             <SchoolLogoWrap
               style={{ flexWrap: "wrap", justifyContent: "start" }}
             >
-              {currentSeasonData.sponser?.map((data) => {
+              {currentSeasonData.sponsor?.map((data) => {
                 return (
-                  <SponserCI
-                    key={"sponser-" + data}
-                    src={`/res/sponser-ci/${data}.png`}
+                  <SponsorCI
+                    key={"sponsor-" + data}
+                    src={`/res/sponsor-ci/${data}.png`}
                   />
                 );
               })}
             </SchoolLogoWrap>
           </ItemWrap>
-
+          {currentSeasonData.personalSponsor &&
+            Array.isArray(currentSeasonData.personalSponsor) && (
+              <TextWrap
+                title="개인후원"
+                content={currentSeasonData.personalSponsor.join(", ")}
+              />
+            )}
           {currentSeasonData.awards && (
             <>
               {!!currentSeasonData.awards.length && (
@@ -296,6 +302,7 @@ const Suapc = () => {
               </div>
             </>
           )}
+
           {currentSeasonData.awards && (
             <ItemWrap className="show-if-mobile" css={ArchiveWrap}>
               <ArchiveButton
@@ -374,7 +381,7 @@ const SchoolLogo = styled.img`
   }
 `;
 
-const SponserCI = styled.img`
+const SponsorCI = styled.img`
   height: 1.6rem;
 
   margin: 0.8rem 1.8rem 0.6rem 0;
