@@ -8,17 +8,17 @@ const CorporateSponsorship = () => {
           <MainTextTitle>
             <span style={{ letterSpacing: "-0.03rem" }}>ICPC Sinchon</span>과
             함께할 <br className="show-if-mobile" />
-            후원사를 모집하고 있습니다
+            후원사를 모집하고 있습니다.
           </MainTextTitle>
           <TextSubTitle>
             지금까지의 모든 연합 활동은 후원사의 후원을 통해 성공적으로 개최될
-            수 있었습니다
+            수 있었습니다.
             <br />
             참가자에게 제공되는 상금 및 각종 상품들을 제공해주시면,{" "}
             <span css={[SinchonColor, KeepCalmFont]}>ICPC Sinchon</span>은
-            참가자들을 상대로 기업에 대한 홍보를 진행합니다
+            참가자들을 상대로 기업에 대한 홍보를 진행합니다.
             <br />매 시즌 신촌지역 5개 대학의 컴퓨터공학 전공생들을 대상으로
-            이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요{" "}
+            이루어지는 연합 활동의 후원사로 참여하여 기업 홍보 효과를 누리세요.
             <br />
           </TextSubTitle>
         </ItemWrap>
@@ -34,7 +34,7 @@ const CorporateSponsorship = () => {
           className="slide-up"
           style={{ marginTop: "2rem", animationDelay: "700ms" }}
         >
-          <TextTitle>다음의 후원품들을 제공받고 있습니다</TextTitle>
+          <TextTitle>다음의 후원품들을 제공받고 있습니다.</TextTitle>
           <ul>
             <li>후원금</li>
             <li>컴퓨터 과학 서적</li>
@@ -43,7 +43,7 @@ const CorporateSponsorship = () => {
           </ul>
         </ItemWrap>
         <ItemWrap className="slide-up" style={{ animationDelay: "900ms" }}>
-          <TextTitle>다음과 같은 기업 홍보 방안을 제공합니다</TextTitle>
+          <TextTitle>다음과 같은 기업 홍보 방안을 제공합니다.</TextTitle>
           <ul>
             <li>대회 포스터 내 후원사 로고 포함</li>
             <li>후원사 이름 및 서비스와 관련된 대회 문제 출제</li>
@@ -58,7 +58,7 @@ const CorporateSponsorship = () => {
           </ul>
         </ItemWrap>
         <ItemWrap className="slide-up" style={{ animationDelay: "1100ms" }}>
-          <TextTitle>다음과 같은 기업 맞춤 홍보를 진행하고 있습니다</TextTitle>
+          <TextTitle>다음과 같은 기업 맞춤 홍보를 진행하고 있습니다.</TextTitle>
           <SponsorWrap>
             <SponsorItem>
               <SponsorImgWrap>
@@ -206,7 +206,7 @@ const CorporateSponsorship = () => {
           </SponsorWrap>
         </ItemWrap>
         <ItemWrap className="slide-up" style={{ animationDelay: "1300ms" }}>
-          <TextTitle>언제든지 ICPC Sinchon과 함께하세요</TextTitle>
+          <TextTitle>언제든지 ICPC Sinchon과 함께하세요.</TextTitle>
           <TextSubTitle>
             후원에 함께해주시는 만큼 저희도 후원사 홍보에 최선을 다할 것을
             약속드립니다.
