@@ -99,7 +99,7 @@ const Main = () => {
               </SchoolItem>
               <SchoolItem>
                 <img src="/school-logo/yonsei.png" alt="yonsei-univ-logo" />
-                <h4>Morgorithm</h4>
+                <h4>Molgorithm</h4>
               </SchoolItem>
               <SchoolItem>
                 <img src="/school-logo/ewha.png" alt="ewha-univ-logo" />
